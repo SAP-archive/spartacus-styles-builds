@@ -1,0 +1,21 @@
+@import '../../theme';
+
+.cx-page {
+  padding-bottom: var(--cx-padding, 120px);
+}
+
+.cx-page__header {
+  background-color: var(--cx-background-color, var(--cx-g-color-background));
+  text-align: var(--cx-text-align, center);
+  padding: var(--cx-padding, 25px 0);
+}
+
+.cx-page__title {
+  @include type('4');
+  font-weight: var(--cx-font-weight, var(--cx-g-font-weight-semi, 600));
+  margin: var(--cx-margin, 0 auto);
+}
+
+.cx-page__section {
+  padding-top: var(--cx-padding, 60px);
+}
