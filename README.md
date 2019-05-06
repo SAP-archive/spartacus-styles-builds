@@ -9,3 +9,7 @@ For more informations, see [Cloud Commerce Spartacus Storefront](https://github.
 #### Related projects
 
 [Spartacus Storefront](https://www.npmjs.com/package/@spartacus/storefront)
+
+Information about snapshot builds can be found [here](https://github.com/SAP/cloud-commerce-spartacus-storefront/blob/develop/docs/snapshot_builds.md)
+
+License: Apache 2
