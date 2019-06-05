@@ -15346,9 +15346,6 @@ cx-category-navigation {
   display: flex;
   flex-wrap: wrap;
 }
-.CartPageTemplate .EmptyCartMiddleContent {
-  display: none;
-}
 .CartPageTemplate .TopContent {
   --cx-flex-basis: 75%;
 }
@@ -15376,13 +15373,6 @@ cx-category-navigation {
   .CartPageTemplate .CenterRightContentSlot cx-cart-totals {
     max-width: none;
   }
-}
-.empty.CartPageTemplate .EmptyCartMiddleContent {
-  display: block;
-}
-.empty.CartPageTemplate .TopContent,
-.empty.CartPageTemplate .CenterRightContentSlot {
-  display: none;
 }
 
 .AccountPageTemplate, .LoginPageTemplate {
