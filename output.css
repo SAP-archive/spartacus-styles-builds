@@ -12486,14 +12486,14 @@ cx-navigation-ui .wrapper[attr="1"] {
 cx-navigation-ui .wrapper[attr="2"] {
   width: 400px;
 }
+cx-navigation-ui.flyout .wrapper {
+  color: #000;
+}
 @media (max-width: 991.98px) {
-  cx-navigation-ui .wrapper {
+  cx-navigation-ui.flyout .wrapper {
     height: 0;
     overflow: hidden;
   }
-}
-cx-navigation-ui.flyout .wrapper {
-  color: #000;
 }
 @media (min-width: 992px) {
   cx-navigation-ui.flyout .wrapper {
