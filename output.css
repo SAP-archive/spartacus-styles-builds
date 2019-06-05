@@ -12573,8 +12573,8 @@ cx-navigation-ui.flyout cx-generic-link a {
   }
   cx-navigation-ui.flyout > nav > h5,
 cx-navigation-ui.flyout > nav > cx-generic-link {
-    padding: 5px 25px 5px 0;
-    height: 35px;
+    padding: 5px 15px 5px 0;
+    height: 67px;
   }
   cx-navigation-ui.flyout > nav nav > h5 {
     font-size: var(--cx-font-size, 1rem);
@@ -12595,7 +12595,7 @@ cx-navigation-ui cx-icon:before {
 }
 @media (min-width: 992px) {
   cx-navigation-ui cx-icon {
-    padding: 0 0 0 10px;
+    padding: 0 0 0 7px;
   }
   cx-navigation-ui cx-icon:before {
     font-size: 1rem;
@@ -13843,7 +13843,7 @@ cx-product-references {
 
 cx-site-context-selector {
   position: relative;
-  margin: 8px;
+  margin: 14px 8px 14px 0;
 }
 @media (max-width: 991.98px) {
   cx-site-context-selector {
@@ -14295,10 +14295,10 @@ header .SiteLinks cx-link {
   padding: 0 10px 0 0;
 }
 header .SiteLogo {
-  width: 95px;
+  width: 90px;
 }
 header .SearchBox {
-  margin: 4px auto;
+  margin: 14px auto;
 }
 @media (max-width: 767.98px) {
   header .SearchBox {
@@ -14308,7 +14308,7 @@ header .SearchBox {
 header .NavigationBar {
   flex: 100%;
   overflow: hidden;
-  min-height: 35px;
+  min-height: 67px;
 }
 @media (max-width: 991.98px) {
   header .NavigationBar {
@@ -14359,7 +14359,7 @@ header .SiteLinks {
     width: 100%;
     position: absolute;
     left: 0;
-    top: 32px;
+    top: 44px;
   }
   header .SiteLinks {
     justify-content: flex-end;
@@ -15071,7 +15071,7 @@ cx-icon {
   line-height: normal;
 }
 cx-icon.small:before {
-  font-size: 1.2rem;
+  font-size: 0.9rem;
 }
 cx-icon svg {
   width: 28px;
