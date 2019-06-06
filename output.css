@@ -12497,7 +12497,7 @@ cx-navigation-ui.flyout .wrapper {
 }
 @media (min-width: 992px) {
   cx-navigation-ui.flyout .wrapper {
-    z-index: 2;
+    z-index: 3;
   }
   cx-navigation-ui.flyout > nav > .wrapper {
     padding: 15px 20px;
