@@ -8722,6 +8722,7 @@ COMPONENT VARIABLE OVERRIDES
   padding: 12px 17px 12px 17px;
   height: 48px;
   color: var(--cx-g-color-text);
+  cursor: pointer;
 }
 .page-item .page-link:hover {
   background-color: var(--cx-g-color-primary);
