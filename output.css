@@ -511,7 +511,7 @@ mark,
   content: "— ";
 }
 
-.container, .ProductDetailsPageTemplate .tab-delivery, .ProductDetailsPageTemplate .ProductDetails {
+.container, .ProductDetailsPageTemplate .tab-delivery, .ProductDetailsPageTemplate cx-page-slot.Summary {
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;
@@ -519,22 +519,22 @@ mark,
   margin-left: auto;
 }
 @media (min-width: 576px) {
-  .container, .ProductDetailsPageTemplate .tab-delivery, .ProductDetailsPageTemplate .ProductDetails {
+  .container, .ProductDetailsPageTemplate .tab-delivery, .ProductDetailsPageTemplate cx-page-slot.Summary {
     max-width: 540px;
   }
 }
 @media (min-width: 768px) {
-  .container, .ProductDetailsPageTemplate .tab-delivery, .ProductDetailsPageTemplate .ProductDetails {
+  .container, .ProductDetailsPageTemplate .tab-delivery, .ProductDetailsPageTemplate cx-page-slot.Summary {
     max-width: 720px;
   }
 }
 @media (min-width: 992px) {
-  .container, .ProductDetailsPageTemplate .tab-delivery, .ProductDetailsPageTemplate .ProductDetails {
+  .container, .ProductDetailsPageTemplate .tab-delivery, .ProductDetailsPageTemplate cx-page-slot.Summary {
     max-width: 960px;
   }
 }
 @media (min-width: 1200px) {
-  .container, .ProductDetailsPageTemplate .tab-delivery, .ProductDetailsPageTemplate .ProductDetails {
+  .container, .ProductDetailsPageTemplate .tab-delivery, .ProductDetailsPageTemplate cx-page-slot.Summary {
     max-width: 1140px;
   }
 }
@@ -11156,7 +11156,7 @@ COMPONENT VARIABLE OVERRIDES
   }
 }
 @media (max-width: 991.98px) {
-  cx-billing-address-form .container, cx-billing-address-form .ProductDetailsPageTemplate .tab-delivery, .ProductDetailsPageTemplate cx-billing-address-form .tab-delivery, cx-billing-address-form .ProductDetailsPageTemplate .ProductDetails, .ProductDetailsPageTemplate cx-billing-address-form .ProductDetails {
+  cx-billing-address-form .container, cx-billing-address-form .ProductDetailsPageTemplate .tab-delivery, .ProductDetailsPageTemplate cx-billing-address-form .tab-delivery, cx-billing-address-form .ProductDetailsPageTemplate cx-page-slot.Summary, .ProductDetailsPageTemplate cx-billing-address-form cx-page-slot.Summary {
     width: 100%;
   }
 }
@@ -11264,7 +11264,7 @@ COMPONENT VARIABLE OVERRIDES
   }
 }
 @media (max-width: 991.98px) {
-  cx-payment-method .container, cx-payment-method .ProductDetailsPageTemplate .tab-delivery, .ProductDetailsPageTemplate cx-payment-method .tab-delivery, cx-payment-method .ProductDetailsPageTemplate .ProductDetails, .ProductDetailsPageTemplate cx-payment-method .ProductDetails {
+  cx-payment-method .container, cx-payment-method .ProductDetailsPageTemplate .tab-delivery, .ProductDetailsPageTemplate cx-payment-method .tab-delivery, cx-payment-method .ProductDetailsPageTemplate cx-page-slot.Summary, .ProductDetailsPageTemplate cx-payment-method cx-page-slot.Summary {
     width: 100%;
   }
 }
@@ -11318,7 +11318,7 @@ cx-payment-method .cx-spinner {
   padding-top: 30px;
   padding-bottom: 30px;
 }
-cx-payment-method .cx-payment.container, cx-payment-method .ProductDetailsPageTemplate .cx-payment.tab-delivery, .ProductDetailsPageTemplate cx-payment-method .cx-payment.tab-delivery, cx-payment-method .ProductDetailsPageTemplate .cx-payment.ProductDetails, .ProductDetailsPageTemplate cx-payment-method .cx-payment.ProductDetails {
+cx-payment-method .cx-payment.container, cx-payment-method .ProductDetailsPageTemplate .cx-payment.tab-delivery, .ProductDetailsPageTemplate cx-payment-method .cx-payment.tab-delivery, cx-payment-method .ProductDetailsPageTemplate cx-page-slot.cx-payment.Summary, .ProductDetailsPageTemplate cx-payment-method cx-page-slot.cx-payment.Summary {
   padding: 0;
 }
 cx-payment-method .cx-payment-card {
@@ -11429,7 +11429,7 @@ COMPONENT VARIABLE OVERRIDES
   }
 }
 @media (max-width: 991.98px) {
-  cx-payment-form .container, cx-payment-form .ProductDetailsPageTemplate .tab-delivery, .ProductDetailsPageTemplate cx-payment-form .tab-delivery, cx-payment-form .ProductDetailsPageTemplate .ProductDetails, .ProductDetailsPageTemplate cx-payment-form .ProductDetails {
+  cx-payment-form .container, cx-payment-form .ProductDetailsPageTemplate .tab-delivery, .ProductDetailsPageTemplate cx-payment-form .tab-delivery, cx-payment-form .ProductDetailsPageTemplate cx-page-slot.Summary, .ProductDetailsPageTemplate cx-payment-form cx-page-slot.Summary {
     width: 100%;
   }
 }
@@ -11642,7 +11642,7 @@ cx-review-submit .cx-review-cart-item {
   }
 }
 @media (max-width: 991.98px) {
-  cx-review-submit .container, cx-review-submit .ProductDetailsPageTemplate .tab-delivery, .ProductDetailsPageTemplate cx-review-submit .tab-delivery, cx-review-submit .ProductDetailsPageTemplate .ProductDetails, .ProductDetailsPageTemplate cx-review-submit .ProductDetails {
+  cx-review-submit .container, cx-review-submit .ProductDetailsPageTemplate .tab-delivery, .ProductDetailsPageTemplate cx-review-submit .tab-delivery, cx-review-submit .ProductDetailsPageTemplate cx-page-slot.Summary, .ProductDetailsPageTemplate cx-review-submit cx-page-slot.Summary {
     width: 100%;
   }
 }
@@ -11769,7 +11769,7 @@ COMPONENT VARIABLE OVERRIDES
   }
 }
 @media (max-width: 991.98px) {
-  cx-shipping-address .container, cx-shipping-address .ProductDetailsPageTemplate .tab-delivery, .ProductDetailsPageTemplate cx-shipping-address .tab-delivery, cx-shipping-address .ProductDetailsPageTemplate .ProductDetails, .ProductDetailsPageTemplate cx-shipping-address .ProductDetails {
+  cx-shipping-address .container, cx-shipping-address .ProductDetailsPageTemplate .tab-delivery, .ProductDetailsPageTemplate cx-shipping-address .tab-delivery, cx-shipping-address .ProductDetailsPageTemplate cx-page-slot.Summary, .ProductDetailsPageTemplate cx-shipping-address cx-page-slot.Summary {
     width: 100%;
   }
 }
@@ -11885,7 +11885,7 @@ COMPONENT VARIABLE OVERRIDES
   }
 }
 @media (max-width: 991.98px) {
-  cx-address-form .container, cx-address-form .ProductDetailsPageTemplate .tab-delivery, .ProductDetailsPageTemplate cx-address-form .tab-delivery, cx-address-form .ProductDetailsPageTemplate .ProductDetails, .ProductDetailsPageTemplate cx-address-form .ProductDetails {
+  cx-address-form .container, cx-address-form .ProductDetailsPageTemplate .tab-delivery, .ProductDetailsPageTemplate cx-address-form .tab-delivery, cx-address-form .ProductDetailsPageTemplate cx-page-slot.Summary, .ProductDetailsPageTemplate cx-address-form cx-page-slot.Summary {
     width: 100%;
   }
 }
@@ -12070,7 +12070,7 @@ COMPONENT VARIABLE OVERRIDES
   }
 }
 @media (max-width: 991.98px) {
-  cx-delivery-mode .container, cx-delivery-mode .ProductDetailsPageTemplate .tab-delivery, .ProductDetailsPageTemplate cx-delivery-mode .tab-delivery, cx-delivery-mode .ProductDetailsPageTemplate .ProductDetails, .ProductDetailsPageTemplate cx-delivery-mode .ProductDetails {
+  cx-delivery-mode .container, cx-delivery-mode .ProductDetailsPageTemplate .tab-delivery, .ProductDetailsPageTemplate cx-delivery-mode .tab-delivery, cx-delivery-mode .ProductDetailsPageTemplate cx-page-slot.Summary, .ProductDetailsPageTemplate cx-delivery-mode cx-page-slot.Summary {
     width: 100%;
   }
 }
@@ -12187,14 +12187,14 @@ COMPONENT VARIABLE OVERRIDES
   $cx-storefront-background-color: "info";
 */
 @media (max-width: 991.98px) {
-  cx-order-confirmation-items .cx-order-items.container, cx-order-confirmation-items .ProductDetailsPageTemplate .cx-order-items.tab-delivery, .ProductDetailsPageTemplate cx-order-confirmation-items .cx-order-items.tab-delivery, cx-order-confirmation-items .ProductDetailsPageTemplate .cx-order-items.ProductDetails, .ProductDetailsPageTemplate cx-order-confirmation-items .cx-order-items.ProductDetails {
+  cx-order-confirmation-items .cx-order-items.container, cx-order-confirmation-items .ProductDetailsPageTemplate .cx-order-items.tab-delivery, .ProductDetailsPageTemplate cx-order-confirmation-items .cx-order-items.tab-delivery, cx-order-confirmation-items .ProductDetailsPageTemplate cx-page-slot.cx-order-items.Summary, .ProductDetailsPageTemplate cx-order-confirmation-items cx-page-slot.cx-order-items.Summary {
     max-width: var(--cx-max-width, 100%);
     min-width: var(--cx-min-width, 100%);
     padding: var(--cx-padding, 0);
   }
 }
 @media (max-width: 767.98px) {
-  cx-order-confirmation-items .cx-order-items.container, cx-order-confirmation-items .ProductDetailsPageTemplate .cx-order-items.tab-delivery, .ProductDetailsPageTemplate cx-order-confirmation-items .cx-order-items.tab-delivery, cx-order-confirmation-items .ProductDetailsPageTemplate .cx-order-items.ProductDetails, .ProductDetailsPageTemplate cx-order-confirmation-items .cx-order-items.ProductDetails {
+  cx-order-confirmation-items .cx-order-items.container, cx-order-confirmation-items .ProductDetailsPageTemplate .cx-order-items.tab-delivery, .ProductDetailsPageTemplate cx-order-confirmation-items .cx-order-items.tab-delivery, cx-order-confirmation-items .ProductDetailsPageTemplate cx-page-slot.cx-order-items.Summary, .ProductDetailsPageTemplate cx-order-confirmation-items cx-page-slot.cx-order-items.Summary {
     max-width: var(--cx-max-width, 100%);
     min-width: var(--cx-min-width, 100%);
     padding: var(--cx-padding, 0);
@@ -12281,18 +12281,18 @@ cx-order-confirmation-overview .cx-order-review-summary {
     margin: var(--cx-margin, 0.625rem 0);
   }
 }
-cx-order-confirmation-overview .cx-order-review-summary .container, cx-order-confirmation-overview .cx-order-review-summary .ProductDetailsPageTemplate .tab-delivery, .ProductDetailsPageTemplate cx-order-confirmation-overview .cx-order-review-summary .tab-delivery, cx-order-confirmation-overview .cx-order-review-summary .ProductDetailsPageTemplate .ProductDetails, .ProductDetailsPageTemplate cx-order-confirmation-overview .cx-order-review-summary .ProductDetails {
+cx-order-confirmation-overview .cx-order-review-summary .container, cx-order-confirmation-overview .cx-order-review-summary .ProductDetailsPageTemplate .tab-delivery, .ProductDetailsPageTemplate cx-order-confirmation-overview .cx-order-review-summary .tab-delivery, cx-order-confirmation-overview .cx-order-review-summary .ProductDetailsPageTemplate cx-page-slot.Summary, .ProductDetailsPageTemplate cx-order-confirmation-overview .cx-order-review-summary cx-page-slot.Summary {
   padding: var(--cx-padding, 0);
 }
 @media (max-width: 991.98px) {
-  cx-order-confirmation-overview .cx-order-review-summary .container, cx-order-confirmation-overview .cx-order-review-summary .ProductDetailsPageTemplate .tab-delivery, .ProductDetailsPageTemplate cx-order-confirmation-overview .cx-order-review-summary .tab-delivery, cx-order-confirmation-overview .cx-order-review-summary .ProductDetailsPageTemplate .ProductDetails, .ProductDetailsPageTemplate cx-order-confirmation-overview .cx-order-review-summary .ProductDetails {
+  cx-order-confirmation-overview .cx-order-review-summary .container, cx-order-confirmation-overview .cx-order-review-summary .ProductDetailsPageTemplate .tab-delivery, .ProductDetailsPageTemplate cx-order-confirmation-overview .cx-order-review-summary .tab-delivery, cx-order-confirmation-overview .cx-order-review-summary .ProductDetailsPageTemplate cx-page-slot.Summary, .ProductDetailsPageTemplate cx-order-confirmation-overview .cx-order-review-summary cx-page-slot.Summary {
     max-width: var(--cx-max-width, 100%);
     min-width: var(--cx-min-width, 100%);
     padding: var(--cx-padding, 0 1.25rem);
   }
 }
 @media (max-width: 767.98px) {
-  cx-order-confirmation-overview .cx-order-review-summary .container, cx-order-confirmation-overview .cx-order-review-summary .ProductDetailsPageTemplate .tab-delivery, .ProductDetailsPageTemplate cx-order-confirmation-overview .cx-order-review-summary .tab-delivery, cx-order-confirmation-overview .cx-order-review-summary .ProductDetailsPageTemplate .ProductDetails, .ProductDetailsPageTemplate cx-order-confirmation-overview .cx-order-review-summary .ProductDetails {
+  cx-order-confirmation-overview .cx-order-review-summary .container, cx-order-confirmation-overview .cx-order-review-summary .ProductDetailsPageTemplate .tab-delivery, .ProductDetailsPageTemplate cx-order-confirmation-overview .cx-order-review-summary .tab-delivery, cx-order-confirmation-overview .cx-order-review-summary .ProductDetailsPageTemplate cx-page-slot.Summary, .ProductDetailsPageTemplate cx-order-confirmation-overview .cx-order-review-summary cx-page-slot.Summary {
     padding: var(--cx-padding, 1.25rem);
   }
 }
@@ -12389,14 +12389,14 @@ cx-order-confirmation-totals .cx-order-summary {
   padding-right: var(--cx-padding, 0);
 }
 @media (max-width: 991.98px) {
-  cx-order-confirmation-totals .cx-order-summary.container, cx-order-confirmation-totals .ProductDetailsPageTemplate .cx-order-summary.tab-delivery, .ProductDetailsPageTemplate cx-order-confirmation-totals .cx-order-summary.tab-delivery, cx-order-confirmation-totals .ProductDetailsPageTemplate .cx-order-summary.ProductDetails, .ProductDetailsPageTemplate cx-order-confirmation-totals .cx-order-summary.ProductDetails {
+  cx-order-confirmation-totals .cx-order-summary.container, cx-order-confirmation-totals .ProductDetailsPageTemplate .cx-order-summary.tab-delivery, .ProductDetailsPageTemplate cx-order-confirmation-totals .cx-order-summary.tab-delivery, cx-order-confirmation-totals .ProductDetailsPageTemplate cx-page-slot.cx-order-summary.Summary, .ProductDetailsPageTemplate cx-order-confirmation-totals cx-page-slot.cx-order-summary.Summary {
     max-width: var(--cx-max-width, 100%);
     min-width: var(--cx-min-width, 100%);
     padding-right: var(--cx-padding, 1.625rem);
   }
 }
 @media (max-width: 767.98px) {
-  cx-order-confirmation-totals .cx-order-summary.container, cx-order-confirmation-totals .ProductDetailsPageTemplate .cx-order-summary.tab-delivery, .ProductDetailsPageTemplate cx-order-confirmation-totals .cx-order-summary.tab-delivery, cx-order-confirmation-totals .ProductDetailsPageTemplate .cx-order-summary.ProductDetails, .ProductDetailsPageTemplate cx-order-confirmation-totals .cx-order-summary.ProductDetails {
+  cx-order-confirmation-totals .cx-order-summary.container, cx-order-confirmation-totals .ProductDetailsPageTemplate .cx-order-summary.tab-delivery, .ProductDetailsPageTemplate cx-order-confirmation-totals .cx-order-summary.tab-delivery, cx-order-confirmation-totals .ProductDetailsPageTemplate cx-page-slot.cx-order-summary.Summary, .ProductDetailsPageTemplate cx-order-confirmation-totals cx-page-slot.cx-order-summary.Summary {
     padding: var(--cx-padding, 0);
   }
 }
@@ -12783,7 +12783,7 @@ cx-tab-paragraph-container > div {
 cx-tab-paragraph-container > div:not(.active) {
   display: none;
 }
-cx-tab-paragraph-container > div .container > h2, cx-tab-paragraph-container > div .ProductDetailsPageTemplate .tab-delivery > h2, .ProductDetailsPageTemplate cx-tab-paragraph-container > div .tab-delivery > h2, cx-tab-paragraph-container > div .ProductDetailsPageTemplate .ProductDetails > h2, .ProductDetailsPageTemplate cx-tab-paragraph-container > div .ProductDetails > h2 {
+cx-tab-paragraph-container > div .container > h2, cx-tab-paragraph-container > div .ProductDetailsPageTemplate .tab-delivery > h2, .ProductDetailsPageTemplate cx-tab-paragraph-container > div .tab-delivery > h2, cx-tab-paragraph-container > div .ProductDetailsPageTemplate cx-page-slot.Summary > h2, .ProductDetailsPageTemplate cx-tab-paragraph-container > div cx-page-slot.Summary > h2 {
   display: none;
 }
 cx-tab-paragraph-container > h3 {
@@ -13545,43 +13545,19 @@ cx-product-images .thumbs cx-media.is-loading:before, cx-product-images .thumbs 
 }
 
 cx-product-summary {
-  display: grid;
-  grid-column-gap: 30px;
-  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 0;
 }
 @media (max-width: 991.98px) {
   cx-product-summary {
     padding-top: 1.5em;
   }
 }
-@media (max-width: 1199.98px) {
+@media (min-width: 992px) {
   cx-product-summary {
-    padding: 20px;
-    grid-template-rows: repeat(7, auto) 1fr;
+    padding: 20px 20px 0 20px;
   }
-}
-cx-product-summary .name {
-  font-size: var(--cx-font-size, 1.85rem);
-  font-weight: var(--cx-g-font-weight-normal);
-  line-height: var(--cx-line-height, 1.2222222222);
-}
-cx-product-summary .code {
-  font-size: var(--cx-font-size, 0.875rem);
-  font-weight: var(--cx-g-font-weight-normal);
-  line-height: var(--cx-line-height, 1.2222222222);
-  color: var(--cx-g-color-secondary);
-  margin: 0 0 20px 0;
-}
-cx-product-summary .rating {
-  display: flex;
-  flex-direction: row;
-  align-items: baseline;
-}
-cx-product-summary .rating .count {
-  margin: 0 20px 0 5px;
-}
-cx-product-summary .rating cx-star-rating {
-  padding: 0 0 15px 0;
 }
 cx-product-summary .price {
   display: inline-block;
@@ -13678,6 +13654,30 @@ cx-product-reviews .review .text {
 cx-product-reviews .review .name,
 cx-product-reviews .review .date {
   text-align: right;
+}
+
+@media (min-width: 992px) {
+  cx-product-intro {
+    padding: 20px 20px 0 20px;
+  }
+}
+cx-product-intro .code {
+  font-size: var(--cx-font-size, 0.875rem);
+  font-weight: var(--cx-g-font-weight-normal);
+  line-height: var(--cx-line-height, 1.2222222222);
+  color: var(--cx-g-color-secondary);
+  margin: 0 0 20px 0;
+}
+cx-product-intro .rating {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+}
+cx-product-intro .rating .count {
+  margin: 0 20px 0 5px;
+}
+cx-product-intro .rating cx-star-rating {
+  padding: 0 0 15px 0;
 }
 
 cx-product-references {
@@ -14471,7 +14471,7 @@ cx-store-finder .cx-store-finder-wrapper {
   padding: 3% 0 0;
 }
 
-cx-store-finder-grid > .container, .ProductDetailsPageTemplate cx-store-finder-grid > .tab-delivery, .ProductDetailsPageTemplate cx-store-finder-grid > .ProductDetails {
+cx-store-finder-grid > .container, .ProductDetailsPageTemplate cx-store-finder-grid > .tab-delivery, .ProductDetailsPageTemplate cx-store-finder-grid > cx-page-slot.Summary {
   border-style: solid;
   border-width: 1px 0 0 0;
   border-color: var(--cx-g-color-light);
@@ -15238,23 +15238,42 @@ cx-category-navigation {
 .ProductDetailsPageTemplate {
   padding: var(--cx-padding, 2.5rem 0 0);
 }
-.ProductDetailsPageTemplate .ProductDetails {
+.ProductDetailsPageTemplate cx-page-slot.Summary {
   margin-bottom: 40px;
 }
 @media (min-width: 992px) {
-  .ProductDetailsPageTemplate .ProductDetails cx-product-images {
-    flex: 1 1 50%;
-    max-width: 50%;
+  .ProductDetailsPageTemplate cx-page-slot.Summary {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(2, auto) 1fr;
+    grid-column-gap: 20px;
+    grid-row-gap: 0px;
   }
-  .ProductDetailsPageTemplate .ProductDetails cx-product-details {
-    flex: 1 1 50%;
+  .ProductDetailsPageTemplate cx-page-slot.Summary cx-product-images {
+    grid-column: 1;
+    grid-row: 1/span 3;
   }
+  .ProductDetailsPageTemplate cx-page-slot.Summary cx-product-intro {
+    grid-column: 2;
+    grid-row: 1/2;
+  }
+  .ProductDetailsPageTemplate cx-page-slot.Summary cx-product-summary {
+    grid-column: 2;
+    grid-row: 2/3;
+  }
+  .ProductDetailsPageTemplate cx-page-slot.Summary cx-add-to-cart {
+    grid-column: 2;
+    grid-row: 3/4;
+    padding: 0 20px 20px 20px;
+  }
+}
+.ProductDetailsPageTemplate cx-page-slot.AddToCart {
+  max-width: 50%;
 }
 .ProductDetailsPageTemplate cx-page-slot.UpSelling, .ProductDetailsPageTemplate cx-page-slot.CrossSelling {
   max-width: 1140px;
   margin: auto;
 }
-
 .ProductListPageTemplate {
   max-width: 1140px;
   margin: auto;
