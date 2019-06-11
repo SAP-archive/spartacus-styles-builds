@@ -12706,8 +12706,11 @@ cx-category-navigation cx-navigation-ui > nav > cx-generic-link {
 }
 
 cx-footer-navigation a {
-  text-decoration: underline;
   font-size: var(--cx-g-font-small, 0.8rem);
+}
+cx-footer-navigation a:hover {
+  color: var(--cx-g-color-inverse);
+  text-decoration: underline;
 }
 cx-footer-navigation cx-navigation-ui h5 {
   text-transform: uppercase;
