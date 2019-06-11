@@ -13658,6 +13658,11 @@ cx-product-reviews .review .name,
 cx-product-reviews .review .date {
   text-align: right;
 }
+@media (max-width: 991.98px) {
+  cx-product-reviews .btn-secondary {
+    margin: 0 0 1rem;
+  }
+}
 
 @media (min-width: 992px) {
   cx-product-intro {
