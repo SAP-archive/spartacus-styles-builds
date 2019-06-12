@@ -13717,37 +13717,55 @@ cx-carousel > h3 {
     margin-bottom: 3rem;
   }
 }
-cx-carousel .cx-carousel {
+cx-carousel .carousel-panel {
   display: flex;
   justify-content: space-between;
 }
-cx-carousel .cx-carousel.size-1 .product {
-  flex: 0 0 100%;
+cx-carousel .carousel-panel.size-1 .product {
+  flex: 0 0 calc((100 / 1) * 1%);
 }
-cx-carousel .cx-carousel.size-2 .product {
-  flex: 0 0 50%;
+cx-carousel .carousel-panel.size-2 .product {
+  flex: 0 0 calc((100 / 2) * 1%);
 }
-cx-carousel .cx-carousel.size-3 .product {
-  flex: 0 0 33%;
+cx-carousel .carousel-panel.size-3 .product {
+  flex: 0 0 calc((100 / 3) * 1%);
 }
-cx-carousel .cx-carousel.size-4 .product {
-  flex: 0 0 25%;
+cx-carousel .carousel-panel.size-4 .product {
+  flex: 0 0 calc((100 / 4) * 1%);
 }
-cx-carousel .cx-carousel .groups {
+cx-carousel .carousel-panel.size-5 .product {
+  flex: 0 0 calc((100 / 5) * 1%);
+}
+cx-carousel .carousel-panel.size-6 .product {
+  flex: 0 0 calc((100 / 6) * 1%);
+}
+cx-carousel .carousel-panel.size-7 .product {
+  flex: 0 0 calc((100 / 7) * 1%);
+}
+cx-carousel .carousel-panel.size-8 .product {
+  flex: 0 0 calc((100 / 8) * 1%);
+}
+cx-carousel .carousel-panel.size-9 .product {
+  flex: 0 0 calc((100 / 9) * 1%);
+}
+cx-carousel .carousel-panel.size-10 .product {
+  flex: 0 0 calc((100 / 10) * 1%);
+}
+cx-carousel .carousel-panel .groups {
   flex: auto;
   position: relative;
 }
-cx-carousel .cx-carousel .groups .group {
+cx-carousel .carousel-panel .groups .group {
   transition: 0.6s all;
   width: 100%;
   display: flex;
   flex-wrap: nowrap;
   justify-content: flex-start;
 }
-cx-carousel .cx-carousel .groups .group:not(:last-child) {
+cx-carousel .carousel-panel .groups .group:not(:last-child) {
   position: absolute;
 }
-cx-carousel .cx-carousel .groups .group .product {
+cx-carousel .carousel-panel .groups .group .product {
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -13758,39 +13776,39 @@ cx-carousel .cx-carousel .groups .group .product {
   z-index: -1;
   transition: 0.6s all;
 }
-cx-carousel .cx-carousel .groups .group .product cx-media {
+cx-carousel .carousel-panel .groups .group .product cx-media {
   height: 20vmin;
 }
-cx-carousel .cx-carousel .groups .group .product cx-media.is-missing {
+cx-carousel .carousel-panel .groups .group .product cx-media.is-missing {
   min-height: 20vmin;
   background-size: 20vmin;
 }
-cx-carousel .cx-carousel .groups .group .product.active {
+cx-carousel .carousel-panel .groups .group .product.active {
   opacity: 1;
   z-index: 1;
 }
-cx-carousel .cx-carousel .groups .group .product:nth-child(1) {
+cx-carousel .carousel-panel .groups .group .product:nth-child(1) {
   transition-delay: calc(var(--cx-speed, 1) * 0.25s);
 }
-cx-carousel .cx-carousel .groups .group .product:nth-child(2) {
+cx-carousel .carousel-panel .groups .group .product:nth-child(2) {
   transition-delay: calc(var(--cx-speed, 1) * 0.5s);
 }
-cx-carousel .cx-carousel .groups .group .product:nth-child(3) {
+cx-carousel .carousel-panel .groups .group .product:nth-child(3) {
   transition-delay: calc(var(--cx-speed, 1) * 0.75s);
 }
-cx-carousel .cx-carousel .groups .group .product:nth-child(4) {
+cx-carousel .carousel-panel .groups .group .product:nth-child(4) {
   transition-delay: calc(var(--cx-speed, 1) * 1s);
 }
-cx-carousel .cx-carousel .groups .group .product h4 {
+cx-carousel .carousel-panel .groups .group .product h4 {
   font-size: 0.9rem;
   height: 30px;
   font-weight: bold;
   margin-top: 5px;
 }
-cx-carousel .cx-carousel .groups .group .product:hover {
+cx-carousel .carousel-panel .groups .group .product:hover {
   text-decoration: none;
 }
-cx-carousel .cx-carousel .groups .group .product:hover h4 {
+cx-carousel .carousel-panel .groups .group .product:hover h4 {
   color: var(--cx-g-color-primary);
 }
 cx-carousel button {
