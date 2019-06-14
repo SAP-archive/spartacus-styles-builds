@@ -10651,6 +10651,7 @@ cx-cart-item .cx-name {
   line-height: var(--cx-line-height, 1.2222222222);
   overflow-wrap: break-word;
   padding: 0;
+  min-width: 17rem;
 }
 cx-cart-item .cx-name .cx-link {
   color: var(--cx-g-color-text);
