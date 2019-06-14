@@ -10260,18 +10260,6 @@ cx-product-images cx-media:after {
   transition: all var(--cx-g-transition-duration, 0.6s);
 }
 
-cx-product-images .thumbs cx-media.is-initialized:before {
-  content: "";
-  position: absolute;
-  z-index: 1;
-  width: 100%;
-  height: 100%;
-  margin: calc(-1 * var(--cx-margin, 0.5vw));
-  background-color: rgba(54, 54, 53, 0.7);
-  opacity: var(--cx-opacity, 0);
-  transition: all var(--cx-g-transition-duration, 0.6s);
-}
-
 /**
   * We use the hamburgers from https://github.com/jonsuh/hamburgers
   * In order to allow for custom hamburgers, we use the `cx-hamburger`
@@ -13631,39 +13619,19 @@ cx-product-images cx-media.is-loading:after {
 cx-product-images cx-media.is-waiting:after {
   --cx-opacity: 1;
 }
-cx-product-images .thumbs {
-  display: flex;
-  justify-content: flex-start;
-}
-cx-product-images .thumbs.hidden {
-  display: none;
-}
-cx-product-images .thumbs cx-media {
-  width: 75px;
-  height: 75px;
-  transition: all var(--cx-g-transition-duration);
-  overflow: hidden;
-  position: relative;
-  border: 2px solid var(--cx-g-color-light);
-  margin: 0.5vw;
-  padding: 0.5vw;
+cx-product-images .thumbs a {
   outline: none;
 }
-cx-product-images .thumbs cx-media.is-missing {
-  min-height: 75px;
-  background-size: 75px;
+cx-product-images .thumbs cx-media {
+  margin: 0.5vw;
+  padding: 0.5vw;
+  border: 2px solid var(--cx-g-color-light);
 }
-cx-product-images .thumbs cx-media:not(.active) {
-  cursor: pointer;
-}
-cx-product-images .thumbs cx-media:hover, cx-product-images .thumbs cx-media.active {
+cx-product-images .thumbs cx-media:hover {
   border-color: var(--cx-g-color-primary);
 }
-cx-product-images .thumbs cx-media:hover:not(.active) {
-  --cx-zoom: 1.3;
-}
-cx-product-images .thumbs cx-media.is-loading:before, cx-product-images .thumbs cx-media.is-waiting:before {
-  --cx-opacity: 1;
+cx-product-images .thumbs .activeItem cx-media {
+  border-color: var(--cx-g-color-primary);
 }
 
 cx-product-summary {
@@ -13809,6 +13777,21 @@ cx-product-intro .rating cx-star-rating {
 cx-product-references {
   padding-bottom: 50px;
 }
+cx-product-references cx-media {
+  height: 20vmin;
+}
+cx-product-references cx-media.is-missing {
+  min-height: 20vmin;
+  background-size: 20vmin;
+}
+
+cx-product-carousel cx-media {
+  height: 20vmin;
+}
+cx-product-carousel cx-media.is-missing {
+  min-height: 20vmin;
+  background-size: 20vmin;
+}
 
 cx-carousel {
   display: flex;
@@ -13839,34 +13822,34 @@ cx-carousel .carousel-panel {
   display: flex;
   justify-content: space-between;
 }
-cx-carousel .carousel-panel.size-1 .product {
+cx-carousel .carousel-panel.size-1 .item {
   flex: 0 0 calc((100 / 1) * 1%);
 }
-cx-carousel .carousel-panel.size-2 .product {
+cx-carousel .carousel-panel.size-2 .item {
   flex: 0 0 calc((100 / 2) * 1%);
 }
-cx-carousel .carousel-panel.size-3 .product {
+cx-carousel .carousel-panel.size-3 .item {
   flex: 0 0 calc((100 / 3) * 1%);
 }
-cx-carousel .carousel-panel.size-4 .product {
+cx-carousel .carousel-panel.size-4 .item {
   flex: 0 0 calc((100 / 4) * 1%);
 }
-cx-carousel .carousel-panel.size-5 .product {
+cx-carousel .carousel-panel.size-5 .item {
   flex: 0 0 calc((100 / 5) * 1%);
 }
-cx-carousel .carousel-panel.size-6 .product {
+cx-carousel .carousel-panel.size-6 .item {
   flex: 0 0 calc((100 / 6) * 1%);
 }
-cx-carousel .carousel-panel.size-7 .product {
+cx-carousel .carousel-panel.size-7 .item {
   flex: 0 0 calc((100 / 7) * 1%);
 }
-cx-carousel .carousel-panel.size-8 .product {
+cx-carousel .carousel-panel.size-8 .item {
   flex: 0 0 calc((100 / 8) * 1%);
 }
-cx-carousel .carousel-panel.size-9 .product {
+cx-carousel .carousel-panel.size-9 .item {
   flex: 0 0 calc((100 / 9) * 1%);
 }
-cx-carousel .carousel-panel.size-10 .product {
+cx-carousel .carousel-panel.size-10 .item {
   flex: 0 0 calc((100 / 10) * 1%);
 }
 cx-carousel .carousel-panel .groups {
@@ -13883,50 +13866,48 @@ cx-carousel .carousel-panel .groups .group {
 cx-carousel .carousel-panel .groups .group:not(:last-child) {
   position: absolute;
 }
-cx-carousel .carousel-panel .groups .group .product {
+cx-carousel .carousel-panel .groups .group .item {
   display: flex;
   flex-direction: column;
   text-align: center;
   justify-content: space-between;
   padding-bottom: 10px;
   color: var(--cx-g-color-text);
+  cursor: pointer;
   opacity: 0;
   z-index: -1;
-  transition: 0.6s all;
+  transition: 0.4s all;
 }
-cx-carousel .carousel-panel .groups .group .product cx-media {
-  height: 20vmin;
-}
-cx-carousel .carousel-panel .groups .group .product cx-media.is-missing {
+cx-carousel .carousel-panel .groups .group .item cx-media.is-missing {
   min-height: 20vmin;
   background-size: 20vmin;
 }
-cx-carousel .carousel-panel .groups .group .product.active {
+cx-carousel .carousel-panel .groups .group .item.active {
   opacity: 1;
   z-index: 1;
 }
-cx-carousel .carousel-panel .groups .group .product:nth-child(1) {
+cx-carousel .carousel-panel .groups .group .item:nth-child(1) {
   transition-delay: calc(var(--cx-speed, 1) * 0.25s);
 }
-cx-carousel .carousel-panel .groups .group .product:nth-child(2) {
+cx-carousel .carousel-panel .groups .group .item:nth-child(2) {
   transition-delay: calc(var(--cx-speed, 1) * 0.5s);
 }
-cx-carousel .carousel-panel .groups .group .product:nth-child(3) {
+cx-carousel .carousel-panel .groups .group .item:nth-child(3) {
   transition-delay: calc(var(--cx-speed, 1) * 0.75s);
 }
-cx-carousel .carousel-panel .groups .group .product:nth-child(4) {
+cx-carousel .carousel-panel .groups .group .item:nth-child(4) {
   transition-delay: calc(var(--cx-speed, 1) * 1s);
 }
-cx-carousel .carousel-panel .groups .group .product h4 {
+cx-carousel .carousel-panel .groups .group .item h4 {
   font-size: 0.9rem;
   height: 30px;
   font-weight: bold;
   margin-top: 5px;
 }
-cx-carousel .carousel-panel .groups .group .product:hover {
+cx-carousel .carousel-panel .groups .group .item:hover {
   text-decoration: none;
 }
-cx-carousel .carousel-panel .groups .group .product:hover h4 {
+cx-carousel .carousel-panel .groups .group .item:hover h4 {
   color: var(--cx-g-color-primary);
 }
 cx-carousel button {
