@@ -15105,36 +15105,34 @@ cx-star-rating:not([disabled=true]) {
 }
 cx-star-rating .star {
   font-size: 20px;
-}
-cx-star-rating .star:before {
   margin: 0 2.5px;
 }
 cx-star-rating .star:nth-child(1) {
-  background: linear-gradient(90deg, var(--cx-color-primary) calc((var(--star-fill) - 1 + 1) * 100%), var(--cx-color-light) calc((var(--star-fill) - 1 + 1) * 100%));
+  background: linear-gradient(90deg, var(--cx-color-primary) 0%, var(--cx-color-primary) calc((var(--star-fill) - 1 + 1) * 100%), var(--cx-color-light) calc((var(--star-fill) - 1 + 1) * 100%));
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 cx-star-rating .star:nth-child(2) {
-  background: linear-gradient(90deg, var(--cx-color-primary) calc((var(--star-fill) - 2 + 1) * 100%), var(--cx-color-light) calc((var(--star-fill) - 2 + 1) * 100%));
+  background: linear-gradient(90deg, var(--cx-color-primary) 0%, var(--cx-color-primary) calc((var(--star-fill) - 2 + 1) * 100%), var(--cx-color-light) calc((var(--star-fill) - 2 + 1) * 100%));
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 cx-star-rating .star:nth-child(3) {
-  background: linear-gradient(90deg, var(--cx-color-primary) calc((var(--star-fill) - 3 + 1) * 100%), var(--cx-color-light) calc((var(--star-fill) - 3 + 1) * 100%));
+  background: linear-gradient(90deg, var(--cx-color-primary) 0%, var(--cx-color-primary) calc((var(--star-fill) - 3 + 1) * 100%), var(--cx-color-light) calc((var(--star-fill) - 3 + 1) * 100%));
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 cx-star-rating .star:nth-child(4) {
-  background: linear-gradient(90deg, var(--cx-color-primary) calc((var(--star-fill) - 4 + 1) * 100%), var(--cx-color-light) calc((var(--star-fill) - 4 + 1) * 100%));
+  background: linear-gradient(90deg, var(--cx-color-primary) 0%, var(--cx-color-primary) calc((var(--star-fill) - 4 + 1) * 100%), var(--cx-color-light) calc((var(--star-fill) - 4 + 1) * 100%));
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 cx-star-rating .star:nth-child(5) {
-  background: linear-gradient(90deg, var(--cx-color-primary) calc((var(--star-fill) - 5 + 1) * 100%), var(--cx-color-light) calc((var(--star-fill) - 5 + 1) * 100%));
+  background: linear-gradient(90deg, var(--cx-color-primary) 0%, var(--cx-color-primary) calc((var(--star-fill) - 5 + 1) * 100%), var(--cx-color-light) calc((var(--star-fill) - 5 + 1) * 100%));
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
