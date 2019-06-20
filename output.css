@@ -10492,6 +10492,7 @@ cx-added-to-cart-dialog .cx-dialog-body {
 @media (max-width: 767.98px) {
   cx-added-to-cart-dialog .cx-dialog-body {
     padding: 0;
+    background-color: var(--cx-g-color-inverse);
   }
 }
 cx-added-to-cart-dialog .cx-dialog-body cx-media.is-missing {
@@ -10797,7 +10798,7 @@ cx-cart-item .cx-compact .cx-quantity,
 cx-cart-item .cx-compact .cx-total,
 cx-cart-item .cx-compact .cx-actions {
   justify-content: flex-start;
-  padding: 0;
+  padding: 0 0 10px 0;
 }
 cx-cart-item .cx-compact .cx-price .cx-label,
 cx-cart-item .cx-compact .cx-quantity .cx-label,
