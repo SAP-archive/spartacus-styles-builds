@@ -10494,6 +10494,10 @@ cx-added-to-cart-dialog .cx-dialog-body {
     padding: 0;
   }
 }
+cx-added-to-cart-dialog .cx-dialog-body cx-media.is-missing {
+  min-width: 100%;
+  background-size: 85px;
+}
 cx-added-to-cart-dialog .cx-dialog-row {
   margin: 0;
   display: flex;
@@ -10644,6 +10648,9 @@ COMPONENT VARIABLE OVERRIDES
     display: flex;
     flex-direction: column;
   }
+}
+cx-cart-item cx-media.is-missing {
+  min-width: 96px;
 }
 cx-cart-item .cx-name {
   font-size: var(--cx-font-size, 1rem);
