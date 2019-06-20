@@ -6727,11 +6727,11 @@ button.link:disabled {
   -webkit-filter: brightness(calc(88 / 100));
   filter: brightness(calc(88 / 100));
 }
-.btn-primary.disabled {
+.btn-primary.disabled, .btn-primary:disabled {
   background-color: var(--cx-color-primary);
   border-color: var(--cx-color-primary);
 }
-.btn-primary.disabled:hover {
+.btn-primary.disabled:hover, .btn-primary:disabled:hover {
   border-color: var(--cx-color-primary);
   -webkit-filter: brightness(calc(100 / 100));
   filter: brightness(calc(100 / 100));
@@ -6764,11 +6764,11 @@ button.link:disabled {
   -webkit-filter: brightness(calc(84 / 100));
   filter: brightness(calc(84 / 100));
 }
-.btn-secondary.disabled {
+.btn-secondary.disabled, .btn-secondary:disabled {
   background-color: var(--cx-color-secondary);
   border-color: var(--cx-color-secondary);
 }
-.btn-secondary.disabled:hover {
+.btn-secondary.disabled:hover, .btn-secondary:disabled:hover {
   border-color: var(--cx-color-secondary);
   -webkit-filter: brightness(calc(100 / 100));
   filter: brightness(calc(100 / 100));
@@ -13215,6 +13215,9 @@ cx-product-list .cx-sorting.bottom {
 cx-product-list .cx-pagination {
   display: inline-block;
   vertical-align: top;
+}
+cx-product-list .cx-pagination .page-link:hover {
+  color: var(--cx-color-inverse);
 }
 cx-product-list .cx-sort-dropdown {
   height: 48px;
