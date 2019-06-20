@@ -12939,10 +12939,10 @@ cx-tab-paragraph-container > h3:not(.active):hover:after {
 }
 
 cx-global-message {
-  position: var(--cx-position, sticky);
-  display: var(--cx-display, block);
-  top: var(--cx-top, 0);
-  z-index: var(--cx-z-index, 2);
+  position: sticky;
+  display: block;
+  top: 0;
+  z-index: 2;
 }
 
 /* IMPORTANT: If no there's no theme for any reason,
@@ -13956,6 +13956,45 @@ cx-carousel .next:not(:disabled):hover {
   color: var(--cx-color-primary);
 }
 
+cx-card .cx-card-border {
+  border: 1px solid var(--cx-color-light);
+}
+cx-card .cx-card-container {
+  display: flex;
+}
+cx-card .cx-card-label-container {
+  flex-grow: 2;
+}
+cx-card .cx-card-fit-to-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+cx-card .cx-card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+cx-card .cx-card-delete {
+  background-color: var(--cx-color-background);
+}
+cx-card .cx-card-body-delete {
+  padding: 1rem 0 0 0;
+}
+cx-card .cx-card-delete-msg {
+  color: var(--cx-color-danger);
+  padding: 0 0 1.25rem 0;
+}
+cx-card .cx-card-actions {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1.25rem 0 0 0;
+}
+cx-card .cx-card-link {
+  padding: 0 0 0 1rem;
+}
+
 cx-site-context-selector {
   position: relative;
   margin: 14px 8px 14px 0;
@@ -14345,6 +14384,83 @@ cx-close-account .cx-btn-group button:first-child {
 }
 cx-close-account ul {
   padding-left: 20px;
+}
+
+/* IMPORTANT: If no there's no theme for any reason,
+  then fallback to the cxbase defaults */
+/*!
+  SPARTA v0.1
+  This file is for theme configuration. These variables are used in global and component CSS files.
+
+  You can:
+    1) Set new values for Bootstrap variables - https://github.com/twbs/bootstrap/blob/v4-dev/scss/_variables.scss
+    2) Set new values for cxbase variables - cxbase/_variables.scss
+    3) Set new values for component variables - app/__/_.scss
+  You cannot:
+    1) Add new variables
+*/
+/*!
+  CXBASE VARIABLES
+  This is NOT a theme.
+
+  This file should include ONLY new variables that Bootstrap does not provide.
+  For example, Bootstrap does not have a variable for semi font weight.
+
+  Same case for directionality.
+
+  Also be aware of items that should be configurable.
+  The Sparta buttons use uppercase type but future themes may want normal case
+  so a variable was created to make this available for other themes.
+
+*/
+/*
+GLOBAL VARIABLE OVERRIDES
+  These can be set with anything above or any variables exposed in Bootsrap or cxbase
+*/
+/*
+COMPONENT VARIABLE OVERRIDES
+  For example, the following would override the cx-storefront background set in src/app/ui/layout/main/main.component.scss
+  $cx-storefront-background-color: "info";
+*/
+cx-close-account-modal {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+cx-close-account-modal .cx-dialog-header {
+  padding: 2rem 1.75rem 0.85rem;
+  border-width: 0;
+}
+cx-close-account-modal h3 {
+  font-weight: var(--cx-font-weight-semi);
+}
+cx-close-account-modal .cx-row {
+  display: flex;
+}
+cx-close-account-modal .cx-confirmation {
+  margin: 0 0 3em 0;
+}
+cx-close-account-modal .cx-btn-group {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+cx-close-account-modal .cx-btn-group button:first-child {
+  margin: 0 0 1em 0;
+}
+@media (max-width: 767.98px) {
+  cx-close-account-modal .modal-body {
+    top: -85px;
+    flex: none;
+    margin: auto 0;
+  }
+}
+
+cx-forgot-password button {
+  margin: 30px 0 0;
+}
+cx-forgot-password a {
+  margin: 20px 0 0;
 }
 
 header {
