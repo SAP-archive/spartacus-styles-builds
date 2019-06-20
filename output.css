@@ -10780,6 +10780,10 @@ cx-cart-item .cx-actions button.link {
   line-height: var(--cx-line-height, 1.2222222222);
   color: var(--cx-color-text);
   border-width: 0;
+  text-decoration: none;
+}
+cx-cart-item .cx-actions button.link:hover {
+  text-decoration: underline;
 }
 cx-cart-item .cx-compact {
   display: flex;
