@@ -1,0 +1,47 @@
+//Functions and mixins
+@import 'functions';
+@import 'mixins';
+//Bring in the theme
+@import 'theme';
+//Fonts must be added separate from the theme
+@import 'fonts';
+
+//Bootsrap modules (these are things we are NOT changing at all)
+@import '~bootstrap/scss/reboot';
+@import '~bootstrap/scss/type';
+@import '~bootstrap/scss/grid';
+@import '~bootstrap/scss/utilities';
+@import '~bootstrap/scss/transitions';
+@import '~bootstrap/scss/dropdown';
+@import '~bootstrap/scss/card';
+@import '~bootstrap/scss/nav';
+
+@import '~@ng-select/ng-select/themes/default.theme.css';
+//bootsrap enhancements (these are things we ARE changing)
+@import 'cxbase/blocks/buttons';
+@import 'cxbase/blocks/forms';
+@import 'cxbase/blocks/modal';
+@import 'cxbase/blocks/alert';
+@import 'cxbase/blocks/tooltip';
+@import 'cxbase/blocks/pagination';
+@import 'cxbase/blocks/tables';
+@import 'cxbase/blocks/card';
+@import 'cxbase/blocks/accordion';
+@import 'cxbase/blocks/tabs';
+@import 'cxbase/blocks/carousel';
+@import 'cxbase/blocks/link';
+@import 'cxbase/blocks/dropdown';
+//layout
+@import 'cxbase/layout/app';
+@import 'cxbase/layout/page';
+@import 'cxbase/layout/section';
+@import 'cxbase/layout/container';
+//non-bootstrap blocks and components here below
+
+// effects & animations
+@import 'cxbase/animations';
+
+@import 'misc/hamburger';
+
+// components
+@import './sparta-theme';

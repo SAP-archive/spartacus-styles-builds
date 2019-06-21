@@ -1,0 +1,13 @@
+a {
+  color: var(--cx-color-primary);
+
+  &:hover {
+    color: var(--cx-color-primary);
+  }
+
+  &.disabled {
+    pointer-events: var(--cx-pointer-event, none !important);
+    cursor: var(--cx-cursor, not-allowed !important);
+    opacity: 0.8;
+  }
+}
