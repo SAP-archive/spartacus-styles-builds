@@ -12741,13 +12741,17 @@ cx-navigation-ui nav {
   cx-navigation-ui.flyout > nav > .wrapper {
     position: absolute;
     visibility: hidden;
+    overflow: hidden;
     opacity: 0;
     margin-left: -10px;
     border: 1px solid #ccc;
+    width: 0;
   }
   cx-navigation-ui.flyout > nav:hover > .wrapper, cx-navigation-ui.flyout > nav:focus > .wrapper {
     opacity: 1;
     visibility: visible;
+    overflow: visible;
+    width: auto;
   }
   cx-navigation-ui.flyout .childs {
     display: flex;
@@ -12759,7 +12763,10 @@ cx-navigation-ui nav {
     display: none;
   }
   cx-navigation-ui.flyout > nav > .wrapper {
-    transition: all 0.4s;
+    transition: opacity 0.4s;
+  }
+  cx-navigation-ui.flyout > nav:last-child {
+    overflow: hidden;
   }
 }
 
