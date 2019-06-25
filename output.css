@@ -12568,12 +12568,6 @@ cx-navigation-ui.flyout h5:hover,
 cx-navigation-ui.flyout cx-generic-link:hover {
   color: var(--cx-color-primary);
 }
-@media (min-width: 992px) {
-  cx-navigation-ui.flyout h5,
-cx-navigation-ui.flyout cx-generic-link {
-    padding: 5px 0;
-  }
-}
 @media (max-width: 991.98px) {
   cx-navigation-ui.flyout > nav > h5,
 cx-navigation-ui.flyout > nav > cx-generic-link {
@@ -12601,10 +12595,9 @@ cx-navigation-ui.flyout cx-generic-link a {
   cx-navigation-ui.flyout > nav {
     cursor: pointer;
   }
-  cx-navigation-ui.flyout > nav > h5,
-cx-navigation-ui.flyout > nav > cx-generic-link {
-    padding: 5px 15px 5px 0;
-    height: 67px;
+  cx-navigation-ui.flyout > nav > h5 {
+    margin-top: 3px;
+    padding: 20px 15px 25px 0;
   }
   cx-navigation-ui.flyout > nav nav > h5 {
     font-size: var(--cx-font-size, 1rem);
@@ -12620,6 +12613,19 @@ cx-navigation-ui cx-generic-link.all {
   text-decoration: underline;
 }
 
+@media (min-width: 992px) {
+  cx-navigation-ui > nav > cx-generic-link > a {
+    padding: 20px 15px 22px 0;
+  }
+
+  nav > div > cx-generic-link {
+    padding: 10px 0;
+  }
+
+  div.childs > nav > cx-generic-link > a {
+    padding: 5px 0;
+  }
+}
 cx-navigation-ui cx-icon:before {
   font-size: 1.5rem;
 }
