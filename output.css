@@ -10517,6 +10517,15 @@ cx-added-to-cart-dialog .cx-dialog-row {
     padding: 2rem;
   }
 }
+cx-added-to-cart-dialog .cx-dialog-item .cx-compact .cx-price .cx-label,
+cx-added-to-cart-dialog .cx-dialog-item .cx-compact .cx-quantity .cx-label,
+cx-added-to-cart-dialog .cx-dialog-item .cx-compact .cx-total .cx-label {
+  font-weight: var(--cx-font-weight-normal);
+}
+cx-added-to-cart-dialog .cx-dialog-item .cx-compact .cx-actions button.link {
+  font-weight: var(--cx-font-weight-normal);
+  text-decoration: underline;
+}
 cx-added-to-cart-dialog .cx-dialog-separator {
   border-width: 1px 0 0 0;
   border-style: solid;
