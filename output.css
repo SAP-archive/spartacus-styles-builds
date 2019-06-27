@@ -10405,6 +10405,11 @@ cx-mini-cart {
   margin-left: 0.75rem;
   display: block;
 }
+@media (min-width: 768px) {
+  cx-mini-cart {
+    margin-right: 0.85rem;
+  }
+}
 cx-mini-cart a {
   display: flex;
   background: var(--cx-color-primary);
@@ -10427,7 +10432,7 @@ cx-mini-cart a .count {
 cx-mini-cart a .total {
   display: none;
 }
-@media (max-width: 991.98px) {
+@media (max-width: 767.98px) {
   cx-mini-cart a {
     width: 55px;
     height: 57px;
