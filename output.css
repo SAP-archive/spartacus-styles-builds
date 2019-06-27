@@ -12473,6 +12473,9 @@ cx-promotions .cx-promotions {
   color: var(--cx-color-success);
   padding: 0.5rem 0;
 }
+cx-promotions .cx-promotions li {
+  list-style-type: none;
+}
 
 cx-banner img {
   width: 100%;
