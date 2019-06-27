@@ -10492,7 +10492,7 @@ cx-added-to-cart-dialog .cx-dialog-body {
 @media (max-width: 767.98px) {
   cx-added-to-cart-dialog .cx-dialog-body {
     padding: 0;
-    background-color: var(--cx-g-color-inverse);
+    background-color: var(--cx-color-inverse);
   }
 }
 cx-added-to-cart-dialog .cx-dialog-body cx-media.is-missing {
@@ -14539,10 +14539,10 @@ header .header > * {
 header.is-expanded .navigation {
   position: absolute;
   width: 100%;
-  z-index: 2;
+  z-index: 3;
 }
 header.is-expanded .PreHeader {
-  z-index: 2;
+  z-index: 4;
 }
 @media (max-width: 991.98px) {
   header.is-expanded:after {
@@ -14554,7 +14554,7 @@ header.is-expanded .PreHeader {
     top: 0;
     left: 0;
     background-color: rgba(0, 0, 0, 0.75);
-    z-index: 1;
+    z-index: 2;
   }
 }
 header:not(.is-expanded) cx-page-layout.navigation {
