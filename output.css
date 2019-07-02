@@ -11767,13 +11767,6 @@ cx-review-submit .cx-spinner {
   }
 }
 
-cx-checkout-order-summary {
-  flex-grow: 0;
-}
-
-cx-place-order {
-  padding: 0 2.5rem 0;
-}
 @media (max-width: 1199.98px) {
   cx-place-order {
     --cx-flex-basis: 45%;
@@ -15788,7 +15781,7 @@ cx-category-navigation {
     max-width: 50%;
   }
 }
-@media (max-width: 575.98px) {
+@media (max-width: 767.98px) {
   .CartPageTemplate .CenterRightContentSlot {
     --cx-flex-basis: 100%;
   }
@@ -15870,37 +15863,54 @@ cx-category-navigation {
     display: inline-block;
   }
 }
-.MultiStepCheckoutSummaryPageTemplate cx-page-slot.TopContent, .MultiStepCheckoutSummaryPageTemplate cx-page-slot.BottomContent {
-  --cx-flex: 0 1 100%;
-}
-.MultiStepCheckoutSummaryPageTemplate cx-page-slot.BodyContent, .MultiStepCheckoutSummaryPageTemplate cx-page-slot.SideContent {
-  --cx-flex: 1 1 auto;
+.MultiStepCheckoutSummaryPageTemplate cx-page-slot.TopContent {
+  flex: 0 100%;
 }
 .MultiStepCheckoutSummaryPageTemplate cx-page-slot.BodyContent {
-  --cx-flex-basis: 68%;
+  flex: 0 68%;
 }
 .MultiStepCheckoutSummaryPageTemplate cx-page-slot.SideContent {
-  --cx-flex-basis: 30%;
+  flex: 0 0 30%;
   flex-direction: column;
+  justify-content: flex-start;
+}
+.MultiStepCheckoutSummaryPageTemplate cx-page-slot.SideContent cx-checkout-order-summary {
+  flex: unset;
+}
+.MultiStepCheckoutSummaryPageTemplate cx-page-slot.SideContent cx-place-order {
+  flex: unset;
+  padding: 1rem 2.5rem 0;
 }
 @media (max-width: 991.98px) {
   .MultiStepCheckoutSummaryPageTemplate cx-page-slot.SideContent {
     --cx-flex-basis: 50%;
     justify-content: flex-end;
     align-items: flex-end;
+    flex-direction: column;
   }
   .MultiStepCheckoutSummaryPageTemplate cx-page-slot.SideContent cx-checkout-order-summary {
     max-width: 50%;
     padding-top: 1rem;
   }
+  .MultiStepCheckoutSummaryPageTemplate cx-page-slot.SideContent cx-checkout-order-summary cx-order-summary {
+    padding: 1rem 2.5rem 0;
+  }
   .MultiStepCheckoutSummaryPageTemplate cx-page-slot.SideContent cx-place-order {
     max-width: 50%;
     padding-bottom: 2rem;
+    padding-top: 0;
   }
 }
-@media (max-width: 991.98px) and (max-width: 991.98px) {
-  .MultiStepCheckoutSummaryPageTemplate cx-page-slot.SideContent cx-checkout-order-summary cx-order-summary {
-    padding: 1rem 3.5rem 1rem 0;
+@media (max-width: 767.98px) {
+  .MultiStepCheckoutSummaryPageTemplate cx-page-slot.SideContent {
+    --cx-flex-basis: 100%;
+    align-items: normal;
+  }
+  .MultiStepCheckoutSummaryPageTemplate cx-page-slot.SideContent cx-checkout-order-summary {
+    max-width: 100%;
+  }
+  .MultiStepCheckoutSummaryPageTemplate cx-page-slot.SideContent cx-place-order {
+    max-width: 100%;
   }
 }
 
