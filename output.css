@@ -12602,6 +12602,9 @@ cx-navigation-ui.flyout .back {
   }
 }
 
+cx-navigation-ui nav:focus {
+  color: var(--cx-g-color-primary);
+}
 cx-navigation-ui h5 {
   margin: 0;
 }
@@ -12790,22 +12793,22 @@ cx-navigation-ui nav {
 }
 @media (min-width: 992px) {
   cx-navigation-ui.flyout > nav {
-    /* we only threat the first wrapper as a collapsible container */
+    /* we only treat the first wrapper as a collapsible container */
   }
   cx-navigation-ui.flyout > nav > .wrapper {
     position: absolute;
     visibility: hidden;
-    overflow: hidden;
     opacity: 0;
     margin-left: -10px;
     border: 1px solid #ccc;
-    width: 0;
   }
-  cx-navigation-ui.flyout > nav:hover > .wrapper, cx-navigation-ui.flyout > nav:focus > .wrapper {
+  cx-navigation-ui.flyout > nav:hover > .wrapper {
     opacity: 1;
     visibility: visible;
-    overflow: visible;
-    width: auto;
+  }
+  cx-navigation-ui.flyout:focus-within > nav:focus > .wrapper {
+    opacity: 1;
+    visibility: visible;
   }
   cx-navigation-ui.flyout .childs {
     display: flex;
