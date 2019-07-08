@@ -13209,9 +13209,10 @@ cx-searchbox .results a .search-results-highlight {
   font-weight: normal;
   font-style: normal;
 }
-cx-searchbox .results a:hover {
+cx-searchbox .results a:hover, cx-searchbox .results a:focus {
   background: var(--cx-color-light);
   color: currentColor;
+  outline: auto 5px var(--cx-color-info) !important;
 }
 cx-searchbox .results .suggestions {
   display: flex;
