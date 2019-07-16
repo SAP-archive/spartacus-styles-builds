@@ -11567,6 +11567,13 @@ cx-payment-form .cx-payment-form-exp-date {
 cx-payment-form .form-check {
   margin: 0;
 }
+cx-payment-form .cx-input-number {
+  -moz-appearance: textfield;
+}
+cx-payment-form .cx-input-number::-webkit-outer-spin-button, cx-payment-form .cx-input-number::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 
 /* IMPORTANT: If no there's no theme for any reason,
   then fallback to the cxbase defaults */
