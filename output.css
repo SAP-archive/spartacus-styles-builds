@@ -11616,12 +11616,28 @@ cx-review-submit .cx-review-summary {
   margin: 0;
   background-color: var(--cx-color-background);
 }
+cx-review-submit .cx-review-summary-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100%;
+  word-break: break-all;
+}
+cx-review-submit .cx-review-summary-edit-step {
+  padding: 0 20px 20px;
+}
+@media (max-width: 991.98px) {
+  cx-review-submit .cx-review-summary-edit-step {
+    padding: 10px 0 0;
+  }
+}
 @media (max-width: 991.98px) {
   cx-review-submit .cx-review-summary .cx-review-summary-card {
     background-color: #ffffff;
     border-style: solid;
     border-width: 1px;
     border-color: var(--cx-color-light);
+    min-height: auto;
   }
 }
 cx-review-submit .row {
