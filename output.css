@@ -13315,6 +13315,22 @@ cx-product-list .cx-sort-dropdown {
 cx-product-list .cx-sort-dropdown .ng-arrow-wrapper {
   padding: 0 35px 0 0;
 }
+cx-product-list .cx-double-btn-container {
+  display: grid;
+  grid-gap: 5%;
+  grid-template-columns: 1fr 1fr;
+}
+cx-product-list .cx-single-btn-container {
+  display: grid;
+  width: 50%;
+  margin: auto;
+}
+cx-product-list .grid-btn-padding {
+  padding-top: 25px;
+}
+cx-product-list .align-btn {
+  margin-top: 0px !important;
+}
 
 cx-product-list-item .cx-product-search-list {
   border-width: 0 0 1px 0;
