@@ -14636,6 +14636,97 @@ cx-forgot-password a {
   margin: 20px 0 0;
 }
 
+/* IMPORTANT: If no there's no theme for any reason,
+  then fallback to the cxbase defaults */
+/*!
+  SPARTA v0.1
+  This file is for theme configuration. These variables are used in global and component CSS files.
+
+  You can:
+    1) Set new values for Bootstrap variables - https://github.com/twbs/bootstrap/blob/v4-dev/scss/_variables.scss
+    2) Set new values for cxbase variables - cxbase/_variables.scss
+    3) Set new values for component variables - app/__/_.scss
+  You cannot:
+    1) Add new variables
+*/
+/*!
+  CXBASE VARIABLES
+  This is NOT a theme.
+
+  This file should include ONLY new variables that Bootstrap does not provide.
+  For example, Bootstrap does not have a variable for semi font weight.
+
+  Same case for directionality.
+
+  Also be aware of items that should be configurable.
+  The Sparta buttons use uppercase type but future themes may want normal case
+  so a variable was created to make this available for other themes.
+
+*/
+/*
+GLOBAL VARIABLE OVERRIDES
+  These can be set with anything above or any variables exposed in Bootsrap or cxbase
+*/
+/*
+COMPONENT VARIABLE OVERRIDES
+  For example, the following would override the cx-storefront background set in src/app/ui/layout/main/main.component.scss
+  $cx-storefront-background-color: "info";
+*/
+cx-tracking-events .cx-consignment-tracking-dialog .header {
+  padding-left: 2rem;
+}
+cx-tracking-events .cx-consignment-tracking-dialog .title {
+  font-size: var(--cx-font-size, 1.375rem);
+  font-weight: var(--cx-font-weight-semi);
+  line-height: var(--cx-line-height, 1.2222222222);
+}
+@media (max-width: 767.98px) {
+  cx-tracking-events .cx-consignment-tracking-dialog .body {
+    padding: 0;
+  }
+}
+cx-tracking-events .cx-consignment-tracking-dialog .shipment-heading {
+  position: relative;
+  padding: 1.5rem 0 0.4rem 2rem;
+  background-color: var(--cx-color-background);
+}
+cx-tracking-events .cx-consignment-tracking-dialog .no-tracking-heading {
+  position: relative;
+  padding: 2rem;
+}
+cx-tracking-events .cx-consignment-tracking-dialog .shipment-content {
+  padding: 0.6rem 0 1.2rem 0;
+}
+cx-tracking-events .cx-consignment-tracking-dialog .shipment-title {
+  font-size: var(--cx-font-size, 1.125rem);
+  font-weight: var(--cx-font-weight-bold);
+  line-height: var(--cx-line-height, 1.2222222222);
+}
+cx-tracking-events .cx-consignment-tracking-dialog .events .event-body {
+  border-left: 0.7rem solid var(--cx-color-secondary);
+  padding-left: 1rem;
+  margin-bottom: 1rem;
+}
+cx-tracking-events .cx-consignment-tracking-dialog .events .event-body div {
+  padding-bottom: 0.6rem;
+}
+cx-tracking-events .cx-consignment-tracking-dialog .events .event-body .event-title {
+  font-size: var(--cx-font-size, 1rem);
+  font-weight: var(--cx-font-weight-bold);
+  line-height: var(--cx-line-height, 1.2222222222);
+}
+cx-tracking-events .cx-consignment-tracking-dialog .events .event-body .event-city {
+  font-size: var(--cx-font-size, 0.875rem);
+  font-weight: var(--cx-font-weight-normal);
+  line-height: var(--cx-line-height, 1.2222222222);
+}
+cx-tracking-events .cx-consignment-tracking-dialog .events .event-body .enent-content {
+  font-size: var(--cx-font-size, 1rem);
+  font-weight: var(--cx-font-weight-semi);
+  line-height: var(--cx-line-height, 1.2222222222);
+  padding-bottom: 20rem;
+}
+
 header {
   background-color: var(--cx-color-dark);
   color: var(--cx-color-inverse);
