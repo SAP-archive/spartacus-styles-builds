@@ -12479,6 +12479,21 @@ cx-order-confirmation-totals .cx-order-summary {
   }
 }
 
+cx-guest-register-form .register-guest {
+  display: flex;
+  justify-content: center;
+  background-color: var(--cx-color-background);
+  padding: 1.5rem 1rem;
+}
+@media (min-width: 992px) {
+  cx-guest-register-form .register-guest {
+    margin: 0 0 2em 0;
+  }
+}
+cx-guest-register-form .register-guest p {
+  margin-bottom: 1 rem;
+}
+
 /* IMPORTANT: If no there's no theme for any reason,
   then fallback to the cxbase defaults */
 /*!
@@ -15368,14 +15383,6 @@ cx-store-finder-map .cx-store-map {
   }
 }
 
-cx-store-finder-store .cx-store-actions {
-  margin-bottom: 1rem;
-}
-cx-store-finder-store .cx-store-actions button {
-  outline: none;
-  min-width: 150px;
-}
-
 /* IMPORTANT: If no there's no theme for any reason,
   then fallback to the cxbase defaults */
 /*!
@@ -16043,19 +16050,19 @@ cx-category-navigation {
   }
 }
 
-.AccountPageTemplate, .LoginPageTemplate {
+.AccountPageTemplate, .CheckoutLoginPageTemplate, .LoginPageTemplate {
   padding-bottom: 3rem;
 }
-.AccountPageTemplate cx-page-slot, .LoginPageTemplate cx-page-slot {
+.AccountPageTemplate cx-page-slot, .CheckoutLoginPageTemplate cx-page-slot, .LoginPageTemplate cx-page-slot {
   max-width: 1140px;
   padding: 3rem 1.5rem 0 1.5rem;
   margin: auto;
 }
-.AccountPageTemplate cx-page-slot > *, .LoginPageTemplate cx-page-slot > * {
+.AccountPageTemplate cx-page-slot > *, .CheckoutLoginPageTemplate cx-page-slot > *, .LoginPageTemplate cx-page-slot > * {
   max-width: var(--cx-max-width, 50%);
 }
 @media (max-width: 991.98px) {
-  .AccountPageTemplate, .LoginPageTemplate {
+  .AccountPageTemplate, .CheckoutLoginPageTemplate, .LoginPageTemplate {
     --cx-max-width: 100%;
   }
 }
