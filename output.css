@@ -1620,6 +1620,16 @@ button.bg-dark:focus {
   background-color: #0e1118 !important;
 }
 
+.bg-visual-focus {
+  background-color: #6d9df7 !important;
+}
+
+a.bg-visual-focus:hover, a.bg-visual-focus:focus,
+button.bg-visual-focus:hover,
+button.bg-visual-focus:focus {
+  background-color: #3d7df4 !important;
+}
+
 .bg-white {
   background-color: #fff !important;
 }
@@ -1714,6 +1724,10 @@ button.bg-dark:focus {
 
 .border-dark {
   border-color: #212738 !important;
+}
+
+.border-visual-focus {
+  border-color: #6d9df7 !important;
 }
 
 .border-white {
@@ -5330,6 +5344,14 @@ a.text-dark:hover, a.text-dark:focus {
   color: #050508 !important;
 }
 
+.text-visual-focus {
+  color: #6d9df7 !important;
+}
+
+a.text-visual-focus:hover, a.text-visual-focus:focus {
+  color: #246cf3 !important;
+}
+
 .text-body {
   color: #212738 !important;
 }
@@ -6327,6 +6349,33 @@ fieldset:disabled a.btn {
   box-shadow: 0 0 0 0.2rem rgba(66, 71, 86, 0.5);
 }
 
+.btn-visual-focus {
+  color: #212529;
+  background-color: #6d9df7;
+  border-color: #6d9df7;
+}
+.btn-visual-focus:hover {
+  color: #fff;
+  background-color: #4985f5;
+  border-color: #3d7df4;
+}
+.btn-visual-focus:focus, .btn-visual-focus.focus {
+  box-shadow: 0 0 0 0.2rem rgba(98, 139, 216, 0.5);
+}
+.btn-visual-focus.disabled, .btn-visual-focus:disabled {
+  color: #212529;
+  background-color: #6d9df7;
+  border-color: #6d9df7;
+}
+.btn-visual-focus:not(:disabled):not(.disabled):active, .btn-visual-focus:not(:disabled):not(.disabled).active, .show > .btn-visual-focus.dropdown-toggle {
+  color: #fff;
+  background-color: #3d7df4;
+  border-color: #3174f4;
+}
+.btn-visual-focus:not(:disabled):not(.disabled):active:focus, .btn-visual-focus:not(:disabled):not(.disabled).active:focus, .show > .btn-visual-focus.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem rgba(98, 139, 216, 0.5);
+}
+
 .btn-outline-background {
   color: #f4f4f4;
   border-color: #f4f4f4;
@@ -6625,6 +6674,31 @@ fieldset:disabled a.btn {
 }
 .btn-outline-dark:not(:disabled):not(.disabled):active:focus, .btn-outline-dark:not(:disabled):not(.disabled).active:focus, .show > .btn-outline-dark.dropdown-toggle:focus {
   box-shadow: 0 0 0 0.2rem rgba(33, 39, 56, 0.5);
+}
+
+.btn-outline-visual-focus {
+  color: #6d9df7;
+  border-color: #6d9df7;
+}
+.btn-outline-visual-focus:hover {
+  color: #212529;
+  background-color: #6d9df7;
+  border-color: #6d9df7;
+}
+.btn-outline-visual-focus:focus, .btn-outline-visual-focus.focus {
+  box-shadow: 0 0 0 0.2rem rgba(109, 157, 247, 0.5);
+}
+.btn-outline-visual-focus.disabled, .btn-outline-visual-focus:disabled {
+  color: #6d9df7;
+  background-color: transparent;
+}
+.btn-outline-visual-focus:not(:disabled):not(.disabled):active, .btn-outline-visual-focus:not(:disabled):not(.disabled).active, .show > .btn-outline-visual-focus.dropdown-toggle {
+  color: #212529;
+  background-color: #6d9df7;
+  border-color: #6d9df7;
+}
+.btn-outline-visual-focus:not(:disabled):not(.disabled):active:focus, .btn-outline-visual-focus:not(:disabled):not(.disabled).active:focus, .show > .btn-outline-visual-focus.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem rgba(109, 157, 247, 0.5);
 }
 
 .btn-link {
@@ -8383,6 +8457,18 @@ COMPONENT VARIABLE OVERRIDES
   color: black;
 }
 
+.alert-visual-focus {
+  color: #395280;
+  background-color: #e2ebfd;
+  border-color: #d6e4fd;
+}
+.alert-visual-focus hr {
+  border-top-color: #bed4fc;
+}
+.alert-visual-focus .alert-link {
+  color: #293b5d;
+}
+
 .alert {
   text-align: var(--cx-text-align, center);
   color: var(--cx-color, var(--cx-color-text));
@@ -9066,6 +9152,26 @@ COMPONENT VARIABLE OVERRIDES
 .table-hover .table-dark:hover > td,
 .table-hover .table-dark:hover > th {
   background-color: #b4b6bb;
+}
+
+.table-visual-focus,
+.table-visual-focus > th,
+.table-visual-focus > td {
+  background-color: #d6e4fd;
+}
+.table-visual-focus th,
+.table-visual-focus td,
+.table-visual-focus thead th,
+.table-visual-focus tbody + tbody {
+  border-color: #b3ccfb;
+}
+
+.table-hover .table-visual-focus:hover {
+  background-color: #bed4fc;
+}
+.table-hover .table-visual-focus:hover > td,
+.table-hover .table-visual-focus:hover > th {
+  background-color: #bed4fc;
 }
 
 .table-active,
@@ -15759,6 +15865,7 @@ COMPONENT VARIABLE OVERRIDES
   --cx-color-danger: #db0002;
   --cx-color-light: #d3d6db;
   --cx-color-dark: #212738;
+  --cx-color-visual-focus: #6d9df7;
   --cx-font-weight-light: 300;
   --cx-font-weight-normal: 400;
   --cx-font-weight-semi: 600;
