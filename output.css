@@ -10471,6 +10471,23 @@ cx-product-images cx-media:after {
   transition: bottom 0.075s ease, transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
+cx-icon {
+  align-self: center;
+  line-height: normal;
+}
+cx-icon.small:before {
+  font-size: 0.9rem;
+}
+cx-icon svg {
+  width: 28px;
+  height: 28px;
+  fill: currentColor;
+}
+cx-icon.small svg {
+  width: 14px;
+  height: 14px;
+}
+
 /* IMPORTANT: If no there's no theme for any reason,
   then fallback to the cxbase defaults */
 /*!
@@ -15805,23 +15822,6 @@ cx-spinner .loader::before {
   100% {
     transform: rotate(360deg);
   }
-}
-
-cx-icon {
-  align-self: center;
-  line-height: normal;
-}
-cx-icon.small:before {
-  font-size: 0.9rem;
-}
-cx-icon svg {
-  width: 28px;
-  height: 28px;
-  fill: currentColor;
-}
-cx-icon.small svg {
-  width: 14px;
-  height: 14px;
 }
 
 cx-asm-main-ui {
