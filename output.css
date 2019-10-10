@@ -12665,6 +12665,7 @@ cx-promotions .cx-promotions li {
 }
 
 cx-banner img {
+  width: 100%;
   margin: var(--cx-margin);
 }
 cx-banner p {
@@ -16745,6 +16746,10 @@ cx-category-navigation {
   .MultiStepCheckoutSummaryPageTemplate cx-page-slot.SideContent cx-place-order {
     max-width: 100%;
   }
+}
+
+.StoreFinderPageTemplate cx-page-slot.SideContent cx-banner img {
+  width: auto;
 }
 
 .AccountPageTemplate {
