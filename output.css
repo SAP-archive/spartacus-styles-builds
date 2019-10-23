@@ -15055,84 +15055,6 @@ COMPONENT VARIABLE OVERRIDES
   For example, the following would override the cx-storefront background set in src/app/ui/layout/main/main.component.scss
   $cx-storefront-background-color: "info";
 */
-cx-consent-management-form cx-icon {
-  position: absolute;
-  top: 15px;
-  left: 15px;
-  color: var(--cx-color-secondary);
-}
-cx-consent-management-form cx-icon:before {
-  font-size: 1.6rem;
-}
-cx-consent-management-form .cx-toggle-button {
-  margin-left: -6.5rem;
-}
-cx-consent-management-form .cx-toggle-button .cx-toggle-text {
-  font-size: var(--cx-font-size, 0.875rem);
-  font-weight: var(--cx-font-weight-bold);
-  line-height: var(--cx-line-height, 1.2222222222);
-}
-@media (max-width: 575.98px) {
-  cx-consent-management-form .cx-accordion {
-    margin: 0;
-  }
-}
-cx-consent-management-form .cx-accordion .cx-accordion-item {
-  margin: 15px 0;
-}
-@media (max-width: 575.98px) {
-  cx-consent-management-form .cx-accordion .cx-accordion-item {
-    margin: 0;
-    border-top: 0 none;
-    border-right: 0 none;
-    border-left: 0 none;
-  }
-}
-cx-consent-management-form .cx-accordion .cx-accordion-title {
-  width: 80%;
-}
-@media (max-width: 575.98px) {
-  cx-consent-management-form .cx-accordion .cx-accordion-title {
-    width: 78%;
-  }
-}
-
-/* IMPORTANT: If no there's no theme for any reason,
-  then fallback to the cxbase defaults */
-/*!
-  SPARTA v0.1
-  This file is for theme configuration. These variables are used in global and component CSS files.
-
-  You can:
-    1) Set new values for Bootstrap variables - https://github.com/twbs/bootstrap/blob/v4-dev/scss/_variables.scss
-    2) Set new values for cxbase variables - cxbase/_variables.scss
-    3) Set new values for component variables - app/__/_.scss
-  You cannot:
-    1) Add new variables
-*/
-/*!
-  CXBASE VARIABLES
-  This is NOT a theme.
-
-  This file should include ONLY new variables that Bootstrap does not provide.
-  For example, Bootstrap does not have a variable for semi font weight.
-
-  Same case for directionality.
-
-  Also be aware of items that should be configurable.
-  The Sparta buttons use uppercase type but future themes may want normal case
-  so a variable was created to make this available for other themes.
-
-*/
-/*
-GLOBAL VARIABLE OVERRIDES
-  These can be set with anything above or any variables exposed in Bootsrap or cxbase
-*/
-/*
-COMPONENT VARIABLE OVERRIDES
-  For example, the following would override the cx-storefront background set in src/app/ui/layout/main/main.component.scss
-  $cx-storefront-background-color: "info";
-*/
 cx-consent-management .cx-consent-action-links {
   text-align: right;
   display: flex;
@@ -15143,6 +15065,9 @@ cx-consent-management .cx-consent-action-links {
   cx-consent-management .cx-consent-action-links > div {
     padding: 0;
   }
+}
+cx-consent-management .cx-consent-action-links .cx-action-link {
+  margin: 0 0.35rem;
 }
 cx-consent-management .cx-consent-toggles {
   display: flex;
@@ -15156,7 +15081,7 @@ cx-consent-management .cx-consent-toggles {
 }
 @media (max-width: 575.98px) {
   cx-consent-management .cx-consent-toggles > div {
-    padding: 0;
+    padding-top: 15px;
   }
 }
 
@@ -16618,84 +16543,6 @@ cx-anonymous-consent-management-banner .cx-banner-buttons button:last-child {
 }
 cx-anonymous-consent-management-banner .anonymous-consent-banner-hidden {
   display: none;
-}
-
-/* IMPORTANT: If no there's no theme for any reason,
-  then fallback to the cxbase defaults */
-/*!
-  SPARTA v0.1
-  This file is for theme configuration. These variables are used in global and component CSS files.
-
-  You can:
-    1) Set new values for Bootstrap variables - https://github.com/twbs/bootstrap/blob/v4-dev/scss/_variables.scss
-    2) Set new values for cxbase variables - cxbase/_variables.scss
-    3) Set new values for component variables - app/__/_.scss
-  You cannot:
-    1) Add new variables
-*/
-/*!
-  CXBASE VARIABLES
-  This is NOT a theme.
-
-  This file should include ONLY new variables that Bootstrap does not provide.
-  For example, Bootstrap does not have a variable for semi font weight.
-
-  Same case for directionality.
-
-  Also be aware of items that should be configurable.
-  The Sparta buttons use uppercase type but future themes may want normal case
-  so a variable was created to make this available for other themes.
-
-*/
-/*
-GLOBAL VARIABLE OVERRIDES
-  These can be set with anything above or any variables exposed in Bootsrap or cxbase
-*/
-/*
-COMPONENT VARIABLE OVERRIDES
-  For example, the following would override the cx-storefront background set in src/app/ui/layout/main/main.component.scss
-  $cx-storefront-background-color: "info";
-*/
-cx-anonymous-consent-form cx-icon {
-  position: absolute;
-  top: 15px;
-  left: 15px;
-  color: var(--cx-color-secondary);
-}
-cx-anonymous-consent-form cx-icon:before {
-  font-size: 1.6rem;
-}
-@media (max-width: 575.98px) {
-  cx-anonymous-consent-form .cx-accordion {
-    margin: 0;
-  }
-}
-cx-anonymous-consent-form .cx-accordion .cx-accordion-item {
-  margin-top: 15px;
-  margin-bottom: 15px;
-}
-@media (max-width: 575.98px) {
-  cx-anonymous-consent-form .cx-accordion .cx-accordion-item {
-    border-top: 0 none;
-    border-right: 0 none;
-    border-left: 0 none;
-  }
-}
-cx-anonymous-consent-form .cx-accordion .cx-accordion-item .cx-accordion-tab .cx-accordion-title {
-  width: 80%;
-}
-@media (max-width: 575.98px) {
-  cx-anonymous-consent-form .cx-accordion .cx-accordion-item .cx-accordion-tab .cx-accordion-title {
-    width: 78%;
-  }
-}
-cx-anonymous-consent-form .cx-toggle-button {
-  margin-left: -6.5rem;
-}
-cx-anonymous-consent-form .cx-toggle-button .cx-toggle-text {
-  font-size: var(--cx-font-size, 0.875rem);
-  font-weight: var(--cx-font-weight-bold);
-  line-height: var(--cx-line-height, 1.2222222222);
 }
 
 /* IMPORTANT: If no there's no theme for any reason,
