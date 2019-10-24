@@ -10479,6 +10479,17 @@ COMPONENT VARIABLE OVERRIDES
   }
 }
 
+.cx-notice {
+  padding: 32px 0;
+  text-align: center;
+  font-size: var(--cx-font-size, 1rem);
+  font-weight: var(--cx-font-weight-normal);
+  line-height: var(--cx-line-height, 1.6);
+  color: var(--cx-color-dark);
+  background-color: var(--cx-color-inverse);
+  margin-bottom: -1.5rem;
+}
+
 @keyframes spin {
   100% {
     transform: rotate(360deg);
@@ -13299,19 +13310,6 @@ cx-footer-navigation cx-navigation-ui {
 }
 cx-footer-navigation cx-navigation-ui > nav {
   margin: 3vw;
-}
-cx-footer-navigation .anonymous-consents {
-  display: flex;
-  justify-content: center;
-  margin: 0 3vw 3vw 3vw;
-}
-@media (max-width: 767.98px) {
-  cx-footer-navigation .anonymous-consents {
-    justify-content: flex-start;
-  }
-}
-cx-footer-navigation .anonymous-consents a {
-  color: var(--cx-color-inverse);
 }
 cx-footer-navigation .notice {
   padding: 32px 0;
@@ -16723,52 +16721,74 @@ COMPONENT VARIABLE OVERRIDES
   For example, the following would override the cx-storefront background set in src/app/ui/layout/main/main.component.scss
   $cx-storefront-background-color: "info";
 */
-cx-anonymous-consents-dialog .cx-dialog-header {
+cx-anonymous-consent-dialog .cx-dialog-header {
   padding: 2rem 1.75rem 0.85rem;
 }
-cx-anonymous-consents-dialog .cx-dialog-body {
+cx-anonymous-consent-dialog .cx-dialog-body {
   padding-top: 0;
   background-color: var(--cx-color-inverse);
 }
 @media (max-width: 575.98px) {
-  cx-anonymous-consents-dialog .cx-dialog-body {
+  cx-anonymous-consent-dialog .cx-dialog-body {
     padding: 0 0 1.5rem;
     border-top: 1px solid var(--cx-color-light);
   }
 }
-cx-anonymous-consents-dialog .cx-dialog-buttons {
+cx-anonymous-consent-dialog .cx-dialog-buttons {
   text-align: right;
   padding: 1rem 4rem;
 }
 @media (max-width: 575.98px) {
-  cx-anonymous-consents-dialog .cx-dialog-buttons {
+  cx-anonymous-consent-dialog .cx-dialog-buttons {
     padding: 1rem;
   }
 }
-cx-anonymous-consents-dialog .cx-action-link {
+cx-anonymous-consent-dialog .cx-action-link {
   margin: 0 0.35rem;
 }
-cx-anonymous-consents-dialog .cx-dialog-row {
+cx-anonymous-consent-dialog .cx-dialog-row {
   max-width: 100%;
 }
 @media (max-width: 575.98px) {
-  cx-anonymous-consents-dialog .cx-dialog-row {
+  cx-anonymous-consent-dialog .cx-dialog-row {
     padding: 0;
   }
 }
-cx-anonymous-consents-dialog .cx-dialog-title {
+cx-anonymous-consent-dialog .cx-dialog-title {
   font-size: var(--cx-font-size, 1.375rem);
   font-weight: var(--cx-font-weight-semi);
   line-height: var(--cx-line-height, 1.2222222222);
 }
-cx-anonymous-consents-dialog .cx-dialog-description {
+cx-anonymous-consent-dialog .cx-dialog-description {
   font-size: var(--cx-font-size, 1rem);
   font-weight: var(--cx-font-weight-normal);
   line-height: var(--cx-line-height, 1.6);
   padding: 1.5rem 1.75rem 0;
 }
-cx-anonymous-consents-dialog a:not([href]):not([tabindex]) {
+cx-anonymous-consent-dialog a:not([href]):not([tabindex]) {
   text-decoration: underline;
+}
+
+cx-anonymous-consent-open-dialog .anonymous-consents {
+  display: flex;
+  justify-content: center;
+  margin: 0 3vw 3vw 3vw;
+}
+@media (max-width: 767.98px) {
+  cx-anonymous-consent-open-dialog .anonymous-consents {
+    justify-content: flex-start;
+  }
+}
+cx-anonymous-consent-open-dialog .anonymous-consents button {
+  padding: 0;
+  color: var(--cx-color-inverse);
+  font-size: 0.8rem;
+}
+cx-anonymous-consent-open-dialog .anonymous-consents button:not(:hover) {
+  text-decoration: none;
+}
+cx-anonymous-consent-open-dialog .anonymous-consents button:hover {
+  color: var(--cx-color-inverse);
 }
 
 cx-cart-totals cx-order-summary {
