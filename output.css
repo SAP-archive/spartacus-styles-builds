@@ -11240,6 +11240,18 @@ cx-order-summary .cx-summary-savings {
 cx-order-summary .cx-summary-total {
   font-weight: var(--cx-font-weight-bold);
 }
+cx-order-summary .cx-coupon-code-pill {
+  background: var(--cx-g-color-light);
+  padding: 7px 15px 7px 13px;
+  margin: 10px 10px 5px 0;
+  display: inline-flex;
+  align-items: flex-start;
+  border-radius: 4px;
+  word-break: break-all;
+}
+cx-order-summary .cx-coupon-code--pill-value {
+  line-height: 1.7;
+}
 
 cx-add-to-cart .quantity {
   margin: 0 0 20px;
@@ -11256,6 +11268,136 @@ cx-add-to-cart .quantity .info {
   line-height: var(--cx-line-height, 1.2222222222);
   margin: 0 15px 0 15px;
   color: var(--cx-color-secondary);
+}
+
+/* IMPORTANT: If no there's no theme for any reason,
+  then fallback to the cxbase defaults */
+/*!
+  SPARTA v0.1
+  This file is for theme configuration. These variables are used in global and component CSS files.
+
+  You can:
+    1) Set new values for Bootstrap variables - https://github.com/twbs/bootstrap/blob/v4-dev/scss/_variables.scss
+    2) Set new values for cxbase variables - cxbase/_variables.scss
+    3) Set new values for component variables - app/__/_.scss
+  You cannot:
+    1) Add new variables
+*/
+/*!
+  CXBASE VARIABLES
+  This is NOT a theme.
+
+  This file should include ONLY new variables that Bootstrap does not provide.
+  For example, Bootstrap does not have a variable for semi font weight.
+
+  Same case for directionality.
+
+  Also be aware of items that should be configurable.
+  The Sparta buttons use uppercase type but future themes may want normal case
+  so a variable was created to make this available for other themes.
+
+*/
+/*
+GLOBAL VARIABLE OVERRIDES
+  These can be set with anything above or any variables exposed in Bootsrap or cxbase
+*/
+/*
+COMPONENT VARIABLE OVERRIDES
+  For example, the following would override the cx-storefront background set in src/app/ui/layout/main/main.component.scss
+  $cx-storefront-background-color: "info";
+*/
+cx-cart-coupon {
+  padding: 2rem 3rem;
+}
+@media (max-width: 991.98px) {
+  cx-cart-coupon {
+    padding: 0 3rem 2rem 3rem;
+  }
+}
+cx-cart-coupon .cx-cart-coupon-title {
+  font-size: var(--cx-font-size, 1rem);
+  font-weight: var(--cx-font-weight-bold);
+  line-height: var(--cx-line-height, 1.2222222222);
+  margin: 1.125rem 0 0.5rem;
+}
+@media (min-width: 768px) {
+  cx-cart-coupon .form-group .col-md-4 {
+    padding-left: 0;
+  }
+}
+
+/* IMPORTANT: If no there's no theme for any reason,
+  then fallback to the cxbase defaults */
+/*!
+  SPARTA v0.1
+  This file is for theme configuration. These variables are used in global and component CSS files.
+
+  You can:
+    1) Set new values for Bootstrap variables - https://github.com/twbs/bootstrap/blob/v4-dev/scss/_variables.scss
+    2) Set new values for cxbase variables - cxbase/_variables.scss
+    3) Set new values for component variables - app/__/_.scss
+  You cannot:
+    1) Add new variables
+*/
+/*!
+  CXBASE VARIABLES
+  This is NOT a theme.
+
+  This file should include ONLY new variables that Bootstrap does not provide.
+  For example, Bootstrap does not have a variable for semi font weight.
+
+  Same case for directionality.
+
+  Also be aware of items that should be configurable.
+  The Sparta buttons use uppercase type but future themes may want normal case
+  so a variable was created to make this available for other themes.
+
+*/
+/*
+GLOBAL VARIABLE OVERRIDES
+  These can be set with anything above or any variables exposed in Bootsrap or cxbase
+*/
+/*
+COMPONENT VARIABLE OVERRIDES
+  For example, the following would override the cx-storefront background set in src/app/ui/layout/main/main.component.scss
+  $cx-storefront-background-color: "info";
+*/
+cx-applied-coupons .cx-applied-coupon-title {
+  display: flex;
+  flex-wrap: wrap;
+}
+cx-applied-coupons .cx-coupon-list-wrap {
+  margin-bottom: 1rem;
+}
+cx-applied-coupons .cx-coupon-card-grid {
+  display: grid;
+}
+cx-applied-coupons .coupon-summary {
+  font-size: var(--cx-font-size, 0.875rem);
+  font-weight: var(--cx-font-weight-normal);
+  line-height: var(--cx-line-height, 1.2222222222);
+  display: inline-flex;
+  align-items: flex-start;
+  padding: var(--cx-padding, 0.25rem 0.25rem);
+  word-break: break-all;
+  margin: var(--cx-margin, 0.25rem 0.25rem 0 0);
+}
+cx-applied-coupons .cx-coupon-card {
+  background: var(--cx-color-background);
+  border: 1px solid #d3d6db;
+  border-radius: 0.25rem;
+}
+cx-applied-coupons .textonly {
+  margin: 0 10px 10px 0;
+  font-size: 14px;
+}
+cx-applied-coupons .cx-coupon-apply {
+  font-size: var(--cx-font-size, 1rem);
+  font-weight: var(--cx-font-weight-semi);
+  line-height: var(--cx-line-height, 1.2222222222);
+  padding: 1rem 1rem;
+  align-items: flex-start;
+  word-break: break-all;
 }
 
 /* IMPORTANT: If no there's no theme for any reason,
@@ -16629,6 +16771,10 @@ cx-anonymous-consents-dialog a:not([href]):not([tabindex]) {
   text-decoration: underline;
 }
 
+cx-cart-totals cx-order-summary {
+  padding: 0 0 1rem;
+}
+
 /* IMPORTANT: If no there's no theme for any reason,
   then fallback to the cxbase defaults */
 /*!
@@ -16960,12 +17106,18 @@ cx-category-navigation {
   .CartPageTemplate .CenterRightContentSlot cx-cart-totals {
     max-width: 50%;
   }
+  .CartPageTemplate .CenterRightContentSlot cx-cart-coupon {
+    max-width: 100%;
+  }
 }
 @media (max-width: 767.98px) {
   .CartPageTemplate .CenterRightContentSlot {
     --cx-flex-basis: 100%;
   }
   .CartPageTemplate .CenterRightContentSlot cx-cart-totals {
+    max-width: none;
+  }
+  .CartPageTemplate .CenterRightContentSlot cx-cart-coupon {
     max-width: none;
   }
 }
