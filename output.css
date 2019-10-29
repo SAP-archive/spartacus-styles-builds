@@ -15225,6 +15225,10 @@ cx-consent-management .cx-consent-toggles {
   }
 }
 
+cx-consent-management-form .cx-be-bold {
+  font-weight: var(--cx-font-weight-semi);
+}
+
 header {
   background-color: var(--cx-color-dark);
   color: var(--cx-color-inverse);
