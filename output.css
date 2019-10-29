@@ -16396,12 +16396,14 @@ cx-asm-main-ui .fd-button--emphasized.fd-button--standard {
 cx-asm-main-ui .fd-button--negative {
   color: #bb0000;
   border-color: #bb0000;
+  fill: #bb0000;
   font-size: 14px;
 }
 cx-asm-main-ui .fd-button--negative .is-hover,
 cx-asm-main-ui .fd-button--negative:hover {
   background-color: #b00;
   color: #fff;
+  fill: #fff;
 }
 cx-asm-main-ui .fd-input,
 cx-asm-main-ui input[type=date],
