@@ -1,4 +1,46 @@
 @charset "UTF-8";
+/** 
+ * the mixins depend on variables, mainly because of some
+ * lower level bootstrap variables. Hence we import the variables here,
+ * to make the mixins resuable. In order to have the right variables
+ * we load variables through the theme import. 
+ */
+/* IMPORTANT: If no there's no theme for any reason,
+  then fallback to the cxbase defaults */
+/*!
+  SPARTA v0.1
+  This file is for theme configuration. These variables are used in global and component CSS files.
+
+  You can:
+    1) Set new values for Bootstrap variables - https://github.com/twbs/bootstrap/blob/v4-dev/scss/_variables.scss
+    2) Set new values for cxbase variables - cxbase/_variables.scss
+    3) Set new values for component variables - app/__/_.scss
+  You cannot:
+    1) Add new variables
+*/
+/*!
+  CXBASE VARIABLES
+  This is NOT a theme.
+
+  This file should include ONLY new variables that Bootstrap does not provide.
+  For example, Bootstrap does not have a variable for semi font weight.
+
+  Same case for directionality.
+
+  Also be aware of items that should be configurable.
+  The Sparta buttons use uppercase type but future themes may want normal case
+  so a variable was created to make this available for other themes.
+
+*/
+/*
+GLOBAL VARIABLE OVERRIDES
+  These can be set with anything above or any variables exposed in Bootsrap or cxbase
+*/
+/*
+COMPONENT VARIABLE OVERRIDES
+  For example, the following would override the cx-storefront background set in src/app/ui/layout/main/main.component.scss
+  $cx-storefront-background-color: "info";
+*/
 /* IMPORTANT: If no there's no theme for any reason,
   then fallback to the cxbase defaults */
 /*!
@@ -315,11 +357,6 @@ legend {
   color: inherit;
   white-space: normal;
 }
-@media (max-width: 1200px) {
-  legend {
-    font-size: calc(1.275rem + 0.3vw);
-  }
-}
 
 progress {
   vertical-align: baseline;
@@ -371,28 +408,13 @@ h1, h2, h3, h4, h5, h6,
 h1, .h1 {
   font-size: 1.85rem;
 }
-@media (max-width: 1200px) {
-  h1, .h1 {
-    font-size: calc(1.31rem + 0.72vw);
-  }
-}
 
 h2, .h2 {
   font-size: 1.75rem;
 }
-@media (max-width: 1200px) {
-  h2, .h2 {
-    font-size: calc(1.3rem + 0.6vw);
-  }
-}
 
 h3, .h3 {
   font-size: 1.375rem;
-}
-@media (max-width: 1200px) {
-  h3, .h3 {
-    font-size: calc(1.2625rem + 0.15vw);
-  }
 }
 
 h4, .h4 {
@@ -417,21 +439,11 @@ h6, .h6 {
   font-weight: 300;
   line-height: 1.2;
 }
-@media (max-width: 1200px) {
-  .display-1 {
-    font-size: calc(1.725rem + 5.7vw);
-  }
-}
 
 .display-2 {
   font-size: 5.5rem;
   font-weight: 300;
   line-height: 1.2;
-}
-@media (max-width: 1200px) {
-  .display-2 {
-    font-size: calc(1.675rem + 5.1vw);
-  }
 }
 
 .display-3 {
@@ -439,21 +451,11 @@ h6, .h6 {
   font-weight: 300;
   line-height: 1.2;
 }
-@media (max-width: 1200px) {
-  .display-3 {
-    font-size: calc(1.575rem + 3.9vw);
-  }
-}
 
 .display-4 {
   font-size: 3.5rem;
   font-weight: 300;
   line-height: 1.2;
-}
-@media (max-width: 1200px) {
-  .display-4 {
-    font-size: calc(1.475rem + 2.7vw);
-  }
 }
 
 hr {
@@ -2028,6 +2030,22 @@ button.bg-visual-focus:focus {
   width: 100%;
   height: 100%;
   border: 0;
+}
+
+.embed-responsive-21by9::before {
+  padding-top: 42.8571428571%;
+}
+
+.embed-responsive-16by9::before {
+  padding-top: 56.25%;
+}
+
+.embed-responsive-4by3::before {
+  padding-top: 75%;
+}
+
+.embed-responsive-1by1::before {
+  padding-top: 100%;
 }
 
 .embed-responsive-21by9::before {
@@ -8269,11 +8287,6 @@ COMPONENT VARIABLE OVERRIDES
   text-shadow: 0 1px 0 #fff;
   opacity: 0.5;
 }
-@media (max-width: 1200px) {
-  .close {
-    font-size: calc(1.275rem + 0.3vw);
-  }
-}
 .close:hover {
   color: #000;
   text-decoration: none;
@@ -8344,6 +8357,48 @@ a.close.disabled {
     overflow-y: auto;
   }
 }
+/* IMPORTANT: If no there's no theme for any reason,
+  then fallback to the cxbase defaults */
+/*!
+  SPARTA v0.1
+  This file is for theme configuration. These variables are used in global and component CSS files.
+
+  You can:
+    1) Set new values for Bootstrap variables - https://github.com/twbs/bootstrap/blob/v4-dev/scss/_variables.scss
+    2) Set new values for cxbase variables - cxbase/_variables.scss
+    3) Set new values for component variables - app/__/_.scss
+  You cannot:
+    1) Add new variables
+*/
+/*!
+  CXBASE VARIABLES
+  This is NOT a theme.
+
+  This file should include ONLY new variables that Bootstrap does not provide.
+  For example, Bootstrap does not have a variable for semi font weight.
+
+  Same case for directionality.
+
+  Also be aware of items that should be configurable.
+  The Sparta buttons use uppercase type but future themes may want normal case
+  so a variable was created to make this available for other themes.
+
+*/
+/*
+GLOBAL VARIABLE OVERRIDES
+  These can be set with anything above or any variables exposed in Bootsrap or cxbase
+*/
+/*
+COMPONENT VARIABLE OVERRIDES
+  For example, the following would override the cx-storefront background set in src/app/ui/layout/main/main.component.scss
+  $cx-storefront-background-color: "info";
+*/
+/** 
+ * the mixins depend on variables, mainly because of some
+ * lower level bootstrap variables. Hence we import the variables here,
+ * to make the mixins resuable. In order to have the right variables
+ * we load variables through the theme import. 
+ */
 /* IMPORTANT: If no there's no theme for any reason,
   then fallback to the cxbase defaults */
 /*!
@@ -9753,6 +9808,48 @@ COMPONENT VARIABLE OVERRIDES
   For example, the following would override the cx-storefront background set in src/app/ui/layout/main/main.component.scss
   $cx-storefront-background-color: "info";
 */
+/** 
+ * the mixins depend on variables, mainly because of some
+ * lower level bootstrap variables. Hence we import the variables here,
+ * to make the mixins resuable. In order to have the right variables
+ * we load variables through the theme import. 
+ */
+/* IMPORTANT: If no there's no theme for any reason,
+  then fallback to the cxbase defaults */
+/*!
+  SPARTA v0.1
+  This file is for theme configuration. These variables are used in global and component CSS files.
+
+  You can:
+    1) Set new values for Bootstrap variables - https://github.com/twbs/bootstrap/blob/v4-dev/scss/_variables.scss
+    2) Set new values for cxbase variables - cxbase/_variables.scss
+    3) Set new values for component variables - app/__/_.scss
+  You cannot:
+    1) Add new variables
+*/
+/*!
+  CXBASE VARIABLES
+  This is NOT a theme.
+
+  This file should include ONLY new variables that Bootstrap does not provide.
+  For example, Bootstrap does not have a variable for semi font weight.
+
+  Same case for directionality.
+
+  Also be aware of items that should be configurable.
+  The Sparta buttons use uppercase type but future themes may want normal case
+  so a variable was created to make this available for other themes.
+
+*/
+/*
+GLOBAL VARIABLE OVERRIDES
+  These can be set with anything above or any variables exposed in Bootsrap or cxbase
+*/
+/*
+COMPONENT VARIABLE OVERRIDES
+  For example, the following would override the cx-storefront background set in src/app/ui/layout/main/main.component.scss
+  $cx-storefront-background-color: "info";
+*/
 .accordion .card {
   margin-bottom: 20px;
   border: none;
@@ -9879,6 +9976,48 @@ ul[role=tablist] .nav-link.active div {
   font-weight: 600;
 }
 
+/* IMPORTANT: If no there's no theme for any reason,
+  then fallback to the cxbase defaults */
+/*!
+  SPARTA v0.1
+  This file is for theme configuration. These variables are used in global and component CSS files.
+
+  You can:
+    1) Set new values for Bootstrap variables - https://github.com/twbs/bootstrap/blob/v4-dev/scss/_variables.scss
+    2) Set new values for cxbase variables - cxbase/_variables.scss
+    3) Set new values for component variables - app/__/_.scss
+  You cannot:
+    1) Add new variables
+*/
+/*!
+  CXBASE VARIABLES
+  This is NOT a theme.
+
+  This file should include ONLY new variables that Bootstrap does not provide.
+  For example, Bootstrap does not have a variable for semi font weight.
+
+  Same case for directionality.
+
+  Also be aware of items that should be configurable.
+  The Sparta buttons use uppercase type but future themes may want normal case
+  so a variable was created to make this available for other themes.
+
+*/
+/*
+GLOBAL VARIABLE OVERRIDES
+  These can be set with anything above or any variables exposed in Bootsrap or cxbase
+*/
+/*
+COMPONENT VARIABLE OVERRIDES
+  For example, the following would override the cx-storefront background set in src/app/ui/layout/main/main.component.scss
+  $cx-storefront-background-color: "info";
+*/
+/** 
+ * the mixins depend on variables, mainly because of some
+ * lower level bootstrap variables. Hence we import the variables here,
+ * to make the mixins resuable. In order to have the right variables
+ * we load variables through the theme import. 
+ */
 /* IMPORTANT: If no there's no theme for any reason,
   then fallback to the cxbase defaults */
 /*!
@@ -10293,6 +10432,48 @@ COMPONENT VARIABLE OVERRIDES
   For example, the following would override the cx-storefront background set in src/app/ui/layout/main/main.component.scss
   $cx-storefront-background-color: "info";
 */
+/** 
+ * the mixins depend on variables, mainly because of some
+ * lower level bootstrap variables. Hence we import the variables here,
+ * to make the mixins resuable. In order to have the right variables
+ * we load variables through the theme import. 
+ */
+/* IMPORTANT: If no there's no theme for any reason,
+  then fallback to the cxbase defaults */
+/*!
+  SPARTA v0.1
+  This file is for theme configuration. These variables are used in global and component CSS files.
+
+  You can:
+    1) Set new values for Bootstrap variables - https://github.com/twbs/bootstrap/blob/v4-dev/scss/_variables.scss
+    2) Set new values for cxbase variables - cxbase/_variables.scss
+    3) Set new values for component variables - app/__/_.scss
+  You cannot:
+    1) Add new variables
+*/
+/*!
+  CXBASE VARIABLES
+  This is NOT a theme.
+
+  This file should include ONLY new variables that Bootstrap does not provide.
+  For example, Bootstrap does not have a variable for semi font weight.
+
+  Same case for directionality.
+
+  Also be aware of items that should be configurable.
+  The Sparta buttons use uppercase type but future themes may want normal case
+  so a variable was created to make this available for other themes.
+
+*/
+/*
+GLOBAL VARIABLE OVERRIDES
+  These can be set with anything above or any variables exposed in Bootsrap or cxbase
+*/
+/*
+COMPONENT VARIABLE OVERRIDES
+  For example, the following would override the cx-storefront background set in src/app/ui/layout/main/main.component.scss
+  $cx-storefront-background-color: "info";
+*/
 .cx-app__breadcrumb {
   background-color: #f4f4f4;
   text-align: center;
@@ -10413,6 +10594,48 @@ COMPONENT VARIABLE OVERRIDES
   text-transform: var(--cx-text-transform, none);
 }
 
+/* IMPORTANT: If no there's no theme for any reason,
+  then fallback to the cxbase defaults */
+/*!
+  SPARTA v0.1
+  This file is for theme configuration. These variables are used in global and component CSS files.
+
+  You can:
+    1) Set new values for Bootstrap variables - https://github.com/twbs/bootstrap/blob/v4-dev/scss/_variables.scss
+    2) Set new values for cxbase variables - cxbase/_variables.scss
+    3) Set new values for component variables - app/__/_.scss
+  You cannot:
+    1) Add new variables
+*/
+/*!
+  CXBASE VARIABLES
+  This is NOT a theme.
+
+  This file should include ONLY new variables that Bootstrap does not provide.
+  For example, Bootstrap does not have a variable for semi font weight.
+
+  Same case for directionality.
+
+  Also be aware of items that should be configurable.
+  The Sparta buttons use uppercase type but future themes may want normal case
+  so a variable was created to make this available for other themes.
+
+*/
+/*
+GLOBAL VARIABLE OVERRIDES
+  These can be set with anything above or any variables exposed in Bootsrap or cxbase
+*/
+/*
+COMPONENT VARIABLE OVERRIDES
+  For example, the following would override the cx-storefront background set in src/app/ui/layout/main/main.component.scss
+  $cx-storefront-background-color: "info";
+*/
+/** 
+ * the mixins depend on variables, mainly because of some
+ * lower level bootstrap variables. Hence we import the variables here,
+ * to make the mixins resuable. In order to have the right variables
+ * we load variables through the theme import. 
+ */
 /* IMPORTANT: If no there's no theme for any reason,
   then fallback to the cxbase defaults */
 /*!
@@ -16863,6 +17086,48 @@ COMPONENT VARIABLE OVERRIDES
   --cx-border-style: solid;
 }
 
+/** 
+ * the mixins depend on variables, mainly because of some
+ * lower level bootstrap variables. Hence we import the variables here,
+ * to make the mixins resuable. In order to have the right variables
+ * we load variables through the theme import. 
+ */
+/* IMPORTANT: If no there's no theme for any reason,
+  then fallback to the cxbase defaults */
+/*!
+  SPARTA v0.1
+  This file is for theme configuration. These variables are used in global and component CSS files.
+
+  You can:
+    1) Set new values for Bootstrap variables - https://github.com/twbs/bootstrap/blob/v4-dev/scss/_variables.scss
+    2) Set new values for cxbase variables - cxbase/_variables.scss
+    3) Set new values for component variables - app/__/_.scss
+  You cannot:
+    1) Add new variables
+*/
+/*!
+  CXBASE VARIABLES
+  This is NOT a theme.
+
+  This file should include ONLY new variables that Bootstrap does not provide.
+  For example, Bootstrap does not have a variable for semi font weight.
+
+  Same case for directionality.
+
+  Also be aware of items that should be configurable.
+  The Sparta buttons use uppercase type but future themes may want normal case
+  so a variable was created to make this available for other themes.
+
+*/
+/*
+GLOBAL VARIABLE OVERRIDES
+  These can be set with anything above or any variables exposed in Bootsrap or cxbase
+*/
+/*
+COMPONENT VARIABLE OVERRIDES
+  For example, the following would override the cx-storefront background set in src/app/ui/layout/main/main.component.scss
+  $cx-storefront-background-color: "info";
+*/
 cx-page-layout {
   display: block;
   width: 100%;
@@ -17148,19 +17413,19 @@ cx-category-navigation {
   }
 }
 
-.AccountPageTemplate, .CheckoutLoginPageTemplate, .LoginPageTemplate {
+.LoginPageTemplate, .CheckoutLoginPageTemplate, .AccountPageTemplate {
   padding-bottom: 3rem;
 }
-.AccountPageTemplate cx-page-slot, .CheckoutLoginPageTemplate cx-page-slot, .LoginPageTemplate cx-page-slot {
+.LoginPageTemplate cx-page-slot, .CheckoutLoginPageTemplate cx-page-slot, .AccountPageTemplate cx-page-slot {
   max-width: 1140px;
   padding: 3rem 1.5rem 0 1.5rem;
   margin: auto;
 }
-.AccountPageTemplate cx-page-slot > *, .CheckoutLoginPageTemplate cx-page-slot > *, .LoginPageTemplate cx-page-slot > * {
+.LoginPageTemplate cx-page-slot > *, .CheckoutLoginPageTemplate cx-page-slot > *, .AccountPageTemplate cx-page-slot > * {
   max-width: var(--cx-max-width, 50%);
 }
 @media (max-width: 991.98px) {
-  .AccountPageTemplate, .CheckoutLoginPageTemplate, .LoginPageTemplate {
+  .LoginPageTemplate, .CheckoutLoginPageTemplate, .AccountPageTemplate {
     --cx-max-width: 100%;
   }
 }
@@ -17193,6 +17458,9 @@ cx-category-navigation {
   display: block;
 }
 
+.AccountPageTemplate {
+  --cx-max-width: 100%;
+}
 .AccountPageTemplate cx-order-details-headline {
   order: 1;
 }
@@ -17274,8 +17542,4 @@ cx-category-navigation {
 
 .StoreFinderPageTemplate cx-page-slot.SideContent cx-banner img {
   width: auto;
-}
-
-.AccountPageTemplate {
-  --cx-max-width: 100%;
 }
