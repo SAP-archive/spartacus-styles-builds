@@ -10846,21 +10846,524 @@ cx-product-images cx-media:after {
   transition: bottom 0.075s ease, transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
-cx-icon {
-  align-self: center;
-  line-height: normal;
+/* IMPORTANT: If no there's no theme for any reason,
+  then fallback to the cxbase defaults */
+/*!
+  SPARTA v0.1
+  This file is for theme configuration. These variables are used in global and component CSS files.
+
+  You can:
+    1) Set new values for Bootstrap variables - https://github.com/twbs/bootstrap/blob/v4-dev/scss/_variables.scss
+    2) Set new values for cxbase variables - cxbase/_variables.scss
+    3) Set new values for component variables - app/__/_.scss
+  You cannot:
+    1) Add new variables
+*/
+/*!
+  CXBASE VARIABLES
+  This is NOT a theme.
+
+  This file should include ONLY new variables that Bootstrap does not provide.
+  For example, Bootstrap does not have a variable for semi font weight.
+
+  Same case for directionality.
+
+  Also be aware of items that should be configurable.
+  The Sparta buttons use uppercase type but future themes may want normal case
+  so a variable was created to make this available for other themes.
+
+*/
+/*
+GLOBAL VARIABLE OVERRIDES
+  These can be set with anything above or any variables exposed in Bootsrap or cxbase
+*/
+/*
+COMPONENT VARIABLE OVERRIDES
+  For example, the following would override the cx-storefront background set in src/app/ui/layout/main/main.component.scss
+  $cx-storefront-background-color: "info";
+*/
+:root {
+  --cx-color-background: #f4f4f4;
+  --cx-color-text: #212738;
+  --cx-color-inverse: #ffffff;
+  --cx-color-transparent: transparent;
+  --cx-color-primary: #fe5757;
+  --cx-color-secondary: #747881;
+  --cx-color-success: #5dac06;
+  --cx-color-info: #17a2b8;
+  --cx-color-warning: #ffc107;
+  --cx-color-danger: #db0002;
+  --cx-color-light: #d3d6db;
+  --cx-color-dark: #212738;
+  --cx-color-visual-focus: #6d9df7;
+  --cx-font-weight-light: 300;
+  --cx-font-weight-normal: 400;
+  --cx-font-weight-semi: 600;
+  --cx-font-weight-bold: 700;
+  --cx-direction: ltr;
+  --cx-transition-duration: 0.5s;
+  --cx-animation-duration: 1s;
+  --cx-border-radius: 1em;
+  --cx-buttons-border-radius: 0.25rem;
+  --cx-border-style: solid;
 }
-cx-icon.small:before {
-  font-size: 0.9rem;
+
+/** 
+ * the mixins depend on variables, mainly because of some
+ * lower level bootstrap variables. Hence we import the variables here,
+ * to make the mixins resuable. In order to have the right variables
+ * we load variables through the theme import. 
+ */
+/* IMPORTANT: If no there's no theme for any reason,
+  then fallback to the cxbase defaults */
+/*!
+  SPARTA v0.1
+  This file is for theme configuration. These variables are used in global and component CSS files.
+
+  You can:
+    1) Set new values for Bootstrap variables - https://github.com/twbs/bootstrap/blob/v4-dev/scss/_variables.scss
+    2) Set new values for cxbase variables - cxbase/_variables.scss
+    3) Set new values for component variables - app/__/_.scss
+  You cannot:
+    1) Add new variables
+*/
+/*!
+  CXBASE VARIABLES
+  This is NOT a theme.
+
+  This file should include ONLY new variables that Bootstrap does not provide.
+  For example, Bootstrap does not have a variable for semi font weight.
+
+  Same case for directionality.
+
+  Also be aware of items that should be configurable.
+  The Sparta buttons use uppercase type but future themes may want normal case
+  so a variable was created to make this available for other themes.
+
+*/
+/*
+GLOBAL VARIABLE OVERRIDES
+  These can be set with anything above or any variables exposed in Bootsrap or cxbase
+*/
+/*
+COMPONENT VARIABLE OVERRIDES
+  For example, the following would override the cx-storefront background set in src/app/ui/layout/main/main.component.scss
+  $cx-storefront-background-color: "info";
+*/
+cx-page-layout {
+  display: block;
+  width: 100%;
 }
-cx-icon svg {
-  width: 28px;
-  height: 28px;
-  fill: currentColor;
+cx-page-layout > header {
+  background-color: var(--cx-color-background);
+  text-align: center;
+  padding-bottom: 25px;
+  padding-top: 25px;
 }
-cx-icon.small svg {
-  width: 14px;
-  height: 14px;
+cx-page-layout cx-page-slot {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex: 1 1 var(--cx-flex-basis, 100%);
+}
+cx-page-layout cx-page-slot > * {
+  flex: 1 1 var(--cx-flex-basis, 100%);
+}
+cx-page-layout.footer {
+  background-color: var(--cx-background-color, var(--cx-color-dark));
+  color: var(--cx-color, var(--cx-color-inverse));
+}
+
+cx-page-slot {
+  display: block;
+}
+
+cx-paragraph {
+  display: block;
+}
+
+cx-category-navigation {
+  display: block;
+}
+
+.LandingPage2Template {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1700px;
+  margin: auto;
+}
+.LandingPage2Template cx-page-slot.Section1 {
+  max-width: 1140px;
+  margin: auto;
+  margin-top: 30px;
+}
+@media (max-width: 991.98px) {
+  .LandingPage2Template cx-page-slot.Section1 {
+    margin-top: 0;
+  }
+}
+.LandingPage2Template cx-page-slot.Section2A {
+  margin-left: auto;
+}
+.LandingPage2Template cx-page-slot.Section2B {
+  margin-right: auto;
+}
+.LandingPage2Template cx-page-slot.Section2A, .LandingPage2Template cx-page-slot.Section2B {
+  --cx-flex-basis: 50%;
+  max-width: 570px;
+}
+@media (max-width: 991.98px) {
+  .LandingPage2Template cx-page-slot.Section2A, .LandingPage2Template cx-page-slot.Section2B {
+    --cx-flex-basis: 100%;
+    max-width: 100%;
+  }
+  .LandingPage2Template cx-page-slot.Section2A > *, .LandingPage2Template cx-page-slot.Section2B > * {
+    --cx-flex-basis: 50%;
+  }
+}
+@media (max-width: 575.98px) {
+  .LandingPage2Template cx-page-slot.Section2A > *, .LandingPage2Template cx-page-slot.Section2B > * {
+    --cx-flex-basis: 100%;
+  }
+}
+.LandingPage2Template cx-page-slot.Section3 {
+  max-width: 1140px;
+  margin: auto;
+}
+.LandingPage2Template cx-page-slot.Section4 {
+  color: var(--cx-color, var(--cx-color-light));
+  flex-wrap: nowrap;
+}
+@media (max-width: 991.98px) {
+  .LandingPage2Template cx-page-slot.Section4 {
+    flex-wrap: wrap;
+  }
+  .LandingPage2Template cx-page-slot.Section4 > * {
+    --cx-flex-basis: 50%;
+    border-bottom: solid 1px currentColor;
+    border-right: solid 1px currentColor;
+  }
+}
+@media (max-width: 575.98px) {
+  .LandingPage2Template cx-page-slot.Section4 > * {
+    --cx-flex-basis: 100%;
+  }
+}
+
+.ContentPage1Template {
+  max-width: 1140px;
+  padding: 2rem 1.5rem 0 1.5rem;
+  margin: auto;
+}
+.ContentPage1Template cx-page-slot.Section2A, .ContentPage1Template cx-page-slot.Section2B {
+  display: block;
+}
+
+.CategoryPageTemplate {
+  max-width: 1140px;
+  margin: auto;
+}
+.CategoryPageTemplate .Section1 {
+  margin-top: 30px;
+}
+@media (max-width: 991.98px) {
+  .CategoryPageTemplate .Section1 {
+    margin-top: 0;
+  }
+}
+.CategoryPageTemplate .Section2 > * {
+  --cx-flex-basis: 33%;
+}
+@media (max-width: 991.98px) {
+  .CategoryPageTemplate .Section2 > * {
+    --cx-flex-basis: 50%;
+  }
+}
+
+.ProductDetailsPageTemplate {
+  padding: var(--cx-padding, 2.5rem 0 0);
+}
+.ProductDetailsPageTemplate cx-page-slot.Summary {
+  margin-bottom: 40px;
+}
+@media (min-width: 992px) {
+  .ProductDetailsPageTemplate cx-page-slot.Summary {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(2, auto) 1fr;
+    grid-column-gap: 20px;
+    grid-row-gap: 0px;
+  }
+  .ProductDetailsPageTemplate cx-page-slot.Summary cx-product-images {
+    grid-column: 1;
+    grid-row: 1/span 3;
+  }
+  .ProductDetailsPageTemplate cx-page-slot.Summary cx-product-intro {
+    grid-column: 2;
+    grid-row: 1/2;
+  }
+  .ProductDetailsPageTemplate cx-page-slot.Summary cx-product-summary {
+    grid-column: 2;
+    grid-row: 2/3;
+  }
+  .ProductDetailsPageTemplate cx-page-slot.Summary cx-add-to-cart {
+    grid-column: 2;
+    grid-row: 3/4;
+    padding: 0 20px 20px 20px;
+  }
+}
+.ProductDetailsPageTemplate cx-page-slot.AddToCart {
+  max-width: 50%;
+}
+.ProductDetailsPageTemplate cx-page-slot.UpSelling, .ProductDetailsPageTemplate cx-page-slot.CrossSelling {
+  max-width: 1140px;
+  margin: auto;
+}
+.ProductListPageTemplate {
+  max-width: 1140px;
+  margin: auto;
+  display: flex;
+}
+@media (max-width: 991.98px) {
+  .ProductListPageTemplate {
+    flex-direction: column;
+  }
+}
+.ProductListPageTemplate .ProductLeftRefinements {
+  order: 1;
+  max-width: 25%;
+  padding: 60px 15px 15px 15px;
+}
+@media (max-width: 991.98px) {
+  .ProductListPageTemplate .ProductLeftRefinements {
+    width: 100%;
+    max-width: none;
+  }
+}
+.ProductListPageTemplate .ProductListSlot {
+  order: 2;
+  max-width: 75%;
+}
+@media (max-width: 991.98px) {
+  .ProductListPageTemplate .ProductListSlot {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.SearchResultsListPageTemplate {
+  max-width: 1140px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: stretch;
+  height: 100%;
+}
+@media (max-width: 991.98px) {
+  .SearchResultsListPageTemplate {
+    flex-direction: column;
+  }
+}
+.SearchResultsListPageTemplate .ProductLeftRefinements {
+  order: 1;
+  max-width: 25%;
+  padding: 60px 15px 15px 15px;
+}
+@media (max-width: 991.98px) {
+  .SearchResultsListPageTemplate .ProductLeftRefinements {
+    width: 100%;
+    max-width: none;
+  }
+}
+.SearchResultsListPageTemplate .SearchResultsListSlot {
+  order: 2;
+  max-width: 75%;
+}
+@media (max-width: 991.98px) {
+  .SearchResultsListPageTemplate .SearchResultsListSlot {
+    width: 100%;
+    max-width: none;
+  }
+}
+.SearchResultsListPageTemplate .Section2 {
+  padding: 0 1rem;
+}
+.SearchResultsListPageTemplate .Section4 {
+  padding: 0 1rem;
+  order: 3;
+}
+
+.CartPageTemplate {
+  max-width: 1140px;
+  padding: 0 1.5rem;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+.CartPageTemplate .TopContent {
+  --cx-flex-basis: 68%;
+}
+@media (max-width: 991.98px) {
+  .CartPageTemplate .TopContent {
+    --cx-flex-basis: 100%;
+  }
+}
+.CartPageTemplate .CenterRightContentSlot {
+  --cx-flex-basis: 30%;
+}
+@media (max-width: 991.98px) {
+  .CartPageTemplate .CenterRightContentSlot {
+    --cx-flex-basis: 50%;
+    justify-content: flex-end;
+  }
+  .CartPageTemplate .CenterRightContentSlot cx-cart-totals {
+    max-width: 50%;
+  }
+  .CartPageTemplate .CenterRightContentSlot cx-cart-coupon {
+    max-width: 100%;
+  }
+}
+@media (max-width: 767.98px) {
+  .CartPageTemplate .CenterRightContentSlot {
+    --cx-flex-basis: 100%;
+  }
+  .CartPageTemplate .CenterRightContentSlot cx-cart-totals {
+    max-width: none;
+  }
+  .CartPageTemplate .CenterRightContentSlot cx-cart-coupon {
+    max-width: none;
+  }
+}
+
+.LoginPageTemplate, .CheckoutLoginPageTemplate, .AccountPageTemplate {
+  padding-bottom: 3rem;
+}
+.LoginPageTemplate cx-page-slot, .CheckoutLoginPageTemplate cx-page-slot, .AccountPageTemplate cx-page-slot {
+  max-width: 1140px;
+  padding: 3rem 1.5rem 0 1.5rem;
+  margin: auto;
+}
+.LoginPageTemplate cx-page-slot > *, .CheckoutLoginPageTemplate cx-page-slot > *, .AccountPageTemplate cx-page-slot > * {
+  max-width: var(--cx-max-width, 50%);
+}
+@media (max-width: 991.98px) {
+  .LoginPageTemplate, .CheckoutLoginPageTemplate, .AccountPageTemplate {
+    --cx-max-width: 100%;
+  }
+}
+
+.ErrorPageTemplate {
+  padding-bottom: 3rem;
+}
+.ErrorPageTemplate cx-page-slot {
+  max-width: 1140px;
+  margin: auto;
+}
+.ErrorPageTemplate cx-page-slot cx-responsive-banner {
+  max-width: 400px;
+}
+.ErrorPageTemplate cx-page-slot cx-link {
+  text-decoration: underline;
+}
+.ErrorPageTemplate cx-page-slot cx-paragraph {
+  max-height: 170px;
+}
+.ErrorPageTemplate cx-page-slot > * {
+  text-align: center;
+}
+@media (max-width: 991.98px) {
+  .ErrorPageTemplate {
+    --cx-max-width: 100%;
+  }
+}
+.MiddleContent.ErrorPageTemplate, .BottomContent.ErrorPageTemplate {
+  display: block;
+}
+
+.AccountPageTemplate {
+  --cx-max-width: 100%;
+}
+.AccountPageTemplate cx-order-details-headline {
+  order: 1;
+}
+.AccountPageTemplate cx-order-details-items {
+  order: 2;
+}
+.AccountPageTemplate cx-order-details-shipping {
+  order: 4;
+}
+.AccountPageTemplate cx-order-details-totals {
+  order: 3;
+}
+
+.MultiStepCheckoutSummaryPageTemplate {
+  max-width: 1140px;
+  padding: 2rem 1.5rem 0 1.5rem;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: flex-start;
+}
+@media (max-width: 991.98px) {
+  .MultiStepCheckoutSummaryPageTemplate {
+    display: inline-block;
+  }
+}
+.MultiStepCheckoutSummaryPageTemplate cx-page-slot.TopContent {
+  flex: 0 100%;
+}
+.MultiStepCheckoutSummaryPageTemplate cx-page-slot.BodyContent {
+  flex: 0 68%;
+}
+.MultiStepCheckoutSummaryPageTemplate cx-page-slot.SideContent {
+  flex: 0 0 30%;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.MultiStepCheckoutSummaryPageTemplate cx-page-slot.SideContent cx-checkout-order-summary {
+  flex: unset;
+}
+.MultiStepCheckoutSummaryPageTemplate cx-page-slot.SideContent cx-place-order {
+  flex: unset;
+  padding: 1rem 2.5rem 0;
+}
+@media (max-width: 991.98px) {
+  .MultiStepCheckoutSummaryPageTemplate cx-page-slot.SideContent {
+    --cx-flex-basis: 50%;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-direction: column;
+  }
+  .MultiStepCheckoutSummaryPageTemplate cx-page-slot.SideContent cx-checkout-order-summary {
+    max-width: 50%;
+    padding-top: 1rem;
+  }
+  .MultiStepCheckoutSummaryPageTemplate cx-page-slot.SideContent cx-checkout-order-summary cx-order-summary {
+    padding: 1rem 2.5rem 0;
+  }
+  .MultiStepCheckoutSummaryPageTemplate cx-page-slot.SideContent cx-place-order {
+    max-width: 50%;
+    padding-bottom: 2rem;
+    padding-top: 0;
+  }
+}
+@media (max-width: 767.98px) {
+  .MultiStepCheckoutSummaryPageTemplate cx-page-slot.SideContent {
+    --cx-flex-basis: 100%;
+    align-items: normal;
+  }
+  .MultiStepCheckoutSummaryPageTemplate cx-page-slot.SideContent cx-checkout-order-summary {
+    max-width: 100%;
+  }
+  .MultiStepCheckoutSummaryPageTemplate cx-page-slot.SideContent cx-place-order {
+    max-width: 100%;
+  }
+}
+
+.StoreFinderPageTemplate cx-page-slot.SideContent cx-banner img {
+  width: auto;
 }
 
 /* IMPORTANT: If no there's no theme for any reason,
@@ -11634,6 +12137,157 @@ cx-applied-coupons .cx-coupon-apply {
   word-break: break-all;
 }
 
+.btn-group,
+.btn-group-vertical {
+  position: relative;
+  display: inline-flex;
+  vertical-align: middle;
+}
+.btn-group > .btn,
+.btn-group-vertical > .btn {
+  position: relative;
+  flex: 1 1 auto;
+}
+.btn-group > .btn:hover,
+.btn-group-vertical > .btn:hover {
+  z-index: 1;
+}
+.btn-group > .btn:focus, .btn-group > .btn:active, .btn-group > .btn.active,
+.btn-group-vertical > .btn:focus,
+.btn-group-vertical > .btn:active,
+.btn-group-vertical > .btn.active {
+  z-index: 1;
+}
+
+.btn-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.btn-toolbar .input-group {
+  width: auto;
+}
+
+.btn-group > .btn:not(:first-child),
+.btn-group > .btn-group:not(:first-child) {
+  margin-left: -1px;
+}
+.btn-group > .btn:not(:last-child):not(.dropdown-toggle),
+.btn-group > .btn-group:not(:last-child) > .btn {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.btn-group > .btn:not(:first-child),
+.btn-group > .btn-group:not(:first-child) > .btn {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.dropdown-toggle-split {
+  padding-right: 0.5625rem;
+  padding-left: 0.5625rem;
+}
+.dropdown-toggle-split::after, .dropup .dropdown-toggle-split::after, .dropright .dropdown-toggle-split::after {
+  margin-left: 0;
+}
+.dropleft .dropdown-toggle-split::before {
+  margin-right: 0;
+}
+
+.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split {
+  padding-right: 0.375rem;
+  padding-left: 0.375rem;
+}
+
+.btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split {
+  padding-right: 0.75rem;
+  padding-left: 0.75rem;
+}
+
+.btn-group-vertical {
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.btn-group-vertical > .btn,
+.btn-group-vertical > .btn-group {
+  width: 100%;
+}
+.btn-group-vertical > .btn:not(:first-child),
+.btn-group-vertical > .btn-group:not(:first-child) {
+  margin-top: -1px;
+}
+.btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle),
+.btn-group-vertical > .btn-group:not(:last-child) > .btn {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.btn-group-vertical > .btn:not(:first-child),
+.btn-group-vertical > .btn-group:not(:first-child) > .btn {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.btn-group-toggle > .btn,
+.btn-group-toggle > .btn-group > .btn {
+  margin-bottom: 0;
+}
+.btn-group-toggle > .btn input[type=radio],
+.btn-group-toggle > .btn input[type=checkbox],
+.btn-group-toggle > .btn-group > .btn input[type=radio],
+.btn-group-toggle > .btn-group > .btn input[type=checkbox] {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  pointer-events: none;
+}
+
+cx-item-counter .cx-counter-wrapper {
+  display: inline-flex;
+  flex-direction: column;
+}
+cx-item-counter .cx-counter {
+  border-radius: 4px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--cx-color-light);
+}
+cx-item-counter .cx-counter-value {
+  border: none;
+  text-align: center;
+  border-width: 0 1px 0 1px;
+  border-style: solid;
+  border-color: var(--cx-color-light);
+  padding: 12px 9px 12px 9px;
+  max-height: 46px;
+  min-width: 48px;
+  max-width: 78px;
+}
+cx-item-counter .cx-counter-action {
+  max-height: 48px;
+  min-width: 40px;
+  border: none;
+  cursor: pointer;
+  color: var(--cx-color-text);
+  background-color: var(--cx-color-transparent);
+  margin: 0;
+  font-size: var(--cx-font-size, 1rem);
+  font-weight: var(--cx-font-weight-normal);
+  line-height: var(--cx-line-height, 1.6);
+}
+cx-item-counter .cx-counter-action:hover {
+  color: var(--cx-color-primary);
+}
+cx-item-counter .cx-counter-action:focus {
+  color: var(--cx-color, var(--cx-color-primary));
+  font-weight: var(--cx-font-weight-bold);
+  cursor: pointer;
+}
+cx-item-counter .cx-counter-action:disabled {
+  color: var(--cx-color-light);
+  opacity: 1;
+  cursor: not-allowed;
+}
+
 /* IMPORTANT: If no there's no theme for any reason,
   then fallback to the cxbase defaults */
 /*!
@@ -11856,7 +12510,7 @@ COMPONENT VARIABLE OVERRIDES
   }
 }
 @media (max-width: 991.98px) {
-  cx-billing-address-form .container, cx-billing-address-form .ProductDetailsPageTemplate .tab-delivery, .ProductDetailsPageTemplate cx-billing-address-form .tab-delivery, cx-billing-address-form .ProductDetailsPageTemplate cx-page-slot.Summary, .ProductDetailsPageTemplate cx-billing-address-form cx-page-slot.Summary {
+  cx-billing-address-form .container, cx-billing-address-form .ProductDetailsPageTemplate cx-page-slot.Summary, .ProductDetailsPageTemplate cx-billing-address-form cx-page-slot.Summary, cx-billing-address-form .ProductDetailsPageTemplate .tab-delivery, .ProductDetailsPageTemplate cx-billing-address-form .tab-delivery {
     width: 100%;
   }
 }
@@ -11964,7 +12618,7 @@ COMPONENT VARIABLE OVERRIDES
   }
 }
 @media (max-width: 991.98px) {
-  cx-payment-method .container, cx-payment-method .ProductDetailsPageTemplate .tab-delivery, .ProductDetailsPageTemplate cx-payment-method .tab-delivery, cx-payment-method .ProductDetailsPageTemplate cx-page-slot.Summary, .ProductDetailsPageTemplate cx-payment-method cx-page-slot.Summary {
+  cx-payment-method .container, cx-payment-method .ProductDetailsPageTemplate cx-page-slot.Summary, .ProductDetailsPageTemplate cx-payment-method cx-page-slot.Summary, cx-payment-method .ProductDetailsPageTemplate .tab-delivery, .ProductDetailsPageTemplate cx-payment-method .tab-delivery {
     width: 100%;
   }
 }
@@ -12018,7 +12672,7 @@ cx-payment-method .cx-spinner {
   padding-top: 30px;
   padding-bottom: 30px;
 }
-cx-payment-method .cx-payment.container, cx-payment-method .ProductDetailsPageTemplate .cx-payment.tab-delivery, .ProductDetailsPageTemplate cx-payment-method .cx-payment.tab-delivery, cx-payment-method .ProductDetailsPageTemplate cx-page-slot.cx-payment.Summary, .ProductDetailsPageTemplate cx-payment-method cx-page-slot.cx-payment.Summary {
+cx-payment-method .cx-payment.container, cx-payment-method .ProductDetailsPageTemplate cx-page-slot.cx-payment.Summary, .ProductDetailsPageTemplate cx-payment-method cx-page-slot.cx-payment.Summary, cx-payment-method .ProductDetailsPageTemplate .cx-payment.tab-delivery, .ProductDetailsPageTemplate cx-payment-method .cx-payment.tab-delivery {
   padding: 0;
 }
 cx-payment-method .cx-payment-card {
@@ -12129,7 +12783,7 @@ COMPONENT VARIABLE OVERRIDES
   }
 }
 @media (max-width: 991.98px) {
-  cx-payment-form .container, cx-payment-form .ProductDetailsPageTemplate .tab-delivery, .ProductDetailsPageTemplate cx-payment-form .tab-delivery, cx-payment-form .ProductDetailsPageTemplate cx-page-slot.Summary, .ProductDetailsPageTemplate cx-payment-form cx-page-slot.Summary {
+  cx-payment-form .container, cx-payment-form .ProductDetailsPageTemplate cx-page-slot.Summary, .ProductDetailsPageTemplate cx-payment-form cx-page-slot.Summary, cx-payment-form .ProductDetailsPageTemplate .tab-delivery, .ProductDetailsPageTemplate cx-payment-form .tab-delivery {
     width: 100%;
   }
 }
@@ -12358,7 +13012,7 @@ cx-review-submit .cx-review-cart-item {
   }
 }
 @media (max-width: 991.98px) {
-  cx-review-submit .container, cx-review-submit .ProductDetailsPageTemplate .tab-delivery, .ProductDetailsPageTemplate cx-review-submit .tab-delivery, cx-review-submit .ProductDetailsPageTemplate cx-page-slot.Summary, .ProductDetailsPageTemplate cx-review-submit cx-page-slot.Summary {
+  cx-review-submit .container, cx-review-submit .ProductDetailsPageTemplate cx-page-slot.Summary, .ProductDetailsPageTemplate cx-review-submit cx-page-slot.Summary, cx-review-submit .ProductDetailsPageTemplate .tab-delivery, .ProductDetailsPageTemplate cx-review-submit .tab-delivery {
     width: 100%;
   }
 }
@@ -12487,7 +13141,7 @@ COMPONENT VARIABLE OVERRIDES
   }
 }
 @media (max-width: 991.98px) {
-  cx-shipping-address .container, cx-shipping-address .ProductDetailsPageTemplate .tab-delivery, .ProductDetailsPageTemplate cx-shipping-address .tab-delivery, cx-shipping-address .ProductDetailsPageTemplate cx-page-slot.Summary, .ProductDetailsPageTemplate cx-shipping-address cx-page-slot.Summary {
+  cx-shipping-address .container, cx-shipping-address .ProductDetailsPageTemplate cx-page-slot.Summary, .ProductDetailsPageTemplate cx-shipping-address cx-page-slot.Summary, cx-shipping-address .ProductDetailsPageTemplate .tab-delivery, .ProductDetailsPageTemplate cx-shipping-address .tab-delivery {
     width: 100%;
   }
 }
@@ -12603,7 +13257,7 @@ COMPONENT VARIABLE OVERRIDES
   }
 }
 @media (max-width: 991.98px) {
-  cx-address-form .container, cx-address-form .ProductDetailsPageTemplate .tab-delivery, .ProductDetailsPageTemplate cx-address-form .tab-delivery, cx-address-form .ProductDetailsPageTemplate cx-page-slot.Summary, .ProductDetailsPageTemplate cx-address-form cx-page-slot.Summary {
+  cx-address-form .container, cx-address-form .ProductDetailsPageTemplate cx-page-slot.Summary, .ProductDetailsPageTemplate cx-address-form cx-page-slot.Summary, cx-address-form .ProductDetailsPageTemplate .tab-delivery, .ProductDetailsPageTemplate cx-address-form .tab-delivery {
     width: 100%;
   }
 }
@@ -12788,7 +13442,7 @@ COMPONENT VARIABLE OVERRIDES
   }
 }
 @media (max-width: 991.98px) {
-  cx-delivery-mode .container, cx-delivery-mode .ProductDetailsPageTemplate .tab-delivery, .ProductDetailsPageTemplate cx-delivery-mode .tab-delivery, cx-delivery-mode .ProductDetailsPageTemplate cx-page-slot.Summary, .ProductDetailsPageTemplate cx-delivery-mode cx-page-slot.Summary {
+  cx-delivery-mode .container, cx-delivery-mode .ProductDetailsPageTemplate cx-page-slot.Summary, .ProductDetailsPageTemplate cx-delivery-mode cx-page-slot.Summary, cx-delivery-mode .ProductDetailsPageTemplate .tab-delivery, .ProductDetailsPageTemplate cx-delivery-mode .tab-delivery {
     width: 100%;
   }
 }
@@ -12905,14 +13559,14 @@ COMPONENT VARIABLE OVERRIDES
   $cx-storefront-background-color: "info";
 */
 @media (max-width: 991.98px) {
-  cx-order-confirmation-items .cx-order-items.container, cx-order-confirmation-items .ProductDetailsPageTemplate .cx-order-items.tab-delivery, .ProductDetailsPageTemplate cx-order-confirmation-items .cx-order-items.tab-delivery, cx-order-confirmation-items .ProductDetailsPageTemplate cx-page-slot.cx-order-items.Summary, .ProductDetailsPageTemplate cx-order-confirmation-items cx-page-slot.cx-order-items.Summary {
+  cx-order-confirmation-items .cx-order-items.container, cx-order-confirmation-items .ProductDetailsPageTemplate cx-page-slot.cx-order-items.Summary, .ProductDetailsPageTemplate cx-order-confirmation-items cx-page-slot.cx-order-items.Summary, cx-order-confirmation-items .ProductDetailsPageTemplate .cx-order-items.tab-delivery, .ProductDetailsPageTemplate cx-order-confirmation-items .cx-order-items.tab-delivery {
     max-width: 100%;
     min-width: 100%;
     padding: 0;
   }
 }
 @media (max-width: 767.98px) {
-  cx-order-confirmation-items .cx-order-items.container, cx-order-confirmation-items .ProductDetailsPageTemplate .cx-order-items.tab-delivery, .ProductDetailsPageTemplate cx-order-confirmation-items .cx-order-items.tab-delivery, cx-order-confirmation-items .ProductDetailsPageTemplate cx-page-slot.cx-order-items.Summary, .ProductDetailsPageTemplate cx-order-confirmation-items cx-page-slot.cx-order-items.Summary {
+  cx-order-confirmation-items .cx-order-items.container, cx-order-confirmation-items .ProductDetailsPageTemplate cx-page-slot.cx-order-items.Summary, .ProductDetailsPageTemplate cx-order-confirmation-items cx-page-slot.cx-order-items.Summary, cx-order-confirmation-items .ProductDetailsPageTemplate .cx-order-items.tab-delivery, .ProductDetailsPageTemplate cx-order-confirmation-items .cx-order-items.tab-delivery {
     max-width: 100%;
     min-width: 100%;
     padding: 0;
@@ -12999,18 +13653,18 @@ cx-order-confirmation-overview .cx-order-review-summary {
     margin: 0.625rem 0;
   }
 }
-cx-order-confirmation-overview .cx-order-review-summary .container, cx-order-confirmation-overview .cx-order-review-summary .ProductDetailsPageTemplate .tab-delivery, .ProductDetailsPageTemplate cx-order-confirmation-overview .cx-order-review-summary .tab-delivery, cx-order-confirmation-overview .cx-order-review-summary .ProductDetailsPageTemplate cx-page-slot.Summary, .ProductDetailsPageTemplate cx-order-confirmation-overview .cx-order-review-summary cx-page-slot.Summary {
+cx-order-confirmation-overview .cx-order-review-summary .container, cx-order-confirmation-overview .cx-order-review-summary .ProductDetailsPageTemplate cx-page-slot.Summary, .ProductDetailsPageTemplate cx-order-confirmation-overview .cx-order-review-summary cx-page-slot.Summary, cx-order-confirmation-overview .cx-order-review-summary .ProductDetailsPageTemplate .tab-delivery, .ProductDetailsPageTemplate cx-order-confirmation-overview .cx-order-review-summary .tab-delivery {
   padding: 0;
 }
 @media (max-width: 991.98px) {
-  cx-order-confirmation-overview .cx-order-review-summary .container, cx-order-confirmation-overview .cx-order-review-summary .ProductDetailsPageTemplate .tab-delivery, .ProductDetailsPageTemplate cx-order-confirmation-overview .cx-order-review-summary .tab-delivery, cx-order-confirmation-overview .cx-order-review-summary .ProductDetailsPageTemplate cx-page-slot.Summary, .ProductDetailsPageTemplate cx-order-confirmation-overview .cx-order-review-summary cx-page-slot.Summary {
+  cx-order-confirmation-overview .cx-order-review-summary .container, cx-order-confirmation-overview .cx-order-review-summary .ProductDetailsPageTemplate cx-page-slot.Summary, .ProductDetailsPageTemplate cx-order-confirmation-overview .cx-order-review-summary cx-page-slot.Summary, cx-order-confirmation-overview .cx-order-review-summary .ProductDetailsPageTemplate .tab-delivery, .ProductDetailsPageTemplate cx-order-confirmation-overview .cx-order-review-summary .tab-delivery {
     max-width: 100%;
     min-width: 100%;
     padding: 0 1.25rem;
   }
 }
 @media (max-width: 767.98px) {
-  cx-order-confirmation-overview .cx-order-review-summary .container, cx-order-confirmation-overview .cx-order-review-summary .ProductDetailsPageTemplate .tab-delivery, .ProductDetailsPageTemplate cx-order-confirmation-overview .cx-order-review-summary .tab-delivery, cx-order-confirmation-overview .cx-order-review-summary .ProductDetailsPageTemplate cx-page-slot.Summary, .ProductDetailsPageTemplate cx-order-confirmation-overview .cx-order-review-summary cx-page-slot.Summary {
+  cx-order-confirmation-overview .cx-order-review-summary .container, cx-order-confirmation-overview .cx-order-review-summary .ProductDetailsPageTemplate cx-page-slot.Summary, .ProductDetailsPageTemplate cx-order-confirmation-overview .cx-order-review-summary cx-page-slot.Summary, cx-order-confirmation-overview .cx-order-review-summary .ProductDetailsPageTemplate .tab-delivery, .ProductDetailsPageTemplate cx-order-confirmation-overview .cx-order-review-summary .tab-delivery {
     padding: 1.25rem;
   }
 }
@@ -13107,14 +13761,14 @@ cx-order-confirmation-totals .cx-order-summary {
   padding-right: var(--cx-padding, 0);
 }
 @media (max-width: 991.98px) {
-  cx-order-confirmation-totals .cx-order-summary.container, cx-order-confirmation-totals .ProductDetailsPageTemplate .cx-order-summary.tab-delivery, .ProductDetailsPageTemplate cx-order-confirmation-totals .cx-order-summary.tab-delivery, cx-order-confirmation-totals .ProductDetailsPageTemplate cx-page-slot.cx-order-summary.Summary, .ProductDetailsPageTemplate cx-order-confirmation-totals cx-page-slot.cx-order-summary.Summary {
+  cx-order-confirmation-totals .cx-order-summary.container, cx-order-confirmation-totals .ProductDetailsPageTemplate cx-page-slot.cx-order-summary.Summary, .ProductDetailsPageTemplate cx-order-confirmation-totals cx-page-slot.cx-order-summary.Summary, cx-order-confirmation-totals .ProductDetailsPageTemplate .cx-order-summary.tab-delivery, .ProductDetailsPageTemplate cx-order-confirmation-totals .cx-order-summary.tab-delivery {
     max-width: var(--cx-max-width, 100%);
     min-width: var(--cx-min-width, 100%);
     padding-right: var(--cx-padding, 1.625rem);
   }
 }
 @media (max-width: 767.98px) {
-  cx-order-confirmation-totals .cx-order-summary.container, cx-order-confirmation-totals .ProductDetailsPageTemplate .cx-order-summary.tab-delivery, .ProductDetailsPageTemplate cx-order-confirmation-totals .cx-order-summary.tab-delivery, cx-order-confirmation-totals .ProductDetailsPageTemplate cx-page-slot.cx-order-summary.Summary, .ProductDetailsPageTemplate cx-order-confirmation-totals cx-page-slot.cx-order-summary.Summary {
+  cx-order-confirmation-totals .cx-order-summary.container, cx-order-confirmation-totals .ProductDetailsPageTemplate cx-page-slot.cx-order-summary.Summary, .ProductDetailsPageTemplate cx-order-confirmation-totals cx-page-slot.cx-order-summary.Summary, cx-order-confirmation-totals .ProductDetailsPageTemplate .cx-order-summary.tab-delivery, .ProductDetailsPageTemplate cx-order-confirmation-totals .cx-order-summary.tab-delivery {
     padding: var(--cx-padding, 0);
   }
 }
@@ -13590,7 +14244,7 @@ cx-tab-paragraph-container > div {
 cx-tab-paragraph-container > div:not(.active) {
   display: none;
 }
-cx-tab-paragraph-container > div .container > h2, cx-tab-paragraph-container > div .ProductDetailsPageTemplate .tab-delivery > h2, .ProductDetailsPageTemplate cx-tab-paragraph-container > div .tab-delivery > h2, cx-tab-paragraph-container > div .ProductDetailsPageTemplate cx-page-slot.Summary > h2, .ProductDetailsPageTemplate cx-tab-paragraph-container > div cx-page-slot.Summary > h2 {
+cx-tab-paragraph-container > div .container > h2, cx-tab-paragraph-container > div .ProductDetailsPageTemplate cx-page-slot.Summary > h2, .ProductDetailsPageTemplate cx-tab-paragraph-container > div cx-page-slot.Summary > h2, cx-tab-paragraph-container > div .ProductDetailsPageTemplate .tab-delivery > h2, .ProductDetailsPageTemplate cx-tab-paragraph-container > div .tab-delivery > h2 {
   display: none;
 }
 cx-tab-paragraph-container > h3 {
@@ -14784,6 +15438,47 @@ cx-product-references cx-media.is-missing {
   background-size: 60%;
 }
 
+cx-star-rating {
+  padding: 15px 0;
+}
+cx-star-rating:not([disabled=true]) {
+  cursor: pointer;
+}
+cx-star-rating .star {
+  font-size: 20px;
+  margin: 0 2.5px;
+}
+cx-star-rating .star:nth-child(1) {
+  background: linear-gradient(90deg, var(--cx-color-primary) 0%, var(--cx-color-primary) calc((var(--star-fill) - 1 + 1) * 100%), var(--cx-color-light) calc((var(--star-fill) - 1 + 1) * 100%));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+cx-star-rating .star:nth-child(2) {
+  background: linear-gradient(90deg, var(--cx-color-primary) 0%, var(--cx-color-primary) calc((var(--star-fill) - 2 + 1) * 100%), var(--cx-color-light) calc((var(--star-fill) - 2 + 1) * 100%));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+cx-star-rating .star:nth-child(3) {
+  background: linear-gradient(90deg, var(--cx-color-primary) 0%, var(--cx-color-primary) calc((var(--star-fill) - 3 + 1) * 100%), var(--cx-color-light) calc((var(--star-fill) - 3 + 1) * 100%));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+cx-star-rating .star:nth-child(4) {
+  background: linear-gradient(90deg, var(--cx-color-primary) 0%, var(--cx-color-primary) calc((var(--star-fill) - 4 + 1) * 100%), var(--cx-color-light) calc((var(--star-fill) - 4 + 1) * 100%));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+cx-star-rating .star:nth-child(5) {
+  background: linear-gradient(90deg, var(--cx-color-primary) 0%, var(--cx-color-primary) calc((var(--star-fill) - 5 + 1) * 100%), var(--cx-color-light) calc((var(--star-fill) - 5 + 1) * 100%));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 cx-card .cx-card-border {
   border: 1px solid var(--cx-color-light);
 }
@@ -14823,55 +15518,74 @@ cx-card .cx-card-link {
   padding: 0 0 0 1rem;
 }
 
-cx-site-context-selector {
-  position: relative;
-  margin: 14px 8px 14px 0;
-}
-@media (max-width: 991.98px) {
-  cx-site-context-selector {
-    display: inline-block;
-  }
-  cx-site-context-selector:first-child {
-    margin-left: 0;
-  }
-  cx-site-context-selector:not(:first-child) {
-    padding-left: 16px;
-    border-left: 1px solid var(--cx-color-secondary);
-  }
-}
-cx-site-context-selector label {
-  display: flex;
-  margin: 0;
-}
-cx-site-context-selector label span {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
-}
-cx-site-context-selector cx-icon {
-  margin-left: -10px;
-}
-cx-site-context-selector select {
-  color: inherit;
-  background-color: transparent;
-  border: 0;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  padding-right: 14px;
-  outline: none;
-  position: relative;
-  z-index: 1;
-}
-
 cx-pagination ul .pagination .page-item.active .page-link {
   background-color: var(--cx-background-color, var(--cx-color-primary));
   border-color: var(--cx-border-color, var(--cx-color-primary));
+}
+
+/* IDEAS TO EXTEND
+  - sizing (variants: small, medium, big)
+  - theme (variants: primary, secondary)
+*/
+:root {
+  --cx-spinner-radius: 120px;
+  --cx-spinner-border-width: 15px;
+  --cx-spinner-animation-time: 1s;
+  --cx-spinner-primary-color: var(--cx-color-primary);
+  --cx-spinner-secondary-color: var(--cx-color-light);
+}
+
+cx-spinner .loader-container {
+  position: relative;
+  margin: 30px auto;
+  width: var(--cx-spinner-radius);
+  height: var(--cx-spinner-radius);
+}
+cx-spinner .loader {
+  width: var(--cx-spinner-radius);
+  height: var(--cx-spinner-radius);
+  font-size: 10px;
+  overflow: hidden;
+  animation: load8 var(--cx-spinner-animation-time) infinite linear;
+}
+cx-spinner .loader::before {
+  content: "";
+  box-sizing: border-box;
+  display: block;
+  width: var(--cx-spinner-radius);
+  height: var(--cx-spinner-radius);
+  border: var(--cx-spinner-border-width) solid;
+  margin: auto;
+  border-top-color: var(--cx-spinner-secondary-color);
+  border-bottom-color: var(--cx-spinner-secondary-color);
+  border-right-color: var(--cx-spinner-secondary-color);
+  border-left-color: var(--cx-spinner-primary-color);
+  border-radius: 50%;
+}
+@keyframes load8 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+cx-icon {
+  align-self: center;
+  line-height: normal;
+}
+cx-icon.small:before {
+  font-size: 0.9rem;
+}
+cx-icon svg {
+  width: 28px;
+  height: 28px;
+  fill: currentColor;
+}
+cx-icon.small svg {
+  width: 14px;
+  height: 14px;
 }
 
 @media (max-width: 991.98px) {
@@ -15452,6 +16166,307 @@ cx-consent-management-form .cx-be-bold {
   font-weight: var(--cx-font-weight-semi);
 }
 
+cx-anonymous-consent-management-banner .anonymous-consent-banner {
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  background-color: var(--cx-color-inverse);
+  z-index: 1000;
+  border-top: 5px solid var(--cx-color-primary);
+  color: var(--cx-color-text);
+  padding: 2rem 0;
+}
+cx-anonymous-consent-management-banner .cx-banner-title {
+  font-size: var(--cx-font-size, 1.375rem);
+  font-weight: var(--cx-font-weight-semi);
+  line-height: var(--cx-line-height, 1.2222222222);
+  margin-bottom: 0.5rem;
+}
+cx-anonymous-consent-management-banner .cx-banner-description {
+  font-size: var(--cx-font-size, 1rem);
+  font-weight: var(--cx-font-weight-normal);
+  line-height: var(--cx-line-height, 1.6);
+}
+cx-anonymous-consent-management-banner .cx-banner-buttons {
+  text-align: right;
+}
+cx-anonymous-consent-management-banner .cx-banner-buttons button:last-child {
+  margin-left: 1.5rem;
+}
+@media (max-width: 575.98px) {
+  cx-anonymous-consent-management-banner .cx-banner-buttons {
+    text-align: center;
+    margin-top: 1rem;
+  }
+}
+@media (min-width: 768px) {
+  cx-anonymous-consent-management-banner .cx-banner-buttons {
+    margin-top: 1rem;
+  }
+}
+cx-anonymous-consent-management-banner .anonymous-consent-banner-hidden {
+  display: none;
+}
+
+/* IMPORTANT: If no there's no theme for any reason,
+  then fallback to the cxbase defaults */
+/*!
+  SPARTA v0.1
+  This file is for theme configuration. These variables are used in global and component CSS files.
+
+  You can:
+    1) Set new values for Bootstrap variables - https://github.com/twbs/bootstrap/blob/v4-dev/scss/_variables.scss
+    2) Set new values for cxbase variables - cxbase/_variables.scss
+    3) Set new values for component variables - app/__/_.scss
+  You cannot:
+    1) Add new variables
+*/
+/*!
+  CXBASE VARIABLES
+  This is NOT a theme.
+
+  This file should include ONLY new variables that Bootstrap does not provide.
+  For example, Bootstrap does not have a variable for semi font weight.
+
+  Same case for directionality.
+
+  Also be aware of items that should be configurable.
+  The Sparta buttons use uppercase type but future themes may want normal case
+  so a variable was created to make this available for other themes.
+
+*/
+/*
+GLOBAL VARIABLE OVERRIDES
+  These can be set with anything above or any variables exposed in Bootsrap or cxbase
+*/
+/*
+COMPONENT VARIABLE OVERRIDES
+  For example, the following would override the cx-storefront background set in src/app/ui/layout/main/main.component.scss
+  $cx-storefront-background-color: "info";
+*/
+cx-anonymous-consent-dialog .cx-dialog-header {
+  padding: 2rem 1.75rem 0.85rem;
+}
+cx-anonymous-consent-dialog .cx-dialog-body {
+  padding-top: 0;
+  background-color: var(--cx-color-inverse);
+}
+@media (max-width: 575.98px) {
+  cx-anonymous-consent-dialog .cx-dialog-body {
+    padding: 0 0 1.5rem;
+    border-top: 1px solid var(--cx-color-light);
+  }
+}
+cx-anonymous-consent-dialog .cx-dialog-buttons {
+  text-align: right;
+  padding: 1rem 4rem;
+}
+@media (max-width: 575.98px) {
+  cx-anonymous-consent-dialog .cx-dialog-buttons {
+    padding: 1rem;
+  }
+}
+cx-anonymous-consent-dialog .cx-action-link {
+  margin: 0 0.35rem;
+}
+cx-anonymous-consent-dialog .cx-dialog-row {
+  max-width: 100%;
+}
+@media (max-width: 575.98px) {
+  cx-anonymous-consent-dialog .cx-dialog-row {
+    padding: 0;
+  }
+}
+cx-anonymous-consent-dialog .cx-dialog-title {
+  font-size: var(--cx-font-size, 1.375rem);
+  font-weight: var(--cx-font-weight-semi);
+  line-height: var(--cx-line-height, 1.2222222222);
+}
+cx-anonymous-consent-dialog .cx-dialog-description {
+  font-size: var(--cx-font-size, 1rem);
+  font-weight: var(--cx-font-weight-normal);
+  line-height: var(--cx-line-height, 1.6);
+  padding: 1.5rem 1.75rem 0;
+}
+cx-anonymous-consent-dialog a:not([href]):not([tabindex]) {
+  text-decoration: underline;
+}
+
+cx-anonymous-consent-open-dialog .anonymous-consents {
+  display: flex;
+  justify-content: center;
+  margin: 0 3vw 3vw 3vw;
+}
+@media (max-width: 767.98px) {
+  cx-anonymous-consent-open-dialog .anonymous-consents {
+    justify-content: flex-start;
+  }
+}
+cx-anonymous-consent-open-dialog .anonymous-consents button {
+  padding: 0;
+  color: var(--cx-color-inverse);
+  font-size: 0.8rem;
+}
+cx-anonymous-consent-open-dialog .anonymous-consents button:not(:hover) {
+  text-decoration: none;
+}
+cx-anonymous-consent-open-dialog .anonymous-consents button:hover {
+  color: var(--cx-color-inverse);
+}
+
+cx-storefront.stop-navigating:before, cx-storefront.start-navigating:before, cx-storefront.stop-navigating:after, cx-storefront.start-navigating:after {
+  height: 2px;
+  width: 100%;
+  left: 0;
+  top: 0;
+  margin: 0;
+  content: "";
+  position: fixed;
+  z-index: 2;
+}
+cx-storefront.stop-navigating:before, cx-storefront.start-navigating:before {
+  background-color: var(--cx-color-light);
+}
+cx-storefront.stop-navigating:after, cx-storefront.start-navigating:after {
+  background-color: var(--cx-color-dark);
+}
+
+@keyframes loading {
+  0% {
+    margin-left: 0px;
+    margin-right: 100%;
+  }
+  50% {
+    margin-left: 25%;
+    margin-right: 0%;
+  }
+  100% {
+    margin-left: 100%;
+    margin-right: 0;
+  }
+}
+cx-storefront.start-navigating:after {
+  animation: loading 2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+@keyframes loaded {
+  0% {
+    margin-left: 50%;
+    margin-right: 100%;
+  }
+  100% {
+    margin-left: 100%;
+    margin-right: 0;
+  }
+}
+cx-storefront.stop-navigating:after {
+  animation: loaded 0.5s;
+}
+
+cx-storefront.stop-navigating:before, cx-storefront.start-navigating:before, cx-storefront.stop-navigating:after, cx-storefront.start-navigating:after {
+  height: 2px;
+  width: 100%;
+  left: 0;
+  top: 0;
+  margin: 0;
+  content: "";
+  position: fixed;
+  z-index: 2;
+}
+cx-storefront.stop-navigating:before, cx-storefront.start-navigating:before {
+  background-color: var(--cx-color-light);
+}
+cx-storefront.stop-navigating:after, cx-storefront.start-navigating:after {
+  background-color: var(--cx-color-dark);
+}
+
+@keyframes loading {
+  0% {
+    margin-left: 0px;
+    margin-right: 100%;
+  }
+  50% {
+    margin-left: 25%;
+    margin-right: 0%;
+  }
+  100% {
+    margin-left: 100%;
+    margin-right: 0;
+  }
+}
+cx-storefront.start-navigating:after {
+  animation: loading 2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+@keyframes loaded {
+  0% {
+    margin-left: 50%;
+    margin-right: 100%;
+  }
+  100% {
+    margin-left: 100%;
+    margin-right: 0;
+  }
+}
+cx-storefront.stop-navigating:after {
+  animation: loaded 0.5s;
+}
+
+cx-storefront {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+cx-storefront > footer {
+  margin-top: auto;
+}
+
+cx-site-context-selector {
+  position: relative;
+  margin: 14px 8px 14px 0;
+}
+@media (max-width: 991.98px) {
+  cx-site-context-selector {
+    display: inline-block;
+  }
+  cx-site-context-selector:first-child {
+    margin-left: 0;
+  }
+  cx-site-context-selector:not(:first-child) {
+    padding-left: 16px;
+    border-left: 1px solid var(--cx-color-secondary);
+  }
+}
+cx-site-context-selector label {
+  display: flex;
+  margin: 0;
+}
+cx-site-context-selector label span {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+cx-site-context-selector cx-icon {
+  margin-left: -10px;
+}
+cx-site-context-selector select {
+  color: inherit;
+  background-color: transparent;
+  border: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding-right: 14px;
+  outline: none;
+  position: relative;
+  z-index: 1;
+}
+
 header {
   background-color: var(--cx-color-dark);
   color: var(--cx-color-inverse);
@@ -15589,113 +16604,6 @@ header .SiteLinks {
   }
 }
 
-cx-storefront.stop-navigating:before, cx-storefront.start-navigating:before, cx-storefront.stop-navigating:after, cx-storefront.start-navigating:after {
-  height: 2px;
-  width: 100%;
-  left: 0;
-  top: 0;
-  margin: 0;
-  content: "";
-  position: fixed;
-  z-index: 2;
-}
-cx-storefront.stop-navigating:before, cx-storefront.start-navigating:before {
-  background-color: var(--cx-color-light);
-}
-cx-storefront.stop-navigating:after, cx-storefront.start-navigating:after {
-  background-color: var(--cx-color-dark);
-}
-
-@keyframes loading {
-  0% {
-    margin-left: 0px;
-    margin-right: 100%;
-  }
-  50% {
-    margin-left: 25%;
-    margin-right: 0%;
-  }
-  100% {
-    margin-left: 100%;
-    margin-right: 0;
-  }
-}
-cx-storefront.start-navigating:after {
-  animation: loading 2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
-}
-
-@keyframes loaded {
-  0% {
-    margin-left: 50%;
-    margin-right: 100%;
-  }
-  100% {
-    margin-left: 100%;
-    margin-right: 0;
-  }
-}
-cx-storefront.stop-navigating:after {
-  animation: loaded 0.5s;
-}
-
-cx-storefront.stop-navigating:before, cx-storefront.start-navigating:before, cx-storefront.stop-navigating:after, cx-storefront.start-navigating:after {
-  height: 2px;
-  width: 100%;
-  left: 0;
-  top: 0;
-  margin: 0;
-  content: "";
-  position: fixed;
-  z-index: 2;
-}
-cx-storefront.stop-navigating:before, cx-storefront.start-navigating:before {
-  background-color: var(--cx-color-light);
-}
-cx-storefront.stop-navigating:after, cx-storefront.start-navigating:after {
-  background-color: var(--cx-color-dark);
-}
-
-@keyframes loading {
-  0% {
-    margin-left: 0px;
-    margin-right: 100%;
-  }
-  50% {
-    margin-left: 25%;
-    margin-right: 0%;
-  }
-  100% {
-    margin-left: 100%;
-    margin-right: 0;
-  }
-}
-cx-storefront.start-navigating:after {
-  animation: loading 2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
-}
-
-@keyframes loaded {
-  0% {
-    margin-left: 50%;
-    margin-right: 100%;
-  }
-  100% {
-    margin-left: 100%;
-    margin-right: 0;
-  }
-}
-cx-storefront.stop-navigating:after {
-  animation: loaded 0.5s;
-}
-
-cx-storefront {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-cx-storefront > footer {
-  margin-top: auto;
-}
-
 cx-store-finder .cx-store-finder-wrapper {
   text-align: center;
   padding: 3rem 0;
@@ -15705,7 +16613,7 @@ cx-store-finder .cx-pagination .pagination a.page-link:hover {
   font-weight: normal;
 }
 
-cx-store-finder-grid > .container, .ProductDetailsPageTemplate cx-store-finder-grid > .tab-delivery, .ProductDetailsPageTemplate cx-store-finder-grid > cx-page-slot.Summary {
+cx-store-finder-grid > .container, .ProductDetailsPageTemplate cx-store-finder-grid > cx-page-slot.Summary, .ProductDetailsPageTemplate cx-store-finder-grid > .tab-delivery {
   border-style: solid;
   border-width: 1px 0 0 0;
   border-color: var(--cx-color-light);
@@ -15713,7 +16621,7 @@ cx-store-finder-grid > .container, .ProductDetailsPageTemplate cx-store-finder-g
   padding: 10px 0 0 0;
 }
 @media (max-width: 767.98px) {
-  cx-store-finder-grid > .container, .ProductDetailsPageTemplate cx-store-finder-grid > .tab-delivery, .ProductDetailsPageTemplate cx-store-finder-grid > cx-page-slot.Summary {
+  cx-store-finder-grid > .container, .ProductDetailsPageTemplate cx-store-finder-grid > cx-page-slot.Summary, .ProductDetailsPageTemplate cx-store-finder-grid > .tab-delivery {
     padding: 0 15px;
   }
 }
@@ -15789,7 +16697,7 @@ cx-store-finder-list-item .cx-button {
   margin: 1rem 0 0;
 }
 
-cx-store-finder-store-description .container, cx-store-finder-store-description .ProductDetailsPageTemplate .tab-delivery, .ProductDetailsPageTemplate cx-store-finder-store-description .tab-delivery, cx-store-finder-store-description .ProductDetailsPageTemplate cx-page-slot.Summary, .ProductDetailsPageTemplate cx-store-finder-store-description cx-page-slot.Summary {
+cx-store-finder-store-description .container, cx-store-finder-store-description .ProductDetailsPageTemplate cx-page-slot.Summary, .ProductDetailsPageTemplate cx-store-finder-store-description cx-page-slot.Summary, cx-store-finder-store-description .ProductDetailsPageTemplate .tab-delivery, .ProductDetailsPageTemplate cx-store-finder-store-description .tab-delivery {
   margin-bottom: 1rem;
 }
 cx-store-finder-store-description .cx-store {
@@ -16170,246 +17078,6 @@ cx-add-to-home-screen-banner .cx-add-to-home-screen-banner ul li {
 cx-add-to-home-screen-banner .cx-add-to-home-screen-banner-inner {
   max-width: 600px;
   margin: 0 auto;
-}
-
-.btn-group,
-.btn-group-vertical {
-  position: relative;
-  display: inline-flex;
-  vertical-align: middle;
-}
-.btn-group > .btn,
-.btn-group-vertical > .btn {
-  position: relative;
-  flex: 1 1 auto;
-}
-.btn-group > .btn:hover,
-.btn-group-vertical > .btn:hover {
-  z-index: 1;
-}
-.btn-group > .btn:focus, .btn-group > .btn:active, .btn-group > .btn.active,
-.btn-group-vertical > .btn:focus,
-.btn-group-vertical > .btn:active,
-.btn-group-vertical > .btn.active {
-  z-index: 1;
-}
-
-.btn-toolbar {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-}
-.btn-toolbar .input-group {
-  width: auto;
-}
-
-.btn-group > .btn:not(:first-child),
-.btn-group > .btn-group:not(:first-child) {
-  margin-left: -1px;
-}
-.btn-group > .btn:not(:last-child):not(.dropdown-toggle),
-.btn-group > .btn-group:not(:last-child) > .btn {
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-}
-.btn-group > .btn:not(:first-child),
-.btn-group > .btn-group:not(:first-child) > .btn {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-}
-
-.dropdown-toggle-split {
-  padding-right: 0.5625rem;
-  padding-left: 0.5625rem;
-}
-.dropdown-toggle-split::after, .dropup .dropdown-toggle-split::after, .dropright .dropdown-toggle-split::after {
-  margin-left: 0;
-}
-.dropleft .dropdown-toggle-split::before {
-  margin-right: 0;
-}
-
-.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split {
-  padding-right: 0.375rem;
-  padding-left: 0.375rem;
-}
-
-.btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split {
-  padding-right: 0.75rem;
-  padding-left: 0.75rem;
-}
-
-.btn-group-vertical {
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-}
-.btn-group-vertical > .btn,
-.btn-group-vertical > .btn-group {
-  width: 100%;
-}
-.btn-group-vertical > .btn:not(:first-child),
-.btn-group-vertical > .btn-group:not(:first-child) {
-  margin-top: -1px;
-}
-.btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle),
-.btn-group-vertical > .btn-group:not(:last-child) > .btn {
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
-}
-.btn-group-vertical > .btn:not(:first-child),
-.btn-group-vertical > .btn-group:not(:first-child) > .btn {
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-}
-
-.btn-group-toggle > .btn,
-.btn-group-toggle > .btn-group > .btn {
-  margin-bottom: 0;
-}
-.btn-group-toggle > .btn input[type=radio],
-.btn-group-toggle > .btn input[type=checkbox],
-.btn-group-toggle > .btn-group > .btn input[type=radio],
-.btn-group-toggle > .btn-group > .btn input[type=checkbox] {
-  position: absolute;
-  clip: rect(0, 0, 0, 0);
-  pointer-events: none;
-}
-
-cx-item-counter .cx-counter-wrapper {
-  display: inline-flex;
-  flex-direction: column;
-}
-cx-item-counter .cx-counter {
-  border-radius: 4px;
-  border-width: 1px;
-  border-style: solid;
-  border-color: var(--cx-color-light);
-}
-cx-item-counter .cx-counter-value {
-  border: none;
-  text-align: center;
-  border-width: 0 1px 0 1px;
-  border-style: solid;
-  border-color: var(--cx-color-light);
-  padding: 12px 9px 12px 9px;
-  max-height: 46px;
-  min-width: 48px;
-  max-width: 78px;
-}
-cx-item-counter .cx-counter-action {
-  max-height: 48px;
-  min-width: 40px;
-  border: none;
-  cursor: pointer;
-  color: var(--cx-color-text);
-  background-color: var(--cx-color-transparent);
-  margin: 0;
-  font-size: var(--cx-font-size, 1rem);
-  font-weight: var(--cx-font-weight-normal);
-  line-height: var(--cx-line-height, 1.6);
-}
-cx-item-counter .cx-counter-action:hover {
-  color: var(--cx-color-primary);
-}
-cx-item-counter .cx-counter-action:focus {
-  color: var(--cx-color, var(--cx-color-primary));
-  font-weight: var(--cx-font-weight-bold);
-  cursor: pointer;
-}
-cx-item-counter .cx-counter-action:disabled {
-  color: var(--cx-color-light);
-  opacity: 1;
-  cursor: not-allowed;
-}
-
-cx-star-rating {
-  padding: 15px 0;
-}
-cx-star-rating:not([disabled=true]) {
-  cursor: pointer;
-}
-cx-star-rating .star {
-  font-size: 20px;
-  margin: 0 2.5px;
-}
-cx-star-rating .star:nth-child(1) {
-  background: linear-gradient(90deg, var(--cx-color-primary) 0%, var(--cx-color-primary) calc((var(--star-fill) - 1 + 1) * 100%), var(--cx-color-light) calc((var(--star-fill) - 1 + 1) * 100%));
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-cx-star-rating .star:nth-child(2) {
-  background: linear-gradient(90deg, var(--cx-color-primary) 0%, var(--cx-color-primary) calc((var(--star-fill) - 2 + 1) * 100%), var(--cx-color-light) calc((var(--star-fill) - 2 + 1) * 100%));
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-cx-star-rating .star:nth-child(3) {
-  background: linear-gradient(90deg, var(--cx-color-primary) 0%, var(--cx-color-primary) calc((var(--star-fill) - 3 + 1) * 100%), var(--cx-color-light) calc((var(--star-fill) - 3 + 1) * 100%));
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-cx-star-rating .star:nth-child(4) {
-  background: linear-gradient(90deg, var(--cx-color-primary) 0%, var(--cx-color-primary) calc((var(--star-fill) - 4 + 1) * 100%), var(--cx-color-light) calc((var(--star-fill) - 4 + 1) * 100%));
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-cx-star-rating .star:nth-child(5) {
-  background: linear-gradient(90deg, var(--cx-color-primary) 0%, var(--cx-color-primary) calc((var(--star-fill) - 5 + 1) * 100%), var(--cx-color-light) calc((var(--star-fill) - 5 + 1) * 100%));
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-/* IDEAS TO EXTEND
-  - sizing (variants: small, medium, big)
-  - theme (variants: primary, secondary)
-*/
-:root {
-  --cx-spinner-radius: 120px;
-  --cx-spinner-border-width: 15px;
-  --cx-spinner-animation-time: 1s;
-  --cx-spinner-primary-color: var(--cx-color-primary);
-  --cx-spinner-secondary-color: var(--cx-color-light);
-}
-
-cx-spinner .loader-container {
-  position: relative;
-  margin: 30px auto;
-  width: var(--cx-spinner-radius);
-  height: var(--cx-spinner-radius);
-}
-cx-spinner .loader {
-  width: var(--cx-spinner-radius);
-  height: var(--cx-spinner-radius);
-  font-size: 10px;
-  overflow: hidden;
-  animation: load8 var(--cx-spinner-animation-time) infinite linear;
-}
-cx-spinner .loader::before {
-  content: "";
-  box-sizing: border-box;
-  display: block;
-  width: var(--cx-spinner-radius);
-  height: var(--cx-spinner-radius);
-  border: var(--cx-spinner-border-width) solid;
-  margin: auto;
-  border-top-color: var(--cx-spinner-secondary-color);
-  border-bottom-color: var(--cx-spinner-secondary-color);
-  border-right-color: var(--cx-spinner-secondary-color);
-  border-left-color: var(--cx-spinner-primary-color);
-  border-radius: 50%;
-}
-@keyframes load8 {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
 }
 
 cx-asm-main-ui {
@@ -16872,674 +17540,6 @@ cx-customer-selection .sap-icon--media-play {
   background: url(data:image/png;base64,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6vkQdN2HukEeqklQD5uKewDY1lbq/zZxsq3NTC1yCypNSicn36GaBW8MwLe+ycmJlsnJb9Vosw8AaP8wo+GnTGcMlfreU9SdM5H3n1r6X/dYEDmGJmdAAAAACXBIWXMAAAsTAAALEwEAmpwYAAAGL2lUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMxNDUgNzkuMTYzNDk5LCAyMDE4LzA4LzEzLTE2OjQwOjIyICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczpleGlmPSJodHRwOi8vbnMuYWRvYmUuY29tL2V4aWYvMS4wLyIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iIHhtbG5zOnBob3Rvc2hvcD0iaHR0cDovL25zLmFkb2JlLmNvbS9waG90b3Nob3AvMS4wLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0RXZ0PSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VFdmVudCMiIGV4aWY6UGl4ZWxYRGltZW5zaW9uPSIyNSIgZXhpZjpQaXhlbFlEaW1lbnNpb249IjI3IiB4bXA6Q3JlYXRlRGF0ZT0iMjAxOS0wOS0yNVQxMjoyODo1MS0wNDowMCIgeG1wOk1vZGlmeURhdGU9IjIwMTktMDktMjVUMTI6MzI6MjAtMDQ6MDAiIHhtcDpNZXRhZGF0YURhdGU9IjIwMTktMDktMjVUMTI6MzI6MjAtMDQ6MDAiIGRjOmZvcm1hdD0iaW1hZ2UvcG5nIiBwaG90b3Nob3A6Q29sb3JNb2RlPSIzIiBwaG90b3Nob3A6SUNDUHJvZmlsZT0iRGlzcGxheSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDowZTIyOTVhMC0yYWY0LTQ2Y2UtOThlNy0zZTU2YTM0YjFkZjUiIHhtcE1NOkRvY3VtZW50SUQ9ImFkb2JlOmRvY2lkOnBob3Rvc2hvcDozYmMzNWI0YS0wNjkxLTRmNDEtODk5OC1lYWFmOTI2NGQ2NmMiIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDpjZWE4Y2FhMC0yMGU1LTQzN2ItYmQ5YS03YjlmMGZiNmYyZTYiPiA8eG1wTU06SGlzdG9yeT4gPHJkZjpTZXE+IDxyZGY6bGkgc3RFdnQ6YWN0aW9uPSJzYXZlZCIgc3RFdnQ6aW5zdGFuY2VJRD0ieG1wLmlpZDpjZWE4Y2FhMC0yMGU1LTQzN2ItYmQ5YS03YjlmMGZiNmYyZTYiIHN0RXZ0OndoZW49IjIwMTktMDktMjVUMTI6MzI6MjAtMDQ6MDAiIHN0RXZ0OnNvZnR3YXJlQWdlbnQ9IkFkb2JlIFBob3Rvc2hvcCBDQyAyMDE5IChNYWNpbnRvc2gpIiBzdEV2dDpjaGFuZ2VkPSIvIi8+IDxyZGY6bGkgc3RFdnQ6YWN0aW9uPSJzYXZlZCIgc3RFdnQ6aW5zdGFuY2VJRD0ieG1wLmlpZDowZTIyOTVhMC0yYWY0LTQ2Y2UtOThlNy0zZTU2YTM0YjFkZjUiIHN0RXZ0OndoZW49IjIwMTktMDktMjVUMTI6MzI6MjAtMDQ6MDAiIHN0RXZ0OnNvZnR3YXJlQWdlbnQ9IkFkb2JlIFBob3Rvc2hvcCBDQyAyMDE5IChNYWNpbnRvc2gpIiBzdEV2dDpjaGFuZ2VkPSIvIi8+IDwvcmRmOlNlcT4gPC94bXBNTTpIaXN0b3J5PiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PuzZx/kAAAEoSURBVDjLY/z//z8DNQATA5UAhkGNe+f8f/757f+09e2kORXkNWR86P75/zCw7cax/6o9If/R1WDDOA368/cvmH7/7dP/tHXt/8k2KGlNy/8dN4/DXbf95rH/anhch9Mgz/kFYE3p6zv+f/j+GSwGokF8sgwCYZBLQC6CAZBL0V1HlEEwnLquDRxmMNfFrmyAqyEpHd1+85jh5Zd3YDYfOzeDlrgi4ehHdpFYi8f/KcdW///7DxKTQAP/e8zLJ81rfgtL/j949wws9vvvn/+9h5f9F212/090YEetqP2/+Nx2eABfeHbrv/WMNNKj/8fvX2D6+++f/+t3z/ov2Ojyn6wECQJHHlz8bzgplrws0rBn9v9XX97/L9zS/5+vwYkoQ0CYcdCVRwBmUrSjUTYI3gAAAABJRU5ErkJggg==) no-repeat 10px center;
 }
 
-cx-anonymous-consent-management-banner .anonymous-consent-banner {
-  position: fixed;
-  bottom: 0;
-  width: 100vw;
-  background-color: var(--cx-color-inverse);
-  z-index: 1000;
-  border-top: 5px solid var(--cx-color-primary);
-  color: var(--cx-color-text);
-  padding: 2rem 0;
-}
-cx-anonymous-consent-management-banner .cx-banner-title {
-  font-size: var(--cx-font-size, 1.375rem);
-  font-weight: var(--cx-font-weight-semi);
-  line-height: var(--cx-line-height, 1.2222222222);
-  margin-bottom: 0.5rem;
-}
-cx-anonymous-consent-management-banner .cx-banner-description {
-  font-size: var(--cx-font-size, 1rem);
-  font-weight: var(--cx-font-weight-normal);
-  line-height: var(--cx-line-height, 1.6);
-}
-cx-anonymous-consent-management-banner .cx-banner-buttons {
-  text-align: right;
-}
-cx-anonymous-consent-management-banner .cx-banner-buttons button:last-child {
-  margin-left: 1.5rem;
-}
-@media (max-width: 575.98px) {
-  cx-anonymous-consent-management-banner .cx-banner-buttons {
-    text-align: center;
-    margin-top: 1rem;
-  }
-}
-@media (min-width: 768px) {
-  cx-anonymous-consent-management-banner .cx-banner-buttons {
-    margin-top: 1rem;
-  }
-}
-cx-anonymous-consent-management-banner .anonymous-consent-banner-hidden {
-  display: none;
-}
-
-/* IMPORTANT: If no there's no theme for any reason,
-  then fallback to the cxbase defaults */
-/*!
-  SPARTA v0.1
-  This file is for theme configuration. These variables are used in global and component CSS files.
-
-  You can:
-    1) Set new values for Bootstrap variables - https://github.com/twbs/bootstrap/blob/v4-dev/scss/_variables.scss
-    2) Set new values for cxbase variables - cxbase/_variables.scss
-    3) Set new values for component variables - app/__/_.scss
-  You cannot:
-    1) Add new variables
-*/
-/*!
-  CXBASE VARIABLES
-  This is NOT a theme.
-
-  This file should include ONLY new variables that Bootstrap does not provide.
-  For example, Bootstrap does not have a variable for semi font weight.
-
-  Same case for directionality.
-
-  Also be aware of items that should be configurable.
-  The Sparta buttons use uppercase type but future themes may want normal case
-  so a variable was created to make this available for other themes.
-
-*/
-/*
-GLOBAL VARIABLE OVERRIDES
-  These can be set with anything above or any variables exposed in Bootsrap or cxbase
-*/
-/*
-COMPONENT VARIABLE OVERRIDES
-  For example, the following would override the cx-storefront background set in src/app/ui/layout/main/main.component.scss
-  $cx-storefront-background-color: "info";
-*/
-cx-anonymous-consent-dialog .cx-dialog-header {
-  padding: 2rem 1.75rem 0.85rem;
-}
-cx-anonymous-consent-dialog .cx-dialog-body {
-  padding-top: 0;
-  background-color: var(--cx-color-inverse);
-}
-@media (max-width: 575.98px) {
-  cx-anonymous-consent-dialog .cx-dialog-body {
-    padding: 0 0 1.5rem;
-    border-top: 1px solid var(--cx-color-light);
-  }
-}
-cx-anonymous-consent-dialog .cx-dialog-buttons {
-  text-align: right;
-  padding: 1rem 4rem;
-}
-@media (max-width: 575.98px) {
-  cx-anonymous-consent-dialog .cx-dialog-buttons {
-    padding: 1rem;
-  }
-}
-cx-anonymous-consent-dialog .cx-action-link {
-  margin: 0 0.35rem;
-}
-cx-anonymous-consent-dialog .cx-dialog-row {
-  max-width: 100%;
-}
-@media (max-width: 575.98px) {
-  cx-anonymous-consent-dialog .cx-dialog-row {
-    padding: 0;
-  }
-}
-cx-anonymous-consent-dialog .cx-dialog-title {
-  font-size: var(--cx-font-size, 1.375rem);
-  font-weight: var(--cx-font-weight-semi);
-  line-height: var(--cx-line-height, 1.2222222222);
-}
-cx-anonymous-consent-dialog .cx-dialog-description {
-  font-size: var(--cx-font-size, 1rem);
-  font-weight: var(--cx-font-weight-normal);
-  line-height: var(--cx-line-height, 1.6);
-  padding: 1.5rem 1.75rem 0;
-}
-cx-anonymous-consent-dialog a:not([href]):not([tabindex]) {
-  text-decoration: underline;
-}
-
-cx-anonymous-consent-open-dialog .anonymous-consents {
-  display: flex;
-  justify-content: center;
-  margin: 0 3vw 3vw 3vw;
-}
-@media (max-width: 767.98px) {
-  cx-anonymous-consent-open-dialog .anonymous-consents {
-    justify-content: flex-start;
-  }
-}
-cx-anonymous-consent-open-dialog .anonymous-consents button {
-  padding: 0;
-  color: var(--cx-color-inverse);
-  font-size: 0.8rem;
-}
-cx-anonymous-consent-open-dialog .anonymous-consents button:not(:hover) {
-  text-decoration: none;
-}
-cx-anonymous-consent-open-dialog .anonymous-consents button:hover {
-  color: var(--cx-color-inverse);
-}
-
 cx-cart-totals cx-order-summary {
   padding: 0 0 1rem;
-}
-
-/* IMPORTANT: If no there's no theme for any reason,
-  then fallback to the cxbase defaults */
-/*!
-  SPARTA v0.1
-  This file is for theme configuration. These variables are used in global and component CSS files.
-
-  You can:
-    1) Set new values for Bootstrap variables - https://github.com/twbs/bootstrap/blob/v4-dev/scss/_variables.scss
-    2) Set new values for cxbase variables - cxbase/_variables.scss
-    3) Set new values for component variables - app/__/_.scss
-  You cannot:
-    1) Add new variables
-*/
-/*!
-  CXBASE VARIABLES
-  This is NOT a theme.
-
-  This file should include ONLY new variables that Bootstrap does not provide.
-  For example, Bootstrap does not have a variable for semi font weight.
-
-  Same case for directionality.
-
-  Also be aware of items that should be configurable.
-  The Sparta buttons use uppercase type but future themes may want normal case
-  so a variable was created to make this available for other themes.
-
-*/
-/*
-GLOBAL VARIABLE OVERRIDES
-  These can be set with anything above or any variables exposed in Bootsrap or cxbase
-*/
-/*
-COMPONENT VARIABLE OVERRIDES
-  For example, the following would override the cx-storefront background set in src/app/ui/layout/main/main.component.scss
-  $cx-storefront-background-color: "info";
-*/
-:root {
-  --cx-color-background: #f4f4f4;
-  --cx-color-text: #212738;
-  --cx-color-inverse: #ffffff;
-  --cx-color-transparent: transparent;
-  --cx-color-primary: #fe5757;
-  --cx-color-secondary: #747881;
-  --cx-color-success: #5dac06;
-  --cx-color-info: #17a2b8;
-  --cx-color-warning: #ffc107;
-  --cx-color-danger: #db0002;
-  --cx-color-light: #d3d6db;
-  --cx-color-dark: #212738;
-  --cx-color-visual-focus: #6d9df7;
-  --cx-font-weight-light: 300;
-  --cx-font-weight-normal: 400;
-  --cx-font-weight-semi: 600;
-  --cx-font-weight-bold: 700;
-  --cx-direction: ltr;
-  --cx-transition-duration: 0.5s;
-  --cx-animation-duration: 1s;
-  --cx-border-radius: 1em;
-  --cx-buttons-border-radius: 0.25rem;
-  --cx-border-style: solid;
-}
-
-/** 
- * the mixins depend on variables, mainly because of some
- * lower level bootstrap variables. Hence we import the variables here,
- * to make the mixins resuable. In order to have the right variables
- * we load variables through the theme import. 
- */
-/* IMPORTANT: If no there's no theme for any reason,
-  then fallback to the cxbase defaults */
-/*!
-  SPARTA v0.1
-  This file is for theme configuration. These variables are used in global and component CSS files.
-
-  You can:
-    1) Set new values for Bootstrap variables - https://github.com/twbs/bootstrap/blob/v4-dev/scss/_variables.scss
-    2) Set new values for cxbase variables - cxbase/_variables.scss
-    3) Set new values for component variables - app/__/_.scss
-  You cannot:
-    1) Add new variables
-*/
-/*!
-  CXBASE VARIABLES
-  This is NOT a theme.
-
-  This file should include ONLY new variables that Bootstrap does not provide.
-  For example, Bootstrap does not have a variable for semi font weight.
-
-  Same case for directionality.
-
-  Also be aware of items that should be configurable.
-  The Sparta buttons use uppercase type but future themes may want normal case
-  so a variable was created to make this available for other themes.
-
-*/
-/*
-GLOBAL VARIABLE OVERRIDES
-  These can be set with anything above or any variables exposed in Bootsrap or cxbase
-*/
-/*
-COMPONENT VARIABLE OVERRIDES
-  For example, the following would override the cx-storefront background set in src/app/ui/layout/main/main.component.scss
-  $cx-storefront-background-color: "info";
-*/
-cx-page-layout {
-  display: block;
-  width: 100%;
-}
-cx-page-layout > header {
-  background-color: var(--cx-color-background);
-  text-align: center;
-  padding-bottom: 25px;
-  padding-top: 25px;
-}
-cx-page-layout cx-page-slot {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  flex: 1 1 var(--cx-flex-basis, 100%);
-}
-cx-page-layout cx-page-slot > * {
-  flex: 1 1 var(--cx-flex-basis, 100%);
-}
-cx-page-layout.footer {
-  background-color: var(--cx-background-color, var(--cx-color-dark));
-  color: var(--cx-color, var(--cx-color-inverse));
-}
-
-cx-page-slot {
-  display: block;
-}
-
-cx-paragraph {
-  display: block;
-}
-
-cx-category-navigation {
-  display: block;
-}
-
-.LandingPage2Template {
-  display: flex;
-  flex-wrap: wrap;
-  max-width: 1700px;
-  margin: auto;
-}
-.LandingPage2Template cx-page-slot.Section1 {
-  max-width: 1140px;
-  margin: auto;
-  margin-top: 30px;
-}
-@media (max-width: 991.98px) {
-  .LandingPage2Template cx-page-slot.Section1 {
-    margin-top: 0;
-  }
-}
-.LandingPage2Template cx-page-slot.Section2A {
-  margin-left: auto;
-}
-.LandingPage2Template cx-page-slot.Section2B {
-  margin-right: auto;
-}
-.LandingPage2Template cx-page-slot.Section2A, .LandingPage2Template cx-page-slot.Section2B {
-  --cx-flex-basis: 50%;
-  max-width: 570px;
-}
-@media (max-width: 991.98px) {
-  .LandingPage2Template cx-page-slot.Section2A, .LandingPage2Template cx-page-slot.Section2B {
-    --cx-flex-basis: 100%;
-    max-width: 100%;
-  }
-  .LandingPage2Template cx-page-slot.Section2A > *, .LandingPage2Template cx-page-slot.Section2B > * {
-    --cx-flex-basis: 50%;
-  }
-}
-@media (max-width: 575.98px) {
-  .LandingPage2Template cx-page-slot.Section2A > *, .LandingPage2Template cx-page-slot.Section2B > * {
-    --cx-flex-basis: 100%;
-  }
-}
-.LandingPage2Template cx-page-slot.Section3 {
-  max-width: 1140px;
-  margin: auto;
-}
-.LandingPage2Template cx-page-slot.Section4 {
-  color: var(--cx-color, var(--cx-color-light));
-  flex-wrap: nowrap;
-}
-@media (max-width: 991.98px) {
-  .LandingPage2Template cx-page-slot.Section4 {
-    flex-wrap: wrap;
-  }
-  .LandingPage2Template cx-page-slot.Section4 > * {
-    --cx-flex-basis: 50%;
-    border-bottom: solid 1px currentColor;
-    border-right: solid 1px currentColor;
-  }
-}
-@media (max-width: 575.98px) {
-  .LandingPage2Template cx-page-slot.Section4 > * {
-    --cx-flex-basis: 100%;
-  }
-}
-
-.ContentPage1Template {
-  max-width: 1140px;
-  padding: 2rem 1.5rem 0 1.5rem;
-  margin: auto;
-}
-.ContentPage1Template cx-page-slot.Section2A, .ContentPage1Template cx-page-slot.Section2B {
-  display: block;
-}
-
-.CategoryPageTemplate {
-  max-width: 1140px;
-  margin: auto;
-}
-.CategoryPageTemplate .Section1 {
-  margin-top: 30px;
-}
-@media (max-width: 991.98px) {
-  .CategoryPageTemplate .Section1 {
-    margin-top: 0;
-  }
-}
-.CategoryPageTemplate .Section2 > * {
-  --cx-flex-basis: 33%;
-}
-@media (max-width: 991.98px) {
-  .CategoryPageTemplate .Section2 > * {
-    --cx-flex-basis: 50%;
-  }
-}
-
-.ProductDetailsPageTemplate {
-  padding: var(--cx-padding, 2.5rem 0 0);
-}
-.ProductDetailsPageTemplate cx-page-slot.Summary {
-  margin-bottom: 40px;
-}
-@media (min-width: 992px) {
-  .ProductDetailsPageTemplate cx-page-slot.Summary {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(2, auto) 1fr;
-    grid-column-gap: 20px;
-    grid-row-gap: 0px;
-  }
-  .ProductDetailsPageTemplate cx-page-slot.Summary cx-product-images {
-    grid-column: 1;
-    grid-row: 1/span 3;
-  }
-  .ProductDetailsPageTemplate cx-page-slot.Summary cx-product-intro {
-    grid-column: 2;
-    grid-row: 1/2;
-  }
-  .ProductDetailsPageTemplate cx-page-slot.Summary cx-product-summary {
-    grid-column: 2;
-    grid-row: 2/3;
-  }
-  .ProductDetailsPageTemplate cx-page-slot.Summary cx-add-to-cart {
-    grid-column: 2;
-    grid-row: 3/4;
-    padding: 0 20px 20px 20px;
-  }
-}
-.ProductDetailsPageTemplate cx-page-slot.AddToCart {
-  max-width: 50%;
-}
-.ProductDetailsPageTemplate cx-page-slot.UpSelling, .ProductDetailsPageTemplate cx-page-slot.CrossSelling {
-  max-width: 1140px;
-  margin: auto;
-}
-.ProductListPageTemplate {
-  max-width: 1140px;
-  margin: auto;
-  display: flex;
-}
-@media (max-width: 991.98px) {
-  .ProductListPageTemplate {
-    flex-direction: column;
-  }
-}
-.ProductListPageTemplate .ProductLeftRefinements {
-  order: 1;
-  max-width: 25%;
-  padding: 60px 15px 15px 15px;
-}
-@media (max-width: 991.98px) {
-  .ProductListPageTemplate .ProductLeftRefinements {
-    width: 100%;
-    max-width: none;
-  }
-}
-.ProductListPageTemplate .ProductListSlot {
-  order: 2;
-  max-width: 75%;
-}
-@media (max-width: 991.98px) {
-  .ProductListPageTemplate .ProductListSlot {
-    width: 100%;
-    max-width: none;
-  }
-}
-
-.SearchResultsListPageTemplate {
-  max-width: 1140px;
-  margin: auto;
-  display: flex;
-  flex-wrap: wrap;
-  align-content: stretch;
-  height: 100%;
-}
-@media (max-width: 991.98px) {
-  .SearchResultsListPageTemplate {
-    flex-direction: column;
-  }
-}
-.SearchResultsListPageTemplate .ProductLeftRefinements {
-  order: 1;
-  max-width: 25%;
-  padding: 60px 15px 15px 15px;
-}
-@media (max-width: 991.98px) {
-  .SearchResultsListPageTemplate .ProductLeftRefinements {
-    width: 100%;
-    max-width: none;
-  }
-}
-.SearchResultsListPageTemplate .SearchResultsListSlot {
-  order: 2;
-  max-width: 75%;
-}
-@media (max-width: 991.98px) {
-  .SearchResultsListPageTemplate .SearchResultsListSlot {
-    width: 100%;
-    max-width: none;
-  }
-}
-.SearchResultsListPageTemplate .Section2 {
-  padding: 0 1rem;
-}
-.SearchResultsListPageTemplate .Section4 {
-  padding: 0 1rem;
-  order: 3;
-}
-
-.CartPageTemplate {
-  max-width: 1140px;
-  padding: 0 1.5rem;
-  margin: auto;
-  display: flex;
-  flex-wrap: wrap;
-}
-.CartPageTemplate .TopContent {
-  --cx-flex-basis: 68%;
-}
-@media (max-width: 991.98px) {
-  .CartPageTemplate .TopContent {
-    --cx-flex-basis: 100%;
-  }
-}
-.CartPageTemplate .CenterRightContentSlot {
-  --cx-flex-basis: 30%;
-}
-@media (max-width: 991.98px) {
-  .CartPageTemplate .CenterRightContentSlot {
-    --cx-flex-basis: 50%;
-    justify-content: flex-end;
-  }
-  .CartPageTemplate .CenterRightContentSlot cx-cart-totals {
-    max-width: 50%;
-  }
-  .CartPageTemplate .CenterRightContentSlot cx-cart-coupon {
-    max-width: 100%;
-  }
-}
-@media (max-width: 767.98px) {
-  .CartPageTemplate .CenterRightContentSlot {
-    --cx-flex-basis: 100%;
-  }
-  .CartPageTemplate .CenterRightContentSlot cx-cart-totals {
-    max-width: none;
-  }
-  .CartPageTemplate .CenterRightContentSlot cx-cart-coupon {
-    max-width: none;
-  }
-}
-
-.LoginPageTemplate, .CheckoutLoginPageTemplate, .AccountPageTemplate {
-  padding-bottom: 3rem;
-}
-.LoginPageTemplate cx-page-slot, .CheckoutLoginPageTemplate cx-page-slot, .AccountPageTemplate cx-page-slot {
-  max-width: 1140px;
-  padding: 3rem 1.5rem 0 1.5rem;
-  margin: auto;
-}
-.LoginPageTemplate cx-page-slot > *, .CheckoutLoginPageTemplate cx-page-slot > *, .AccountPageTemplate cx-page-slot > * {
-  max-width: var(--cx-max-width, 50%);
-}
-@media (max-width: 991.98px) {
-  .LoginPageTemplate, .CheckoutLoginPageTemplate, .AccountPageTemplate {
-    --cx-max-width: 100%;
-  }
-}
-
-.ErrorPageTemplate {
-  padding-bottom: 3rem;
-}
-.ErrorPageTemplate cx-page-slot {
-  max-width: 1140px;
-  margin: auto;
-}
-.ErrorPageTemplate cx-page-slot cx-responsive-banner {
-  max-width: 400px;
-}
-.ErrorPageTemplate cx-page-slot cx-link {
-  text-decoration: underline;
-}
-.ErrorPageTemplate cx-page-slot cx-paragraph {
-  max-height: 170px;
-}
-.ErrorPageTemplate cx-page-slot > * {
-  text-align: center;
-}
-@media (max-width: 991.98px) {
-  .ErrorPageTemplate {
-    --cx-max-width: 100%;
-  }
-}
-.MiddleContent.ErrorPageTemplate, .BottomContent.ErrorPageTemplate {
-  display: block;
-}
-
-.AccountPageTemplate {
-  --cx-max-width: 100%;
-}
-.AccountPageTemplate cx-order-details-headline {
-  order: 1;
-}
-.AccountPageTemplate cx-order-details-items {
-  order: 2;
-}
-.AccountPageTemplate cx-order-details-shipping {
-  order: 4;
-}
-.AccountPageTemplate cx-order-details-totals {
-  order: 3;
-}
-
-.MultiStepCheckoutSummaryPageTemplate {
-  max-width: 1140px;
-  padding: 2rem 1.5rem 0 1.5rem;
-  margin: auto;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-content: flex-start;
-}
-@media (max-width: 991.98px) {
-  .MultiStepCheckoutSummaryPageTemplate {
-    display: inline-block;
-  }
-}
-.MultiStepCheckoutSummaryPageTemplate cx-page-slot.TopContent {
-  flex: 0 100%;
-}
-.MultiStepCheckoutSummaryPageTemplate cx-page-slot.BodyContent {
-  flex: 0 68%;
-}
-.MultiStepCheckoutSummaryPageTemplate cx-page-slot.SideContent {
-  flex: 0 0 30%;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-.MultiStepCheckoutSummaryPageTemplate cx-page-slot.SideContent cx-checkout-order-summary {
-  flex: unset;
-}
-.MultiStepCheckoutSummaryPageTemplate cx-page-slot.SideContent cx-place-order {
-  flex: unset;
-  padding: 1rem 2.5rem 0;
-}
-@media (max-width: 991.98px) {
-  .MultiStepCheckoutSummaryPageTemplate cx-page-slot.SideContent {
-    --cx-flex-basis: 50%;
-    justify-content: flex-end;
-    align-items: flex-end;
-    flex-direction: column;
-  }
-  .MultiStepCheckoutSummaryPageTemplate cx-page-slot.SideContent cx-checkout-order-summary {
-    max-width: 50%;
-    padding-top: 1rem;
-  }
-  .MultiStepCheckoutSummaryPageTemplate cx-page-slot.SideContent cx-checkout-order-summary cx-order-summary {
-    padding: 1rem 2.5rem 0;
-  }
-  .MultiStepCheckoutSummaryPageTemplate cx-page-slot.SideContent cx-place-order {
-    max-width: 50%;
-    padding-bottom: 2rem;
-    padding-top: 0;
-  }
-}
-@media (max-width: 767.98px) {
-  .MultiStepCheckoutSummaryPageTemplate cx-page-slot.SideContent {
-    --cx-flex-basis: 100%;
-    align-items: normal;
-  }
-  .MultiStepCheckoutSummaryPageTemplate cx-page-slot.SideContent cx-checkout-order-summary {
-    max-width: 100%;
-  }
-  .MultiStepCheckoutSummaryPageTemplate cx-page-slot.SideContent cx-place-order {
-    max-width: 100%;
-  }
-}
-
-.StoreFinderPageTemplate cx-page-slot.SideContent cx-banner img {
-  width: auto;
 }
