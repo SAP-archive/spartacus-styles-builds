@@ -14400,7 +14400,7 @@ body.searchbox-is-active.has-searchbox-results header {
 }
 body.searchbox-is-active.has-searchbox-results cx-storefront:before {
   content: "";
-  position: absolute;
+  position: fixed;
   left: 0;
   top: 0;
   width: 100%;
@@ -17088,12 +17088,12 @@ cx-asm-main-ui {
 }
 cx-asm-main-ui cx-csagent-login-form,
 cx-asm-main-ui cx-customer-selection,
-cx-asm-main-ui .cx-customer-emulation {
+cx-asm-main-ui cx-customer-emulation {
   padding: 2rem 2rem 1rem;
   width: 100%;
   display: flex;
 }
-cx-asm-main-ui .cx-customer-emulation {
+cx-asm-main-ui cx-customer-emulation {
   padding: 2rem;
 }
 cx-asm-main-ui form {
