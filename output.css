@@ -17104,6 +17104,23 @@ cx-asm-main-ui {
   width: 100%;
   display: block;
 }
+cx-asm-main-ui cx-asm-session-timer {
+  font-size: 14px;
+}
+cx-asm-main-ui cx-asm-session-timer .session-timer {
+  margin-top: 10px;
+}
+cx-asm-main-ui cx-asm-session-timer .session-label {
+  margin-right: 6px;
+}
+cx-asm-main-ui cx-asm-session-timer .session-time {
+  font-weight: 600;
+}
+cx-asm-main-ui cx-asm-session-timer .session-btn {
+  margin-left: 15px;
+  margin-right: 30px;
+  cursor: pointer;
+}
 cx-asm-main-ui cx-csagent-login-form,
 cx-asm-main-ui cx-customer-selection,
 cx-asm-main-ui cx-customer-emulation {
@@ -17226,7 +17243,9 @@ cx-asm-main-ui .fd-shellbar__title {
   overflow: hidden;
   max-width: 100%;
   text-overflow: ellipsis;
-  display: inline-block;
+}
+cx-asm-main-ui .fd-shellbar__action > div {
+  display: inline;
 }
 cx-asm-main-ui .sap-icon--log a,
 cx-asm-main-ui .sap-icon--decline a {
@@ -17570,7 +17589,7 @@ cx-asm-main-ui .fd-loading-dots > div:nth-child(1) {
     height: 230px;
   }
   cx-asm-main-ui cx-customer-selection,
-cx-asm-main-ui .cx-customer-emulation {
+cx-asm-main-ui cx-customer-emulation {
     padding-left: 6%;
     padding-top: 45px;
   }
@@ -17605,10 +17624,22 @@ cx-asm-main-ui .fd-popover__body a .result-id {
 cx-asm-main-ui [class*=fd-button--] {
     width: 100%;
   }
+  cx-asm-main-ui .fd-shellbar__title {
+    display: none;
+  }
+  cx-asm-main-ui cx-asm-session-timer .session-label {
+    display: none;
+  }
+  cx-asm-main-ui cx-asm-session-timer .session-btn {
+    margin-right: 10px;
+  }
 }
 @media (min-width: 576px) and (max-width: 767px) {
   cx-asm-main-ui {
     height: auto;
+  }
+  cx-asm-main-ui .fd-shellbar__title {
+    display: inline-block;
   }
   cx-asm-main-ui .fd-popover__body {
     width: 360px;
@@ -17627,6 +17658,9 @@ cx-asm-main-ui .fd-popover__body a .result-id {
   }
 }
 @media (min-width: 768px) {
+  cx-asm-main-ui .fd-shellbar__title {
+    display: inline-block;
+  }
   cx-asm-main-ui .fd-popover__body {
     width: 516px;
     top: 117px;
