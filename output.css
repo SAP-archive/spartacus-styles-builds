@@ -16271,7 +16271,7 @@ cx-anonymous-consent-dialog .cx-dialog-body {
 }
 @media (max-width: 575.98px) {
   cx-anonymous-consent-dialog .cx-dialog-body {
-    padding: 0 0 1.5rem;
+    padding: 1.5rem;
     border-top: 1px solid var(--cx-color-light);
   }
 }
