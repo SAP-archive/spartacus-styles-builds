@@ -12306,6 +12306,67 @@ cx-item-counter .cx-counter-action:disabled {
   cursor: not-allowed;
 }
 
+@media (min-width: 992px) {
+  cx-add-to-wishlist {
+    grid-column: 2;
+    grid-row: 3;
+    padding: 0 20px;
+    margin-top: 155px;
+  }
+}
+cx-add-to-wishlist .button-add {
+  text-decoration: none;
+}
+cx-add-to-wishlist .button-remove {
+  vertical-align: inherit;
+}
+cx-add-to-wishlist .button-add, cx-add-to-wishlist .button-remove {
+  padding: 0;
+  font-size: 1rem;
+}
+
+cx-wish-list .cx-wish-list-item {
+  display: block;
+  border-width: 0 0 1px 0;
+  border-style: solid;
+  border-color: var(--cx-color-light);
+  margin: 0 0 25px 0;
+}
+cx-wish-list .cx-wish-list-item:last-of-type {
+  border-width: 0 0 0 0;
+}
+cx-wish-list .cx-product-image-container {
+  display: block;
+  text-align: center;
+}
+cx-wish-list .cx-product-image {
+  width: 100%;
+}
+cx-wish-list .cx-product-name {
+  font-size: var(--cx-font-size, 1rem);
+  font-weight: var(--cx-font-weight-bold);
+  line-height: var(--cx-line-height, 1.2222222222);
+  text-align: left;
+  display: block;
+  margin: 0 0 3px 0;
+  color: var(--cx-color-dark);
+  text-decoration: none;
+}
+cx-wish-list .cx-product-name:hover {
+  color: var(--cx-color-primary);
+}
+cx-wish-list .cx-product-price {
+  font-size: var(--cx-font-size, 1.375rem);
+  font-weight: var(--cx-font-weight-semi);
+  line-height: var(--cx-line-height, 1.2222222222);
+  text-align: left;
+  margin: 15px 0 0 0;
+}
+cx-wish-list .btn-link {
+  display: block;
+  text-align: right;
+}
+
 /* IMPORTANT: If no there's no theme for any reason,
   then fallback to the cxbase defaults */
 /*!
@@ -16271,7 +16332,7 @@ cx-anonymous-consent-dialog .cx-dialog-body {
 }
 @media (max-width: 575.98px) {
   cx-anonymous-consent-dialog .cx-dialog-body {
-    padding: 1.5rem;
+    padding: 0 0 1.5rem;
     border-top: 1px solid var(--cx-color-light);
   }
 }
@@ -17104,23 +17165,6 @@ cx-asm-main-ui {
   width: 100%;
   display: block;
 }
-cx-asm-main-ui cx-asm-session-timer {
-  font-size: 14px;
-}
-cx-asm-main-ui cx-asm-session-timer .session-timer {
-  margin-top: 10px;
-}
-cx-asm-main-ui cx-asm-session-timer .session-label {
-  margin-right: 6px;
-}
-cx-asm-main-ui cx-asm-session-timer .session-time {
-  font-weight: 600;
-}
-cx-asm-main-ui cx-asm-session-timer .session-btn {
-  margin-left: 15px;
-  margin-right: 30px;
-  cursor: pointer;
-}
 cx-asm-main-ui cx-csagent-login-form,
 cx-asm-main-ui cx-customer-selection,
 cx-asm-main-ui cx-customer-emulation {
@@ -17173,9 +17217,6 @@ cx-asm-main-ui form {
 cx-asm-main-ui label,
 cx-asm-main-ui input {
   margin-bottom: 0;
-}
-cx-asm-main-ui .collapsed {
-  display: none;
 }
 cx-asm-main-ui .fd-shellbar {
   font-size: 14px;
@@ -17246,24 +17287,7 @@ cx-asm-main-ui .fd-shellbar__title {
   overflow: hidden;
   max-width: 100%;
   text-overflow: ellipsis;
-}
-cx-asm-main-ui .fd-shellbar__action > div {
-  display: inline;
-}
-cx-asm-main-ui .fd-alert {
-  display: block;
-  font-size: 14px;
-  line-height: 1.42857;
-  color: #32363a;
-  position: relative;
-  border-style: solid;
-  border-width: 1px;
-  background-color: #f4f4f4;
-  border-color: #89919a;
-  padding: 9px 12px;
-  border-radius: 4px;
-  width: 100%;
-  text-align: center;
+  display: inline-block;
 }
 cx-asm-main-ui .sap-icon--log a,
 cx-asm-main-ui .sap-icon--decline a {
@@ -17607,7 +17631,7 @@ cx-asm-main-ui .fd-loading-dots > div:nth-child(1) {
     height: 230px;
   }
   cx-asm-main-ui cx-customer-selection,
-cx-asm-main-ui cx-customer-emulation {
+cx-asm-main-ui .cx-customer-emulation {
     padding-left: 6%;
     padding-top: 45px;
   }
@@ -17642,25 +17666,10 @@ cx-asm-main-ui .fd-popover__body a .result-id {
 cx-asm-main-ui [class*=fd-button--] {
     width: 100%;
   }
-  cx-asm-main-ui .fd-shellbar__title {
-    display: none;
-  }
-  cx-asm-main-ui .fd-alert {
-    margin-top: 30px;
-  }
-  cx-asm-main-ui cx-asm-session-timer .session-label {
-    display: none;
-  }
-  cx-asm-main-ui cx-asm-session-timer .session-btn {
-    margin-right: 10px;
-  }
 }
 @media (min-width: 576px) and (max-width: 767px) {
   cx-asm-main-ui {
     height: auto;
-  }
-  cx-asm-main-ui .fd-shellbar__title {
-    display: inline-block;
   }
   cx-asm-main-ui .fd-popover__body {
     width: 360px;
@@ -17679,9 +17688,6 @@ cx-asm-main-ui .fd-popover__body a .result-id {
   }
 }
 @media (min-width: 768px) {
-  cx-asm-main-ui .fd-shellbar__title {
-    display: inline-block;
-  }
   cx-asm-main-ui .fd-popover__body {
     width: 516px;
     top: 117px;
