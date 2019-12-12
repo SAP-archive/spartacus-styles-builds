@@ -11887,7 +11887,7 @@ COMPONENT VARIABLE OVERRIDES
   For example, the following would override the cx-storefront background set in src/app/ui/layout/main/main.component.scss
   $cx-storefront-background-color: "info";
 */
-cx-cart-item-list .cx-item-list-header {
+cx-cart-item-list .cx-item-list-header, cx-wish-list .cx-item-list-header {
   font-size: var(--cx-font-size, 0.875rem);
   font-weight: var(--cx-font-weight-bold);
   line-height: var(--cx-line-height, 1.2222222222);
@@ -11899,40 +11899,42 @@ cx-cart-item-list .cx-item-list-header {
   border-style: solid;
   border-color: var(--cx-color-light);
 }
-cx-cart-item-list .cx-item-list-desc {
+cx-cart-item-list .cx-item-list-desc, cx-wish-list .cx-item-list-desc {
   text-align: left;
   padding: 0;
 }
-cx-cart-item-list .cx-item-list-price,
-cx-cart-item-list .cx-item-list-qty {
+cx-cart-item-list .cx-item-list-price, cx-wish-list .cx-item-list-price,
+cx-cart-item-list .cx-item-list-qty,
+cx-wish-list .cx-item-list-qty {
   text-align: center;
 }
 @media (max-width: 991.98px) {
-  cx-cart-item-list .cx-item-list-price,
-cx-cart-item-list .cx-item-list-qty {
+  cx-cart-item-list .cx-item-list-price, cx-wish-list .cx-item-list-price,
+cx-cart-item-list .cx-item-list-qty,
+cx-wish-list .cx-item-list-qty {
     text-align: left;
   }
 }
-cx-cart-item-list .cx-item-list-total {
+cx-cart-item-list .cx-item-list-total, cx-wish-list .cx-item-list-total {
   text-align: right;
   padding: 0;
 }
-cx-cart-item-list .cx-item-list-row {
+cx-cart-item-list .cx-item-list-row, cx-wish-list .cx-item-list-row {
   padding: 1.25rem 0;
   border-width: 0 0 1px 0;
   border-style: solid;
   border-color: var(--cx-color-light);
 }
 @media (max-width: 991.98px) {
-  cx-cart-item-list .cx-item-list-header {
+  cx-cart-item-list .cx-item-list-header, cx-wish-list .cx-item-list-header {
     padding: 1.125rem 2.5rem;
   }
-  cx-cart-item-list .cx-item-list-items {
+  cx-cart-item-list .cx-item-list-items, cx-wish-list .cx-item-list-items {
     padding: 0 2.5rem;
   }
 }
 @media (max-width: 767.98px) {
-  cx-cart-item-list .cx-item-list-items {
+  cx-cart-item-list .cx-item-list-items, cx-wish-list .cx-item-list-items {
     padding: 0 0 0 1rem;
   }
 }
@@ -12309,6 +12311,31 @@ cx-item-counter .cx-counter-action:disabled {
   color: var(--cx-color-light);
   opacity: 1;
   cursor: not-allowed;
+}
+
+@media (min-width: 992px) {
+  cx-add-to-wishlist {
+    grid-column: 2;
+    grid-row: 3;
+    padding: 0 20px;
+    margin-top: 155px;
+  }
+}
+cx-add-to-wishlist .btn {
+  text-transform: none;
+}
+cx-add-to-wishlist .button-remove {
+  vertical-align: inherit;
+}
+cx-add-to-wishlist .button-add, cx-add-to-wishlist .button-remove {
+  padding: 0;
+  font-size: 1rem;
+}
+cx-add-to-wishlist .button-text {
+  margin-left: 0.3em;
+}
+cx-add-to-wishlist .button-add-link {
+  padding-left: 0;
 }
 
 /* IMPORTANT: If no there's no theme for any reason,
@@ -17341,4 +17368,235 @@ cx-add-to-home-screen-banner .cx-add-to-home-screen-banner ul li {
 cx-add-to-home-screen-banner .cx-add-to-home-screen-banner-inner {
   max-width: 600px;
   margin: 0 auto;
+}
+
+/* IMPORTANT: If no there's no theme for any reason,
+  then fallback to the cxbase defaults */
+/*!
+  SPARTA v0.1
+  This file is for theme configuration. These variables are used in global and component CSS files.
+
+  You can:
+    1) Set new values for Bootstrap variables - https://github.com/twbs/bootstrap/blob/v4-dev/scss/_variables.scss
+    2) Set new values for cxbase variables - cxbase/_variables.scss
+    3) Set new values for component variables - app/__/_.scss
+  You cannot:
+    1) Add new variables
+*/
+/*!
+  CXBASE VARIABLES
+  This is NOT a theme.
+
+  This file should include ONLY new variables that Bootstrap does not provide.
+  For example, Bootstrap does not have a variable for semi font weight.
+
+  Same case for directionality.
+
+  Also be aware of items that should be configurable.
+  The Sparta buttons use uppercase type but future themes may want normal case
+  so a variable was created to make this available for other themes.
+
+*/
+/*
+GLOBAL VARIABLE OVERRIDES
+  These can be set with anything above or any variables exposed in Bootsrap or cxbase
+*/
+/*
+COMPONENT VARIABLE OVERRIDES
+  For example, the following would override the cx-storefront background set in src/app/ui/layout/main/main.component.scss
+  $cx-storefront-background-color: "info";
+*/
+cx-cart-item-list .cx-item-list-header, cx-wish-list .cx-item-list-header {
+  font-size: var(--cx-font-size, 0.875rem);
+  font-weight: var(--cx-font-weight-bold);
+  line-height: var(--cx-line-height, 1.2222222222);
+  margin: 0;
+  padding: 1.125rem 0;
+  text-transform: uppercase;
+  color: var(--cx-color-secondary);
+  border-width: 0 0 1px 0;
+  border-style: solid;
+  border-color: var(--cx-color-light);
+}
+cx-cart-item-list .cx-item-list-desc, cx-wish-list .cx-item-list-desc {
+  text-align: left;
+  padding: 0;
+}
+cx-cart-item-list .cx-item-list-price, cx-wish-list .cx-item-list-price,
+cx-cart-item-list .cx-item-list-qty,
+cx-wish-list .cx-item-list-qty {
+  text-align: center;
+}
+@media (max-width: 991.98px) {
+  cx-cart-item-list .cx-item-list-price, cx-wish-list .cx-item-list-price,
+cx-cart-item-list .cx-item-list-qty,
+cx-wish-list .cx-item-list-qty {
+    text-align: left;
+  }
+}
+cx-cart-item-list .cx-item-list-total, cx-wish-list .cx-item-list-total {
+  text-align: right;
+  padding: 0;
+}
+cx-cart-item-list .cx-item-list-row, cx-wish-list .cx-item-list-row {
+  padding: 1.25rem 0;
+  border-width: 0 0 1px 0;
+  border-style: solid;
+  border-color: var(--cx-color-light);
+}
+@media (max-width: 991.98px) {
+  cx-cart-item-list .cx-item-list-header, cx-wish-list .cx-item-list-header {
+    padding: 1.125rem 2.5rem;
+  }
+  cx-cart-item-list .cx-item-list-items, cx-wish-list .cx-item-list-items {
+    padding: 0 2.5rem;
+  }
+}
+@media (max-width: 767.98px) {
+  cx-cart-item-list .cx-item-list-items, cx-wish-list .cx-item-list-items {
+    padding: 0 0 0 1rem;
+  }
+}
+
+cx-wish-list {
+  --cx-max-width: 75%;
+  margin: auto;
+}
+cx-wish-list .cx-item-list-price {
+  padding: 0;
+}
+@media (max-width: 767.98px) {
+  cx-wish-list {
+    --cx-max-width: 100%;
+  }
+  cx-wish-list .cx-item-list-row:last-of-type {
+    border: none;
+  }
+}
+@media (max-width: 991.98px) {
+  cx-wish-list {
+    --cx-max-width: 90%;
+  }
+}
+
+@media (max-width: 767.98px) {
+  cx-wish-list-item .cx-info-container {
+    display: flex;
+    flex-direction: column;
+  }
+}
+cx-wish-list-item cx-media.is-missing {
+  min-width: 96px;
+}
+cx-wish-list-item .cx-name {
+  font-size: var(--cx-font-size, 1rem);
+  font-weight: var(--cx-font-weight-bold);
+  line-height: var(--cx-line-height, 1.2222222222);
+  overflow-wrap: break-word;
+  padding: 0;
+  min-width: 17rem;
+}
+cx-wish-list-item .cx-name .cx-link {
+  color: var(--cx-color-text);
+  text-decoration: none;
+}
+cx-wish-list-item .cx-name .cx-link:hover {
+  color: var(--cx-color-primary);
+}
+cx-wish-list-item .cx-code {
+  font-size: var(--cx-font-size, 0.875rem);
+  font-weight: var(--cx-font-weight-normal);
+  line-height: var(--cx-line-height, 1.2222222222);
+  color: var(--cx-color-secondary);
+  padding: 0.625rem 0;
+}
+cx-wish-list-item .cx-property {
+  display: flex;
+}
+cx-wish-list-item .cx-label {
+  font-size: var(--cx-font-size, 0.875rem);
+  font-weight: var(--cx-font-weight-bold);
+  line-height: var(--cx-line-height, 1.2222222222);
+  overflow-wrap: break-word;
+  padding-right: 1rem;
+}
+@media (max-width: 767.98px) {
+  cx-wish-list-item .cx-label {
+    min-width: 5rem;
+  }
+}
+cx-wish-list-item .cx-value {
+  font-size: var(--cx-font-size, 1rem);
+  font-weight: var(--cx-font-weight-bold);
+  line-height: var(--cx-line-height, 1.2222222222);
+  overflow-wrap: break-word;
+  font-weight: 400;
+}
+@media (max-width: 767.98px) {
+  cx-wish-list-item .cx-value {
+    font-size: var(--cx-font-size, 0.875rem);
+    font-weight: var(--cx-font-weight-normal);
+    line-height: var(--cx-line-height, 1.2222222222);
+  }
+}
+cx-wish-list-item .cx-price {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: var(--cx-font-size, 1rem);
+  font-weight: var(--cx-font-weight-bold);
+  line-height: var(--cx-line-height, 1.2222222222);
+  font-weight: "normal";
+}
+@media (max-width: 767.98px) {
+  cx-wish-list-item .cx-price {
+    justify-content: flex-start;
+    margin: 0.3em 0;
+  }
+}
+cx-wish-list-item .cx-quantity {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 767.98px) {
+  cx-wish-list-item .cx-quantity {
+    justify-content: flex-start;
+    margin: 0.3em 0;
+  }
+}
+cx-wish-list-item .cx-add-to-cart {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@media (max-width: 767.98px) {
+  cx-wish-list-item .cx-add-to-cart {
+    margin: 0.5em 0;
+  }
+}
+cx-wish-list-item .cx-return-button {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0;
+}
+@media (max-width: 767.98px) {
+  cx-wish-list-item .cx-return-button {
+    display: flex;
+    justify-content: flex-start;
+    padding: 0;
+  }
+}
+cx-wish-list-item .cx-return-button .btn-link {
+  font-size: var(--cx-font-size, 0.875rem);
+  font-weight: var(--cx-font-weight-bold);
+  line-height: var(--cx-line-height, 1.2222222222);
+  color: var(--cx-color-text);
+  border-width: 0;
+  text-decoration: none;
+  padding: 0;
+  height: 30px;
+}
+cx-wish-list-item .cx-return-button .btn-link:hover {
+  text-decoration: underline;
 }
