@@ -17575,6 +17575,9 @@ cx-wish-list-item .cx-add-to-cart {
     margin: 0.5em 0;
   }
 }
+cx-wish-list-item .cx-out-of-stock {
+  text-align: right;
+}
 cx-wish-list-item .cx-return-button {
   display: flex;
   justify-content: flex-end;
