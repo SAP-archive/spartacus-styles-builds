@@ -10950,6 +10950,10 @@ COMPONENT VARIABLE OVERRIDES
   For example, the following would override the cx-storefront background set in src/app/ui/layout/main/main.component.scss
   $cx-storefront-background-color: "info";
 */
+/**
+ * CSS rules to control above-the-page loading and defer loading 
+ * of additional DOM.
+ */
 cx-page-layout {
   display: block;
   width: 100%;
