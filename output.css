@@ -11120,6 +11120,9 @@ cx-category-navigation {
     grid-row: 3/4;
     padding: 20% 20px 20px 20px;
   }
+  .ProductDetailsPageTemplate cx-page-slot.Summary cx-stock-notification:empty {
+    display: none;
+  }
 }
 .ProductDetailsPageTemplate cx-page-slot.AddToCart {
   max-width: 50%;
