@@ -13955,6 +13955,9 @@ cx-breadcrumb nav span a {
   padding: 5px 5px;
 }
 
+cx-navigation-ui .wrapper {
+  cursor: default;
+}
 cx-navigation-ui .wrapper[attr="1"] {
   width: 200px;
 }
@@ -14016,6 +14019,11 @@ cx-navigation-ui.flyout h5:hover,
 cx-navigation-ui.flyout cx-generic-link:hover {
   color: var(--cx-color-primary);
 }
+cx-navigation-ui.flyout h5 a,
+cx-navigation-ui.flyout cx-generic-link a {
+  display: block;
+  width: 100%;
+}
 @media (max-width: 991.98px) {
   cx-navigation-ui.flyout > nav > h5,
 cx-navigation-ui.flyout > nav > cx-generic-link {
@@ -14028,11 +14036,6 @@ cx-navigation-ui.flyout cx-generic-link {
     display: flex;
     justify-content: space-between;
     cursor: pointer;
-  }
-  cx-navigation-ui.flyout h5 a,
-cx-navigation-ui.flyout cx-generic-link a {
-    display: block;
-    width: 100%;
   }
   cx-navigation-ui.flyout h5,
 cx-navigation-ui.flyout cx-generic-link a {
