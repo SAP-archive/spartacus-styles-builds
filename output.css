@@ -15504,10 +15504,10 @@ cx-carousel .next:not(:disabled):hover {
   color: var(--cx-color-primary);
 }
 
-cx-product-carousel {
+cx-product-carousel, cx-merchandising-carousel {
   display: flex;
 }
-cx-product-carousel a {
+cx-product-carousel a, cx-merchandising-carousel a {
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -15516,21 +15516,21 @@ cx-product-carousel a {
   color: var(--cx-color-text);
   outline: none;
 }
-cx-product-carousel a h4 {
+cx-product-carousel a h4, cx-merchandising-carousel a h4 {
   font-size: 0.9rem;
   height: 30px;
   font-weight: bold;
   margin-top: 5px;
 }
-cx-product-carousel a:hover, cx-product-carousel a:focus {
+cx-product-carousel a:hover, cx-merchandising-carousel a:hover, cx-product-carousel a:focus, cx-merchandising-carousel a:focus {
   color: var(--cx-color-primary);
   text-decoration: underline;
 }
-cx-product-carousel cx-media {
+cx-product-carousel cx-media, cx-merchandising-carousel cx-media {
   align-self: center;
   width: 60%;
 }
-cx-product-carousel cx-media.is-missing {
+cx-product-carousel cx-media.is-missing, cx-merchandising-carousel cx-media.is-missing {
   align-self: center;
   width: 60%;
   background-size: 60%;
@@ -18189,6 +18189,46 @@ cx-add-to-home-screen-banner .cx-add-to-home-screen-banner ul li {
 cx-add-to-home-screen-banner .cx-add-to-home-screen-banner-inner {
   max-width: 600px;
   margin: 0 auto;
+}
+
+cx-product-carousel, cx-merchandising-carousel {
+  display: flex;
+}
+cx-product-carousel a, cx-merchandising-carousel a {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  color: var(--cx-color-text);
+  outline: none;
+}
+cx-product-carousel a h4, cx-merchandising-carousel a h4 {
+  font-size: 0.9rem;
+  height: 30px;
+  font-weight: bold;
+  margin-top: 5px;
+}
+cx-product-carousel a:hover, cx-merchandising-carousel a:hover, cx-product-carousel a:focus, cx-merchandising-carousel a:focus {
+  color: var(--cx-color-primary);
+  text-decoration: underline;
+}
+cx-product-carousel cx-media, cx-merchandising-carousel cx-media {
+  align-self: center;
+  width: 60%;
+}
+cx-product-carousel cx-media.is-missing, cx-merchandising-carousel cx-media.is-missing {
+  align-self: center;
+  width: 60%;
+  background-size: 60%;
+}
+
+cx-merchandising-carousel {
+  background-color: var(--cx-color-background);
+  color: var(--cx-color-text);
+}
+cx-merchandising-carousel a {
+  color: inherit;
 }
 
 /* IMPORTANT: If no there's no theme for any reason,
