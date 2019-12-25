@@ -11578,6 +11578,9 @@ cx-added-to-cart-dialog .cx-dialog-actions {
     padding: 1.875rem;
   }
 }
+cx-added-to-cart-dialog .cx-dialog-promotions {
+  padding: 0 0 1.25rem 0;
+}
 cx-added-to-cart-dialog .cx-dialog-total {
   font-size: var(--cx-font-size, 1.125rem);
   font-weight: var(--cx-font-weight-bold);
@@ -13903,8 +13906,16 @@ cx-promotions .cx-promotions {
   color: var(--cx-color-success);
   padding: 0.5rem 0;
 }
+cx-promotions .cx-promotions ul {
+  padding: 0;
+}
 cx-promotions .cx-promotions li {
   list-style-type: none;
+}
+cx-promotions .cx-promotions ul > li {
+  list-style-type: none;
+  line-height: 1.6;
+  font-weight: 700;
 }
 
 cx-banner img {
