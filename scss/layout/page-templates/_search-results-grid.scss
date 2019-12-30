@@ -1,8 +1,10 @@
-%ProductListPageTemplate,
-%ProductGridPageTemplate {
+%SearchResultsGridPageTemplate {
   max-width: 1140px;
   margin: auto;
   display: flex;
+  flex-wrap: wrap;
+  align-content: stretch;
+  height: 100%;
   @include media-breakpoint-down(md) {
     flex-direction: column;
   }
@@ -16,8 +18,7 @@
       max-width: none;
     }
   }
-  .ProductListSlot,
-  .ProductGridSlot {
+  .SearchResultsGridSlot {
     order: 2;
     max-width: 75%;
 
@@ -25,5 +26,12 @@
       width: 100%;
       max-width: none;
     }
+  }
+  .Section2 {
+    padding: 0 1rem;
+  }
+  .Section4 {
+    padding: 0 1rem;
+    order: 3;
   }
 }
