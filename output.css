@@ -17755,6 +17755,36 @@ header .SiteLinks {
   }
 }
 
+cx-skip-link {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  top: -100%;
+  z-index: 11;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  transition: top 0s 0.3s ease, background-color 0.3s ease;
+}
+cx-skip-link:focus-within {
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: background-color 0.3s ease;
+}
+cx-skip-link button {
+  opacity: 0;
+  padding: 16px 32px;
+  border-radius: 0 0 5px 5px;
+  border: 2px solid var(--cx-color-dark);
+  border-top-width: 0;
+  position: absolute;
+  font-weight: bold;
+}
+cx-skip-link button:focus {
+  opacity: 1;
+  z-index: 12;
+}
+
 cx-store-finder .cx-store-finder-wrapper {
   text-align: center;
   padding: 3rem 0;
