@@ -12091,6 +12091,9 @@ COMPONENT VARIABLE OVERRIDES
 cx-cart-coupon {
   padding: 2rem 3rem;
 }
+cx-cart-coupon .couponbox-is-active .cx-customer-coupons {
+  display: block;
+}
 @media (max-width: 991.98px) {
   cx-cart-coupon {
     padding: 0 3rem 2rem 3rem;
@@ -12106,6 +12109,46 @@ cx-cart-coupon .cx-cart-coupon-title {
   cx-cart-coupon .form-group .col-md-4 {
     padding: 0;
   }
+}
+cx-cart-coupon .cx-apply-voucher {
+  position: relative;
+}
+cx-cart-coupon .cx-customer-coupons {
+  display: none;
+  z-index: 100;
+  position: absolute;
+  max-height: 130px;
+  overflow: auto;
+  width: 100%;
+  background-color: var(--cx-color-inverse);
+  font-size: var(--cx-font-size, 1rem);
+  font-weight: var(--cx-font-weight-normal);
+  line-height: var(--cx-line-height, 1.6);
+  box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  margin-top: -0.25rem;
+}
+@media (max-width: 767.98px) {
+  cx-cart-coupon .cx-customer-coupons .coupons {
+    display: block;
+  }
+}
+cx-cart-coupon .cx-customer-coupons .coupons a {
+  display: grid;
+  text-decoration: none;
+  cursor: pointer;
+}
+cx-cart-coupon .cx-customer-coupons .coupons a:hover {
+  background: var(--cx-color-light);
+  color: currentColor;
+}
+cx-cart-coupon .cx-customer-coupons .coupons a .coupon-id {
+  font-size: var(--cx-font-size, 0.875rem);
+  font-weight: var(--cx-font-weight-normal);
+  line-height: var(--cx-line-height, 1.2222222222);
+  padding: 6px 3px;
+  word-break: break-word;
 }
 
 /* IMPORTANT: If no there's no theme for any reason,
@@ -17238,6 +17281,383 @@ cx-consent-management .cx-consent-toggles {
 
 cx-consent-management-form .cx-be-bold {
   font-weight: var(--cx-font-weight-semi);
+}
+
+cx-my-coupons .cx-coupon-deck {
+  padding: 1.25rem 0 0 0;
+}
+cx-my-coupons .cx-coupon-spinner {
+  padding: 5rem 0 5rem 0;
+}
+cx-my-coupons .cx-coupon-card {
+  padding-bottom: 30px;
+}
+cx-my-coupons .cx-my-coupons-form-group {
+  padding: 0;
+  margin-bottom: 0;
+}
+cx-my-coupons .cx-my-coupons-sort {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+}
+@media (max-width: 767.98px) {
+  cx-my-coupons .cx-my-coupons-sort {
+    flex-direction: column;
+    padding-top: 0;
+  }
+}
+cx-my-coupons .cx-my-coupons-sort.top {
+  padding: 1rem 0;
+  border-width: 0 0 1px 0;
+  border-style: solid;
+  border-color: var(--cx-color-light);
+}
+cx-my-coupons .cx-my-coupons-sort.bottom {
+  padding: 2rem 0 1rem 0;
+  border-width: 1px 0 0 0;
+  border-style: solid;
+  border-color: var(--cx-color-light);
+}
+@media (max-width: 767.98px) {
+  cx-my-coupons .cx-mycoupon-thead-mobile {
+    display: none;
+  }
+}
+cx-my-coupons .cx-my-coupons-notes a {
+  color: var(--cx-color-dark);
+  font-size: var(--cx-font-size, 0.875rem);
+  font-weight: var(--cx-font-weight-bold);
+  line-height: var(--cx-line-height, 1.2222222222);
+}
+
+cx-coupon-card .cx-coupon-card-row {
+  display: flex;
+  justify-content: space-between;
+}
+cx-coupon-card .cx-coupon-card-row.top {
+  height: 48px;
+}
+cx-coupon-card .cx-coupon-card-row.bottom {
+  padding: 1rem 0 0 0;
+}
+@media (max-width: 991.98px) {
+  cx-coupon-card .cx-coupon-card-row.bottom {
+    flex-direction: column;
+  }
+  cx-coupon-card .cx-coupon-card-row.bottom .cx-coupon-find-product {
+    padding: 0;
+  }
+}
+cx-coupon-card .cx-coupon-card-row .cx-coupon-card-head {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  width: 80%;
+}
+cx-coupon-card .cx-coupon-card-row .cx-coupon-status {
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+cx-coupon-card .cx-coupon-card-row .cx-coupon-status.effective {
+  color: var(--cx-color-success);
+}
+cx-coupon-card .cx-coupon-card-row .cx-coupon-status.expiresoon {
+  color: var(--cx-color-danger);
+}
+cx-coupon-card .cx-coupon-card-row .cx-coupon-status.presession {
+  color: var(--cx-color-warning);
+}
+cx-coupon-card .cx-coupon-card-date {
+  padding: 1rem 0 0 0;
+}
+cx-coupon-card .cx-coupon-card-date p {
+  margin: 0;
+}
+cx-coupon-card .cx-coupon-card-date .cx-coupon-date {
+  display: flex;
+  width: 80%;
+}
+@media (max-width: 991.98px) {
+  cx-coupon-card .cx-coupon-card-date .cx-coupon-date {
+    flex-direction: column;
+  }
+}
+cx-coupon-card .cx-coupon-card-date .cx-coupon-date-start {
+  white-space: nowrap;
+}
+cx-coupon-card .cx-coupon-card-date .cx-coupon-date-end {
+  white-space: nowrap;
+}
+cx-coupon-card a:not([href]):not([tabindex]) {
+  text-decoration: underline;
+}
+cx-coupon-card a:not([href]):not([tabindex]).cx-card-read-more {
+  padding: 1rem 0 0 0;
+  cursor: pointer;
+  display: inline-block;
+}
+cx-coupon-card a:not([href]):not([tabindex]).cx-card-read-more:hover {
+  color: var(--cx-color-primary);
+}
+cx-coupon-card .cx-coupon-spinner {
+  padding: 5rem 0 5rem 0;
+}
+cx-coupon-card .cx-coupon-card {
+  padding-bottom: 30px;
+}
+cx-coupon-card .cx-my-coupons-form-group {
+  padding: 0;
+  margin-bottom: 0;
+}
+@media (max-width: 767.98px) {
+  cx-coupon-card .cx-my-coupons-form-group {
+    padding: 1.25rem;
+  }
+}
+cx-coupon-card .cx-my-coupons-sort {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+}
+@media (max-width: 767.98px) {
+  cx-coupon-card .cx-my-coupons-sort {
+    flex-direction: column;
+    padding-top: 0;
+  }
+}
+cx-coupon-card .cx-my-coupons-sort.top {
+  padding: 1rem 0;
+}
+cx-coupon-card .cx-my-coupons-sort.bottom {
+  padding: 2rem 0 1rem 0;
+}
+@media (max-width: 767.98px) {
+  cx-coupon-card .cx-my-coupons-pagination {
+    margin: 0 auto;
+  }
+}
+cx-coupon-card .cx-section-msg {
+  text-align: center;
+}
+
+cx-coupon-dialog .cx-dialog-item {
+  padding: 0 1rem 0 0;
+}
+cx-coupon-dialog .cx-coupon-description {
+  padding: 1rem 0 1rem 0;
+}
+cx-coupon-dialog .cx-coupon-dialog-date {
+  padding: 0 0 1rem 0;
+}
+cx-coupon-dialog .cx-coupon-dialog-date p {
+  margin: 0rem;
+}
+cx-coupon-dialog .cx-coupon-dialog-status {
+  padding: 1rem 0 1rem 0;
+}
+cx-coupon-dialog .cx-coupon-dialog-status p {
+  margin: 0rem;
+}
+cx-coupon-dialog .cx-coupon-dialog-status .cx-coupon-status {
+  text-transform: uppercase;
+  font-size: var(--cx-font-size, 1rem);
+  font-weight: var(--cx-font-weight-bold);
+  line-height: var(--cx-line-height, 1.2222222222);
+}
+cx-coupon-dialog .cx-coupon-dialog-status .cx-coupon-status.effective {
+  color: var(--cx-color-success);
+}
+cx-coupon-dialog .cx-coupon-dialog-status .cx-coupon-status.expiresoon {
+  color: var(--cx-color-danger);
+}
+cx-coupon-dialog .cx-coupon-dialog-status .cx-coupon-status.presession {
+  color: var(--cx-color-warning);
+}
+cx-coupon-dialog .cx-dialog-header {
+  padding: 2rem 1.75rem 0.85rem;
+  border-width: 0;
+}
+cx-coupon-dialog .cx-dialog-title {
+  font-size: var(--cx-font-size, 1.375rem);
+  font-weight: var(--cx-font-weight-semi);
+  line-height: var(--cx-line-height, 1.2222222222);
+}
+cx-coupon-dialog .cx-dialog-body {
+  padding: 1rem 1rem 0 1rem;
+}
+@media (max-width: 767.98px) {
+  cx-coupon-dialog .cx-dialog-body {
+    padding: 0;
+  }
+}
+cx-coupon-dialog .cx-dialog-row {
+  margin: 0;
+  display: flex;
+  padding: 0 0.875rem 2.875rem;
+  max-width: 100%;
+  flex-wrap: wrap;
+}
+@media (max-width: 767.98px) {
+  cx-coupon-dialog .cx-dialog-row {
+    flex-direction: column;
+    padding: 0;
+  }
+}
+@media (max-width: 767.98px) {
+  cx-coupon-dialog .cx-dialog-item {
+    padding: 2rem;
+  }
+}
+
+cx-anonymous-consent-management-banner .anonymous-consent-banner {
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  background-color: var(--cx-color-inverse);
+  z-index: 1000;
+  border-top: 5px solid var(--cx-color-primary);
+  color: var(--cx-color-text);
+  padding: 2rem 0;
+}
+cx-anonymous-consent-management-banner .cx-banner-title {
+  font-size: var(--cx-font-size, 1.375rem);
+  font-weight: var(--cx-font-weight-semi);
+  line-height: var(--cx-line-height, 1.2222222222);
+  margin-bottom: 0.5rem;
+}
+cx-anonymous-consent-management-banner .cx-banner-description {
+  font-size: var(--cx-font-size, 1rem);
+  font-weight: var(--cx-font-weight-normal);
+  line-height: var(--cx-line-height, 1.6);
+}
+cx-anonymous-consent-management-banner .cx-banner-buttons {
+  text-align: right;
+}
+cx-anonymous-consent-management-banner .cx-banner-buttons button:last-child {
+  margin-left: 1.5rem;
+}
+@media (max-width: 575.98px) {
+  cx-anonymous-consent-management-banner .cx-banner-buttons {
+    text-align: center;
+    margin-top: 1rem;
+  }
+}
+@media (min-width: 768px) {
+  cx-anonymous-consent-management-banner .cx-banner-buttons {
+    margin-top: 1rem;
+  }
+}
+cx-anonymous-consent-management-banner .anonymous-consent-banner-hidden {
+  display: none;
+}
+
+/* IMPORTANT: If no there's no theme for any reason,
+  then fallback to the cxbase defaults */
+/*!
+  SPARTA v0.1
+  This file is for theme configuration. These variables are used in global and component CSS files.
+
+  You can:
+    1) Set new values for Bootstrap variables - https://github.com/twbs/bootstrap/blob/v4-dev/scss/_variables.scss
+    2) Set new values for cxbase variables - cxbase/_variables.scss
+    3) Set new values for component variables - app/__/_.scss
+  You cannot:
+    1) Add new variables
+*/
+/*!
+  CXBASE VARIABLES
+  This is NOT a theme.
+
+  This file should include ONLY new variables that Bootstrap does not provide.
+  For example, Bootstrap does not have a variable for semi font weight.
+
+  Same case for directionality.
+
+  Also be aware of items that should be configurable.
+  The Sparta buttons use uppercase type but future themes may want normal case
+  so a variable was created to make this available for other themes.
+
+*/
+/*
+GLOBAL VARIABLE OVERRIDES
+  These can be set with anything above or any variables exposed in Bootsrap or cxbase
+*/
+/*
+COMPONENT VARIABLE OVERRIDES
+  For example, the following would override the cx-storefront background set in src/app/ui/layout/main/main.component.scss
+  $cx-storefront-background-color: "info";
+*/
+cx-anonymous-consent-dialog .cx-dialog-header {
+  padding: 2rem 1.75rem 0.85rem;
+}
+cx-anonymous-consent-dialog .cx-dialog-body {
+  padding-top: 0;
+  background-color: var(--cx-color-inverse);
+}
+@media (max-width: 575.98px) {
+  cx-anonymous-consent-dialog .cx-dialog-body {
+    padding: 1.5rem;
+    border-top: 1px solid var(--cx-color-light);
+  }
+}
+cx-anonymous-consent-dialog .cx-dialog-buttons {
+  text-align: right;
+  padding: 1rem 4rem;
+}
+@media (max-width: 575.98px) {
+  cx-anonymous-consent-dialog .cx-dialog-buttons {
+    padding: 1rem;
+  }
+}
+cx-anonymous-consent-dialog .cx-action-link {
+  margin: 0 0.35rem;
+}
+cx-anonymous-consent-dialog .cx-dialog-row {
+  max-width: 100%;
+}
+@media (max-width: 575.98px) {
+  cx-anonymous-consent-dialog .cx-dialog-row {
+    padding: 0;
+  }
+}
+cx-anonymous-consent-dialog .cx-dialog-title {
+  font-size: var(--cx-font-size, 1.375rem);
+  font-weight: var(--cx-font-weight-semi);
+  line-height: var(--cx-line-height, 1.2222222222);
+}
+cx-anonymous-consent-dialog .cx-dialog-description {
+  font-size: var(--cx-font-size, 1rem);
+  font-weight: var(--cx-font-weight-normal);
+  line-height: var(--cx-line-height, 1.6);
+  padding: 1.5rem 1.75rem 0;
+}
+cx-anonymous-consent-dialog a:not([href]):not([tabindex]) {
+  text-decoration: underline;
+}
+
+cx-anonymous-consent-open-dialog .anonymous-consents {
+  display: flex;
+  justify-content: center;
+  margin: 0 3vw 3vw 3vw;
+}
+@media (max-width: 767.98px) {
+  cx-anonymous-consent-open-dialog .anonymous-consents {
+    justify-content: flex-start;
+  }
+}
+cx-anonymous-consent-open-dialog .anonymous-consents button {
+  padding: 0;
+  color: var(--cx-color-inverse);
+  font-size: 0.8rem;
+}
+cx-anonymous-consent-open-dialog .anonymous-consents button:not(:hover) {
+  text-decoration: none;
+}
+cx-anonymous-consent-open-dialog .anonymous-consents button:hover {
+  color: var(--cx-color-inverse);
 }
 
 cx-my-interests .cx-product-interests-title {
