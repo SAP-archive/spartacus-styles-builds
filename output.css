@@ -12455,6 +12455,67 @@ COMPONENT VARIABLE OVERRIDES
   For example, the following would override the cx-storefront background set in src/app/ui/layout/main/main.component.scss
   $cx-storefront-background-color: "info";
 */
+cx-save-for-later {
+  display: block;
+}
+cx-save-for-later .cart-details-wrapper {
+  padding: 2rem 0;
+}
+cx-save-for-later .cx-total {
+  font-size: var(--cx-font-size, 1.125rem);
+  font-weight: var(--cx-font-weight-bold);
+  line-height: var(--cx-line-height, 1.2222222222);
+  margin: 0 0 1rem;
+}
+cx-save-for-later .cx-remove-btn {
+  text-align: right;
+  padding-left: 0;
+  padding-right: 0;
+}
+cx-save-for-later .cx-sfl-btn {
+  text-align: right;
+  padding-right: 0;
+}
+cx-save-for-later .cx-empty-cart-info {
+  margin-top: 3rem;
+}
+
+/* IMPORTANT: If no there's no theme for any reason,
+  then fallback to the cxbase defaults */
+/*!
+  SPARTA v0.1
+  This file is for theme configuration. These variables are used in global and component CSS files.
+
+  You can:
+    1) Set new values for Bootstrap variables - https://github.com/twbs/bootstrap/blob/v4-dev/scss/_variables.scss
+    2) Set new values for cxbase variables - cxbase/_variables.scss
+    3) Set new values for component variables - app/__/_.scss
+  You cannot:
+    1) Add new variables
+*/
+/*!
+  CXBASE VARIABLES
+  This is NOT a theme.
+
+  This file should include ONLY new variables that Bootstrap does not provide.
+  For example, Bootstrap does not have a variable for semi font weight.
+
+  Same case for directionality.
+
+  Also be aware of items that should be configurable.
+  The Sparta buttons use uppercase type but future themes may want normal case
+  so a variable was created to make this available for other themes.
+
+*/
+/*
+GLOBAL VARIABLE OVERRIDES
+  These can be set with anything above or any variables exposed in Bootsrap or cxbase
+*/
+/*
+COMPONENT VARIABLE OVERRIDES
+  For example, the following would override the cx-storefront background set in src/app/ui/layout/main/main.component.scss
+  $cx-storefront-background-color: "info";
+*/
 cx-checkout-progress .cx-nav,
 cx-checkout-progress-mobile-top .cx-nav,
 cx-checkout-progress-mobile-bottom .cx-nav {
