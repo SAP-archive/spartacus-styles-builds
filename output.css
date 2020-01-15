@@ -15135,6 +15135,10 @@ cx-product-grid .cx-product-price .new {
   color: var(--cx-primary);
 }
 
+cx-product-grid-item {
+  display: flex;
+  flex-direction: column;
+}
 cx-product-grid-item .cx-product-search-list {
   border-width: 0 0 1px 0;
   border-style: solid;
@@ -15169,18 +15173,21 @@ cx-product-grid-item .cx-product-name {
 cx-product-grid-item .cx-product-name:hover {
   color: var(--cx-color-primary);
 }
-cx-product-grid-item .cx-product-price {
+cx-product-grid-item .cx-product-price-container {
+  flex-grow: 1;
+}
+cx-product-grid-item .cx-product-price-container .cx-product-price {
   font-size: var(--cx-font-size, 1.375rem);
   font-weight: var(--cx-font-weight-semi);
   line-height: var(--cx-line-height, 1.2222222222);
   text-align: center;
   margin: 1rem 0;
 }
-cx-product-grid-item .cx-product-price.old {
+cx-product-grid-item .cx-product-price-container .cx-product-price.old {
   color: var(--cx-color-secondary);
   text-decoration: line-through;
 }
-cx-product-grid-item .cx-product-price.new {
+cx-product-grid-item .cx-product-price-container .cx-product-price.new {
   margin: 0 0 0 5px;
   color: var(--cx-color-primary);
 }
