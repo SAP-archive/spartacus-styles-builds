@@ -17033,6 +17033,10 @@ cx-address-card .cx-card-body {
 cx-payment-methods .cx-header {
   padding: 2.5rem 0 0 0;
 }
+cx-payment-methods .cx-card-img-container .fab::before,
+cx-payment-methods .cx-card-img-container .fas::before {
+  font-size: var(--cx-font-size, 48px);
+}
 cx-payment-methods .cx-existing {
   display: flex;
   padding: 0rem 0 2.5rem 0;
