@@ -15424,28 +15424,28 @@ cx-product-intro .rating cx-star-rating {
 }
 
 @media (min-width: 992px) {
-  cx-product-variant-selector .variant-section {
+  cx-product-variants .variant-section {
     padding: 20px 20px 0 20px;
   }
 }
-cx-product-variant-selector .variant-selector a.size-guide {
+cx-product-variants .variant-selector a.size-guide {
   display: flex;
   justify-content: flex-end;
   pointer-events: none;
 }
-cx-product-variant-selector .variant-selector .style-name {
+cx-product-variants .variant-selector .style-name {
   text-transform: capitalize;
 }
-cx-product-variant-selector .variant-list {
+cx-product-variants .variant-list {
   padding: 0;
 }
-cx-product-variant-selector .variant-list li {
+cx-product-variants .variant-list li {
   display: inline;
 }
-cx-product-variant-selector .variant-list li.selected-variant img {
+cx-product-variants .variant-list li.selected-variant img {
   border: 2px solid var(--cx-color-primary);
 }
-cx-product-variant-selector .variant-list li img {
+cx-product-variants .variant-list li img {
   margin: 3px;
   border: 1px solid #ddd;
 }
