@@ -14888,6 +14888,10 @@ cx-product-list-item .cx-product-price.new {
   margin: 0 0 0 5px;
   color: var(--cx-color-primary);
 }
+cx-product-list-item cx-variant-style-icons {
+  display: block;
+  margin-top: 1rem;
+}
 
 @media (max-width: 991.98px) {
   cx-product-facet-navigation .cx-search-facet {
