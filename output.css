@@ -15450,6 +15450,7 @@ cx-product-variants .variant-list li.selected-variant img {
   border: 2px solid var(--cx-color-primary);
 }
 cx-product-variants .variant-list li img {
+  cursor: pointer;
   margin: 3px;
   border: 1px solid #ddd;
 }
