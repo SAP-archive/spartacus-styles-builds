@@ -6737,14 +6737,14 @@ fieldset:disabled a.btn {
   pointer-events: none;
 }
 
-.btn-lg, .btn-group-lg > .btn {
+.btn-lg {
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
   line-height: 1.5;
   border-radius: 0.3rem;
 }
 
-.btn-sm, .btn-group-sm > .btn {
+.btn-sm {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
   line-height: 1.5;
@@ -6791,14 +6791,14 @@ button.link:disabled {
   min-width: 48px;
   border-radius: var(--cx-buttons-border-radius);
 }
-.btn-sm, .btn-group-sm > .btn {
+.btn-sm {
   padding-top: 0;
   padding-bottom: 0;
   height: 40px;
   max-height: 40px;
   min-width: 40px;
 }
-.btn-lg, .btn-group-lg > .btn {
+.btn-lg {
   height: 55px;
   max-height: 55px;
   min-width: 55px;
@@ -8831,148 +8831,6 @@ COMPONENT VARIABLE OVERRIDES
   background-color: #212738;
   padding: 9px 15px;
   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
-}
-
-/* IMPORTANT: If no there's no theme for any reason,
-  then fallback to the cxbase defaults */
-/*!
-  SPARTA v0.1
-  This file is for theme configuration. These variables are used in global and component CSS files.
-
-  You can:
-    1) Set new values for Bootstrap variables - https://github.com/twbs/bootstrap/blob/v4-dev/scss/_variables.scss
-    2) Set new values for cxbase variables - cxbase/_variables.scss
-    3) Set new values for component variables - app/__/_.scss
-  You cannot:
-    1) Add new variables
-*/
-/*!
-  CXBASE VARIABLES
-  This is NOT a theme.
-
-  This file should include ONLY new variables that Bootstrap does not provide.
-  For example, Bootstrap does not have a variable for semi font weight.
-
-  Same case for directionality.
-
-  Also be aware of items that should be configurable.
-  The Sparta buttons use uppercase type but future themes may want normal case
-  so a variable was created to make this available for other themes.
-
-*/
-/*
-GLOBAL VARIABLE OVERRIDES
-  These can be set with anything above or any variables exposed in Bootsrap or cxbase
-*/
-/*
-COMPONENT VARIABLE OVERRIDES
-  For example, the following would override the cx-storefront background set in src/app/ui/layout/main/main.component.scss
-  $cx-storefront-background-color: "info";
-*/
-.pagination {
-  display: flex;
-  padding-left: 0;
-  list-style: none;
-  border-radius: 0.25rem;
-}
-
-.page-link {
-  position: relative;
-  display: block;
-  padding: 0.5rem 0.75rem;
-  margin-left: -1px;
-  line-height: 1.25;
-  color: #fe5757;
-  background-color: #fff;
-  border: 1px solid #dee2e6;
-}
-.page-link:hover {
-  z-index: 2;
-  color: #fe0b0b;
-  text-decoration: none;
-  background-color: #e9ecef;
-  border-color: #dee2e6;
-}
-.page-link:focus {
-  z-index: 2;
-  outline: 0;
-  box-shadow: 0 0 0 0.2rem rgba(254, 87, 87, 0.25);
-}
-
-.page-item:first-child .page-link {
-  margin-left: 0;
-  border-top-left-radius: 0.25rem;
-  border-bottom-left-radius: 0.25rem;
-}
-.page-item:last-child .page-link {
-  border-top-right-radius: 0.25rem;
-  border-bottom-right-radius: 0.25rem;
-}
-.page-item.active .page-link {
-  z-index: 1;
-  color: #fff;
-  background-color: #fe5757;
-  border-color: #fe5757;
-}
-.page-item.disabled .page-link {
-  color: #6c757d;
-  pointer-events: none;
-  cursor: auto;
-  background-color: #fff;
-  border-color: #dee2e6;
-}
-
-.pagination-lg .page-link {
-  padding: 0.75rem 1.5rem;
-  font-size: 1.25rem;
-  line-height: 1.5;
-}
-.pagination-lg .page-item:first-child .page-link {
-  border-top-left-radius: 0.3rem;
-  border-bottom-left-radius: 0.3rem;
-}
-.pagination-lg .page-item:last-child .page-link {
-  border-top-right-radius: 0.3rem;
-  border-bottom-right-radius: 0.3rem;
-}
-
-.pagination-sm .page-link {
-  padding: 0.25rem 0.5rem;
-  font-size: 0.875rem;
-  line-height: 1.5;
-}
-.pagination-sm .page-item:first-child .page-link {
-  border-top-left-radius: 0.2rem;
-  border-bottom-left-radius: 0.2rem;
-}
-.pagination-sm .page-item:last-child .page-link {
-  border-top-right-radius: 0.2rem;
-  border-bottom-right-radius: 0.2rem;
-}
-
-.page-item .page-link {
-  font-size: var(--cx-font-size, 1rem);
-  font-weight: var(--cx-font-weight-normal);
-  line-height: var(--cx-line-height, 1.6);
-  padding: 12px 17px 12px 17px;
-  height: 48px;
-  color: var(--cx-color-text);
-  cursor: pointer;
-}
-.page-item .page-link:hover {
-  background-color: var(--cx-color-primary);
-  color: var(--cx-color-inverse);
-  font-weight: 700;
-}
-.page-item .page-link[aria-label=Previous], .page-item .page-link[aria-label=Next] {
-  padding: 11px 14px 12px 14px;
-  color: var(--cx-color-secondary);
-}
-.page-item .page-link[aria-label=Previous]:hover, .page-item .page-link[aria-label=Next]:hover {
-  color: var(--cx-color-inverse);
-}
-.page-item.disabled .page-link[aria-label=Previous], .page-item.disabled .page-link[aria-label=Next] {
-  color: var(--cx-color-light);
 }
 
 /* IMPORTANT: If no there's no theme for any reason,
@@ -11963,6 +11821,9 @@ cx-cart-item-list .cx-item-list-row, cx-wish-list .cx-item-list-row {
   border-style: solid;
   border-color: var(--cx-color-light);
 }
+cx-cart-item-list .cx-item-list-items.is-changed, cx-wish-list .cx-item-list-items.is-changed {
+  opacity: 0.7;
+}
 @media (max-width: 991.98px) {
   cx-cart-item-list .cx-item-list-header, cx-wish-list .cx-item-list-header {
     padding: 1.125rem 2.5rem;
@@ -12243,154 +12104,63 @@ cx-applied-coupons .cx-coupon-apply .close {
   padding-left: 0.7rem;
 }
 
-.btn-group,
-.btn-group-vertical {
-  position: relative;
-  display: inline-flex;
-  vertical-align: middle;
-}
-.btn-group > .btn,
-.btn-group-vertical > .btn {
-  position: relative;
-  flex: 1 1 auto;
-}
-.btn-group > .btn:hover,
-.btn-group-vertical > .btn:hover {
-  z-index: 1;
-}
-.btn-group > .btn:focus, .btn-group > .btn:active, .btn-group > .btn.active,
-.btn-group-vertical > .btn:focus,
-.btn-group-vertical > .btn:active,
-.btn-group-vertical > .btn.active {
-  z-index: 1;
-}
-
-.btn-toolbar {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-}
-.btn-toolbar .input-group {
-  width: auto;
-}
-
-.btn-group > .btn:not(:first-child),
-.btn-group > .btn-group:not(:first-child) {
-  margin-left: -1px;
-}
-.btn-group > .btn:not(:last-child):not(.dropdown-toggle),
-.btn-group > .btn-group:not(:last-child) > .btn {
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-}
-.btn-group > .btn:not(:first-child),
-.btn-group > .btn-group:not(:first-child) > .btn {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-}
-
-.dropdown-toggle-split {
-  padding-right: 0.5625rem;
-  padding-left: 0.5625rem;
-}
-.dropdown-toggle-split::after, .dropup .dropdown-toggle-split::after, .dropright .dropdown-toggle-split::after {
-  margin-left: 0;
-}
-.dropleft .dropdown-toggle-split::before {
-  margin-right: 0;
-}
-
-.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split {
-  padding-right: 0.375rem;
-  padding-left: 0.375rem;
-}
-
-.btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split {
-  padding-right: 0.75rem;
-  padding-left: 0.75rem;
-}
-
-.btn-group-vertical {
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-}
-.btn-group-vertical > .btn,
-.btn-group-vertical > .btn-group {
-  width: 100%;
-}
-.btn-group-vertical > .btn:not(:first-child),
-.btn-group-vertical > .btn-group:not(:first-child) {
-  margin-top: -1px;
-}
-.btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle),
-.btn-group-vertical > .btn-group:not(:last-child) > .btn {
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
-}
-.btn-group-vertical > .btn:not(:first-child),
-.btn-group-vertical > .btn-group:not(:first-child) > .btn {
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-}
-
-.btn-group-toggle > .btn,
-.btn-group-toggle > .btn-group > .btn {
-  margin-bottom: 0;
-}
-.btn-group-toggle > .btn input[type=radio],
-.btn-group-toggle > .btn input[type=checkbox],
-.btn-group-toggle > .btn-group > .btn input[type=radio],
-.btn-group-toggle > .btn-group > .btn input[type=checkbox] {
-  position: absolute;
-  clip: rect(0, 0, 0, 0);
-  pointer-events: none;
-}
-
-cx-item-counter .cx-counter-wrapper {
-  display: inline-flex;
-  flex-direction: column;
-}
-cx-item-counter .cx-counter {
-  border-radius: 4px;
-  border-width: 1px;
-  border-style: solid;
-  border-color: var(--cx-color-light);
-}
-cx-item-counter .cx-counter-value {
-  border: none;
+cx-item-counter input {
   text-align: center;
-  border-width: 0 1px 0 1px;
-  border-style: solid;
-  border-color: var(--cx-color-light);
-  padding: 12px 9px 12px 9px;
+}
+cx-item-counter input[type=number]::-webkit-inner-spin-button, cx-item-counter input[type=number]::-webkit-outer-spin-button {
+  appearance: none;
+}
+cx-item-counter input[type=number] {
+  -moz-appearance: textfield;
+}
+cx-item-counter.readonly button {
+  display: none;
+}
+cx-item-counter.readonly input {
+  border: none;
+  cursor: text;
+}
+cx-item-counter:not(.readonly) {
+  display: inline-flex;
+  border: solid 1px var(--cx-color-light);
+  border-radius: 4px;
+}
+cx-item-counter:not(.readonly) input {
+  border: solid 1px var(--cx-color-light);
+  border-width: 0 1px;
+  padding: 12px 9px;
   max-height: 46px;
   min-width: 48px;
   max-width: 78px;
 }
-cx-item-counter .cx-counter-action {
+cx-item-counter:not(.readonly) input:focus {
+  background: var(--cx-color-background);
+  outline: none;
+}
+cx-item-counter button {
+  margin: 0;
   max-height: 48px;
   min-width: 40px;
   border: none;
   cursor: pointer;
   color: var(--cx-color-text);
   background-color: var(--cx-color-transparent);
-  margin: 0;
   font-size: var(--cx-font-size, 1rem);
   font-weight: var(--cx-font-weight-normal);
   line-height: var(--cx-line-height, 1.6);
 }
-cx-item-counter .cx-counter-action:hover {
+cx-item-counter button:hover {
   color: var(--cx-color-primary);
 }
-cx-item-counter .cx-counter-action:focus {
+cx-item-counter button:focus {
   color: var(--cx-color, var(--cx-color-primary));
   font-weight: var(--cx-font-weight-bold);
   cursor: pointer;
 }
-cx-item-counter .cx-counter-action:disabled {
+cx-item-counter button:disabled {
   color: var(--cx-color-light);
-  opacity: 1;
+}
+cx-item-counter :disabled {
   cursor: not-allowed;
 }
 
@@ -15793,9 +15563,48 @@ cx-card .cx-card-link {
   padding: 0 0 0 1rem;
 }
 
-cx-pagination ul .pagination .page-item.active .page-link {
-  background-color: var(--cx-background-color, var(--cx-color-primary));
-  border-color: var(--cx-border-color, var(--cx-color-primary));
+cx-pagination {
+  display: flex;
+  justify-content: flex-start;
+  align-content: center;
+  align-items: stretch;
+  height: 48px;
+}
+cx-pagination a {
+  color: var(--cx-color-text);
+  width: 48px;
+  border: solid 1px var(--cx-color-light);
+  box-sizing: content-box;
+  border-inline-end: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s, color 0.3s;
+}
+cx-pagination a:first-child {
+  border-top-left-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+}
+cx-pagination a:last-child {
+  border-inline-end: solid 1px var(--cx-color-light);
+  border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+}
+cx-pagination a.current {
+  background-color: var(--cx-color-primary);
+  border-color: var(--cx-color-primary);
+  color: var(--cx-color-inverse);
+  opacity: 1;
+}
+cx-pagination a.current, cx-pagination a.disabled, cx-pagination a.gap {
+  pointer-events: none;
+}
+cx-pagination a:hover {
+  text-decoration: none;
+  background-color: var(--cx-color-background);
+}
+cx-pagination a.current + a {
+  border-left: none;
 }
 
 /* IDEAS TO EXTEND
@@ -16215,13 +16024,6 @@ cx-amend-order-items .cx-quantity cx-item-counter {
   width: 100%;
   display: flex;
   justify-content: center;
-}
-cx-amend-order-items .cx-quantity cx-item-counter .cx-counter {
-  display: flex;
-  justify-content: center;
-}
-cx-amend-order-items .cx-quantity cx-item-counter .cx-counter-value {
-  max-width: 50px;
 }
 cx-amend-order-items .cx-request-qty {
   display: flex;
@@ -18853,6 +18655,9 @@ cx-cart-item-list .cx-item-list-row, cx-wish-list .cx-item-list-row {
   border-width: 0 0 1px 0;
   border-style: solid;
   border-color: var(--cx-color-light);
+}
+cx-cart-item-list .cx-item-list-items.is-changed, cx-wish-list .cx-item-list-items.is-changed {
+  opacity: 0.7;
 }
 @media (max-width: 991.98px) {
   cx-cart-item-list .cx-item-list-header, cx-wish-list .cx-item-list-header {
