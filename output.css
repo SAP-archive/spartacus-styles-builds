@@ -11003,7 +11003,6 @@ cx-category-navigation {
 }
 .ProductListPageTemplate .ProductLeftRefinements,
 .ProductGridPageTemplate .ProductLeftRefinements {
-  order: 1;
   max-width: 25%;
   padding: 60px 15px 15px 15px;
 }
@@ -11018,7 +11017,6 @@ cx-category-navigation {
 .ProductListPageTemplate .ProductGridSlot,
 .ProductGridPageTemplate .ProductListSlot,
 .ProductGridPageTemplate .ProductGridSlot {
-  order: 2;
   max-width: 75%;
 }
 @media (max-width: 991.98px) {
@@ -11045,7 +11043,6 @@ cx-category-navigation {
   }
 }
 .SearchResultsListPageTemplate .ProductLeftRefinements {
-  order: 1;
   max-width: 25%;
   padding: 60px 15px 15px 15px;
 }
@@ -11056,7 +11053,6 @@ cx-category-navigation {
   }
 }
 .SearchResultsListPageTemplate .SearchResultsListSlot {
-  order: 2;
   max-width: 75%;
 }
 @media (max-width: 991.98px) {
@@ -11070,7 +11066,6 @@ cx-category-navigation {
 }
 .SearchResultsListPageTemplate .Section4 {
   padding: 0 1rem;
-  order: 3;
 }
 
 .CartPageTemplate {
