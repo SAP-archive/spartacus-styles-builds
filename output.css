@@ -15650,19 +15650,19 @@ cx-spinner .loader::before {
   }
 }
 
-cx-icon {
+cx-icon, .cx-icon {
   align-self: center;
   line-height: normal;
 }
-cx-icon.small:before {
+cx-icon.small:before, .small.cx-icon:before {
   font-size: 0.9rem;
 }
-cx-icon svg {
+cx-icon svg, .cx-icon svg {
   width: 28px;
   height: 28px;
   fill: currentColor;
 }
-cx-icon.small svg {
+cx-icon.small svg, .small.cx-icon svg {
   width: 14px;
   height: 14px;
 }
