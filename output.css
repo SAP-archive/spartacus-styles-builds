@@ -18096,9 +18096,6 @@ cx-store-finder-list-item {
 cx-store-finder-list-item:hover {
   background-color: var(--cx-color-background);
 }
-cx-store-finder-list-item:hover .cx-store-name {
-  text-decoration: underline;
-}
 cx-store-finder-list-item .cx-store-list-order {
   position: absolute;
   left: -2rem;
@@ -18107,11 +18104,37 @@ cx-store-finder-list-item .cx-store-name {
   font-size: var(--cx-font-size, 1rem);
   font-weight: var(--cx-font-weight-semi);
   line-height: var(--cx-line-height, 1.2222222222);
-  cursor: pointer;
+  cursor: default;
   min-height: 40px;
 }
-cx-store-finder-list-item .cx-store-address {
+cx-store-finder-list-item .cx-store-name button {
+  margin: 0;
+  padding: 0;
+  appearance: none;
+  outline: 0;
+  border: 0;
+  display: inline-block;
+  text-decoration: none;
   cursor: pointer;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  background-color: transparent;
+  color: var(--cx-color-primary);
+  font-weight: var(--cx-font-weight-semi);
+}
+cx-store-finder-list-item .cx-store-name button:focus {
+  text-decoration: underline;
+}
+cx-store-finder-list-item .cx-store-name button:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+cx-store-finder-list-item .cx-store-name a:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+cx-store-finder-list-item .cx-store-address {
   font-size: var(--cx-font-size, 0.875rem);
   font-weight: var(--cx-font-weight-normal);
   line-height: var(--cx-line-height, 1.2222222222);
@@ -18358,11 +18381,18 @@ cx-store-finder-list .cx-list-items {
   border-style: solid;
   border-color: var(--cx-color-light);
 }
+cx-store-finder-list .cx-list-items .cx-store-name {
+  color: var(--cx-color-primary);
+  cursor: default;
+}
+cx-store-finder-list .cx-list-items .cx-store-name a {
+  cursor: pointer;
+}
+cx-store-finder-list .cx-list-items .cx-store-name a:hover {
+  text-decoration: underline;
+}
 cx-store-finder-list .cx-list-items:hover {
   background-color: var(--cx-color-background);
-}
-cx-store-finder-list .cx-list-items:hover .cx-store-name {
-  text-decoration: underline;
 }
 cx-store-finder-list .cx-list-items.cx-selected-item {
   background-color: var(--cx-color-background);
