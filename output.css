@@ -11947,12 +11947,14 @@ COMPONENT VARIABLE OVERRIDES
 cx-cart-coupon {
   padding: 2rem 3rem;
 }
-cx-cart-coupon .couponbox-is-active .cx-customer-coupons {
-  display: block;
-}
 @media (max-width: 991.98px) {
   cx-cart-coupon {
     padding: 0 3rem 2rem 3rem;
+  }
+}
+@media (min-width: 768px) {
+  cx-cart-coupon .form-group .col-md-4 {
+    padding: 0;
   }
 }
 cx-cart-coupon .cx-cart-coupon-title {
@@ -11961,50 +11963,44 @@ cx-cart-coupon .cx-cart-coupon-title {
   line-height: var(--cx-line-height, 1.2222222222);
   margin: 1.125rem 0 0.5rem;
 }
-@media (min-width: 768px) {
-  cx-cart-coupon .form-group .col-md-4 {
-    padding: 0;
-  }
+cx-cart-coupon .cx-available-coupon .title {
+  font-weight: bold;
 }
-cx-cart-coupon .cx-apply-voucher {
-  position: relative;
+cx-cart-coupon .cx-available-coupon .message {
+  display: flex;
+  flex-wrap: wrap;
 }
-cx-cart-coupon .cx-customer-coupons {
-  display: none;
-  z-index: 100;
-  position: absolute;
-  max-height: 130px;
-  overflow: auto;
-  width: 100%;
-  background-color: var(--cx-color-inverse);
-  font-size: var(--cx-font-size, 1rem);
-  font-weight: var(--cx-font-weight-normal);
-  line-height: var(--cx-line-height, 1.6);
-  box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
-  border-bottom-left-radius: 4px;
-  border-bottom-right-radius: 4px;
-  margin-top: -0.25rem;
+cx-cart-coupon .cx-available-coupon .scroll {
+  display: block;
+  height: auto;
+  box-sizing: border-box;
+  max-height: 240px;
+  overflow-y: auto;
 }
-@media (max-width: 767.98px) {
-  cx-cart-coupon .cx-customer-coupons .coupons {
-    display: block;
-  }
-}
-cx-cart-coupon .cx-customer-coupons .coupons a {
-  display: grid;
-  text-decoration: none;
-  cursor: pointer;
-}
-cx-cart-coupon .cx-customer-coupons .coupons a:hover {
-  background: var(--cx-color-light);
-  color: currentColor;
-}
-cx-cart-coupon .cx-customer-coupons .coupons a .coupon-id {
+cx-cart-coupon .cx-available-coupon .card {
   font-size: var(--cx-font-size, 0.875rem);
   font-weight: var(--cx-font-weight-normal);
   line-height: var(--cx-line-height, 1.2222222222);
-  padding: 6px 3px;
-  word-break: break-word;
+  display: inline-flex;
+  align-items: flex-start;
+  padding: var(--cx-padding, 0.25rem 0.25rem);
+  word-break: break-all;
+  margin: var(--cx-margin, 0.25rem 0.25rem 0 0);
+  background: var(--cx-color-background);
+  border: 1px solid #d3d6db;
+  border-radius: 0.25rem;
+}
+cx-cart-coupon button.link {
+  font-size: var(--cx-font-size, 0.875rem);
+  font-weight: var(--cx-font-weight-bold);
+  line-height: var(--cx-line-height, 1.2222222222);
+  color: var(--cx-color-text);
+  border-width: 0;
+  text-decoration: none;
+  background: var(--cx-color-background);
+}
+cx-cart-coupon button.link:hover {
+  text-decoration: underline;
 }
 
 /* IMPORTANT: If no there's no theme for any reason,
