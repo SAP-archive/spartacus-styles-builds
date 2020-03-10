@@ -12126,7 +12126,6 @@ cx-item-counter:not(.readonly) input {
 }
 cx-item-counter:not(.readonly) input:focus {
   background: var(--cx-color-background);
-  outline: none;
 }
 cx-item-counter button {
   margin: 0;
