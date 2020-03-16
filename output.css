@@ -11304,8 +11304,9 @@ cx-mini-cart {
 cx-mini-cart a {
   display: flex;
   background: var(--cx-color-primary);
-  width: 70px;
-  height: 48px;
+  min-width: 70px;
+  height: 47px;
+  padding: 10px;
   color: var(--cx-color-inverse);
   text-decoration: none;
   justify-content: space-around;
@@ -11318,7 +11319,7 @@ cx-mini-cart a:hover {
 cx-mini-cart a .count {
   color: currentColor;
   align-self: center;
-  padding-right: 7px;
+  padding-inline-start: 7px;
 }
 cx-mini-cart a .total {
   display: none;
