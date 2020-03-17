@@ -18256,13 +18256,8 @@ cx-store-finder-stores-count .cx-set {
 cx-store-finder-stores-count .cx-set:hover {
   background-color: var(--cx-color-background);
 }
-cx-store-finder-stores-count .cx-set:hover a.btn-link {
-  text-decoration: underline;
-  color: var(--cx-color-primary);
-}
-cx-store-finder-stores-count a.btn-link {
+cx-store-finder-stores-count a {
   padding: 1.5rem;
-  text-decoration: none;
   width: 100%;
 }
 cx-store-finder-stores-count .cx-no-stores {
@@ -18472,7 +18467,6 @@ cx-store-finder-search .search-wrapper cx-icon {
   top: 17px;
   right: 17px;
   cursor: pointer;
-  outline: none;
 }
 cx-store-finder-search .disabled-action {
   pointer-events: none;
