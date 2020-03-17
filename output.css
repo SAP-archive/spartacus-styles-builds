@@ -17844,6 +17844,10 @@ cx-storefront:focus {
 cx-storefront > footer {
   margin-top: auto;
 }
+cx-storefront .mouse-focus :focus,
+cx-storefront .mouse-focus .ng-select-focused {
+  outline-width: 0;
+}
 
 cx-site-context-selector {
   position: relative;
