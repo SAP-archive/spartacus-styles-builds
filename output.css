@@ -13908,10 +13908,20 @@ cx-navigation-ui.flyout h5:hover,
 cx-navigation-ui.flyout cx-generic-link:hover {
   color: var(--cx-color-primary);
 }
+cx-navigation-ui.flyout h5:focus,
+cx-navigation-ui.flyout cx-generic-link:focus {
+  z-index: 1;
+  position: relative;
+}
 cx-navigation-ui.flyout h5 a,
 cx-navigation-ui.flyout cx-generic-link a {
   display: block;
   width: 100%;
+}
+cx-navigation-ui.flyout h5 a:focus,
+cx-navigation-ui.flyout cx-generic-link a:focus {
+  z-index: 1;
+  position: relative;
 }
 @media (max-width: 991.98px) {
   cx-navigation-ui.flyout > nav > h5,
