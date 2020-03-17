@@ -15621,6 +15621,9 @@ cx-pagination a:hover {
 cx-pagination a.current + a {
   border-left: none;
 }
+cx-pagination a:focus {
+  z-index: 1;
+}
 
 /* IDEAS TO EXTEND
   - sizing (variants: small, medium, big)
