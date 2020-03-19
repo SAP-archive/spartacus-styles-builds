@@ -15201,9 +15201,6 @@ cx-product-intro .rating button {
   background-color: transparent;
   text-decoration: underline;
 }
-cx-product-intro .rating button:focus {
-  outline: auto;
-}
 cx-product-intro .rating cx-star-rating {
   padding: 0 0 15px 0;
 }
