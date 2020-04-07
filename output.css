@@ -7891,28 +7891,57 @@ textarea.form-control {
   -webkit-box-shadow: none;
 }
 
-.invalid-feedback {
-  text-align: left;
+cx-form-errors {
+  display: none;
 }
-.invalid-feedback::before {
-  content: "!";
-  color: var(--cx-color-inverse);
-  text-align: center;
-  border-radius: 50%;
-  display: inline-block;
+cx-form-errors.control-invalid.control-dirty, cx-form-errors.control-invalid.control-touched {
+  display: initial;
+}
+cx-form-errors p {
+  font-size: 14px;
+  margin: 6px 0;
+  padding: 0 0 0 25px;
+  position: relative;
+  word-break: break-word;
+}
+cx-form-errors p::before, cx-form-errors p::after {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
   width: 20px;
   height: 20px;
-  background-color: var(--cx-color-danger);
-  margin-right: 6px;
-  font-weight: var(--cx-font-weight-bold);
 }
-.invalid-feedback:focus {
+cx-form-errors p::before {
+  content: "";
+  background-color: var(--cx-color-danger);
+  border-radius: 50%;
+}
+cx-form-errors p::after {
+  content: "!";
+  color: var(--cx-color-inverse);
+  font-weight: var(--cx-font-weight-bold);
+  text-align: center;
+  line-height: 20px;
+}
+cx-form-errors p:focus {
   box-shadow: none;
   -webkit-box-shadow: none;
 }
 
-.is-invalid {
-  color: var(--cx-color-danger);
+input.ng-invalid.ng-dirty, input.ng-invalid.ng-touched,
+input[type=checkbox].ng-invalid.ng-dirty,
+input[type=checkbox].ng-invalid.ng-touched,
+input[type=radio].ng-invalid.ng-dirty,
+input[type=radio].ng-invalid.ng-touched,
+textarea.ng-invalid.ng-dirty,
+textarea.ng-invalid.ng-touched {
+  border-color: var(--cx-color-danger);
+}
+
+ng-select.ng-invalid.ng-dirty .ng-select-container, ng-select.ng-invalid.ng-touched .ng-select-container {
+  border-color: var(--cx-color-danger);
 }
 
 input[type=checkbox],
@@ -7932,7 +7961,7 @@ input[type=radio] {
   border-width: 1px;
   position: absolute;
   margin-top: 0.3rem;
-  margin-left: -1.25rem;
+  margin-left: -2.25rem;
 }
 
 label {
@@ -7948,13 +7977,13 @@ label .label-content.bold {
 
 .form-check {
   margin-bottom: 18px;
+  padding-left: 2.25rem;
 }
 .form-check label {
   font-weight: var(--cx-font-weight-normal);
 }
 .form-check .form-check-label {
   display: inline-block;
-  padding-left: 0.75rem;
   position: relative;
   top: 4px;
 }
@@ -12235,7 +12264,7 @@ COMPONENT VARIABLE OVERRIDES
   $cx-storefront-background-color: "info";
 */
 cx-cart-coupon {
-  padding: 2rem 3rem;
+  padding: 2rem 0 2rem 3rem;
 }
 @media (max-width: 991.98px) {
   cx-cart-coupon {
@@ -12252,6 +12281,22 @@ cx-cart-coupon .cx-cart-coupon-title {
   font-weight: var(--cx-font-weight-bold);
   line-height: var(--cx-line-height, 1.2222222222);
   margin: 1.125rem 0 0.5rem;
+}
+cx-cart-coupon .cx-cart-coupon-container {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 15px;
+  grid-row-gap: 0px;
+}
+cx-cart-coupon .cx-cart-coupon-container input {
+  grid-area: 1/1/2/2;
+}
+cx-cart-coupon .cx-cart-coupon-container button {
+  grid-area: 1/2/2/3;
+}
+cx-cart-coupon .cx-cart-coupon-container cx-form-errors {
+  grid-area: 2/1/3/3;
 }
 cx-cart-coupon .cx-available-coupon .title {
   font-weight: bold;
@@ -13096,7 +13141,13 @@ cx-payment-form .cx-payment-form-billing-address {
 cx-payment-form .cx-payment-form-exp-date {
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
+}
+cx-payment-form .cx-payment-form-exp-date-wrapper {
+  flex: 1;
+}
+cx-payment-form .cx-payment-form-exp-date-wrapper:first-of-type {
+  padding-right: 1rem;
 }
 cx-payment-form .form-check {
   margin: 0;
@@ -13326,6 +13377,15 @@ cx-place-order .cx-place-order-form {
   font-size: var(--cx-font-size, 0.875rem);
   font-weight: var(--cx-font-weight-normal);
   line-height: var(--cx-line-height, 1.2222222222);
+  padding: 0;
+}
+cx-place-order .cx-place-order-form .form-check-input {
+  margin: 0;
+  top: 1rem;
+}
+cx-place-order .cx-place-order-form .form-check-label {
+  padding: 0;
+  margin: 0 0 0.5rem 3rem;
 }
 
 /* IMPORTANT: If no there's no theme for any reason,
@@ -15537,6 +15597,9 @@ cx-product-attributes table ul {
   padding: 0 0 0 0;
 }
 
+cx-product-reviews .rating-input {
+  display: none;
+}
 cx-product-reviews .header {
   display: flex;
   flex-wrap: wrap;
