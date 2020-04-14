@@ -11303,9 +11303,6 @@ cx-category-navigation {
 .AccountPageTemplate {
   --cx-max-width: 100%;
 }
-.AccountPageTemplate cx-order-details-headline {
-  order: 1;
-}
 @media (max-width: 767.98px) {
   .AccountPageTemplate cx-order-details-headline {
     border: none;
@@ -11359,7 +11356,6 @@ cx-category-navigation {
   }
 }
 .AccountPageTemplate cx-order-details-items {
-  order: 2;
   margin-bottom: 15px;
 }
 @media (max-width: 767.98px) {
@@ -11383,9 +11379,6 @@ cx-category-navigation {
 }
 .AccountPageTemplate cx-order-details-items .cx-list-date {
   margin: 0.5rem 0 0;
-}
-.AccountPageTemplate cx-order-details-shipping {
-  order: 4;
 }
 .AccountPageTemplate cx-order-details-shipping .cx-summary {
   margin-bottom: 48px;
@@ -11413,11 +11406,7 @@ cx-category-navigation {
   font-weight: bold;
 }
 .AccountPageTemplate cx-order-details-totals {
-  order: 3;
   margin-bottom: 32px;
-}
-.AccountPageTemplate cx-order-details-actions {
-  order: 5;
 }
 .AccountPageTemplate cx-tab-paragraph-container .active {
   background-color: var(--cx-color-inverse);
