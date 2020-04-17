@@ -11258,6 +11258,9 @@ cx-category-navigation {
 .LoginPageTemplate, .CheckoutLoginPageTemplate, .AccountPageTemplate {
   padding-bottom: 3rem;
 }
+.LoginPageTemplate .cx-section-title, .CheckoutLoginPageTemplate .cx-section-title, .AccountPageTemplate .cx-section-title {
+  margin: 40px 0 15px;
+}
 .LoginPageTemplate cx-page-slot, .CheckoutLoginPageTemplate cx-page-slot, .AccountPageTemplate cx-page-slot {
   max-width: 1140px;
   padding: 3rem 1.5rem 0 1.5rem;
