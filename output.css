@@ -18240,10 +18240,11 @@ cx-site-context-selector label span {
 }
 cx-site-context-selector cx-icon {
   margin-left: -10px;
+  z-index: 1;
 }
 cx-site-context-selector select {
   color: inherit;
-  background-color: transparent;
+  background-color: var(--cx-color-light);
   border: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -18251,7 +18252,11 @@ cx-site-context-selector select {
   padding-right: 14px;
   outline: none;
   position: relative;
-  z-index: 1;
+}
+@media (min-width: 992px) {
+  cx-site-context-selector select {
+    background-color: var(--cx-color-dark);
+  }
 }
 
 header {
