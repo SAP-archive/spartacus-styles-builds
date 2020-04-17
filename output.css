@@ -15506,6 +15506,9 @@ cx-product-images > cx-media {
   width: 100%;
   position: relative;
 }
+cx-product-images > cx-media img {
+  object-fit: scale-down;
+}
 cx-product-images cx-media {
   outline: none;
   text-align: center;
