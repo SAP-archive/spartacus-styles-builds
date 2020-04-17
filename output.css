@@ -11361,18 +11361,22 @@ cx-category-navigation {
 .AccountPageTemplate cx-order-details-items {
   margin-bottom: 15px;
 }
+.AccountPageTemplate cx-order-consigned-entries {
+  margin-bottom: 15px;
+}
 @media (max-width: 767.98px) {
-  .AccountPageTemplate cx-order-details-items .cx-list-header {
+  .AccountPageTemplate cx-order-consigned-entries .cx-list-header {
     padding: 0;
   }
 }
 @media (max-width: 767.98px) {
-  .AccountPageTemplate cx-order-details-items .cx-list {
+  .AccountPageTemplate cx-order-consigned-entries .cx-list {
     margin-right: 0;
     margin-left: 0;
   }
 }
-.AccountPageTemplate cx-order-details-items .cx-list-status {
+.AccountPageTemplate cx-order-consigned-entries .cx-list-status {
+  margin: 0 0 0.5rem;
   padding: 15px 30px;
   background-color: var(--cx-color-background);
   font-size: var(--cx-font-size, 1.125rem);
@@ -11380,7 +11384,7 @@ cx-category-navigation {
   line-height: var(--cx-line-height, 1.2222222222);
   font-weight: bold;
 }
-.AccountPageTemplate cx-order-details-items .cx-list-date {
+.AccountPageTemplate cx-order-consigned-entries .cx-list-date {
   margin: 0.5rem 0 0;
 }
 .AccountPageTemplate cx-order-details-shipping .cx-summary {
@@ -17286,6 +17290,103 @@ cx-return-request-totals .cx-footnote {
   line-height: var(--cx-line-height, 1.2222222222);
 }
 
+/* IMPORTANT: If no there's no theme for any reason,
+  then fallback to the cxbase defaults */
+/*!
+  SPARTA v0.1
+  This file is for theme configuration. These variables are used in global and component CSS files.
+
+  You can:
+    1) Set new values for Bootstrap variables - https://github.com/twbs/bootstrap/blob/v4-dev/scss/_variables.scss
+    2) Set new values for cxbase variables - cxbase/_variables.scss
+    3) Set new values for component variables - app/__/_.scss
+  You cannot:
+    1) Add new variables
+*/
+/*!
+  CXBASE VARIABLES
+  This is NOT a theme.
+
+  This file should include ONLY new variables that Bootstrap does not provide.
+  For example, Bootstrap does not have a variable for semi font weight.
+
+  Same case for directionality.
+
+  Also be aware of items that should be configurable.
+  The Sparta buttons use uppercase type but future themes may want normal case
+  so a variable was created to make this available for other themes.
+
+*/
+/*
+GLOBAL VARIABLE OVERRIDES
+  These can be set with anything above or any variables exposed in Bootsrap or cxbase
+*/
+/*
+COMPONENT VARIABLE OVERRIDES
+  For example, the following would override the cx-storefront background set in src/app/ui/layout/main/main.component.scss
+  $cx-storefront-background-color: "info";
+*/
+cx-consignment-tracking {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0 0 0.5rem;
+}
+
+cx-tracking-events .cx-consignment-tracking-dialog .header {
+  padding-left: 2rem;
+}
+cx-tracking-events .cx-consignment-tracking-dialog .title {
+  font-size: var(--cx-font-size, 1.375rem);
+  font-weight: var(--cx-font-weight-semi);
+  line-height: var(--cx-line-height, 1.2222222222);
+}
+@media (max-width: 767.98px) {
+  cx-tracking-events .cx-consignment-tracking-dialog .body {
+    padding: 0;
+  }
+}
+cx-tracking-events .cx-consignment-tracking-dialog .shipment-heading {
+  position: relative;
+  padding: 1.5rem 0 0.4rem 2rem;
+  background-color: var(--cx-color-background);
+}
+cx-tracking-events .cx-consignment-tracking-dialog .no-tracking-heading {
+  position: relative;
+  padding: 2rem;
+}
+cx-tracking-events .cx-consignment-tracking-dialog .shipment-content {
+  padding: 0.6rem 0 1.2rem 0;
+}
+cx-tracking-events .cx-consignment-tracking-dialog .shipment-title {
+  font-size: var(--cx-font-size, 1.125rem);
+  font-weight: var(--cx-font-weight-bold);
+  line-height: var(--cx-line-height, 1.2222222222);
+}
+cx-tracking-events .cx-consignment-tracking-dialog .events .event-body {
+  border-left: 0.7rem solid var(--cx-color-secondary);
+  padding-left: 1rem;
+  margin-bottom: 1rem;
+}
+cx-tracking-events .cx-consignment-tracking-dialog .events .event-body div {
+  padding-bottom: 0.6rem;
+}
+cx-tracking-events .cx-consignment-tracking-dialog .events .event-body .event-title {
+  font-size: var(--cx-font-size, 1rem);
+  font-weight: var(--cx-font-weight-bold);
+  line-height: var(--cx-line-height, 1.2222222222);
+}
+cx-tracking-events .cx-consignment-tracking-dialog .events .event-body .event-city {
+  font-size: var(--cx-font-size, 0.875rem);
+  font-weight: var(--cx-font-weight-normal);
+  line-height: var(--cx-line-height, 1.2222222222);
+}
+cx-tracking-events .cx-consignment-tracking-dialog .events .event-body .enent-content {
+  font-size: var(--cx-font-size, 1rem);
+  font-weight: var(--cx-font-weight-semi);
+  line-height: var(--cx-line-height, 1.2222222222);
+  padding-bottom: 20rem;
+}
+
 cx-address-book .cx-address-deck {
   padding: 1.25rem 0 0 0;
 }
@@ -17470,103 +17571,6 @@ cx-forgot-password a {
   cx-update-password-form .btn-primary {
     margin: 1rem 0 0;
   }
-}
-
-/* IMPORTANT: If no there's no theme for any reason,
-  then fallback to the cxbase defaults */
-/*!
-  SPARTA v0.1
-  This file is for theme configuration. These variables are used in global and component CSS files.
-
-  You can:
-    1) Set new values for Bootstrap variables - https://github.com/twbs/bootstrap/blob/v4-dev/scss/_variables.scss
-    2) Set new values for cxbase variables - cxbase/_variables.scss
-    3) Set new values for component variables - app/__/_.scss
-  You cannot:
-    1) Add new variables
-*/
-/*!
-  CXBASE VARIABLES
-  This is NOT a theme.
-
-  This file should include ONLY new variables that Bootstrap does not provide.
-  For example, Bootstrap does not have a variable for semi font weight.
-
-  Same case for directionality.
-
-  Also be aware of items that should be configurable.
-  The Sparta buttons use uppercase type but future themes may want normal case
-  so a variable was created to make this available for other themes.
-
-*/
-/*
-GLOBAL VARIABLE OVERRIDES
-  These can be set with anything above or any variables exposed in Bootsrap or cxbase
-*/
-/*
-COMPONENT VARIABLE OVERRIDES
-  For example, the following would override the cx-storefront background set in src/app/ui/layout/main/main.component.scss
-  $cx-storefront-background-color: "info";
-*/
-cx-consignment-tracking {
-  display: flex;
-  justify-content: flex-end;
-  margin: 0 0 0.5rem;
-}
-
-cx-tracking-events .cx-consignment-tracking-dialog .header {
-  padding-left: 2rem;
-}
-cx-tracking-events .cx-consignment-tracking-dialog .title {
-  font-size: var(--cx-font-size, 1.375rem);
-  font-weight: var(--cx-font-weight-semi);
-  line-height: var(--cx-line-height, 1.2222222222);
-}
-@media (max-width: 767.98px) {
-  cx-tracking-events .cx-consignment-tracking-dialog .body {
-    padding: 0;
-  }
-}
-cx-tracking-events .cx-consignment-tracking-dialog .shipment-heading {
-  position: relative;
-  padding: 1.5rem 0 0.4rem 2rem;
-  background-color: var(--cx-color-background);
-}
-cx-tracking-events .cx-consignment-tracking-dialog .no-tracking-heading {
-  position: relative;
-  padding: 2rem;
-}
-cx-tracking-events .cx-consignment-tracking-dialog .shipment-content {
-  padding: 0.6rem 0 1.2rem 0;
-}
-cx-tracking-events .cx-consignment-tracking-dialog .shipment-title {
-  font-size: var(--cx-font-size, 1.125rem);
-  font-weight: var(--cx-font-weight-bold);
-  line-height: var(--cx-line-height, 1.2222222222);
-}
-cx-tracking-events .cx-consignment-tracking-dialog .events .event-body {
-  border-left: 0.7rem solid var(--cx-color-secondary);
-  padding-left: 1rem;
-  margin-bottom: 1rem;
-}
-cx-tracking-events .cx-consignment-tracking-dialog .events .event-body div {
-  padding-bottom: 0.6rem;
-}
-cx-tracking-events .cx-consignment-tracking-dialog .events .event-body .event-title {
-  font-size: var(--cx-font-size, 1rem);
-  font-weight: var(--cx-font-weight-bold);
-  line-height: var(--cx-line-height, 1.2222222222);
-}
-cx-tracking-events .cx-consignment-tracking-dialog .events .event-body .event-city {
-  font-size: var(--cx-font-size, 0.875rem);
-  font-weight: var(--cx-font-weight-normal);
-  line-height: var(--cx-line-height, 1.2222222222);
-}
-cx-tracking-events .cx-consignment-tracking-dialog .events .event-body .enent-content {
-  font-size: var(--cx-font-size, 1rem);
-  font-weight: var(--cx-font-weight-semi);
-  line-height: var(--cx-line-height, 1.2222222222);
-  padding-bottom: 20rem;
 }
 
 /* IMPORTANT: If no there's no theme for any reason,
@@ -17881,154 +17885,6 @@ cx-coupon-dialog .cx-dialog-row {
   cx-coupon-dialog .cx-dialog-item {
     padding: 2rem;
   }
-}
-
-cx-anonymous-consent-management-banner .anonymous-consent-banner {
-  position: fixed;
-  bottom: 0;
-  width: 100vw;
-  background-color: var(--cx-color-inverse);
-  z-index: 1000;
-  border-top: 5px solid var(--cx-color-primary);
-  color: var(--cx-color-text);
-  padding: 2rem 0;
-}
-cx-anonymous-consent-management-banner .cx-banner-title {
-  font-size: var(--cx-font-size, 1.375rem);
-  font-weight: var(--cx-font-weight-semi);
-  line-height: var(--cx-line-height, 1.2222222222);
-  margin-bottom: 0.5rem;
-}
-cx-anonymous-consent-management-banner .cx-banner-description {
-  font-size: var(--cx-font-size, 1rem);
-  font-weight: var(--cx-font-weight-normal);
-  line-height: var(--cx-line-height, 1.6);
-}
-cx-anonymous-consent-management-banner .cx-banner-buttons {
-  text-align: right;
-}
-cx-anonymous-consent-management-banner .cx-banner-buttons button:last-child {
-  margin-left: 1.5rem;
-}
-@media (max-width: 575.98px) {
-  cx-anonymous-consent-management-banner .cx-banner-buttons {
-    text-align: center;
-    margin-top: 1rem;
-  }
-}
-@media (min-width: 768px) {
-  cx-anonymous-consent-management-banner .cx-banner-buttons {
-    margin-top: 1rem;
-  }
-}
-cx-anonymous-consent-management-banner .anonymous-consent-banner-hidden {
-  display: none;
-}
-
-/* IMPORTANT: If no there's no theme for any reason,
-  then fallback to the cxbase defaults */
-/*!
-  SPARTA v0.1
-  This file is for theme configuration. These variables are used in global and component CSS files.
-
-  You can:
-    1) Set new values for Bootstrap variables - https://github.com/twbs/bootstrap/blob/v4-dev/scss/_variables.scss
-    2) Set new values for cxbase variables - cxbase/_variables.scss
-    3) Set new values for component variables - app/__/_.scss
-  You cannot:
-    1) Add new variables
-*/
-/*!
-  CXBASE VARIABLES
-  This is NOT a theme.
-
-  This file should include ONLY new variables that Bootstrap does not provide.
-  For example, Bootstrap does not have a variable for semi font weight.
-
-  Same case for directionality.
-
-  Also be aware of items that should be configurable.
-  The Sparta buttons use uppercase type but future themes may want normal case
-  so a variable was created to make this available for other themes.
-
-*/
-/*
-GLOBAL VARIABLE OVERRIDES
-  These can be set with anything above or any variables exposed in Bootsrap or cxbase
-*/
-/*
-COMPONENT VARIABLE OVERRIDES
-  For example, the following would override the cx-storefront background set in src/app/ui/layout/main/main.component.scss
-  $cx-storefront-background-color: "info";
-*/
-cx-anonymous-consent-dialog .cx-dialog-header {
-  padding: 2rem 1.75rem 0.85rem;
-}
-cx-anonymous-consent-dialog .cx-dialog-body {
-  padding-top: 0;
-  background-color: var(--cx-color-inverse);
-}
-@media (max-width: 575.98px) {
-  cx-anonymous-consent-dialog .cx-dialog-body {
-    padding: 1.5rem;
-    border-top: 1px solid var(--cx-color-light);
-  }
-}
-cx-anonymous-consent-dialog .cx-dialog-buttons {
-  text-align: right;
-  padding: 1rem 4rem;
-}
-@media (max-width: 575.98px) {
-  cx-anonymous-consent-dialog .cx-dialog-buttons {
-    padding: 1rem;
-  }
-}
-cx-anonymous-consent-dialog .cx-action-link {
-  margin: 0 0.35rem;
-}
-cx-anonymous-consent-dialog .cx-dialog-row {
-  max-width: 100%;
-}
-@media (max-width: 575.98px) {
-  cx-anonymous-consent-dialog .cx-dialog-row {
-    padding: 0;
-  }
-}
-cx-anonymous-consent-dialog .cx-dialog-title {
-  font-size: var(--cx-font-size, 1.375rem);
-  font-weight: var(--cx-font-weight-semi);
-  line-height: var(--cx-line-height, 1.2222222222);
-}
-cx-anonymous-consent-dialog .cx-dialog-description {
-  font-size: var(--cx-font-size, 1rem);
-  font-weight: var(--cx-font-weight-normal);
-  line-height: var(--cx-line-height, 1.6);
-  padding: 1.5rem 1.75rem 0;
-}
-cx-anonymous-consent-dialog a:not([href]):not([tabindex]) {
-  text-decoration: underline;
-}
-
-cx-anonymous-consent-open-dialog .anonymous-consents {
-  display: flex;
-  justify-content: center;
-  margin: 0 3vw 3vw 3vw;
-}
-@media (max-width: 767.98px) {
-  cx-anonymous-consent-open-dialog .anonymous-consents {
-    justify-content: flex-start;
-  }
-}
-cx-anonymous-consent-open-dialog .anonymous-consents button {
-  padding: 0;
-  color: var(--cx-color-inverse);
-  font-size: 0.8rem;
-}
-cx-anonymous-consent-open-dialog .anonymous-consents button:not(:hover) {
-  text-decoration: none;
-}
-cx-anonymous-consent-open-dialog .anonymous-consents button:hover {
-  color: var(--cx-color-inverse);
 }
 
 cx-my-interests .cx-product-interests-title {
