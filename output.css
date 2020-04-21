@@ -11361,21 +11361,18 @@ cx-category-navigation {
 .AccountPageTemplate cx-order-details-items {
   margin-bottom: 15px;
 }
-.AccountPageTemplate cx-order-consigned-entries {
-  margin-bottom: 15px;
-}
 @media (max-width: 767.98px) {
-  .AccountPageTemplate cx-order-consigned-entries .cx-list-header {
+  .AccountPageTemplate cx-order-details-items .cx-list-header {
     padding: 0;
   }
 }
 @media (max-width: 767.98px) {
-  .AccountPageTemplate cx-order-consigned-entries .cx-list {
+  .AccountPageTemplate cx-order-details-items .cx-list {
     margin-right: 0;
     margin-left: 0;
   }
 }
-.AccountPageTemplate cx-order-consigned-entries .cx-list-status {
+.AccountPageTemplate cx-order-details-items .cx-list-status {
   margin: 0 0 0.5rem;
   padding: 15px 30px;
   background-color: var(--cx-color-background);
@@ -11384,7 +11381,7 @@ cx-category-navigation {
   line-height: var(--cx-line-height, 1.2222222222);
   font-weight: bold;
 }
-.AccountPageTemplate cx-order-consigned-entries .cx-list-date {
+.AccountPageTemplate cx-order-details-items .cx-list-date {
   margin: 0.5rem 0 0;
 }
 .AccountPageTemplate cx-order-details-shipping .cx-summary {
