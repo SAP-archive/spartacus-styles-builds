@@ -6769,7 +6769,6 @@ button:focus {
   outline: none;
 }
 button.link {
-  text-decoration: underline;
   background-color: none;
   border-style: none;
   padding: 0;
@@ -10058,15 +10057,16 @@ a.disabled {
 
 .cx-action-link {
   font-size: var(--cx-font-size, 0.875rem);
-  font-weight: var(--cx-font-weight-bold);
+  font-weight: var(--cx-font-weight-normal);
   line-height: var(--cx-line-height, 1.2222222222);
-  text-transform: uppercase;
+  text-transform: capitalize;
   text-decoration: underline;
   cursor: pointer;
   display: inline-block;
 }
 .cx-action-link:hover {
   color: var(--cx-color-primary);
+  text-decoration: none;
 }
 
 /* IMPORTANT: If no there's no theme for any reason,
@@ -11632,6 +11632,11 @@ cx-added-to-cart-dialog .cx-dialog-body cx-media.is-missing {
   min-width: 100%;
   background-size: 85px;
 }
+cx-added-to-cart-dialog .cx-dialog-body .cx-remove-btn {
+  max-width: 100%;
+  padding: 0;
+  flex: 0 0 100%;
+}
 cx-added-to-cart-dialog .cx-dialog-row {
   margin: 0;
   display: flex;
@@ -11655,9 +11660,8 @@ cx-added-to-cart-dialog .cx-dialog-item .cx-compact .cx-quantity .cx-label,
 cx-added-to-cart-dialog .cx-dialog-item .cx-compact .cx-total .cx-label {
   font-weight: var(--cx-font-weight-normal);
 }
-cx-added-to-cart-dialog .cx-dialog-item .cx-compact .cx-actions button.link {
-  font-weight: var(--cx-font-weight-normal);
-  text-decoration: underline;
+cx-added-to-cart-dialog .cx-dialog-item .cx-compact .cx-actions {
+  justify-content: flex-start;
 }
 cx-added-to-cart-dialog .cx-dialog-separator {
   border-width: 1px 0 0 0;
@@ -11970,15 +11974,14 @@ cx-cart-item .cx-actions {
 }
 cx-cart-item .cx-actions button.link {
   font-size: var(--cx-font-size, 0.875rem);
-  font-weight: var(--cx-font-weight-bold);
+  font-weight: var(--cx-font-weight-normal);
   line-height: var(--cx-line-height, 1.2222222222);
   color: var(--cx-color-text);
   border-width: 0;
-  text-decoration: none;
   background-color: transparent;
 }
 cx-cart-item .cx-actions button.link:hover {
-  text-decoration: underline;
+  color: var(--cx-color-primary);
 }
 cx-cart-item .cx-compact {
   display: flex;
@@ -12027,9 +12030,8 @@ cx-cart-item .cx-compact .cx-quantity button.link,
 cx-cart-item .cx-compact .cx-total button.link,
 cx-cart-item .cx-compact .cx-actions button.link {
   font-size: var(--cx-font-size, 0.875rem);
-  font-weight: var(--cx-font-weight-bold);
+  font-weight: var(--cx-font-weight-normal);
   line-height: var(--cx-line-height, 1.2222222222);
-  color: var(--cx-color-text);
 }
 
 /* IMPORTANT: If no there's no theme for any reason,
@@ -12499,7 +12501,6 @@ cx-add-to-wishlist .button-remove {
 }
 cx-add-to-wishlist .button-add, cx-add-to-wishlist .button-remove {
   padding: 0;
-  font-size: 1rem;
 }
 cx-add-to-wishlist .button-text {
   margin-left: 0.3em;
@@ -15712,21 +15713,6 @@ cx-product-intro .rating {
 cx-product-intro .rating .count {
   margin: 0 20px 0 5px;
 }
-cx-product-intro .rating button {
-  margin: 0;
-  padding: 0;
-  appearance: none;
-  outline: 0;
-  border: 0;
-  display: inline-block;
-  text-decoration: none;
-  cursor: pointer;
-  user-select: none;
-  vertical-align: middle;
-  white-space: nowrap;
-  background-color: transparent;
-  text-decoration: underline;
-}
 cx-product-intro .rating cx-star-rating {
   padding: 0 0 15px 0;
 }
@@ -17663,20 +17649,6 @@ cx-consent-management .cx-consent-action-links {
 }
 cx-consent-management .cx-consent-action-links .cx-action-link {
   margin: 0 0.35rem;
-}
-cx-consent-management .cx-consent-action-links button {
-  margin: 0;
-  padding: 0;
-  appearance: none;
-  outline: 0;
-  border: 0;
-  display: inline-block;
-  text-decoration: none;
-  cursor: pointer;
-  user-select: none;
-  vertical-align: middle;
-  white-space: nowrap;
-  background-color: transparent;
 }
 cx-consent-management .cx-consent-toggles {
   display: flex;
