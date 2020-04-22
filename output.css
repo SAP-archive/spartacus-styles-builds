@@ -15385,7 +15385,6 @@ cx-product-grid-item .cx-product-name {
   max-width: 100%;
   height: 40px;
   display: block;
-  display: -webkit-box;
 }
 cx-product-grid-item .cx-product-name:hover {
   color: var(--cx-color-primary);
