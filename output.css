@@ -15022,7 +15022,7 @@ cx-facet button.heading cx-icon {
 }
 @media (max-width: 991.98px) {
   cx-facet button.heading cx-icon {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 }
 
@@ -15492,35 +15492,70 @@ cx-active-facets a cx-icon:hover {
   color: var(--cx-color-primary);
 }
 
-cx-facet-list h4 {
-  padding: 0.4rem;
+body.modal-open {
+  overflow: hidden;
 }
-cx-facet-list > .close {
-  display: none;
+
+cx-facet-list.dialog {
+  z-index: 11;
+  position: fixed;
+  /* could also be absolute */
+}
+cx-facet-list.dialog > .inner {
+  background-color: var(--cx-color-background);
+  transition: transform 0.3s ease-in-out;
+}
+cx-facet-list.active.dialog > .inner {
+  transform: translate3d(0, 0, 0);
+}
+
+cx-facet-list.dialog {
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  transition: background-color 0.3s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+cx-facet-list.active.dialog {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+cx-facet-list.dialog > .inner {
+  transform: translate3d(0, 100%, 0);
+}
+
+cx-facet-list .inner {
+  padding: 0 10px 10px 10px;
+}
+@media (max-width: 991.98px) {
+  cx-facet-list .inner {
+    max-height: 100vh;
+    overflow: scroll;
+  }
+}
+cx-facet-list .inner h4 {
+  position: sticky;
+  top: 0;
+  background: var(--cx-color-background);
+  padding: 0.4rem;
+  padding-top: 10px;
+}
+cx-facet-list .inner h4 .close {
+  opacity: 1;
+}
+cx-facet-list .inner h4 .close:hover {
+  color: var(--cx-color-primary);
 }
 @media (min-width: 992px) {
-  cx-facet-list h4 {
+  cx-facet-list .inner h4 {
     display: none;
   }
 }
-@media (max-width: 991.98px) {
-  cx-facet-list {
-    display: flex;
-    flex-direction: column;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 11;
-    background-color: var(--cx-color-background);
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
-    transition: transform 0.3s ease-in-out;
-    transform: translate3d(0, 100%, 0);
-  }
-  cx-facet-list.active {
-    transform: translate3d(0, 0, 0);
-  }
+cx-facet-list.dialog > .inner {
+  width: 95vw;
+  height: 95vh;
 }
 
 cx-product-facet-navigation {
