@@ -11832,11 +11832,10 @@ cx-cart-item .cx-name {
   line-height: var(--cx-line-height, 1.2222222222);
   overflow-wrap: break-word;
   padding: 0;
-  min-width: 17rem;
 }
 @media (min-width: 1200px) {
   cx-cart-item .cx-name {
-    min-width: 15rem;
+    min-width: 14rem;
   }
 }
 cx-cart-item .cx-name .cx-link {
@@ -14705,10 +14704,13 @@ cx-tab-paragraph-container > button:not(.active):hover:after {
     border-top: 1px var(--cx-color-light) solid;
     font-size: 18px;
     padding: 15px 0 0 4%;
+    width: 100%;
+    text-align: left;
+    height: 63px;
   }
   cx-tab-paragraph-container > button:before {
     content: "+";
-    margin: 5px 15px;
+    margin: 0px 15px;
     float: right;
     font-size: 33px;
     bottom: 12px;
@@ -16108,6 +16110,11 @@ cx-card .cx-card-delete {
 }
 cx-card .cx-card-body-delete {
   padding: 1rem 0 0 0;
+}
+@media (max-width: 767.98px) {
+  cx-card .cx-card-body-delete .btn-secondary {
+    margin: 0 0 1rem;
+  }
 }
 cx-card .cx-card-delete-msg {
   color: var(--cx-color-danger);
