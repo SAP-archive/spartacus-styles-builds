@@ -15763,16 +15763,16 @@ cx-product-variants .variant-list li img {
   border: 1px solid #ddd;
 }
 
-cx-stock-notification .stock-notification-notes label {
+cx-stock-notification .stock-notification-notes p {
   margin: 0 0 10px 0;
 }
-cx-stock-notification .stock-notification-notes label a {
+cx-stock-notification .stock-notification-notes p a {
   font-size: var(--cx-font-size, 1rem);
   font-weight: var(--cx-font-weight-semi);
   line-height: var(--cx-line-height, 1.2222222222);
   color: var(--cx-color-dark);
 }
-cx-stock-notification .stock-notification-notes label a:hover {
+cx-stock-notification .stock-notification-notes p a:hover {
   color: var(--cx-color-primary);
 }
 
