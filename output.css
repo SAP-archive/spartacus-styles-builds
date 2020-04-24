@@ -13204,9 +13204,6 @@ cx-review-submit .cx-review-summary-edit-step {
     min-height: auto;
   }
 }
-cx-review-submit .row {
-  margin: 0;
-}
 cx-review-submit .form-check {
   padding: 0;
   margin: 0;
