@@ -16403,7 +16403,6 @@ cx-amend-order-items .cx-item-list-header {
   font-size: var(--cx-font-size, 0.875rem);
   font-weight: var(--cx-font-weight-bold);
   line-height: var(--cx-line-height, 1.2222222222);
-  margin: 0;
   padding: 1.125rem 0;
   text-transform: uppercase;
   color: var(--cx-color-secondary);
@@ -16411,24 +16410,12 @@ cx-amend-order-items .cx-item-list-header {
   border-style: solid;
   border-color: var(--cx-color-light);
 }
-cx-amend-order-items .cx-item-list-desc {
-  text-align: left;
-  padding: 0;
-}
-cx-amend-order-items .cx-item-list-price {
-  text-align: center;
-}
-cx-amend-order-items .cx-item-list-qty {
-  text-align: center;
-}
 cx-amend-order-items .cx-item-list-total {
   text-align: right;
-  padding: 0;
 }
 @media (min-width: 1200px) {
   cx-amend-order-items .cx-item-list-total {
-    text-align: center;
-    padding-right: 0;
+    text-align: right;
   }
 }
 @media (max-width: 1199.98px) {
@@ -16447,13 +16434,13 @@ cx-amend-order-items .cx-item-list-row {
   border-style: solid;
   border-color: var(--cx-color-light);
 }
-cx-amend-order-items .cx-item-list-row cx-media {
-  text-align: center;
-}
 @media (max-width: 767.98px) {
   cx-amend-order-items .cx-info-container {
     display: flex;
     flex-direction: column;
+  }
+  cx-amend-order-items .cx-info-container .cx-order-quantity-value {
+    text-align: left;
   }
 }
 cx-amend-order-items .cx-name {
@@ -16585,7 +16572,7 @@ cx-amend-order-items .cx-request-qty {
 }
 cx-amend-order-items .cx-total {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
 }
 @media (max-width: 991.98px) {
@@ -17319,6 +17306,10 @@ cx-return-request-totals .cx-footnote {
   font-size: var(--cx-font-size, 0.875rem);
   font-weight: var(--cx-font-weight-normal);
   line-height: var(--cx-line-height, 1.2222222222);
+}
+
+cx-cancel-order cx-form-errors p {
+  margin: 1rem auto;
 }
 
 /* IMPORTANT: If no there's no theme for any reason,
