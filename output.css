@@ -8448,6 +8448,10 @@ a.close.disabled {
     align-items: unset !important;
     overflow-y: auto;
   }
+
+  .modal-dialog {
+    overflow-y: initial;
+  }
 }
 /* IMPORTANT: If no there's no theme for any reason,
   then fallback to the cxbase defaults */
@@ -18207,6 +18211,9 @@ cx-storefront:focus {
 }
 cx-storefront > footer {
   margin-top: auto;
+}
+cx-storefront > footer cx-paragraph p {
+  margin-bottom: 0;
 }
 cx-storefront .mouse-focus :focus,
 cx-storefront .mouse-focus .ng-select-focused {
