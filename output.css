@@ -8200,22 +8200,22 @@ COMPONENT VARIABLE OVERRIDES
   outline: 0;
 }
 
-.modal-dialog {
+.modal-dialog, cx-anonymous-consent-dialog .cx-anonymous-consent-dialog {
   position: relative;
   width: auto;
   margin: 0.5rem;
   pointer-events: none;
 }
-.modal.fade .modal-dialog {
+.modal.fade .modal-dialog, .modal.fade cx-anonymous-consent-dialog .cx-anonymous-consent-dialog, cx-anonymous-consent-dialog .modal.fade .cx-anonymous-consent-dialog {
   transition: transform 0.3s ease-out;
   transform: translate(0, -50px);
 }
 @media (prefers-reduced-motion: reduce) {
-  .modal.fade .modal-dialog {
+  .modal.fade .modal-dialog, .modal.fade cx-anonymous-consent-dialog .cx-anonymous-consent-dialog, cx-anonymous-consent-dialog .modal.fade .cx-anonymous-consent-dialog {
     transition: none;
   }
 }
-.modal.show .modal-dialog {
+.modal.show .modal-dialog, .modal.show cx-anonymous-consent-dialog .cx-anonymous-consent-dialog, cx-anonymous-consent-dialog .modal.show .cx-anonymous-consent-dialog {
   transform: none;
 }
 
@@ -8223,41 +8223,41 @@ COMPONENT VARIABLE OVERRIDES
   display: flex;
   max-height: calc(100% - 1rem);
 }
-.modal-dialog-scrollable .modal-content {
+.modal-dialog-scrollable .modal-content, .modal-dialog-scrollable cx-anonymous-consent-dialog .cx-anonymous-consent-dialog .cx-dialog-content, cx-anonymous-consent-dialog .cx-anonymous-consent-dialog .modal-dialog-scrollable .cx-dialog-content {
   max-height: calc(100vh - 1rem);
   overflow: hidden;
 }
-.modal-dialog-scrollable .modal-header,
+.modal-dialog-scrollable .modal-header, .modal-dialog-scrollable cx-anonymous-consent-dialog .cx-anonymous-consent-dialog .cx-dialog-content .cx-dialog-header, cx-anonymous-consent-dialog .cx-anonymous-consent-dialog .cx-dialog-content .modal-dialog-scrollable .cx-dialog-header,
 .modal-dialog-scrollable .modal-footer {
   flex-shrink: 0;
 }
-.modal-dialog-scrollable .modal-body {
+.modal-dialog-scrollable .modal-body, .modal-dialog-scrollable cx-anonymous-consent-dialog .cx-anonymous-consent-dialog .cx-dialog-content .cx-dialog-body, cx-anonymous-consent-dialog .cx-anonymous-consent-dialog .cx-dialog-content .modal-dialog-scrollable .cx-dialog-body {
   overflow-y: auto;
 }
 
-.modal-dialog-centered {
+.modal-dialog-centered, cx-anonymous-consent-dialog .cx-anonymous-consent-dialog {
   display: flex;
   align-items: center;
   min-height: calc(100% - 1rem);
 }
-.modal-dialog-centered::before {
+.modal-dialog-centered::before, cx-anonymous-consent-dialog .cx-anonymous-consent-dialog::before {
   display: block;
   height: calc(100vh - 1rem);
   content: "";
 }
-.modal-dialog-centered.modal-dialog-scrollable {
+.modal-dialog-centered.modal-dialog-scrollable, cx-anonymous-consent-dialog .modal-dialog-scrollable.cx-anonymous-consent-dialog {
   flex-direction: column;
   justify-content: center;
   height: 100%;
 }
-.modal-dialog-centered.modal-dialog-scrollable .modal-content {
+.modal-dialog-centered.modal-dialog-scrollable .modal-content, .modal-dialog-centered.modal-dialog-scrollable cx-anonymous-consent-dialog .cx-anonymous-consent-dialog .cx-dialog-content, cx-anonymous-consent-dialog .cx-anonymous-consent-dialog .modal-dialog-centered.modal-dialog-scrollable .cx-dialog-content, cx-anonymous-consent-dialog .modal-dialog-scrollable.cx-anonymous-consent-dialog .modal-content, cx-anonymous-consent-dialog .modal-dialog-scrollable.cx-anonymous-consent-dialog .cx-dialog-content {
   max-height: none;
 }
-.modal-dialog-centered.modal-dialog-scrollable::before {
+.modal-dialog-centered.modal-dialog-scrollable::before, cx-anonymous-consent-dialog .modal-dialog-scrollable.cx-anonymous-consent-dialog::before {
   content: none;
 }
 
-.modal-content {
+.modal-content, cx-anonymous-consent-dialog .cx-anonymous-consent-dialog .cx-dialog-content {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -8286,7 +8286,7 @@ COMPONENT VARIABLE OVERRIDES
   opacity: 0.5;
 }
 
-.modal-header {
+.modal-header, cx-anonymous-consent-dialog .cx-anonymous-consent-dialog .cx-dialog-content .cx-dialog-header {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
@@ -8295,7 +8295,7 @@ COMPONENT VARIABLE OVERRIDES
   border-top-left-radius: 0.3rem;
   border-top-right-radius: 0.3rem;
 }
-.modal-header .close {
+.modal-header .close, cx-anonymous-consent-dialog .cx-anonymous-consent-dialog .cx-dialog-content .cx-dialog-header .close {
   padding: 1rem 1rem;
   margin: -1rem -1rem -1rem auto;
 }
@@ -8305,7 +8305,7 @@ COMPONENT VARIABLE OVERRIDES
   line-height: 1.5;
 }
 
-.modal-body {
+.modal-body, cx-anonymous-consent-dialog .cx-anonymous-consent-dialog .cx-dialog-content .cx-dialog-body {
   position: relative;
   flex: 1 1 auto;
   padding: 1rem;
@@ -8336,7 +8336,7 @@ COMPONENT VARIABLE OVERRIDES
 }
 
 @media (min-width: 576px) {
-  .modal-dialog {
+  .modal-dialog, cx-anonymous-consent-dialog .cx-anonymous-consent-dialog {
     max-width: 500px;
     margin: 1.75rem auto;
   }
@@ -8344,14 +8344,14 @@ COMPONENT VARIABLE OVERRIDES
   .modal-dialog-scrollable {
     max-height: calc(100% - 3.5rem);
   }
-  .modal-dialog-scrollable .modal-content {
+  .modal-dialog-scrollable .modal-content, .modal-dialog-scrollable cx-anonymous-consent-dialog .cx-anonymous-consent-dialog .cx-dialog-content, cx-anonymous-consent-dialog .cx-anonymous-consent-dialog .modal-dialog-scrollable .cx-dialog-content {
     max-height: calc(100vh - 3.5rem);
   }
 
-  .modal-dialog-centered {
+  .modal-dialog-centered, cx-anonymous-consent-dialog .cx-anonymous-consent-dialog {
     min-height: calc(100% - 3.5rem);
   }
-  .modal-dialog-centered::before {
+  .modal-dialog-centered::before, cx-anonymous-consent-dialog .cx-anonymous-consent-dialog::before {
     height: calc(100vh - 3.5rem);
   }
 
@@ -8360,7 +8360,7 @@ COMPONENT VARIABLE OVERRIDES
   }
 }
 @media (min-width: 992px) {
-  .modal-lg,
+  .modal-lg, cx-anonymous-consent-dialog .cx-anonymous-consent-dialog,
 .modal-xl {
     max-width: 800px;
   }
@@ -8398,13 +8398,13 @@ a.close.disabled {
   pointer-events: none;
 }
 
-.modal-header {
+.modal-header, cx-anonymous-consent-dialog .cx-anonymous-consent-dialog .cx-dialog-content .cx-dialog-header {
   padding: 1rem 1rem;
 }
-.modal-body {
+.modal-body, cx-anonymous-consent-dialog .cx-anonymous-consent-dialog .cx-dialog-content .cx-dialog-body {
   padding: 27px 30px;
 }
-.modal-content {
+.modal-content, cx-anonymous-consent-dialog .cx-anonymous-consent-dialog .cx-dialog-content {
   border-radius: 0;
   border: none;
 }
@@ -8419,37 +8419,38 @@ a.close.disabled {
 }
 
 .modal-xl,
-.modal-lg {
+.modal-lg,
+cx-anonymous-consent-dialog .cx-anonymous-consent-dialog {
   max-width: 768px !important;
   min-width: 768px !important;
 }
 
 @media (min-width: 768px) {
-  .modal-lg {
+  .modal-lg, cx-anonymous-consent-dialog .cx-anonymous-consent-dialog {
     max-width: 768px !important;
     min-width: 768px !important;
   }
 }
 @media (max-width: 767.98px) {
-  .modal-lg {
+  .modal-lg, cx-anonymous-consent-dialog .cx-anonymous-consent-dialog {
     min-width: 100% !important;
     max-width: 100% !important;
   }
 
-  .modal-dialog {
+  .modal-dialog, cx-anonymous-consent-dialog .cx-anonymous-consent-dialog {
     margin: 0 !important;
     min-width: 100% !important;
     max-width: 100% !important;
   }
 
-  .modal-dialog-centered {
+  .modal-dialog-centered, cx-anonymous-consent-dialog .cx-anonymous-consent-dialog {
     margin: 0 !important;
     height: 100%;
     align-items: unset !important;
     overflow-y: auto;
   }
 
-  .modal-dialog {
+  .modal-dialog, cx-anonymous-consent-dialog .cx-anonymous-consent-dialog {
     overflow-y: initial;
   }
 }
@@ -16325,73 +16326,77 @@ COMPONENT VARIABLE OVERRIDES
   For example, the following would override the cx-storefront background set in src/app/ui/layout/main/main.component.scss
   $cx-storefront-background-color: "info";
 */
-cx-anonymous-consent-dialog .cx-dialog-header {
+cx-anonymous-consent-dialog {
+  color: var(--cx-color-text);
+  background-color: rgba(0, 0, 0, 0.5);
+}
+cx-anonymous-consent-dialog .cx-anonymous-consent-dialog .cx-dialog-content .cx-dialog-header {
   padding: 2rem 1.75rem 0.85rem;
 }
-cx-anonymous-consent-dialog .cx-dialog-body {
+cx-anonymous-consent-dialog .cx-anonymous-consent-dialog .cx-dialog-content .cx-dialog-body {
   padding-top: 0;
   background-color: var(--cx-color-inverse);
 }
 @media (max-width: 575.98px) {
-  cx-anonymous-consent-dialog .cx-dialog-body {
+  cx-anonymous-consent-dialog .cx-anonymous-consent-dialog .cx-dialog-content .cx-dialog-body {
     padding: 1.5rem;
     border-top: 1px solid var(--cx-color-light);
   }
 }
-cx-anonymous-consent-dialog .cx-dialog-buttons {
+cx-anonymous-consent-dialog .cx-anonymous-consent-dialog .cx-dialog-content .cx-dialog-buttons {
   text-align: right;
   padding: 1rem 4rem;
 }
 @media (max-width: 575.98px) {
-  cx-anonymous-consent-dialog .cx-dialog-buttons {
+  cx-anonymous-consent-dialog .cx-anonymous-consent-dialog .cx-dialog-content .cx-dialog-buttons {
     padding: 1rem;
   }
 }
-cx-anonymous-consent-dialog .cx-action-link {
+cx-anonymous-consent-dialog .cx-anonymous-consent-dialog .cx-dialog-content .cx-action-link {
   margin: 0 0.35rem;
 }
-cx-anonymous-consent-dialog .cx-dialog-row {
+cx-anonymous-consent-dialog .cx-anonymous-consent-dialog .cx-dialog-content .cx-dialog-row {
   max-width: 100%;
 }
 @media (max-width: 575.98px) {
-  cx-anonymous-consent-dialog .cx-dialog-row {
+  cx-anonymous-consent-dialog .cx-anonymous-consent-dialog .cx-dialog-content .cx-dialog-row {
     padding: 0;
   }
 }
-cx-anonymous-consent-dialog .cx-dialog-title {
+cx-anonymous-consent-dialog .cx-anonymous-consent-dialog .cx-dialog-content h3 {
   font-size: var(--cx-font-size, 1.375rem);
   font-weight: var(--cx-font-weight-semi);
   line-height: var(--cx-line-height, 1.2222222222);
 }
-cx-anonymous-consent-dialog .cx-dialog-description {
+cx-anonymous-consent-dialog .cx-anonymous-consent-dialog .cx-dialog-content .cx-dialog-description {
   font-size: var(--cx-font-size, 1rem);
   font-weight: var(--cx-font-weight-normal);
   line-height: var(--cx-line-height, 1.6);
   padding: 1.5rem 1.75rem 0;
 }
-cx-anonymous-consent-dialog a:not([href]):not([tabindex]) {
+cx-anonymous-consent-dialog .cx-anonymous-consent-dialog .cx-dialog-content a:not([href]):not([tabindex]) {
   text-decoration: underline;
 }
 
-cx-anonymous-consent-open-dialog .anonymous-consents {
+cx-anonymous-consent-open-dialog {
   display: flex;
   justify-content: center;
   margin: 0 3vw 3vw 3vw;
 }
 @media (max-width: 767.98px) {
-  cx-anonymous-consent-open-dialog .anonymous-consents {
+  cx-anonymous-consent-open-dialog {
     justify-content: flex-start;
   }
 }
-cx-anonymous-consent-open-dialog .anonymous-consents button {
+cx-anonymous-consent-open-dialog .btn-link {
   padding: 0;
   color: var(--cx-color-inverse);
   font-size: 0.8rem;
 }
-cx-anonymous-consent-open-dialog .anonymous-consents button:not(:hover) {
+cx-anonymous-consent-open-dialog .btn-link:not(:hover) {
   text-decoration: none;
 }
-cx-anonymous-consent-open-dialog .anonymous-consents button:hover {
+cx-anonymous-consent-open-dialog .btn-link:hover {
   color: var(--cx-color-inverse);
 }
 
@@ -17579,7 +17584,7 @@ cx-close-account-modal .cx-btn-group button:first-child {
   margin: 0 0 1em 0;
 }
 @media (max-width: 767.98px) {
-  cx-close-account-modal .modal-body {
+  cx-close-account-modal .modal-body, cx-close-account-modal cx-anonymous-consent-dialog .cx-anonymous-consent-dialog .cx-dialog-content .cx-dialog-body, cx-anonymous-consent-dialog .cx-anonymous-consent-dialog .cx-dialog-content cx-close-account-modal .cx-dialog-body {
     top: -85px;
     flex: none;
     margin: auto 0;
