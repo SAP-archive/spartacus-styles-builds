@@ -13726,6 +13726,9 @@ COMPONENT VARIABLE OVERRIDES
   For example, the following would override the cx-storefront background set in src/app/ui/layout/main/main.component.scss
   $cx-storefront-background-color: "info";
 */
+cx-delivery-mode {
+  padding-top: 10px;
+}
 @media (max-width: 991.98px) {
   cx-delivery-mode {
     display: block;
@@ -13810,11 +13813,12 @@ cx-delivery-mode .form-check .cx-delivery-label {
   justify-content: space-between;
   flex-wrap: wrap;
 }
-cx-delivery-mode .form-check .cx-delivery-label .cx-delivery-shipping {
-  flex: 50%;
+cx-delivery-mode .form-check .cx-delivery-label .cx-delivery-mode {
+  flex: auto;
+  text-align: left;
 }
 cx-delivery-mode .form-check .cx-delivery-label .cx-delivery-price {
-  flex: 50%;
+  flex: auto;
   text-align: right;
 }
 cx-delivery-mode .form-check .cx-delivery-label .cx-delivery-details {
