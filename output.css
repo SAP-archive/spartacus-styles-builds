@@ -11080,6 +11080,13 @@ cx-category-navigation {
 .ContentPage1Template cx-page-slot.Section2A, .ContentPage1Template cx-page-slot.Section2B {
   display: block;
 }
+.ContentPage1Template .textpage-faqs td {
+  padding-bottom: 26px;
+  vertical-align: baseline;
+}
+.ContentPage1Template .textpage-faqs td:first-child {
+  padding-right: 10px;
+}
 
 .CategoryPageTemplate {
   max-width: 1140px;
