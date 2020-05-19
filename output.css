@@ -15922,8 +15922,11 @@ cx-carousel .carousel-panel .slides .slide {
   flex-wrap: nowrap;
   justify-content: flex-start;
 }
-cx-carousel .carousel-panel .slides .slide:not(:last-child) {
+cx-carousel .carousel-panel .slides .slide:not(.active) {
   position: absolute;
+  opacity: 0;
+  z-index: -1;
+  transition: none;
 }
 cx-carousel .carousel-panel .slides .slide .item {
   opacity: 0;
@@ -16006,7 +16009,8 @@ cx-product-carousel a, cx-merchandising-carousel a {
 }
 cx-product-carousel a h4, cx-merchandising-carousel a h4 {
   font-size: 0.9rem;
-  height: 30px;
+  height: auto;
+  min-height: 30px;
   font-weight: bold;
   margin-top: 5px;
 }
@@ -18990,7 +18994,8 @@ cx-product-carousel a, cx-merchandising-carousel a {
 }
 cx-product-carousel a h4, cx-merchandising-carousel a h4 {
   font-size: 0.9rem;
-  height: 30px;
+  height: auto;
+  min-height: 30px;
   font-weight: bold;
   margin-top: 5px;
 }
