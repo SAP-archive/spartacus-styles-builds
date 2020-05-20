@@ -11080,6 +11080,10 @@ cx-category-navigation {
 .ContentPage1Template cx-page-slot.Section2A, .ContentPage1Template cx-page-slot.Section2B {
   display: block;
 }
+.ContentPage1Template .global-alerts .alert-info {
+  display: block;
+  padding: 20px 1.25rem;
+}
 .ContentPage1Template .textpage-faqs td {
   padding-bottom: 26px;
   vertical-align: baseline;
