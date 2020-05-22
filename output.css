@@ -14620,7 +14620,8 @@ cx-footer-navigation cx-navigation-ui > nav {
 
 cx-media {
   position: relative;
-  display: block;
+  display: flex;
+  align-items: stretch;
 }
 cx-media img {
   max-width: 100%;
