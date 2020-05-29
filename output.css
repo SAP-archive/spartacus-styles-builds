@@ -11014,6 +11014,10 @@ cx-category-navigation {
   max-width: 1700px;
   margin: auto;
 }
+.LandingPage2Template cx-page-slot cx-banner cx-media img {
+  display: flex;
+  height: auto;
+}
 .LandingPage2Template cx-page-slot.Section1 {
   max-width: 1140px;
   margin: auto;
@@ -11308,6 +11312,9 @@ cx-category-navigation {
 @media (max-width: 991.98px) {
   .LoginPageTemplate, .CheckoutLoginPageTemplate, .AccountPageTemplate {
     --cx-max-width: 100%;
+  }
+  .LoginPageTemplate button[type=button], .CheckoutLoginPageTemplate button[type=button], .AccountPageTemplate button[type=button] {
+    margin-bottom: 1em;
   }
 }
 
@@ -14166,6 +14173,9 @@ cx-banner a:focus {
   position: relative;
   z-index: 1;
 }
+cx-banner cx-generic-link {
+  display: block;
+}
 cx-banner img {
   width: 100%;
   margin: var(--cx-margin);
@@ -14620,8 +14630,7 @@ cx-footer-navigation cx-navigation-ui > nav {
 
 cx-media {
   position: relative;
-  display: flex;
-  align-items: stretch;
+  display: block;
 }
 cx-media img {
   max-width: 100%;
