@@ -11088,6 +11088,13 @@ cx-category-navigation {
   display: block;
   padding: 20px 1.25rem;
 }
+.ContentPage1Template .textpage-faqs .pagetop-link {
+  margin-bottom: 10px;
+  display: block;
+}
+.ContentPage1Template .textpage-faqs .item_container .faq-menulink {
+  display: block;
+}
 .ContentPage1Template .textpage-faqs td {
   padding-bottom: 26px;
   vertical-align: baseline;
