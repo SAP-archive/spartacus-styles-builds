@@ -6025,6 +6025,13 @@ a.text-visual-focus:hover, a.text-visual-focus:focus {
   display: block;
 }
 
+:root {
+  --cx-spatial-base: 0.5rem;
+  --cx-spatial-sm: calc(var(--cx-spatial-base) / 2);
+  --cx-spatial-md: calc(2 * var(--cx-spatial-base));
+  --cx-spatial-lg: calc(4 * var(--cx-spatial-base));
+}
+
 /* IMPORTANT: If no there's no theme for any reason,
   then fallback to the cxbase defaults */
 /*!
@@ -16329,6 +16336,39 @@ cx-icon svg, .cx-icon svg {
 cx-icon.small svg, .small.cx-icon svg {
   width: 14px;
   height: 14px;
+}
+
+cx-table table {
+  border-bottom: solid 1px var(--cx-color-light);
+  white-space: nowrap;
+  table-layout: fixed;
+  width: 100%;
+}
+cx-table table td,
+cx-table table th {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+cx-table table th {
+  padding: var(--cx-spatial-base) var(--cx-spatial-md);
+  color: var(--cx-color-secondary);
+  text-transform: uppercase;
+}
+cx-table table th.sortable {
+  cursor: pointer;
+}
+cx-table table > tr {
+  border-top: solid 1px var(--cx-color-light);
+  background-color: var(--cx-color-inverse);
+}
+cx-table table td {
+  transition: opacity 0.2s ease-in-out 0.2s, width 0s ease-in-out 0.4s;
+  padding: var(--cx-spatial-md);
+}
+cx-table table td > * {
+  display: flex;
+  justify-content: space-between;
 }
 
 @media (max-width: 991.98px) {
