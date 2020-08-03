@@ -16321,6 +16321,11 @@ cx-spinner .loader::before {
   }
 }
 
+[dir=ltr] cx-icon.flip-at-ltr,
+[dir=rtl] cx-icon.flip-at-rtl {
+  transform: scaleX(-1);
+}
+
 cx-icon, .cx-icon {
   align-self: center;
   line-height: normal;
