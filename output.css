@@ -2,59 +2,59 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700");
 @import '~@ng-select/ng-select/themes/default.theme.css';
 /**
- * The Spartacus team is cautious with introducing style changes in a 
- * minor release, as it would conflict with the [semantic versioning](https://semver.org/) 
+ * The Spartacus team is cautious with introducing style changes in a
+ * minor release, as it would conflict with the [semantic versioning](https://semver.org/)
  * model. To improve the style layer during minor releases, without breaking the versioning,
- * a version flag is used. The version is used to control breaking styles during the 
+ * a version flag is used. The version is used to control breaking styles during the
  * lifecycle of a major version.
- * 
- * The breaking changes are added with the  `forVersion()` mixin. The mixin compares the 
- * from version and (optional) to version, and will only add the mixin content if changes are 
- * part of the stable release, or explicitly requested by the customer. 
- * 
- * An example of the usage of the mixin is given below: 
- * 
+ *
+ * The breaking changes are added with the  `forVersion()` mixin. The mixin compares the
+ * from version and (optional) to version, and will only add the mixin content if changes are
+ * part of the stable release, or explicitly requested by the customer.
+ *
+ * An example of the usage of the mixin is given below:
+ *
  * ```scss
  * @include forVersion(2.1){
  *  // valid when 2.1 is explicit requested or from 3.0 onwards
  * }
  * ```
- * 
- * Customers can opt-in for specific versions by declaring the `$styleVersion` variable or by 
- * using the `$useLatestStyles:true` to always be up-to-date with the latest styles. 
+ *
+ * Customers can opt-in for specific versions by declaring the `$styleVersion` variable or by
+ * using the `$useLatestStyles:true` to always be up-to-date with the latest styles.
  */
 /**
-  * The $version indicates the latest style version. This version is used to control the 
-  * semantic versioning scheme of the final CSS, to avoid breaking changes in the style layer. 
-  * This allows to introduce breaking changes during minor version, but only if customers explicitly 
+  * The $version indicates the latest style version. This version is used to control the
+  * semantic versioning scheme of the final CSS, to avoid breaking changes in the style layer.
+  * This allows to introduce breaking changes during minor version, but only if customers explicitly
   * enable this. It can be enabled by setting the `$useLatestStyles` to true, or `$styleVersion` to a
-  * specific version. 
+  * specific version.
   */
-/**
- * The `$styleVersion` can be used to explicitly opt-in to breaking style changes till
- * the given style version. It must contain a floating number, such as `2.1`. 
- */
-/**
- * For Spartacus development or demo's, the usage of latest styles is recommended. 
- * To avoid frequent changes of the $minorVersion in the application, we offer a 
- * flag that can be used to keep up with the latest version at any time. 
- */
 /**
  * The `$stableVersion` indicates the major version of the style library. Any
  * version related styles that are left over from previous stable releases will
- * always end up in the generated stylesheet. 
- * 
- * The `$stableVersion` variable cannot be redeclared by customers. This version 
- * will be updated each time the major release number increases. 
+ * always end up in the generated stylesheet.
+ *
+ * The `$stableVersion` variable cannot be redeclared by customers. This version
+ * will be updated each time the major release number increases.
+ */
+/**
+ * The `$styleVersion` can be used to explicitly opt-in to breaking style changes till
+ * the given style version. It must contain a floating number, such as `2.1`.
+ */
+/**
+ * For Spartacus development or demo's, the usage of latest styles is recommended.
+ * To avoid frequent changes of the $minorVersion in the application, we offer a
+ * flag that can be used to keep up with the latest version at any time.
  */
 /**
  * The `forVersion` mixin is used during development of the style layer. Breaking style
  * changes can be added for a specific version, and customers can only use those styles if
- * they explicitly enable breaking changes. 
- * 
- * The mixin requires a $from version and optional to version. Content can be flagged for 
- * specific versions or from a specific version onwards. 
- * 
+ * they explicitly enable breaking changes.
+ *
+ * The mixin requires a $from version and optional to version. Content can be flagged for
+ * specific versions or from a specific version onwards.
+ *
  * Examples
  * - `forVersion(2)` is valid from stable version 2 onwards.
  * - `forVersion(2.1)` Valid for version 2.1 and higher, but only added as breaking change or when stable version reaches 3.0.
@@ -63,17 +63,17 @@
  * The version related content is only created if the user opt-in for breaking changes.
  */
 /**
- * Indicates that from and to versions are valid for the stable version. 
+ * Indicates that from and to versions are valid for the stable version.
  * - from 0.9 to 1.1 is valid for version 1
  * - from 1.0 to 1.2 is valid for version 1
  * - from 1.1 to 1.2 is not valid for version 1
- * - from 1.1 to 1.2 is valid for version 2
+ * - from 1.1 to 1.2 is not valid for version 2
  */
 /**
- * Indicates that the style rule should be created for the given opt-in rules. 
+ * Indicates that the style rule should be created for the given opt-in rules.
  */
 /**
- * Indicates that the given from / to versions are valid. 
+ * Indicates that the given from / to versions are valid.
  */
 /**
  * Indicates if breaking changes are requested.
@@ -581,7 +581,7 @@ mark,
   content: "— ";
 }
 
-.container, ProductDetailsPageTemplate .tab-delivery, ProductDetailsPageTemplate cx-page-slot.Summary {
+.container, .ProductDetailsPageTemplate .tab-delivery, .ProductDetailsPageTemplate cx-page-slot.Summary {
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;
@@ -589,22 +589,22 @@ mark,
   margin-left: auto;
 }
 @media (min-width: 576px) {
-  .container, ProductDetailsPageTemplate .tab-delivery, ProductDetailsPageTemplate cx-page-slot.Summary {
+  .container, .ProductDetailsPageTemplate .tab-delivery, .ProductDetailsPageTemplate cx-page-slot.Summary {
     max-width: 540px;
   }
 }
 @media (min-width: 768px) {
-  .container, ProductDetailsPageTemplate .tab-delivery, ProductDetailsPageTemplate cx-page-slot.Summary {
+  .container, .ProductDetailsPageTemplate .tab-delivery, .ProductDetailsPageTemplate cx-page-slot.Summary {
     max-width: 720px;
   }
 }
 @media (min-width: 992px) {
-  .container, ProductDetailsPageTemplate .tab-delivery, ProductDetailsPageTemplate cx-page-slot.Summary {
+  .container, .ProductDetailsPageTemplate .tab-delivery, .ProductDetailsPageTemplate cx-page-slot.Summary {
     max-width: 960px;
   }
 }
 @media (min-width: 1200px) {
-  .container, ProductDetailsPageTemplate .tab-delivery, ProductDetailsPageTemplate cx-page-slot.Summary {
+  .container, .ProductDetailsPageTemplate .tab-delivery, .ProductDetailsPageTemplate cx-page-slot.Summary {
     max-width: 1140px;
   }
 }
@@ -11099,211 +11099,211 @@ cx-category-navigation {
   display: block;
 }
 
-LandingPage2Template {
+.LandingPage2Template {
   display: flex;
   flex-wrap: wrap;
   max-width: 1700px;
   margin: auto;
 }
-LandingPage2Template cx-page-slot cx-banner cx-media img {
+.LandingPage2Template cx-page-slot cx-banner cx-media img {
   display: flex;
   height: auto;
 }
-LandingPage2Template cx-page-slot.Section1 {
+.LandingPage2Template cx-page-slot.Section1 {
   max-width: 1140px;
   margin: auto;
   margin-top: 30px;
 }
 @media (max-width: 991.98px) {
-  LandingPage2Template cx-page-slot.Section1 {
+  .LandingPage2Template cx-page-slot.Section1 {
     margin-top: 0;
   }
 }
-LandingPage2Template cx-page-slot.Section2A {
+.LandingPage2Template cx-page-slot.Section2A {
   margin-left: auto;
 }
-LandingPage2Template cx-page-slot.Section2B {
+.LandingPage2Template cx-page-slot.Section2B {
   margin-right: auto;
 }
-LandingPage2Template cx-page-slot.Section2A, LandingPage2Template cx-page-slot.Section2B {
+.LandingPage2Template cx-page-slot.Section2A, .LandingPage2Template cx-page-slot.Section2B {
   --cx-flex-basis: 50%;
   max-width: 570px;
 }
 @media (max-width: 991.98px) {
-  LandingPage2Template cx-page-slot.Section2A, LandingPage2Template cx-page-slot.Section2B {
+  .LandingPage2Template cx-page-slot.Section2A, .LandingPage2Template cx-page-slot.Section2B {
     --cx-flex-basis: 100%;
     max-width: 100%;
   }
-  LandingPage2Template cx-page-slot.Section2A > *, LandingPage2Template cx-page-slot.Section2B > * {
+  .LandingPage2Template cx-page-slot.Section2A > *, .LandingPage2Template cx-page-slot.Section2B > * {
     --cx-flex-basis: 50%;
   }
 }
 @media (max-width: 575.98px) {
-  LandingPage2Template cx-page-slot.Section2A > *, LandingPage2Template cx-page-slot.Section2B > * {
+  .LandingPage2Template cx-page-slot.Section2A > *, .LandingPage2Template cx-page-slot.Section2B > * {
     --cx-flex-basis: 100%;
   }
 }
-LandingPage2Template cx-page-slot.Section3 {
+.LandingPage2Template cx-page-slot.Section3 {
   max-width: 1140px;
   margin: auto;
 }
-LandingPage2Template cx-page-slot.Section4 {
+.LandingPage2Template cx-page-slot.Section4 {
   color: var(--cx-color, var(--cx-color-light));
   flex-wrap: nowrap;
 }
 @media (max-width: 991.98px) {
-  LandingPage2Template cx-page-slot.Section4 {
+  .LandingPage2Template cx-page-slot.Section4 {
     flex-wrap: wrap;
   }
-  LandingPage2Template cx-page-slot.Section4 > * {
+  .LandingPage2Template cx-page-slot.Section4 > * {
     --cx-flex-basis: 50%;
     border-bottom: solid 1px currentColor;
     border-right: solid 1px currentColor;
   }
 }
 @media (max-width: 575.98px) {
-  LandingPage2Template cx-page-slot.Section4 > * {
+  .LandingPage2Template cx-page-slot.Section4 > * {
     --cx-flex-basis: 100%;
   }
 }
 
-ContentPage1Template {
+.ContentPage1Template {
   max-width: 1140px;
   padding: 2rem 1.5rem 0 1.5rem;
   margin: auto;
 }
-ContentPage1Template cx-page-slot.Section2A, ContentPage1Template cx-page-slot.Section2B {
+.ContentPage1Template cx-page-slot.Section2A, .ContentPage1Template cx-page-slot.Section2B {
   display: block;
 }
-ContentPage1Template .global-alerts .alert-info {
+.ContentPage1Template .global-alerts .alert-info {
   display: block;
   padding: 20px 1.25rem;
 }
-ContentPage1Template .textpage-faqs .pagetop-link {
+.ContentPage1Template .textpage-faqs .pagetop-link {
   margin-bottom: 10px;
   display: block;
 }
-ContentPage1Template .textpage-faqs .item_container .faq-menulink {
+.ContentPage1Template .textpage-faqs .item_container .faq-menulink {
   display: block;
 }
-ContentPage1Template .textpage-faqs td {
+.ContentPage1Template .textpage-faqs td {
   padding-bottom: 26px;
   vertical-align: baseline;
 }
-ContentPage1Template .textpage-faqs td:first-child {
+.ContentPage1Template .textpage-faqs td:first-child {
   padding-right: 10px;
 }
 
-CategoryPageTemplate {
+.CategoryPageTemplate {
   max-width: 1140px;
   margin: auto;
 }
-CategoryPageTemplate .Section1 {
+.CategoryPageTemplate .Section1 {
   margin-top: 30px;
 }
 @media (max-width: 991.98px) {
-  CategoryPageTemplate .Section1 {
+  .CategoryPageTemplate .Section1 {
     margin-top: 0;
   }
 }
-CategoryPageTemplate .Section2 > * {
+.CategoryPageTemplate .Section2 > * {
   --cx-flex-basis: 33%;
 }
 @media (max-width: 991.98px) {
-  CategoryPageTemplate .Section2 > * {
+  .CategoryPageTemplate .Section2 > * {
     --cx-flex-basis: 50%;
   }
 }
 
-ProductDetailsPageTemplate {
+.ProductDetailsPageTemplate {
   padding: var(--cx-padding, 2.5rem 0 0);
 }
-ProductDetailsPageTemplate cx-page-slot.Summary {
+.ProductDetailsPageTemplate cx-page-slot.Summary {
   margin-bottom: 40px;
 }
 @media (min-width: 992px) {
-  ProductDetailsPageTemplate cx-page-slot.Summary {
+  .ProductDetailsPageTemplate cx-page-slot.Summary {
     display: grid;
     grid-column-gap: 20px;
     grid-row-gap: 0px;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(2, auto) 1fr;
   }
-  ProductDetailsPageTemplate cx-page-slot.Summary cx-product-images {
+  .ProductDetailsPageTemplate cx-page-slot.Summary cx-product-images {
     grid-column: 1;
     grid-row: 1/span 5;
   }
-  ProductDetailsPageTemplate cx-page-slot.Summary cx-product-intro {
+  .ProductDetailsPageTemplate cx-page-slot.Summary cx-product-intro {
     grid-column: 2;
   }
-  ProductDetailsPageTemplate cx-page-slot.Summary cx-product-summary {
+  .ProductDetailsPageTemplate cx-page-slot.Summary cx-product-summary {
     grid-column: 2;
   }
-  ProductDetailsPageTemplate cx-page-slot.Summary cx-product-variants {
+  .ProductDetailsPageTemplate cx-page-slot.Summary cx-product-variants {
     grid-column: 2;
     grid-row: 3;
   }
-  ProductDetailsPageTemplate cx-page-slot.Summary cx-add-to-cart {
+  .ProductDetailsPageTemplate cx-page-slot.Summary cx-add-to-cart {
     grid-column: 2;
     padding: 20px 20px 0 20px;
   }
-  ProductDetailsPageTemplate cx-page-slot.Summary cx-stock-notification {
+  .ProductDetailsPageTemplate cx-page-slot.Summary cx-stock-notification {
     grid-column: 2;
     grid-row: 3/4;
     padding: 20% 20px 20px 20px;
   }
-  ProductDetailsPageTemplate cx-page-slot.Summary cx-stock-notification:empty {
+  .ProductDetailsPageTemplate cx-page-slot.Summary cx-stock-notification:empty {
     display: none;
   }
 }
-ProductDetailsPageTemplate cx-page-slot.AddToCart {
+.ProductDetailsPageTemplate cx-page-slot.AddToCart {
   max-width: 50%;
 }
-ProductDetailsPageTemplate cx-page-slot.UpSelling, ProductDetailsPageTemplate cx-page-slot.CrossSelling {
+.ProductDetailsPageTemplate cx-page-slot.UpSelling, .ProductDetailsPageTemplate cx-page-slot.CrossSelling {
   max-width: 1140px;
   margin: auto;
 }
-ProductListPageTemplate,
-ProductGridPageTemplate {
+.ProductListPageTemplate,
+.ProductGridPageTemplate {
   max-width: 1140px;
   margin: auto;
   display: flex;
 }
 @media (max-width: 991.98px) {
-  ProductListPageTemplate,
-ProductGridPageTemplate {
+  .ProductListPageTemplate,
+.ProductGridPageTemplate {
     flex-direction: column;
   }
 }
-ProductListPageTemplate .ProductLeftRefinements,
-ProductGridPageTemplate .ProductLeftRefinements {
+.ProductListPageTemplate .ProductLeftRefinements,
+.ProductGridPageTemplate .ProductLeftRefinements {
   max-width: 25%;
   padding: 60px 15px 15px 15px;
 }
 @media (max-width: 991.98px) {
-  ProductListPageTemplate .ProductLeftRefinements,
-ProductGridPageTemplate .ProductLeftRefinements {
+  .ProductListPageTemplate .ProductLeftRefinements,
+.ProductGridPageTemplate .ProductLeftRefinements {
     width: 100%;
     max-width: none;
   }
 }
-ProductListPageTemplate .ProductListSlot,
-ProductListPageTemplate .ProductGridSlot,
-ProductGridPageTemplate .ProductListSlot,
-ProductGridPageTemplate .ProductGridSlot {
+.ProductListPageTemplate .ProductListSlot,
+.ProductListPageTemplate .ProductGridSlot,
+.ProductGridPageTemplate .ProductListSlot,
+.ProductGridPageTemplate .ProductGridSlot {
   max-width: 75%;
 }
 @media (max-width: 991.98px) {
-  ProductListPageTemplate .ProductListSlot,
-ProductListPageTemplate .ProductGridSlot,
-ProductGridPageTemplate .ProductListSlot,
-ProductGridPageTemplate .ProductGridSlot {
+  .ProductListPageTemplate .ProductListSlot,
+.ProductListPageTemplate .ProductGridSlot,
+.ProductGridPageTemplate .ProductListSlot,
+.ProductGridPageTemplate .ProductGridSlot {
     width: 100%;
     max-width: none;
   }
 }
 
-SearchResultsListPageTemplate {
+.SearchResultsListPageTemplate {
   max-width: 1140px;
   margin: auto;
   display: flex;
@@ -11312,147 +11312,147 @@ SearchResultsListPageTemplate {
   height: 100%;
 }
 @media (max-width: 991.98px) {
-  SearchResultsListPageTemplate {
+  .SearchResultsListPageTemplate {
     flex-direction: column;
   }
 }
-SearchResultsListPageTemplate .ProductLeftRefinements {
+.SearchResultsListPageTemplate .ProductLeftRefinements {
   max-width: 25%;
   padding: 60px 15px 15px 15px;
 }
 @media (max-width: 991.98px) {
-  SearchResultsListPageTemplate .ProductLeftRefinements {
+  .SearchResultsListPageTemplate .ProductLeftRefinements {
     width: 100%;
     max-width: none;
   }
 }
-SearchResultsListPageTemplate .SearchResultsListSlot {
+.SearchResultsListPageTemplate .SearchResultsListSlot {
   max-width: 75%;
 }
 @media (max-width: 991.98px) {
-  SearchResultsListPageTemplate .SearchResultsListSlot {
+  .SearchResultsListPageTemplate .SearchResultsListSlot {
     width: 100%;
     max-width: none;
   }
 }
-SearchResultsListPageTemplate .Section2 {
+.SearchResultsListPageTemplate .Section2 {
   padding: 0 1rem;
 }
-SearchResultsListPageTemplate .Section4 {
+.SearchResultsListPageTemplate .Section4 {
   padding: 0 1rem;
 }
 
-CartPageTemplate {
+.CartPageTemplate {
   max-width: 1140px;
   padding: 0 1.5rem;
   margin: auto;
   display: flex;
   flex-wrap: wrap;
 }
-CartPageTemplate .TopContent {
+.CartPageTemplate .TopContent {
   --cx-flex-basis: 68%;
 }
 @media (max-width: 991.98px) {
-  CartPageTemplate .TopContent {
+  .CartPageTemplate .TopContent {
     --cx-flex-basis: 100%;
   }
 }
-CartPageTemplate .CenterRightContentSlot {
+.CartPageTemplate .CenterRightContentSlot {
   --cx-flex-basis: 30%;
   flex-direction: column;
   justify-content: flex-start;
 }
 @media (min-width: 992px) {
-  CartPageTemplate .CenterRightContentSlot > * {
+  .CartPageTemplate .CenterRightContentSlot > * {
     flex: none;
   }
 }
 @media (max-width: 991.98px) {
-  CartPageTemplate .CenterRightContentSlot {
+  .CartPageTemplate .CenterRightContentSlot {
     --cx-flex-basis: 50%;
     justify-content: flex-end;
     flex-direction: row;
   }
-  CartPageTemplate .CenterRightContentSlot cx-cart-totals {
+  .CartPageTemplate .CenterRightContentSlot cx-cart-totals {
     max-width: 50%;
   }
-  CartPageTemplate .CenterRightContentSlot cx-cart-coupon {
+  .CartPageTemplate .CenterRightContentSlot cx-cart-coupon {
     max-width: 50%;
   }
 }
 @media (max-width: 767.98px) {
-  CartPageTemplate .CenterRightContentSlot {
+  .CartPageTemplate .CenterRightContentSlot {
     --cx-flex-basis: 100%;
     flex-direction: unset;
   }
-  CartPageTemplate .CenterRightContentSlot cx-cart-totals {
+  .CartPageTemplate .CenterRightContentSlot cx-cart-totals {
     max-width: none;
   }
-  CartPageTemplate .CenterRightContentSlot cx-cart-coupon {
+  .CartPageTemplate .CenterRightContentSlot cx-cart-coupon {
     max-width: 100%;
   }
 }
 
-LoginPageTemplate, CheckoutLoginPageTemplate, AccountPageTemplate {
+.LoginPageTemplate, .CheckoutLoginPageTemplate, .AccountPageTemplate {
   padding-bottom: 3rem;
 }
-LoginPageTemplate .cx-section-title, CheckoutLoginPageTemplate .cx-section-title, AccountPageTemplate .cx-section-title {
+.LoginPageTemplate .cx-section-title, .CheckoutLoginPageTemplate .cx-section-title, .AccountPageTemplate .cx-section-title {
   margin: 40px 0 15px;
 }
-LoginPageTemplate cx-page-slot, CheckoutLoginPageTemplate cx-page-slot, AccountPageTemplate cx-page-slot {
+.LoginPageTemplate cx-page-slot, .CheckoutLoginPageTemplate cx-page-slot, .AccountPageTemplate cx-page-slot {
   max-width: 1140px;
   padding: 3rem 1.5rem 0 1.5rem;
   margin: auto;
 }
-LoginPageTemplate cx-page-slot > *, CheckoutLoginPageTemplate cx-page-slot > *, AccountPageTemplate cx-page-slot > * {
+.LoginPageTemplate cx-page-slot > *, .CheckoutLoginPageTemplate cx-page-slot > *, .AccountPageTemplate cx-page-slot > * {
   max-width: var(--cx-max-width, 50%);
 }
 @media (max-width: 991.98px) {
-  LoginPageTemplate, CheckoutLoginPageTemplate, AccountPageTemplate {
+  .LoginPageTemplate, .CheckoutLoginPageTemplate, .AccountPageTemplate {
     --cx-max-width: 100%;
   }
-  LoginPageTemplate button[type=button], CheckoutLoginPageTemplate button[type=button], AccountPageTemplate button[type=button] {
+  .LoginPageTemplate button[type=button], .CheckoutLoginPageTemplate button[type=button], .AccountPageTemplate button[type=button] {
     margin-bottom: 1em;
   }
 }
 
-ErrorPageTemplate {
+.ErrorPageTemplate {
   padding-bottom: 3rem;
 }
-ErrorPageTemplate cx-page-slot {
+.ErrorPageTemplate cx-page-slot {
   max-width: 1140px;
   margin: auto;
 }
-ErrorPageTemplate cx-page-slot cx-responsive-banner {
+.ErrorPageTemplate cx-page-slot cx-responsive-banner {
   max-width: 400px;
 }
-ErrorPageTemplate cx-page-slot cx-link {
+.ErrorPageTemplate cx-page-slot cx-link {
   text-decoration: underline;
 }
-ErrorPageTemplate cx-page-slot cx-paragraph {
+.ErrorPageTemplate cx-page-slot cx-paragraph {
   max-height: 170px;
 }
-ErrorPageTemplate cx-page-slot > * {
+.ErrorPageTemplate cx-page-slot > * {
   text-align: center;
 }
 @media (max-width: 991.98px) {
-  ErrorPageTemplate {
+  .ErrorPageTemplate {
     --cx-max-width: 100%;
   }
 }
-ErrorPageTemplate.MiddleContent, ErrorPageTemplate.BottomContent {
+.MiddleContent.ErrorPageTemplate, .BottomContent.ErrorPageTemplate {
   display: block;
 }
 
-AccountPageTemplate {
+.AccountPageTemplate {
   --cx-max-width: 100%;
 }
 @media (max-width: 767.98px) {
-  AccountPageTemplate cx-order-details-headline {
+  .AccountPageTemplate cx-order-details-headline {
     border: none;
   }
 }
-AccountPageTemplate cx-order-details-headline .cx-header {
+.AccountPageTemplate cx-order-details-headline .cx-header {
   border: 1px solid;
   border-color: var(--cx-color-light);
   padding: 30px 30px 20px 30px;
@@ -11461,59 +11461,59 @@ AccountPageTemplate cx-order-details-headline .cx-header {
   margin-right: 0;
 }
 @media (max-width: 767.98px) {
-  AccountPageTemplate cx-order-details-headline .cx-header {
+  .AccountPageTemplate cx-order-details-headline .cx-header {
     border: none;
     padding: 0;
   }
 }
-AccountPageTemplate cx-order-details-headline .cx-header .cx-detail {
+.AccountPageTemplate cx-order-details-headline .cx-header .cx-detail {
   border-right: 1px solid var(--cx-color-light);
 }
-AccountPageTemplate cx-order-details-headline .cx-header .cx-detail:last-child {
+.AccountPageTemplate cx-order-details-headline .cx-header .cx-detail:last-child {
   border: none;
 }
 @media (min-width: 768px) {
-  AccountPageTemplate cx-order-details-headline .cx-header .cx-detail {
+  .AccountPageTemplate cx-order-details-headline .cx-header .cx-detail {
     padding-left: 47px;
   }
-  AccountPageTemplate cx-order-details-headline .cx-header .cx-detail:first-child {
+  .AccountPageTemplate cx-order-details-headline .cx-header .cx-detail:first-child {
     padding-left: 0;
   }
 }
 @media (max-width: 767.98px) {
-  AccountPageTemplate cx-order-details-headline .cx-header .cx-detail {
+  .AccountPageTemplate cx-order-details-headline .cx-header .cx-detail {
     border: none;
     margin-bottom: 10px;
   }
 }
-AccountPageTemplate cx-order-details-headline .cx-header .cx-detail-label {
+.AccountPageTemplate cx-order-details-headline .cx-header .cx-detail-label {
   font-size: 18px;
   font-weight: bold;
 }
-AccountPageTemplate cx-order-details-headline .cx-nav {
+.AccountPageTemplate cx-order-details-headline .cx-nav {
   justify-content: center;
   padding: 1rem 0;
 }
 @media (max-width: 767.98px) {
-  AccountPageTemplate cx-order-details-headline .cx-nav .btn-action {
+  .AccountPageTemplate cx-order-details-headline .cx-nav .btn-action {
     margin: 0 0 1rem;
   }
 }
-AccountPageTemplate cx-order-details-items {
+.AccountPageTemplate cx-order-details-items {
   margin-bottom: 15px;
 }
 @media (max-width: 767.98px) {
-  AccountPageTemplate cx-order-details-items .cx-list-header {
+  .AccountPageTemplate cx-order-details-items .cx-list-header {
     padding: 0;
   }
 }
 @media (max-width: 767.98px) {
-  AccountPageTemplate cx-order-details-items .cx-list {
+  .AccountPageTemplate cx-order-details-items .cx-list {
     margin-right: 0;
     margin-left: 0;
   }
 }
-AccountPageTemplate cx-order-details-items .cx-list-status {
+.AccountPageTemplate cx-order-details-items .cx-list-status {
   margin: 0 0 0.5rem;
   padding: 15px 30px;
   background-color: var(--cx-color-background);
@@ -11522,48 +11522,48 @@ AccountPageTemplate cx-order-details-items .cx-list-status {
   line-height: var(--cx-line-height, 1.2222222222);
   font-weight: bold;
 }
-AccountPageTemplate cx-order-details-items .cx-list-date {
+.AccountPageTemplate cx-order-details-items .cx-list-date {
   margin: 0.5rem 0 0;
 }
-AccountPageTemplate cx-order-details-shipping .cx-summary {
+.AccountPageTemplate cx-order-details-shipping .cx-summary {
   margin-bottom: 48px;
 }
-AccountPageTemplate cx-order-details-shipping .cx-account-summary {
+.AccountPageTemplate cx-order-details-shipping .cx-account-summary {
   background-color: var(--cx-color-background);
 }
 @media (min-width: 768px) {
-  AccountPageTemplate cx-order-details-shipping .cx-account-summary {
+  .AccountPageTemplate cx-order-details-shipping .cx-account-summary {
     padding: 5px 18px 12px;
   }
 }
 @media (max-width: 767.98px) {
-  AccountPageTemplate cx-order-details-shipping .cx-account-summary {
+  .AccountPageTemplate cx-order-details-shipping .cx-account-summary {
     margin: 0 -24px;
   }
 }
-AccountPageTemplate cx-order-details-shipping .cx-account-summary .cx-card-title {
+.AccountPageTemplate cx-order-details-shipping .cx-account-summary .cx-card-title {
   font-size: var(--cx-font-size, 1.125rem);
   font-weight: var(--cx-font-weight-bold);
   line-height: var(--cx-line-height, 1.2222222222);
   font-weight: bold;
 }
-AccountPageTemplate cx-order-details-shipping .cx-account-summary .cx-card-label-bold {
+.AccountPageTemplate cx-order-details-shipping .cx-account-summary .cx-card-label-bold {
   font-weight: bold;
 }
-AccountPageTemplate cx-order-details-totals {
+.AccountPageTemplate cx-order-details-totals {
   margin-bottom: 32px;
 }
-AccountPageTemplate cx-tab-paragraph-container .active {
+.AccountPageTemplate cx-tab-paragraph-container .active {
   background-color: var(--cx-color-inverse);
 }
-AccountPageTemplate cx-paragraph h4 {
+.AccountPageTemplate cx-paragraph h4 {
   text-align: center;
 }
-AccountPageTemplate cx-cart-item .cx-image-container a {
+.AccountPageTemplate cx-cart-item .cx-image-container a {
   padding: 0 3vw;
 }
 
-MultiStepCheckoutSummaryPageTemplate {
+.MultiStepCheckoutSummaryPageTemplate {
   max-width: 1140px;
   padding: 2rem 1.5rem 0 1.5rem;
   margin: auto;
@@ -11574,62 +11574,62 @@ MultiStepCheckoutSummaryPageTemplate {
   align-content: flex-start;
 }
 @media (max-width: 991.98px) {
-  MultiStepCheckoutSummaryPageTemplate {
+  .MultiStepCheckoutSummaryPageTemplate {
     display: inline-block;
   }
 }
-MultiStepCheckoutSummaryPageTemplate cx-page-slot.TopContent {
+.MultiStepCheckoutSummaryPageTemplate cx-page-slot.TopContent {
   flex: 0 100%;
 }
-MultiStepCheckoutSummaryPageTemplate cx-page-slot.BodyContent {
+.MultiStepCheckoutSummaryPageTemplate cx-page-slot.BodyContent {
   flex: 0 68%;
 }
-MultiStepCheckoutSummaryPageTemplate cx-page-slot.SideContent {
+.MultiStepCheckoutSummaryPageTemplate cx-page-slot.SideContent {
   flex: 0 0 30%;
   flex-direction: column;
   justify-content: flex-start;
 }
-MultiStepCheckoutSummaryPageTemplate cx-page-slot.SideContent cx-checkout-order-summary {
+.MultiStepCheckoutSummaryPageTemplate cx-page-slot.SideContent cx-checkout-order-summary {
   flex: unset;
 }
-MultiStepCheckoutSummaryPageTemplate cx-page-slot.SideContent cx-place-order {
+.MultiStepCheckoutSummaryPageTemplate cx-page-slot.SideContent cx-place-order {
   flex: unset;
   padding: 1rem 2.5rem 0;
 }
 @media (max-width: 991.98px) {
-  MultiStepCheckoutSummaryPageTemplate cx-page-slot.SideContent {
+  .MultiStepCheckoutSummaryPageTemplate cx-page-slot.SideContent {
     --cx-flex-basis: 50%;
     justify-content: flex-end;
     align-items: flex-end;
     flex-direction: column;
   }
-  MultiStepCheckoutSummaryPageTemplate cx-page-slot.SideContent cx-checkout-order-summary {
+  .MultiStepCheckoutSummaryPageTemplate cx-page-slot.SideContent cx-checkout-order-summary {
     max-width: 50%;
     padding-top: 1rem;
   }
-  MultiStepCheckoutSummaryPageTemplate cx-page-slot.SideContent cx-checkout-order-summary cx-order-summary {
+  .MultiStepCheckoutSummaryPageTemplate cx-page-slot.SideContent cx-checkout-order-summary cx-order-summary {
     padding: 1rem 2.5rem 0;
   }
-  MultiStepCheckoutSummaryPageTemplate cx-page-slot.SideContent cx-place-order {
+  .MultiStepCheckoutSummaryPageTemplate cx-page-slot.SideContent cx-place-order {
     max-width: 50%;
     padding-bottom: 2rem;
     padding-top: 0;
   }
 }
 @media (max-width: 767.98px) {
-  MultiStepCheckoutSummaryPageTemplate cx-page-slot.SideContent {
+  .MultiStepCheckoutSummaryPageTemplate cx-page-slot.SideContent {
     --cx-flex-basis: 100%;
     align-items: normal;
   }
-  MultiStepCheckoutSummaryPageTemplate cx-page-slot.SideContent cx-checkout-order-summary {
+  .MultiStepCheckoutSummaryPageTemplate cx-page-slot.SideContent cx-checkout-order-summary {
     max-width: 100%;
   }
-  MultiStepCheckoutSummaryPageTemplate cx-page-slot.SideContent cx-place-order {
+  .MultiStepCheckoutSummaryPageTemplate cx-page-slot.SideContent cx-place-order {
     max-width: 100%;
   }
 }
 
-StoreFinderPageTemplate cx-page-slot.SideContent cx-banner img {
+.StoreFinderPageTemplate cx-page-slot.SideContent cx-banner img {
   width: auto;
 }
 
@@ -12915,7 +12915,7 @@ COMPONENT VARIABLE OVERRIDES
   }
 }
 @media (max-width: 991.98px) {
-  cx-billing-address-form .container, cx-billing-address-form ProductDetailsPageTemplate cx-page-slot.Summary, ProductDetailsPageTemplate cx-billing-address-form cx-page-slot.Summary, cx-billing-address-form ProductDetailsPageTemplate .tab-delivery, ProductDetailsPageTemplate cx-billing-address-form .tab-delivery {
+  cx-billing-address-form .container, cx-billing-address-form .ProductDetailsPageTemplate cx-page-slot.Summary, .ProductDetailsPageTemplate cx-billing-address-form cx-page-slot.Summary, cx-billing-address-form .ProductDetailsPageTemplate .tab-delivery, .ProductDetailsPageTemplate cx-billing-address-form .tab-delivery {
     width: 100%;
   }
 }
@@ -13023,7 +13023,7 @@ COMPONENT VARIABLE OVERRIDES
   }
 }
 @media (max-width: 991.98px) {
-  cx-payment-method .container, cx-payment-method ProductDetailsPageTemplate cx-page-slot.Summary, ProductDetailsPageTemplate cx-payment-method cx-page-slot.Summary, cx-payment-method ProductDetailsPageTemplate .tab-delivery, ProductDetailsPageTemplate cx-payment-method .tab-delivery {
+  cx-payment-method .container, cx-payment-method .ProductDetailsPageTemplate cx-page-slot.Summary, .ProductDetailsPageTemplate cx-payment-method cx-page-slot.Summary, cx-payment-method .ProductDetailsPageTemplate .tab-delivery, .ProductDetailsPageTemplate cx-payment-method .tab-delivery {
     width: 100%;
   }
 }
@@ -13077,7 +13077,7 @@ cx-payment-method .cx-spinner {
   padding-top: 30px;
   padding-bottom: 30px;
 }
-cx-payment-method .cx-payment.container, cx-payment-method ProductDetailsPageTemplate cx-page-slot.cx-payment.Summary, ProductDetailsPageTemplate cx-payment-method cx-page-slot.cx-payment.Summary, cx-payment-method ProductDetailsPageTemplate .cx-payment.tab-delivery, ProductDetailsPageTemplate cx-payment-method .cx-payment.tab-delivery {
+cx-payment-method .cx-payment.container, cx-payment-method .ProductDetailsPageTemplate cx-page-slot.cx-payment.Summary, .ProductDetailsPageTemplate cx-payment-method cx-page-slot.cx-payment.Summary, cx-payment-method .ProductDetailsPageTemplate .cx-payment.tab-delivery, .ProductDetailsPageTemplate cx-payment-method .cx-payment.tab-delivery {
   padding: 0;
 }
 cx-payment-method .cx-payment-card {
@@ -13188,7 +13188,7 @@ COMPONENT VARIABLE OVERRIDES
   }
 }
 @media (max-width: 991.98px) {
-  cx-payment-form .container, cx-payment-form ProductDetailsPageTemplate cx-page-slot.Summary, ProductDetailsPageTemplate cx-payment-form cx-page-slot.Summary, cx-payment-form ProductDetailsPageTemplate .tab-delivery, ProductDetailsPageTemplate cx-payment-form .tab-delivery {
+  cx-payment-form .container, cx-payment-form .ProductDetailsPageTemplate cx-page-slot.Summary, .ProductDetailsPageTemplate cx-payment-form cx-page-slot.Summary, cx-payment-form .ProductDetailsPageTemplate .tab-delivery, .ProductDetailsPageTemplate cx-payment-form .tab-delivery {
     width: 100%;
   }
 }
@@ -13420,7 +13420,7 @@ cx-review-submit .cx-review-cart-item {
   }
 }
 @media (max-width: 991.98px) {
-  cx-review-submit .container, cx-review-submit ProductDetailsPageTemplate cx-page-slot.Summary, ProductDetailsPageTemplate cx-review-submit cx-page-slot.Summary, cx-review-submit ProductDetailsPageTemplate .tab-delivery, ProductDetailsPageTemplate cx-review-submit .tab-delivery {
+  cx-review-submit .container, cx-review-submit .ProductDetailsPageTemplate cx-page-slot.Summary, .ProductDetailsPageTemplate cx-review-submit cx-page-slot.Summary, cx-review-submit .ProductDetailsPageTemplate .tab-delivery, .ProductDetailsPageTemplate cx-review-submit .tab-delivery {
     width: 100%;
   }
 }
@@ -13558,7 +13558,7 @@ COMPONENT VARIABLE OVERRIDES
   }
 }
 @media (max-width: 991.98px) {
-  cx-shipping-address .container, cx-shipping-address ProductDetailsPageTemplate cx-page-slot.Summary, ProductDetailsPageTemplate cx-shipping-address cx-page-slot.Summary, cx-shipping-address ProductDetailsPageTemplate .tab-delivery, ProductDetailsPageTemplate cx-shipping-address .tab-delivery {
+  cx-shipping-address .container, cx-shipping-address .ProductDetailsPageTemplate cx-page-slot.Summary, .ProductDetailsPageTemplate cx-shipping-address cx-page-slot.Summary, cx-shipping-address .ProductDetailsPageTemplate .tab-delivery, .ProductDetailsPageTemplate cx-shipping-address .tab-delivery {
     width: 100%;
   }
 }
@@ -13674,7 +13674,7 @@ COMPONENT VARIABLE OVERRIDES
   }
 }
 @media (max-width: 991.98px) {
-  cx-address-form .container, cx-address-form ProductDetailsPageTemplate cx-page-slot.Summary, ProductDetailsPageTemplate cx-address-form cx-page-slot.Summary, cx-address-form ProductDetailsPageTemplate .tab-delivery, ProductDetailsPageTemplate cx-address-form .tab-delivery {
+  cx-address-form .container, cx-address-form .ProductDetailsPageTemplate cx-page-slot.Summary, .ProductDetailsPageTemplate cx-address-form cx-page-slot.Summary, cx-address-form .ProductDetailsPageTemplate .tab-delivery, .ProductDetailsPageTemplate cx-address-form .tab-delivery {
     width: 100%;
   }
 }
@@ -13862,7 +13862,7 @@ cx-delivery-mode {
   }
 }
 @media (max-width: 991.98px) {
-  cx-delivery-mode .container, cx-delivery-mode ProductDetailsPageTemplate cx-page-slot.Summary, ProductDetailsPageTemplate cx-delivery-mode cx-page-slot.Summary, cx-delivery-mode ProductDetailsPageTemplate .tab-delivery, ProductDetailsPageTemplate cx-delivery-mode .tab-delivery {
+  cx-delivery-mode .container, cx-delivery-mode .ProductDetailsPageTemplate cx-page-slot.Summary, .ProductDetailsPageTemplate cx-delivery-mode cx-page-slot.Summary, cx-delivery-mode .ProductDetailsPageTemplate .tab-delivery, .ProductDetailsPageTemplate cx-delivery-mode .tab-delivery {
     width: 100%;
   }
 }
@@ -13980,14 +13980,14 @@ COMPONENT VARIABLE OVERRIDES
   $cx-storefront-background-color: "info";
 */
 @media (max-width: 991.98px) {
-  cx-order-confirmation-items .cx-order-items.container, cx-order-confirmation-items ProductDetailsPageTemplate cx-page-slot.cx-order-items.Summary, ProductDetailsPageTemplate cx-order-confirmation-items cx-page-slot.cx-order-items.Summary, cx-order-confirmation-items ProductDetailsPageTemplate .cx-order-items.tab-delivery, ProductDetailsPageTemplate cx-order-confirmation-items .cx-order-items.tab-delivery {
+  cx-order-confirmation-items .cx-order-items.container, cx-order-confirmation-items .ProductDetailsPageTemplate cx-page-slot.cx-order-items.Summary, .ProductDetailsPageTemplate cx-order-confirmation-items cx-page-slot.cx-order-items.Summary, cx-order-confirmation-items .ProductDetailsPageTemplate .cx-order-items.tab-delivery, .ProductDetailsPageTemplate cx-order-confirmation-items .cx-order-items.tab-delivery {
     max-width: 100%;
     min-width: 100%;
     padding: 0;
   }
 }
 @media (max-width: 767.98px) {
-  cx-order-confirmation-items .cx-order-items.container, cx-order-confirmation-items ProductDetailsPageTemplate cx-page-slot.cx-order-items.Summary, ProductDetailsPageTemplate cx-order-confirmation-items cx-page-slot.cx-order-items.Summary, cx-order-confirmation-items ProductDetailsPageTemplate .cx-order-items.tab-delivery, ProductDetailsPageTemplate cx-order-confirmation-items .cx-order-items.tab-delivery {
+  cx-order-confirmation-items .cx-order-items.container, cx-order-confirmation-items .ProductDetailsPageTemplate cx-page-slot.cx-order-items.Summary, .ProductDetailsPageTemplate cx-order-confirmation-items cx-page-slot.cx-order-items.Summary, cx-order-confirmation-items .ProductDetailsPageTemplate .cx-order-items.tab-delivery, .ProductDetailsPageTemplate cx-order-confirmation-items .cx-order-items.tab-delivery {
     max-width: 100%;
     min-width: 100%;
     padding: 0;
@@ -14074,18 +14074,18 @@ cx-order-confirmation-overview .cx-order-review-summary {
     margin: 0.625rem 0;
   }
 }
-cx-order-confirmation-overview .cx-order-review-summary .container, cx-order-confirmation-overview .cx-order-review-summary ProductDetailsPageTemplate cx-page-slot.Summary, ProductDetailsPageTemplate cx-order-confirmation-overview .cx-order-review-summary cx-page-slot.Summary, cx-order-confirmation-overview .cx-order-review-summary ProductDetailsPageTemplate .tab-delivery, ProductDetailsPageTemplate cx-order-confirmation-overview .cx-order-review-summary .tab-delivery {
+cx-order-confirmation-overview .cx-order-review-summary .container, cx-order-confirmation-overview .cx-order-review-summary .ProductDetailsPageTemplate cx-page-slot.Summary, .ProductDetailsPageTemplate cx-order-confirmation-overview .cx-order-review-summary cx-page-slot.Summary, cx-order-confirmation-overview .cx-order-review-summary .ProductDetailsPageTemplate .tab-delivery, .ProductDetailsPageTemplate cx-order-confirmation-overview .cx-order-review-summary .tab-delivery {
   padding: 0;
 }
 @media (max-width: 991.98px) {
-  cx-order-confirmation-overview .cx-order-review-summary .container, cx-order-confirmation-overview .cx-order-review-summary ProductDetailsPageTemplate cx-page-slot.Summary, ProductDetailsPageTemplate cx-order-confirmation-overview .cx-order-review-summary cx-page-slot.Summary, cx-order-confirmation-overview .cx-order-review-summary ProductDetailsPageTemplate .tab-delivery, ProductDetailsPageTemplate cx-order-confirmation-overview .cx-order-review-summary .tab-delivery {
+  cx-order-confirmation-overview .cx-order-review-summary .container, cx-order-confirmation-overview .cx-order-review-summary .ProductDetailsPageTemplate cx-page-slot.Summary, .ProductDetailsPageTemplate cx-order-confirmation-overview .cx-order-review-summary cx-page-slot.Summary, cx-order-confirmation-overview .cx-order-review-summary .ProductDetailsPageTemplate .tab-delivery, .ProductDetailsPageTemplate cx-order-confirmation-overview .cx-order-review-summary .tab-delivery {
     max-width: 100%;
     min-width: 100%;
     padding: 0 1.25rem;
   }
 }
 @media (max-width: 767.98px) {
-  cx-order-confirmation-overview .cx-order-review-summary .container, cx-order-confirmation-overview .cx-order-review-summary ProductDetailsPageTemplate cx-page-slot.Summary, ProductDetailsPageTemplate cx-order-confirmation-overview .cx-order-review-summary cx-page-slot.Summary, cx-order-confirmation-overview .cx-order-review-summary ProductDetailsPageTemplate .tab-delivery, ProductDetailsPageTemplate cx-order-confirmation-overview .cx-order-review-summary .tab-delivery {
+  cx-order-confirmation-overview .cx-order-review-summary .container, cx-order-confirmation-overview .cx-order-review-summary .ProductDetailsPageTemplate cx-page-slot.Summary, .ProductDetailsPageTemplate cx-order-confirmation-overview .cx-order-review-summary cx-page-slot.Summary, cx-order-confirmation-overview .cx-order-review-summary .ProductDetailsPageTemplate .tab-delivery, .ProductDetailsPageTemplate cx-order-confirmation-overview .cx-order-review-summary .tab-delivery {
     padding: 1.25rem;
   }
 }
@@ -14182,14 +14182,14 @@ cx-order-confirmation-totals .cx-order-summary {
   padding-right: var(--cx-padding, 0);
 }
 @media (max-width: 991.98px) {
-  cx-order-confirmation-totals .cx-order-summary.container, cx-order-confirmation-totals ProductDetailsPageTemplate cx-page-slot.cx-order-summary.Summary, ProductDetailsPageTemplate cx-order-confirmation-totals cx-page-slot.cx-order-summary.Summary, cx-order-confirmation-totals ProductDetailsPageTemplate .cx-order-summary.tab-delivery, ProductDetailsPageTemplate cx-order-confirmation-totals .cx-order-summary.tab-delivery {
+  cx-order-confirmation-totals .cx-order-summary.container, cx-order-confirmation-totals .ProductDetailsPageTemplate cx-page-slot.cx-order-summary.Summary, .ProductDetailsPageTemplate cx-order-confirmation-totals cx-page-slot.cx-order-summary.Summary, cx-order-confirmation-totals .ProductDetailsPageTemplate .cx-order-summary.tab-delivery, .ProductDetailsPageTemplate cx-order-confirmation-totals .cx-order-summary.tab-delivery {
     max-width: var(--cx-max-width, 100%);
     min-width: var(--cx-min-width, 100%);
     padding-right: var(--cx-padding, 1.625rem);
   }
 }
 @media (max-width: 767.98px) {
-  cx-order-confirmation-totals .cx-order-summary.container, cx-order-confirmation-totals ProductDetailsPageTemplate cx-page-slot.cx-order-summary.Summary, ProductDetailsPageTemplate cx-order-confirmation-totals cx-page-slot.cx-order-summary.Summary, cx-order-confirmation-totals ProductDetailsPageTemplate .cx-order-summary.tab-delivery, ProductDetailsPageTemplate cx-order-confirmation-totals .cx-order-summary.tab-delivery {
+  cx-order-confirmation-totals .cx-order-summary.container, cx-order-confirmation-totals .ProductDetailsPageTemplate cx-page-slot.cx-order-summary.Summary, .ProductDetailsPageTemplate cx-order-confirmation-totals cx-page-slot.cx-order-summary.Summary, cx-order-confirmation-totals .ProductDetailsPageTemplate .cx-order-summary.tab-delivery, .ProductDetailsPageTemplate cx-order-confirmation-totals .cx-order-summary.tab-delivery {
     padding: var(--cx-padding, 0);
   }
 }
@@ -14767,7 +14767,7 @@ cx-tab-paragraph-container > div {
 cx-tab-paragraph-container > div:not(.active) {
   display: none;
 }
-cx-tab-paragraph-container > div .container > h2, cx-tab-paragraph-container > div ProductDetailsPageTemplate cx-page-slot.Summary > h2, ProductDetailsPageTemplate cx-tab-paragraph-container > div cx-page-slot.Summary > h2, cx-tab-paragraph-container > div ProductDetailsPageTemplate .tab-delivery > h2, ProductDetailsPageTemplate cx-tab-paragraph-container > div .tab-delivery > h2 {
+cx-tab-paragraph-container > div .container > h2, cx-tab-paragraph-container > div .ProductDetailsPageTemplate cx-page-slot.Summary > h2, .ProductDetailsPageTemplate cx-tab-paragraph-container > div cx-page-slot.Summary > h2, cx-tab-paragraph-container > div .ProductDetailsPageTemplate .tab-delivery > h2, .ProductDetailsPageTemplate cx-tab-paragraph-container > div .tab-delivery > h2 {
   display: none;
 }
 cx-tab-paragraph-container > button {
@@ -15945,13 +15945,13 @@ cx-stock-notification-dialog .channels span {
   font-weight: var(--cx-font-weight-semi);
   line-height: var(--cx-line-height, 1.2222222222);
 }
-cx-stock-notification-dialog .container p a, cx-stock-notification-dialog ProductDetailsPageTemplate cx-page-slot.Summary p a, ProductDetailsPageTemplate cx-stock-notification-dialog cx-page-slot.Summary p a, cx-stock-notification-dialog ProductDetailsPageTemplate .tab-delivery p a, ProductDetailsPageTemplate cx-stock-notification-dialog .tab-delivery p a {
+cx-stock-notification-dialog .container p a, cx-stock-notification-dialog .ProductDetailsPageTemplate cx-page-slot.Summary p a, .ProductDetailsPageTemplate cx-stock-notification-dialog cx-page-slot.Summary p a, cx-stock-notification-dialog .ProductDetailsPageTemplate .tab-delivery p a, .ProductDetailsPageTemplate cx-stock-notification-dialog .tab-delivery p a {
   font-size: var(--cx-font-size, 1rem);
   font-weight: var(--cx-font-weight-semi);
   line-height: var(--cx-line-height, 1.2222222222);
   color: var(--cx-color-dark);
 }
-cx-stock-notification-dialog .container p a:hover, cx-stock-notification-dialog ProductDetailsPageTemplate cx-page-slot.Summary p a:hover, ProductDetailsPageTemplate cx-stock-notification-dialog cx-page-slot.Summary p a:hover, cx-stock-notification-dialog ProductDetailsPageTemplate .tab-delivery p a:hover, ProductDetailsPageTemplate cx-stock-notification-dialog .tab-delivery p a:hover {
+cx-stock-notification-dialog .container p a:hover, cx-stock-notification-dialog .ProductDetailsPageTemplate cx-page-slot.Summary p a:hover, .ProductDetailsPageTemplate cx-stock-notification-dialog cx-page-slot.Summary p a:hover, cx-stock-notification-dialog .ProductDetailsPageTemplate .tab-delivery p a:hover, .ProductDetailsPageTemplate cx-stock-notification-dialog .tab-delivery p a:hover {
   color: var(--cx-color-primary);
 }
 
@@ -18724,7 +18724,7 @@ cx-store-finder .cx-pagination .pagination a.page-link:hover {
   font-weight: normal;
 }
 
-cx-store-finder-grid > .container, ProductDetailsPageTemplate cx-store-finder-grid > cx-page-slot.Summary, ProductDetailsPageTemplate cx-store-finder-grid > .tab-delivery {
+cx-store-finder-grid > .container, .ProductDetailsPageTemplate cx-store-finder-grid > cx-page-slot.Summary, .ProductDetailsPageTemplate cx-store-finder-grid > .tab-delivery {
   border-style: solid;
   border-width: 1px 0 0 0;
   border-color: var(--cx-color-light);
@@ -18732,7 +18732,7 @@ cx-store-finder-grid > .container, ProductDetailsPageTemplate cx-store-finder-gr
   padding: 10px 0 0 0;
 }
 @media (max-width: 767.98px) {
-  cx-store-finder-grid > .container, ProductDetailsPageTemplate cx-store-finder-grid > cx-page-slot.Summary, ProductDetailsPageTemplate cx-store-finder-grid > .tab-delivery {
+  cx-store-finder-grid > .container, .ProductDetailsPageTemplate cx-store-finder-grid > cx-page-slot.Summary, .ProductDetailsPageTemplate cx-store-finder-grid > .tab-delivery {
     padding: 0 15px;
   }
 }
@@ -18831,7 +18831,7 @@ cx-store-finder-list-item .cx-button {
   margin: 1rem 0 0;
 }
 
-cx-store-finder-store-description .container, cx-store-finder-store-description ProductDetailsPageTemplate cx-page-slot.Summary, ProductDetailsPageTemplate cx-store-finder-store-description cx-page-slot.Summary, cx-store-finder-store-description ProductDetailsPageTemplate .tab-delivery, ProductDetailsPageTemplate cx-store-finder-store-description .tab-delivery {
+cx-store-finder-store-description .container, cx-store-finder-store-description .ProductDetailsPageTemplate cx-page-slot.Summary, .ProductDetailsPageTemplate cx-store-finder-store-description cx-page-slot.Summary, cx-store-finder-store-description .ProductDetailsPageTemplate .tab-delivery, .ProductDetailsPageTemplate cx-store-finder-store-description .tab-delivery {
   margin-bottom: 1rem;
 }
 cx-store-finder-store-description .cx-store {
