@@ -11400,12 +11400,16 @@ cx-category-navigation {
   margin: 40px 0 15px;
 }
 .LoginPageTemplate cx-page-slot, .CheckoutLoginPageTemplate cx-page-slot, .AccountPageTemplate cx-page-slot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   max-width: 1140px;
   padding: 3rem 1.5rem 0 1.5rem;
   margin: auto;
 }
 .LoginPageTemplate cx-page-slot > *, .CheckoutLoginPageTemplate cx-page-slot > *, .AccountPageTemplate cx-page-slot > * {
   max-width: var(--cx-max-width, 50%);
+  width: 100%;
 }
 @media (max-width: 991.98px) {
   .LoginPageTemplate, .CheckoutLoginPageTemplate, .AccountPageTemplate {
@@ -11525,29 +11529,63 @@ cx-category-navigation {
 .AccountPageTemplate cx-order-details-items .cx-list-date {
   margin: 0.5rem 0 0;
 }
-.AccountPageTemplate cx-order-details-shipping .cx-summary {
-  margin-bottom: 48px;
-}
 .AccountPageTemplate cx-order-details-shipping .cx-account-summary {
   background-color: var(--cx-color-background);
-}
-@media (min-width: 768px) {
-  .AccountPageTemplate cx-order-details-shipping .cx-account-summary {
-    padding: 5px 18px 12px;
-  }
+  border-width: 0 0 1px 0;
+  border-style: solid;
+  border-color: var(--cx-color-light);
 }
 @media (max-width: 767.98px) {
   .AccountPageTemplate cx-order-details-shipping .cx-account-summary {
-    margin: 0 -24px;
+    background-color: var(--cx-color-inverse);
   }
 }
-.AccountPageTemplate cx-order-details-shipping .cx-account-summary .cx-card-title {
+.AccountPageTemplate cx-order-details-shipping .cx-account-summary .container, .AccountPageTemplate cx-order-details-shipping .cx-account-summary .ProductDetailsPageTemplate cx-page-slot.Summary, .ProductDetailsPageTemplate .AccountPageTemplate cx-order-details-shipping .cx-account-summary cx-page-slot.Summary, .AccountPageTemplate cx-order-details-shipping .cx-account-summary .ProductDetailsPageTemplate .tab-delivery, .ProductDetailsPageTemplate .AccountPageTemplate cx-order-details-shipping .cx-account-summary .tab-delivery {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 15px 0;
+}
+@media (max-width: 991.98px) {
+  .AccountPageTemplate cx-order-details-shipping .cx-account-summary .container, .AccountPageTemplate cx-order-details-shipping .cx-account-summary .ProductDetailsPageTemplate cx-page-slot.Summary, .ProductDetailsPageTemplate .AccountPageTemplate cx-order-details-shipping .cx-account-summary cx-page-slot.Summary, .AccountPageTemplate cx-order-details-shipping .cx-account-summary .ProductDetailsPageTemplate .tab-delivery, .ProductDetailsPageTemplate .AccountPageTemplate cx-order-details-shipping .cx-account-summary .tab-delivery {
+    max-width: 100%;
+    min-width: 100%;
+    padding: 0 1.25rem;
+  }
+}
+@media (max-width: 767.98px) {
+  .AccountPageTemplate cx-order-details-shipping .cx-account-summary .container, .AccountPageTemplate cx-order-details-shipping .cx-account-summary .ProductDetailsPageTemplate cx-page-slot.Summary, .ProductDetailsPageTemplate .AccountPageTemplate cx-order-details-shipping .cx-account-summary cx-page-slot.Summary, .AccountPageTemplate cx-order-details-shipping .cx-account-summary .ProductDetailsPageTemplate .tab-delivery, .ProductDetailsPageTemplate .AccountPageTemplate cx-order-details-shipping .cx-account-summary .tab-delivery {
+    flex-direction: column;
+    padding: 1.25rem;
+  }
+}
+.AccountPageTemplate cx-order-details-shipping .cx-account-summary .container .cx-summary-card, .AccountPageTemplate cx-order-details-shipping .cx-account-summary .ProductDetailsPageTemplate cx-page-slot.Summary .cx-summary-card, .ProductDetailsPageTemplate .AccountPageTemplate cx-order-details-shipping .cx-account-summary cx-page-slot.Summary .cx-summary-card, .AccountPageTemplate cx-order-details-shipping .cx-account-summary .ProductDetailsPageTemplate .tab-delivery .cx-summary-card, .ProductDetailsPageTemplate .AccountPageTemplate cx-order-details-shipping .cx-account-summary .tab-delivery .cx-summary-card {
+  flex: 1;
+  padding: 0 15px;
+}
+@media (min-width: 992px) {
+  .AccountPageTemplate cx-order-details-shipping .cx-account-summary .container .cx-summary-card:not(:last-of-type), .AccountPageTemplate cx-order-details-shipping .cx-account-summary .ProductDetailsPageTemplate cx-page-slot.Summary .cx-summary-card:not(:last-of-type), .ProductDetailsPageTemplate .AccountPageTemplate cx-order-details-shipping .cx-account-summary cx-page-slot.Summary .cx-summary-card:not(:last-of-type), .AccountPageTemplate cx-order-details-shipping .cx-account-summary .ProductDetailsPageTemplate .tab-delivery .cx-summary-card:not(:last-of-type), .ProductDetailsPageTemplate .AccountPageTemplate cx-order-details-shipping .cx-account-summary .tab-delivery .cx-summary-card:not(:last-of-type) {
+    border-inline-end: 1px solid var(--cx-color-text);
+  }
+}
+@media (max-width: 991.98px) {
+  .AccountPageTemplate cx-order-details-shipping .cx-account-summary .container .cx-summary-card, .AccountPageTemplate cx-order-details-shipping .cx-account-summary .ProductDetailsPageTemplate cx-page-slot.Summary .cx-summary-card, .ProductDetailsPageTemplate .AccountPageTemplate cx-order-details-shipping .cx-account-summary cx-page-slot.Summary .cx-summary-card, .AccountPageTemplate cx-order-details-shipping .cx-account-summary .ProductDetailsPageTemplate .tab-delivery .cx-summary-card, .ProductDetailsPageTemplate .AccountPageTemplate cx-order-details-shipping .cx-account-summary .tab-delivery .cx-summary-card {
+    flex: 0 0 33%;
+  }
+}
+@media (max-width: 767.98px) {
+  .AccountPageTemplate cx-order-details-shipping .cx-account-summary .container .cx-summary-card, .AccountPageTemplate cx-order-details-shipping .cx-account-summary .ProductDetailsPageTemplate cx-page-slot.Summary .cx-summary-card, .ProductDetailsPageTemplate .AccountPageTemplate cx-order-details-shipping .cx-account-summary cx-page-slot.Summary .cx-summary-card, .AccountPageTemplate cx-order-details-shipping .cx-account-summary .ProductDetailsPageTemplate .tab-delivery .cx-summary-card, .ProductDetailsPageTemplate .AccountPageTemplate cx-order-details-shipping .cx-account-summary .tab-delivery .cx-summary-card {
+    flex: 1;
+    background-color: var(--cx-color-inverse);
+    border-width: 1px;
+    border-style: solid;
+    border-color: var(--cx-color-light);
+    margin: 0.625rem 0;
+  }
+}
+.AccountPageTemplate cx-order-details-shipping .cx-account-summary .container .cx-summary-card .cx-card-title, .AccountPageTemplate cx-order-details-shipping .cx-account-summary .ProductDetailsPageTemplate cx-page-slot.Summary .cx-summary-card .cx-card-title, .ProductDetailsPageTemplate .AccountPageTemplate cx-order-details-shipping .cx-account-summary cx-page-slot.Summary .cx-summary-card .cx-card-title, .AccountPageTemplate cx-order-details-shipping .cx-account-summary .ProductDetailsPageTemplate .tab-delivery .cx-summary-card .cx-card-title, .ProductDetailsPageTemplate .AccountPageTemplate cx-order-details-shipping .cx-account-summary .tab-delivery .cx-summary-card .cx-card-title {
   font-size: var(--cx-font-size, 1.125rem);
   font-weight: var(--cx-font-weight-bold);
   line-height: var(--cx-line-height, 1.2222222222);
-  font-weight: bold;
-}
-.AccountPageTemplate cx-order-details-shipping .cx-account-summary .cx-card-label-bold {
   font-weight: bold;
 }
 .AccountPageTemplate cx-order-details-totals {
@@ -12758,15 +12796,18 @@ cx-checkout-progress-mobile-bottom .cx-nav .cx-list {
 cx-checkout-progress .cx-nav .cx-item,
 cx-checkout-progress-mobile-top .cx-nav .cx-item,
 cx-checkout-progress-mobile-bottom .cx-nav .cx-item {
+  display: flex;
+  justify-content: center;
+  flex: 1;
   color: var(--cx-color-text);
   padding: 0 0 1.375rem 0;
+  border-bottom: 2px solid var(--cx-color-text);
 }
 cx-checkout-progress .cx-nav .cx-item ::after,
 cx-checkout-progress-mobile-top .cx-nav .cx-item ::after,
 cx-checkout-progress-mobile-bottom .cx-nav .cx-item ::after {
   padding: 0 0.75rem 0 0;
-  content: ">";
-  color: var(--cx-color-text);
+  content: "";
 }
 @media (min-width: 992px) and (max-width: 1199.98px) {
   cx-checkout-progress .cx-nav .cx-item ::after,
@@ -12774,6 +12815,16 @@ cx-checkout-progress-mobile-top .cx-nav .cx-item ::after,
 cx-checkout-progress-mobile-bottom .cx-nav .cx-item ::after {
     padding: 0 0.5rem 0 0;
   }
+}
+cx-checkout-progress .cx-nav .cx-item.active,
+cx-checkout-progress-mobile-top .cx-nav .cx-item.active,
+cx-checkout-progress-mobile-bottom .cx-nav .cx-item.active {
+  border-color: var(--cx-color-primary);
+}
+cx-checkout-progress .cx-nav .cx-item.disabled,
+cx-checkout-progress-mobile-top .cx-nav .cx-item.disabled,
+cx-checkout-progress-mobile-bottom .cx-nav .cx-item.disabled {
+  border-color: var(--cx-color-light);
 }
 cx-checkout-progress .cx-nav .cx-item:first-child ::before,
 cx-checkout-progress-mobile-top .cx-nav .cx-item:first-child ::before,
@@ -12793,6 +12844,7 @@ cx-checkout-progress-mobile-bottom .cx-link {
   color: var(--cx-color-text);
   cursor: pointer;
   text-decoration: none;
+  text-align: start;
 }
 cx-checkout-progress .cx-link.disabled,
 cx-checkout-progress-mobile-top .cx-link.disabled,
@@ -13309,6 +13361,11 @@ COMPONENT VARIABLE OVERRIDES
   For example, the following would override the cx-storefront background set in src/app/ui/layout/main/main.component.scss
   $cx-storefront-background-color: "info";
 */
+@media (max-width: 991.98px) {
+  cx-review-submit {
+    padding: 20px 0;
+  }
+}
 cx-review-submit .cx-review {
   padding: 0 0 1rem;
 }
@@ -13320,6 +13377,7 @@ cx-review-submit .cx-review-title {
 cx-review-submit .cx-review-summary {
   margin: 0;
   background-color: var(--cx-color-background);
+  padding: 15px 0;
 }
 cx-review-submit .cx-review-summary-wrapper {
   display: flex;
@@ -13336,6 +13394,15 @@ cx-review-submit .cx-review-summary-edit-step {
     padding: 10px 0 0;
   }
 }
+@media (min-width: 992px) {
+  cx-review-submit .cx-review-summary .cx-review-payment-col {
+    border-inline-end: 1px solid var(--cx-color-text);
+  }
+}
+cx-review-submit .cx-review-summary .cx-review-summary-card {
+  display: flex;
+  justify-content: space-between;
+}
 @media (max-width: 991.98px) {
   cx-review-submit .cx-review-summary .cx-review-summary-card {
     background-color: #ffffff;
@@ -13344,6 +13411,28 @@ cx-review-submit .cx-review-summary-edit-step {
     border-color: var(--cx-color-light);
     min-height: auto;
   }
+}
+@media (min-width: 992px) {
+  cx-review-submit .cx-review-summary .cx-review-summary-card:not(:last-of-type) {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  }
+}
+cx-review-submit .cx-review-summary .cx-review-summary-card .cx-card-title {
+  font-size: var(--cx-font-size, 1.125rem);
+  font-weight: var(--cx-font-weight-bold);
+  line-height: var(--cx-line-height, 1.2222222222);
+  font-weight: bold;
+}
+cx-review-submit .cx-review-summary .cx-review-summary-card .cx-card-paragraph-title {
+  font-style: italic;
+}
+cx-review-submit .cx-review-summary .cx-review-summary-card .cx-review-summary-edit-step {
+  align-self: flex-start;
+  padding: 20px;
+  font-size: 1.125rem;
+}
+cx-review-submit .cx-review-summary .cx-review-summary-card .cx-review-summary-edit-step a {
+  color: var(--cx-color-dark);
 }
 cx-review-submit .form-check {
   padding: 0;
@@ -13842,9 +13931,128 @@ COMPONENT VARIABLE OVERRIDES
   For example, the following would override the cx-storefront background set in src/app/ui/layout/main/main.component.scss
   $cx-storefront-background-color: "info";
 */
-cx-delivery-mode {
-  padding-top: 10px;
+cx-cost-center {
+  padding-top: 2.375rem;
 }
+@media (max-width: 991.98px) {
+  cx-cost-center {
+    display: block;
+    background-color: var(--cx-color-background);
+  }
+}
+@media (max-width: 991.98px) {
+  cx-cost-center .col-md-12 {
+    padding: 0 4.375rem;
+  }
+}
+@media (max-width: 767.98px) {
+  cx-cost-center .col-md-12 {
+    padding: 0 2.25rem;
+  }
+}
+@media (max-width: 991.98px) {
+  cx-cost-center .container, cx-cost-center .ProductDetailsPageTemplate cx-page-slot.Summary, .ProductDetailsPageTemplate cx-cost-center cx-page-slot.Summary, cx-cost-center .ProductDetailsPageTemplate .tab-delivery, .ProductDetailsPageTemplate cx-cost-center .tab-delivery {
+    width: 100%;
+  }
+}
+cx-cost-center .cx-checkout-btns {
+  padding: 1rem 0;
+  justify-content: flex-end;
+}
+@media (max-width: 991.98px) {
+  cx-cost-center .cx-checkout-btns {
+    padding: 1.25rem 0;
+  }
+}
+@media (max-width: 767.98px) {
+  cx-cost-center .cx-checkout-btns {
+    padding: 1.25rem 0;
+  }
+}
+@media (max-width: 991.98px) {
+  cx-cost-center .cx-checkout-btns .btn-action {
+    margin: 0 0 1rem;
+  }
+}
+cx-cost-center .cx-checkout-title {
+  text-transform: capitalize;
+  margin: 0 auto;
+  padding: 2.375rem 0 1.75rem 0;
+}
+cx-cost-center .cx-checkout-body {
+  display: flex;
+  align-items: stretch;
+}
+@media (max-width: 991.98px) {
+  cx-cost-center .cx-checkout-body.row {
+    padding: 0;
+  }
+}
+cx-cost-center .cx-checkout-text {
+  margin-bottom: 1.25rem;
+}
+@media (max-width: 991.98px) {
+  cx-cost-center .cx-checkout-text {
+    padding-left: 3.5rem;
+  }
+}
+@media (max-width: 767.98px) {
+  cx-cost-center .cx-checkout-text {
+    padding-left: 1.5rem;
+  }
+}
+cx-cost-center .cx-spinner {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+@media (max-width: 991.98px) {
+  cx-cost-center {
+    padding: 20px 0;
+  }
+}
+cx-cost-center select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 4px;
+  border-color: var(--cx-color-light);
+}
+
+/* IMPORTANT: If no there's no theme for any reason,
+  then fallback to the cxbase defaults */
+/*!
+  SPARTA v0.1
+  This file is for theme configuration. These variables are used in global and component CSS files.
+
+  You can:
+    1) Set new values for Bootstrap variables - https://github.com/twbs/bootstrap/blob/v4-dev/scss/_variables.scss
+    2) Set new values for cxbase variables - cxbase/_variables.scss
+    3) Set new values for component variables - app/__/_.scss
+  You cannot:
+    1) Add new variables
+*/
+/*!
+  CXBASE VARIABLES
+  This is NOT a theme.
+
+  This file should include ONLY new variables that Bootstrap does not provide.
+  For example, Bootstrap does not have a variable for semi font weight.
+
+  Same case for directionality.
+
+  Also be aware of items that should be configurable.
+  The Sparta buttons use uppercase type but future themes may want normal case
+  so a variable was created to make this available for other themes.
+
+*/
+/*
+GLOBAL VARIABLE OVERRIDES
+  These can be set with anything above or any variables exposed in Bootsrap or cxbase
+*/
+/*
+COMPONENT VARIABLE OVERRIDES
+  For example, the following would override the cx-storefront background set in src/app/ui/layout/main/main.component.scss
+  $cx-storefront-background-color: "info";
+*/
 @media (max-width: 991.98px) {
   cx-delivery-mode {
     display: block;
@@ -13916,6 +14124,11 @@ cx-delivery-mode .cx-spinner {
   padding-top: 30px;
   padding-bottom: 30px;
 }
+@media (max-width: 991.98px) {
+  cx-delivery-mode {
+    padding: 20px 0;
+  }
+}
 cx-delivery-mode .form-check {
   display: flex;
   margin-bottom: 0;
@@ -13941,6 +14154,131 @@ cx-delivery-mode .form-check .cx-delivery-label .cx-delivery-details {
   flex: 100%;
   flex-basis: 100%;
   color: var(--cx-color-success);
+}
+
+/* IMPORTANT: If no there's no theme for any reason,
+  then fallback to the cxbase defaults */
+/*!
+  SPARTA v0.1
+  This file is for theme configuration. These variables are used in global and component CSS files.
+
+  You can:
+    1) Set new values for Bootstrap variables - https://github.com/twbs/bootstrap/blob/v4-dev/scss/_variables.scss
+    2) Set new values for cxbase variables - cxbase/_variables.scss
+    3) Set new values for component variables - app/__/_.scss
+  You cannot:
+    1) Add new variables
+*/
+/*!
+  CXBASE VARIABLES
+  This is NOT a theme.
+
+  This file should include ONLY new variables that Bootstrap does not provide.
+  For example, Bootstrap does not have a variable for semi font weight.
+
+  Same case for directionality.
+
+  Also be aware of items that should be configurable.
+  The Sparta buttons use uppercase type but future themes may want normal case
+  so a variable was created to make this available for other themes.
+
+*/
+/*
+GLOBAL VARIABLE OVERRIDES
+  These can be set with anything above or any variables exposed in Bootsrap or cxbase
+*/
+/*
+COMPONENT VARIABLE OVERRIDES
+  For example, the following would override the cx-storefront background set in src/app/ui/layout/main/main.component.scss
+  $cx-storefront-background-color: "info";
+*/
+cx-payment-type {
+  padding-top: 2.375rem;
+}
+@media (max-width: 991.98px) {
+  cx-payment-type {
+    display: block;
+    background-color: var(--cx-color-background);
+  }
+}
+@media (max-width: 991.98px) {
+  cx-payment-type .col-md-12 {
+    padding: 0 4.375rem;
+  }
+}
+@media (max-width: 767.98px) {
+  cx-payment-type .col-md-12 {
+    padding: 0 2.25rem;
+  }
+}
+@media (max-width: 991.98px) {
+  cx-payment-type .container, cx-payment-type .ProductDetailsPageTemplate cx-page-slot.Summary, .ProductDetailsPageTemplate cx-payment-type cx-page-slot.Summary, cx-payment-type .ProductDetailsPageTemplate .tab-delivery, .ProductDetailsPageTemplate cx-payment-type .tab-delivery {
+    width: 100%;
+  }
+}
+cx-payment-type .cx-checkout-btns {
+  padding: 1rem 0;
+  justify-content: flex-end;
+}
+@media (max-width: 991.98px) {
+  cx-payment-type .cx-checkout-btns {
+    padding: 1.25rem 0;
+  }
+}
+@media (max-width: 767.98px) {
+  cx-payment-type .cx-checkout-btns {
+    padding: 1.25rem 0;
+  }
+}
+@media (max-width: 991.98px) {
+  cx-payment-type .cx-checkout-btns .btn-action {
+    margin: 0 0 1rem;
+  }
+}
+cx-payment-type .cx-checkout-title {
+  text-transform: capitalize;
+  margin: 0 auto;
+  padding: 2.375rem 0 1.75rem 0;
+}
+cx-payment-type .cx-checkout-body {
+  display: flex;
+  align-items: stretch;
+}
+@media (max-width: 991.98px) {
+  cx-payment-type .cx-checkout-body.row {
+    padding: 0;
+  }
+}
+cx-payment-type .cx-checkout-text {
+  margin-bottom: 1.25rem;
+}
+@media (max-width: 991.98px) {
+  cx-payment-type .cx-checkout-text {
+    padding-left: 3.5rem;
+  }
+}
+@media (max-width: 767.98px) {
+  cx-payment-type .cx-checkout-text {
+    padding-left: 1.5rem;
+  }
+}
+cx-payment-type .cx-spinner {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+@media (max-width: 991.98px) {
+  cx-payment-type {
+    padding-top: 20px;
+  }
+}
+cx-payment-type .cx-payment-type-container {
+  padding-top: 20px;
+}
+cx-payment-type .cx-payment-type-label {
+  margin: 0 auto 0 0.75rem;
+}
+cx-payment-type .cx-payment-type-label .cx-payment-type:hover {
+  cursor: pointer;
 }
 
 /* IMPORTANT: If no there's no theme for any reason,
@@ -14060,22 +14398,15 @@ cx-order-confirmation-overview .cx-order-review-summary {
   border-style: solid;
   border-color: var(--cx-color-light);
 }
-@media (max-width: 991.98px) {
+@media (max-width: 767.98px) {
   cx-order-confirmation-overview .cx-order-review-summary {
     background-color: var(--cx-color-inverse);
   }
 }
-@media (max-width: 767.98px) {
-  cx-order-confirmation-overview .cx-order-review-summary .summary-card {
-    background-color: var(--cx-color-inverse);
-    border-width: 1px;
-    border-style: solid;
-    border-color: var(--cx-color-light);
-    margin: 0.625rem 0;
-  }
-}
 cx-order-confirmation-overview .cx-order-review-summary .container, cx-order-confirmation-overview .cx-order-review-summary .ProductDetailsPageTemplate cx-page-slot.Summary, .ProductDetailsPageTemplate cx-order-confirmation-overview .cx-order-review-summary cx-page-slot.Summary, cx-order-confirmation-overview .cx-order-review-summary .ProductDetailsPageTemplate .tab-delivery, .ProductDetailsPageTemplate cx-order-confirmation-overview .cx-order-review-summary .tab-delivery {
-  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 15px 0;
 }
 @media (max-width: 991.98px) {
   cx-order-confirmation-overview .cx-order-review-summary .container, cx-order-confirmation-overview .cx-order-review-summary .ProductDetailsPageTemplate cx-page-slot.Summary, .ProductDetailsPageTemplate cx-order-confirmation-overview .cx-order-review-summary cx-page-slot.Summary, cx-order-confirmation-overview .cx-order-review-summary .ProductDetailsPageTemplate .tab-delivery, .ProductDetailsPageTemplate cx-order-confirmation-overview .cx-order-review-summary .tab-delivery {
@@ -14086,8 +14417,39 @@ cx-order-confirmation-overview .cx-order-review-summary .container, cx-order-con
 }
 @media (max-width: 767.98px) {
   cx-order-confirmation-overview .cx-order-review-summary .container, cx-order-confirmation-overview .cx-order-review-summary .ProductDetailsPageTemplate cx-page-slot.Summary, .ProductDetailsPageTemplate cx-order-confirmation-overview .cx-order-review-summary cx-page-slot.Summary, cx-order-confirmation-overview .cx-order-review-summary .ProductDetailsPageTemplate .tab-delivery, .ProductDetailsPageTemplate cx-order-confirmation-overview .cx-order-review-summary .tab-delivery {
+    flex-direction: column;
     padding: 1.25rem;
   }
+}
+cx-order-confirmation-overview .cx-order-review-summary .container .summary-card, cx-order-confirmation-overview .cx-order-review-summary .ProductDetailsPageTemplate cx-page-slot.Summary .summary-card, .ProductDetailsPageTemplate cx-order-confirmation-overview .cx-order-review-summary cx-page-slot.Summary .summary-card, cx-order-confirmation-overview .cx-order-review-summary .ProductDetailsPageTemplate .tab-delivery .summary-card, .ProductDetailsPageTemplate cx-order-confirmation-overview .cx-order-review-summary .tab-delivery .summary-card {
+  flex: 1;
+  padding: 0 15px;
+}
+@media (min-width: 992px) {
+  cx-order-confirmation-overview .cx-order-review-summary .container .summary-card:not(:last-of-type), cx-order-confirmation-overview .cx-order-review-summary .ProductDetailsPageTemplate cx-page-slot.Summary .summary-card:not(:last-of-type), .ProductDetailsPageTemplate cx-order-confirmation-overview .cx-order-review-summary cx-page-slot.Summary .summary-card:not(:last-of-type), cx-order-confirmation-overview .cx-order-review-summary .ProductDetailsPageTemplate .tab-delivery .summary-card:not(:last-of-type), .ProductDetailsPageTemplate cx-order-confirmation-overview .cx-order-review-summary .tab-delivery .summary-card:not(:last-of-type) {
+    border-inline-end: 1px solid var(--cx-color-text);
+  }
+}
+@media (max-width: 991.98px) {
+  cx-order-confirmation-overview .cx-order-review-summary .container .summary-card, cx-order-confirmation-overview .cx-order-review-summary .ProductDetailsPageTemplate cx-page-slot.Summary .summary-card, .ProductDetailsPageTemplate cx-order-confirmation-overview .cx-order-review-summary cx-page-slot.Summary .summary-card, cx-order-confirmation-overview .cx-order-review-summary .ProductDetailsPageTemplate .tab-delivery .summary-card, .ProductDetailsPageTemplate cx-order-confirmation-overview .cx-order-review-summary .tab-delivery .summary-card {
+    flex: 0 0 33%;
+  }
+}
+@media (max-width: 767.98px) {
+  cx-order-confirmation-overview .cx-order-review-summary .container .summary-card, cx-order-confirmation-overview .cx-order-review-summary .ProductDetailsPageTemplate cx-page-slot.Summary .summary-card, .ProductDetailsPageTemplate cx-order-confirmation-overview .cx-order-review-summary cx-page-slot.Summary .summary-card, cx-order-confirmation-overview .cx-order-review-summary .ProductDetailsPageTemplate .tab-delivery .summary-card, .ProductDetailsPageTemplate cx-order-confirmation-overview .cx-order-review-summary .tab-delivery .summary-card {
+    flex: 1;
+    background-color: var(--cx-color-inverse);
+    border-width: 1px;
+    border-style: solid;
+    border-color: var(--cx-color-light);
+    margin: 0.625rem 0;
+  }
+}
+cx-order-confirmation-overview .cx-order-review-summary .container .summary-card .cx-card-title, cx-order-confirmation-overview .cx-order-review-summary .ProductDetailsPageTemplate cx-page-slot.Summary .summary-card .cx-card-title, .ProductDetailsPageTemplate cx-order-confirmation-overview .cx-order-review-summary cx-page-slot.Summary .summary-card .cx-card-title, cx-order-confirmation-overview .cx-order-review-summary .ProductDetailsPageTemplate .tab-delivery .summary-card .cx-card-title, .ProductDetailsPageTemplate cx-order-confirmation-overview .cx-order-review-summary .tab-delivery .summary-card .cx-card-title {
+  font-size: var(--cx-font-size, 1.125rem);
+  font-weight: var(--cx-font-weight-bold);
+  line-height: var(--cx-line-height, 1.2222222222);
+  font-weight: bold;
 }
 
 /* IMPORTANT: If no there's no theme for any reason,
@@ -16244,6 +16606,12 @@ cx-card .cx-card-container {
 }
 cx-card .cx-card-label-container {
   flex-grow: 2;
+}
+cx-card .cx-card-paragraph {
+  padding-inline-start: 0.7em;
+}
+cx-card .cx-card-paragraph .cx-card-paragraph-title {
+  padding-top: 0.7em;
 }
 cx-card .cx-card-fit-to-container {
   width: 100%;
