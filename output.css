@@ -8278,10 +8278,7 @@ textarea.ng-invalid.ng-touched {
   border-color: var(--cx-color-danger);
 }
 
-.ng-dirty.ng-invalid input,
-.ng-dirty.ng-invalid ng-select .ng-select-container,
-.ng-touched.ng-invalid input,
-.ng-touched.ng-invalid ng-select .ng-select-container {
+ng-select.ng-invalid.ng-dirty .ng-select-container, ng-select.ng-invalid.ng-touched .ng-select-container {
   border-color: var(--cx-color-danger);
 }
 
